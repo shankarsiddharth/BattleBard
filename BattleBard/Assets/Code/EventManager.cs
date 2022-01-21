@@ -1,0 +1,61 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public static class EventManager
+{
+
+	#region Animations
+	public delegate void AttackAnimEvent(Minion m);
+	public static event AttackAnimEvent OnAttackAnim;
+	public static void RaiseAttackAnimEvent(Minion m)
+	{
+		OnAttackAnim?.Invoke(m);
+	}
+
+	public delegate void MinionDeathAnimEvent(Minion m);
+	public static event MinionDeathAnimEvent OnMinionDeathAnim;
+	public static void RaiseMinionDeathAnimEvent(Minion m)
+	{
+		OnMinionDeathAnim?.Invoke(m);
+	}
+	#endregion
+
+	#region Effects
+	public delegate void AreaEffectApplied(Effect eff, Vector3 center, float radius);
+	public static event AreaEffectApplied OnAreaEffectApplied;
+	public static void RaiseAreaEffectAppliedEvent(Effect eff, Vector3 center, float radius) {
+		OnAreaEffectApplied?.Invoke(eff, center, radius);
+	}
+
+	public delegate void EffectApplied(Effect eff, Minion target);
+	public static event EffectApplied OnEffectApplied;
+	public static void RaiseEffectAppliedEvent(Effect eff, Minion target)
+	{
+		OnEffectApplied?.Invoke(eff, target);
+	}
+
+	public delegate void EffectExpired(Effect eff);
+	public static event EffectExpired OnEffectExpired;
+	public static void RaiseEffectExpiredEvent(Effect eff)
+	{
+		OnEffectExpired?.Invoke(eff);
+	}
+
+	#endregion
+
+	#region Minions
+	public delegate void AttackEvent(Minion attacker, Minion other);
+	public static event AttackEvent OnMinionAttack;
+	public static void RaiseMinionAttackEvent(Minion attacker, Minion other)
+	{
+		OnMinionAttack?.Invoke(attacker, other);
+	}
+
+	public delegate void MinionDeathEvent(Minion m);
+	public static event MinionDeathEvent OnMinionDeath;
+	public static void RaiseMinionDeathEvent(Minion m) {
+		OnMinionDeath?.Invoke(m);
+	}
+	#endregion
+}
