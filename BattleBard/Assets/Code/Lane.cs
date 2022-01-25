@@ -7,18 +7,28 @@ public class Lane : MonoBehaviour
     [Tooltip("List of points along the lane's path. First point is green.")]
     public List<Vector3> nav_points;
 
-    [HideInInspector]
+    //[HideInInspector]
     public List<Minion> allied_minions;
     [HideInInspector] 
     public List<Minion> enemy_minions;
-    [HideInInspector]
-    public List<Effect> current_effects;
 
     // Start is called before the first frame update
     void Start()
     {
 
     }
+
+    public Minion GetFurthestMinion()
+	{
+        Minion furthest = allied_minions[0];
+        foreach (Minion m in allied_minions)
+		{
+            if (m.transform.position.x > furthest.transform.position.x)
+                furthest = m;
+		}
+
+        return furthest;
+	}
 
 
 	#region Gizmos
