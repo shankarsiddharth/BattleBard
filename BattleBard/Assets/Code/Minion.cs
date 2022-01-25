@@ -35,6 +35,7 @@ public class Minion : MonoBehaviour
         #region Events
         EventManager.OnEffectApplied += OnEffectApplied;
         EventManager.OnEffectExpired += OnEffectExpired;
+        EventManager.OnAreaEffectApplied += OnAreaEffectApplied;
 		#endregion
 
 		if (minion_stats.allied)
@@ -62,7 +63,7 @@ public class Minion : MonoBehaviour
         bool valid = true;
 
         Minion m = FindTargetInRange();
-        if (m && valid)
+        if (m != null && valid)
 		{
             Attack(m);
             valid = false;
@@ -90,7 +91,6 @@ public class Minion : MonoBehaviour
         foreach (Effect e in current_effects)
             minion_stats = e.Apply(minion_stats);
 
-        print(minion_stats.movement_speed);
 	}
 	private void Move()
 	{
@@ -118,8 +118,8 @@ public class Minion : MonoBehaviour
         {
             Minion other = go.GetComponent<Minion>();
 
-            // Ignore self
-            if (other == this)
+            // Ignore if on same team
+            if (other.minion_stats.allied == minion_stats.allied)
                 continue;
 
             // Ignore already dead Minions
@@ -136,12 +136,19 @@ public class Minion : MonoBehaviour
     private void Attack(Minion other)
 	{
         if (_attack_cooldown <= 0f)
-		{
+        {
             EventManager.RaiseAttackAnimEvent(this);
-            EventManager.RaiseMinionAttackEvent(this, other);
 
             if (minion_stats.applied_effect)
-                EventManager.RaiseEffectAppliedEvent(minion_stats.applied_effect, other);
+			{
+                if (minion_stats.AOE)
+                    EventManager.RaiseAreaEffectAppliedEvent(minion_stats.applied_effect, other.transform.position, minion_stats.AOE_range);
+                else
+                    EventManager.RaiseEffectAppliedEvent(minion_stats.applied_effect, other);
+            }
+
+            EventManager.RaiseMinionAttackEvent(this, other);
+
 
             other.minion_stats.health -= minion_stats.damage;
             _attack_cooldown += BASE_ATTACK_SPEED / minion_stats.attack_speed;
@@ -151,7 +158,15 @@ public class Minion : MonoBehaviour
     #region Events
     private void OnEffectApplied(Effect eff, Minion target)
     {
-        if (target == this)
+        bool hasEffect = false;
+        foreach (Effect e in current_effects)
+            if (e.GetID() == eff.GetID())
+            {
+                hasEffect = true;
+                break;
+            }
+
+        if (target == this && !hasEffect)
             current_effects.Add(eff);
     }
 
@@ -161,11 +176,24 @@ public class Minion : MonoBehaviour
             current_effects.Remove(eff);
     }
 
-    #endregion
+    private void OnAreaEffectApplied(Effect eff, Vector3 center, float radius)
+	{
+        if ((transform.position - center).magnitude < radius)
+            EventManager.RaiseEffectAppliedEvent(eff, this);
+	}
+
+	private void OnDestroy()
+	{
+        EventManager.OnEffectApplied -= OnEffectApplied;
+        EventManager.OnEffectExpired -= OnEffectExpired;
+        EventManager.OnAreaEffectApplied -= OnAreaEffectApplied;
+    }
+
+	#endregion
 
 
-    #region Gizmos
-    private void OnDrawGizmosSelected()
+	#region Gizmos
+	private void OnDrawGizmosSelected()
 	{
         if (debug)
             Gizmos.DrawWireSphere(transform.position, movement_precision);

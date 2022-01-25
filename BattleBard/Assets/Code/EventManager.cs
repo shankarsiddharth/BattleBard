@@ -32,7 +32,7 @@ public static class EventManager
 	public static event EffectApplied OnEffectApplied;
 	public static void RaiseEffectAppliedEvent(Effect eff, Minion target)
 	{
-		OnEffectApplied?.Invoke(eff, target);
+		OnEffectApplied?.Invoke(Object.Instantiate(eff), target);
 	}
 
 	public delegate void EffectExpired(Effect eff);

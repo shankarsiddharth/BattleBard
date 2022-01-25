@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,11 +16,14 @@ public class Lane : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        EventManager.OnMinionDeath += OnMinionDeath;
     }
 
-    public Minion GetFurthestMinion()
+	public Minion GetFurthestMinion()
 	{
+        if (allied_minions.Count == 0)
+            return null;
+
         Minion furthest = allied_minions[0];
         foreach (Minion m in allied_minions)
 		{
@@ -31,8 +35,17 @@ public class Lane : MonoBehaviour
 	}
 
 
-	#region Gizmos
-	private void OnDrawGizmos()
+    private void OnMinionDeath(Minion m)
+    {
+        if (allied_minions.Contains(m))
+            allied_minions.Remove(m);
+
+        if (enemy_minions.Contains(m))
+            enemy_minions.Remove(m);
+    }
+
+    #region Gizmos
+    private void OnDrawGizmos()
 	{
         Gizmos.color = Color.green;
         foreach (Vector3 point in nav_points)

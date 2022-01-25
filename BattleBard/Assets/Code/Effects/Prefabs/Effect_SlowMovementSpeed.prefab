@@ -45,4 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   persistent: 1
   duration: -1
-  MovementSpeedSlowAmount: 2
+  rawChange: -2
+  scalarChange: 1
