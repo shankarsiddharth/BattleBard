@@ -17,6 +17,7 @@ public class Lane : MonoBehaviour
     void Start()
     {
         EventManager.OnMinionDeath += OnMinionDeath;
+        EventManager.OnLaneComboComplete += OnLaneComboComplete;
     }
 
     // Get the minion closest to the end of this lane.
@@ -58,6 +59,20 @@ public class Lane : MonoBehaviour
 
         if (enemy_minions.Contains(m))
             enemy_minions.Remove(m);
+    }
+    private void OnLaneComboComplete(Effect eff, Lane lane, bool affectsAllies, bool affectsEnemies)
+    {
+        if (lane != this)
+            return;
+
+        if (affectsAllies)
+            foreach (Minion m in allied_minions)
+                EventManager.RaiseEffectAppliedEvent(eff, m);
+
+        if (affectsEnemies)
+            foreach (Minion m in enemy_minions)
+                EventManager.RaiseEffectAppliedEvent(eff, m);
+
     }
 
     #region Gizmos
