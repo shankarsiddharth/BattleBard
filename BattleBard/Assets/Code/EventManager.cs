@@ -49,6 +49,14 @@ public static class EventManager
 	{
 		OnZoneEffectExpired?.Invoke(eff, m);
 	}
+
+	// A combo has just been hit and the current lane is now being effected
+	public delegate void LaneComboComplete(Effect eff, Lane lane, bool affectsAllies, bool affectsEnemies);
+	public static event LaneComboComplete OnLaneComboComplete;
+	public static void RaiseLaneComboComplete(Effect eff, Lane lane, bool affectsAllies, bool affectsEnemies)
+    {
+		OnLaneComboComplete?.Invoke(eff, lane, affectsAllies, affectsEnemies);
+    }
 	#endregion
 
 	#region Minions
@@ -73,5 +81,22 @@ public static class EventManager
 	{
 		OnLaneSpawnEvent?.Invoke(waveCount);
 	}
+	#endregion
+
+	#region Camera
+	// Forces the camera to move to a lane. When the camera moves, fires CameraMovedEvent
+	public delegate void ForceCameraMoveEvent(int lane);
+	public static event ForceCameraMoveEvent OnForceCameraMovement;
+	public static void RaiseForceCameraMovement(int lane) {
+		OnForceCameraMovement?.Invoke(lane);
+	}
+
+	// After the camera has begun moving to a lane
+	public delegate void CameraMovedEvent(int lane);
+	public static event CameraMovedEvent OnCameraMove;
+	public static void RaiseCameraMovedEvent(int lane)
+    {
+		OnCameraMove?.Invoke(lane);
+    }
 	#endregion
 }

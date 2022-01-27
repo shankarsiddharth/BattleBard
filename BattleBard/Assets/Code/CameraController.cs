@@ -6,6 +6,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public List<Lane> lanes;
+    public LaneManager lane_manager;
     public Lane cur_lane;
 
     [Header("Config")]
@@ -22,6 +23,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         EventManager.OnMinionDeath += OnMinionDeath;
+        EventManager.OnForceCameraMovement += OnForceCameraMove;
     }
 
     // Update is called once per frame
@@ -52,4 +54,10 @@ public class CameraController : MonoBehaviour
             _following_delay = 0f;
         }
 	}
+    void OnForceCameraMove(int lane)
+    {
+        cur_lane = lane_manager.lanes[lane%lane_manager.lanes.Count];
+        _following = null;
+        EventManager.RaiseCameraMovedEvent(lane);
+    }
 }
