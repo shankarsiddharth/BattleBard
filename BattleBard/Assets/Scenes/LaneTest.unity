@@ -1000,6 +1000,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 170311204}
     - target: {fileID: 1356065754023679269, guid: 3f4edbdf6202fa141badab13c8645e99, type: 3}
+      propertyPath: lane_manager
+      value: 
+      objectReference: {fileID: 25431151}
+    - target: {fileID: 1356065754023679269, guid: 3f4edbdf6202fa141badab13c8645e99, type: 3}
       propertyPath: lanes.Array.data[0]
       value: 
       objectReference: {fileID: 170311204}
