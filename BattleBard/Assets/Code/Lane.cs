@@ -34,6 +34,10 @@ public class Lane : MonoBehaviour
         return furthest;
 	}
 
+    public Vector3 GetLaneCheckpoint(int index)
+	{
+        return transform.position + nav_points[index];
+	}
 
     private void OnMinionDeath(Minion m)
     {
@@ -50,7 +54,7 @@ public class Lane : MonoBehaviour
         Gizmos.color = Color.green;
         foreach (Vector3 point in nav_points)
         {
-            Gizmos.DrawWireSphere(point, 0.1f);
+            Gizmos.DrawWireSphere(transform.position + point, 0.1f);
             Gizmos.color = Color.white;
         }
 	}
@@ -58,7 +62,7 @@ public class Lane : MonoBehaviour
 	{
 		for (int i=0; i<nav_points.Count-1; i++)
 		{
-            Gizmos.DrawLine(nav_points[i], nav_points[i+1]);
+            Gizmos.DrawLine(transform.position + nav_points[i], transform.position + nav_points[i+1]);
 		}
 	}
     #endregion

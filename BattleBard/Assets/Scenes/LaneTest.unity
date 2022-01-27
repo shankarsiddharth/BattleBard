@@ -279,12 +279,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nav_points:
-  - {x: 4.43, y: -1.21, z: -4.59}
-  - {x: 2.6, y: -1.21, z: -3.46}
-  - {x: 1.85, y: -1.21, z: -0.46}
-  - {x: -1.77, y: -1.21, z: 0.48}
-  - {x: -2.73, y: -1.21, z: 2.62}
-  - {x: -4.72, y: -1.21, z: 4.1}
+  - {x: 4.43, y: 0, z: -4.59}
+  - {x: 2.6, y: 0, z: -3.46}
+  - {x: 1.85, y: 0, z: -0.46}
+  - {x: -1.77, y: 0, z: 0.48}
+  - {x: -2.73, y: 0, z: 2.62}
+  - {x: -4.72, y: 0, z: 4.1}
   allied_minions:
   - {fileID: 163677551}
   enemy_minions: []
@@ -296,7 +296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170311203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.71, z: 0}
+  m_LocalPosition: {x: 0, y: -1.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
