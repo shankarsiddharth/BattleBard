@@ -9,9 +9,9 @@ public class Lane : MonoBehaviour
     public List<Vector3> nav_points;
 
     [HideInInspector]
-    public List<Minion> allied_minions;
+    public List<Minion> allied_minions = new List<Minion>();
     [HideInInspector] 
-    public List<Minion> enemy_minions;
+    public List<Minion> enemy_minions = new List<Minion>();
 
     // Start is called before the first frame update
     void Start()
