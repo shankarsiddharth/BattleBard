@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a195d28f9cfa7cd41b5cfa857073ca81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lane_manager: {fileID: 0}
+  lane_manager: {fileID: 25431151}
   valid_combos:
   - {fileID: 11400000, guid: 7555fe840d2a9c84d9d941905e975dae, type: 2}
   - {fileID: 11400000, guid: 383ee4aca6b34a542a1c54265433352d, type: 2}
