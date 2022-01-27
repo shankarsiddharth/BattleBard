@@ -401,6 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a195d28f9cfa7cd41b5cfa857073ca81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lane_manager: {fileID: 0}
   valid_combos:
   - {fileID: 11400000, guid: 7555fe840d2a9c84d9d941905e975dae, type: 2}
   - {fileID: 11400000, guid: 383ee4aca6b34a542a1c54265433352d, type: 2}
@@ -408,7 +409,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fe40131c049763e488372db703388ac5, type: 2}
   - {fileID: 11400000, guid: 626ca7fe05b453641b27282ccd295616, type: 2}
   - {fileID: 11400000, guid: 9cc2ea58b8a720f4cb4f6d2772efac47, type: 2}
-  keypad: 00000000000000000000
+  drumsHit: 
 --- !u!114 &1778927582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 184709abb969391408b52b74484818a1, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -433,7 +434,143 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1778927581}
+        m_TargetAssemblyTypeName: ComboManager, Assembly-CSharp
+        m_MethodName: LeftThigh
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0abeef33-0f28-4e0e-bbb7-b92bff1fb6d8
+    m_ActionName: Player/LeftThigh[/Keyboard/numpad1]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1778927581}
+        m_TargetAssemblyTypeName: ComboManager, Assembly-CSharp
+        m_MethodName: RightThigh
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8f77aea7-51d6-4c69-bea8-d2b2bd50be41
+    m_ActionName: Player/RightThigh[/Keyboard/numpad3]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1778927581}
+        m_TargetAssemblyTypeName: ComboManager, Assembly-CSharp
+        m_MethodName: Stomach
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 21f4bffb-a0a8-4177-832d-90e15bf68bc2
+    m_ActionName: Player/Stomach[/Keyboard/numpad5]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1778927581}
+        m_TargetAssemblyTypeName: ComboManager, Assembly-CSharp
+        m_MethodName: RightShoulder
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a70956c8-9af7-417b-a38f-f22ed1262a71
+    m_ActionName: Player/RightShoulder[/Keyboard/numpad9]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1778927581}
+        m_TargetAssemblyTypeName: ComboManager, Assembly-CSharp
+        m_MethodName: LeftShoulder
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4cb1f906-ee7c-41c6-ab02-abfb71908b3b
+    m_ActionName: Player/LeftShoulder[/Keyboard/numpad7]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1778927581}
+        m_TargetAssemblyTypeName: ComboManager, Assembly-CSharp
+        m_MethodName: Pedal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c1d6df3d-d4e6-4ed5-9908-24528c23a21b
+    m_ActionName: Player/Pedal[/Keyboard/numpad0]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bc9fbafd-8ba3-4860-84b7-07dd9a611a90
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a53fa1f7-7b36-42f9-83b4-92757afe59ac
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2fa8237c-1c7e-44ac-9a38-0c217725b134
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e3ab5fd6-7a66-4448-b419-1706df69de29
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3830d26a-a23c-40ed-8044-f5aba3f83ffe
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9903e8ba-1866-4965-9dc6-0669f1107b40
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 42dd6589-baeb-4a9c-b82a-1f7f15bea1bd
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c0248f4d-149d-42ee-91cf-3225a45f6566
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1a53b2da-b2e3-4255-b6cf-94c7438951da
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fdb7827c-7f9e-4f8b-abcc-4b287b49aebe
+    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
