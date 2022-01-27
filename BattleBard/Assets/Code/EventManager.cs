@@ -42,6 +42,13 @@ public static class EventManager
 		OnEffectExpired?.Invoke(eff);
 	}
 
+	// A minion has left a persistent zone effect
+	public delegate void ZoneEffectExpired(Effect eff, Minion m);
+	public static event ZoneEffectExpired OnZoneEffectExpired;
+	public static void RaiseZoneEffectExpired(Effect eff, Minion m)
+	{
+		OnZoneEffectExpired?.Invoke(eff, m);
+	}
 	#endregion
 
 	#region Minions
@@ -56,6 +63,15 @@ public static class EventManager
 	public static event MinionDeathEvent OnMinionDeath;
 	public static void RaiseMinionDeathEvent(Minion m) {
 		OnMinionDeath?.Invoke(m);
+	}
+	#endregion
+
+	#region Lane Spawning
+	public delegate void LaneSpawnEvent(int waveCount);
+	public static event LaneSpawnEvent OnLaneSpawnEvent;
+	public static void RaiseLaneSpawnEvent(int waveCount)
+	{
+		OnLaneSpawnEvent?.Invoke(waveCount);
 	}
 	#endregion
 }

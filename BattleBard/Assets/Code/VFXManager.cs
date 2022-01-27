@@ -30,7 +30,6 @@ public class VFXManager : MonoBehaviour
 
 	private void OnMinionDeath(Minion m)
 	{
-		GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = m.transform.position + new Vector3(0, 2f, 0);
 	}
 
 	

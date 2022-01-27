@@ -36,18 +36,8 @@ public class Minion : MonoBehaviour
         EventManager.OnEffectApplied += OnEffectApplied;
         EventManager.OnEffectExpired += OnEffectExpired;
         EventManager.OnAreaEffectApplied += OnAreaEffectApplied;
-		#endregion
-
-		if (minion_stats.allied)
-        {
-            transform.position = cur_lane.nav_points[0];
-            pointIndex = 1;
-        }
-        else
-        {
-            transform.position = cur_lane.nav_points[cur_lane.nav_points.Count-1];
-            pointIndex = cur_lane.nav_points.Count - 2;
-        }
+        EventManager.OnZoneEffectExpired += OnZoneEffectExpired;
+        #endregion
 
         // Keep a copy around
         _default_stats = minion_stats;
@@ -173,7 +163,13 @@ public class Minion : MonoBehaviour
     private void OnEffectExpired(Effect eff)
     {
         if (current_effects.Contains(eff))
+        {
             current_effects.Remove(eff);
+
+            // Persistent effects don't expire on their own, so if this triggers, they need to be cleaned up since they're instantiated on a minion-by-minion basis)
+            if (eff.persistent)
+                Destroy(eff.gameObject);
+        }
     }
 
     private void OnAreaEffectApplied(Effect eff, Vector3 center, float radius)
@@ -182,11 +178,44 @@ public class Minion : MonoBehaviour
             EventManager.RaiseEffectAppliedEvent(eff, this);
 	}
 
+    private void OnZoneEffectExpired(Effect eff, Minion m)
+	{
+        if (m != this)
+            return;
+
+        Effect foundEffect = null;
+
+        foreach (Effect effect in current_effects)
+		{
+            if (eff.GetID() == effect.GetID())
+			{
+                foundEffect = effect;
+                break;
+			}
+		}
+
+        // Remove and cleanup the zone effect instance
+        if (foundEffect != null)
+        {
+            current_effects.Remove(foundEffect);
+            Destroy(foundEffect.gameObject);
+        }
+
+	}
+
 	private void OnDestroy()
 	{
         EventManager.OnEffectApplied -= OnEffectApplied;
         EventManager.OnEffectExpired -= OnEffectExpired;
         EventManager.OnAreaEffectApplied -= OnAreaEffectApplied;
+        EventManager.OnZoneEffectExpired -= OnZoneEffectExpired;
+
+        foreach (Effect effect in current_effects)
+		{
+            // If the effect hasn't cleaned itself yet, destroy it
+            if (effect != null)
+                Destroy(effect.gameObject);
+		}
     }
 
 	#endregion

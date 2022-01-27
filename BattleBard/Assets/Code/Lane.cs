@@ -8,7 +8,7 @@ public class Lane : MonoBehaviour
     [Tooltip("List of points along the lane's path. First point is green.")]
     public List<Vector3> nav_points;
 
-    //[HideInInspector]
+    [HideInInspector]
     public List<Minion> allied_minions;
     [HideInInspector] 
     public List<Minion> enemy_minions;
@@ -19,16 +19,24 @@ public class Lane : MonoBehaviour
         EventManager.OnMinionDeath += OnMinionDeath;
     }
 
+    // Get the minion closest to the end of this lane.
 	public Minion GetFurthestMinion()
 	{
         if (allied_minions.Count == 0)
             return null;
 
         Minion furthest = allied_minions[0];
+        float distance = Vector3.Distance(furthest.transform.position, nav_points[nav_points.Count-1]);
+
         foreach (Minion m in allied_minions)
 		{
-            if (m.transform.position.x > furthest.transform.position.x)
+            float newDist = Vector3.Distance(m.transform.position, nav_points[nav_points.Count - 1]);
+
+            if (newDist < distance)
+            {
                 furthest = m;
+                distance = newDist;
+            }
 		}
 
         return furthest;
@@ -37,6 +45,10 @@ public class Lane : MonoBehaviour
     public Vector3 GetLaneCheckpoint(int index)
 	{
         return transform.position + nav_points[index];
+	}
+    public int GetLaneCheckpointCount()
+	{
+        return nav_points.Count;
 	}
 
     private void OnMinionDeath(Minion m)
