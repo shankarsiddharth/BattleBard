@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public List<Lane> lanes;
     public LaneManager lane_manager;
     public Lane cur_lane;
 
