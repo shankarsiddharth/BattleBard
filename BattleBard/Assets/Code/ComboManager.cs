@@ -47,6 +47,10 @@ public class ComboManager : MonoBehaviour
             {
                 EventManager.RaiseLaneComboComplete(validCombo.effect, lane_manager.lanes[_cam_lane], validCombo.affectsAllies, validCombo.affectsEnemies);
                 print(validCombo);
+
+                char lastDrum = drumsHit[drumsHit.Count - 1];
+                drumsHit.Clear();
+                drumsHit.Add(lastDrum);
             }
         }
     }
