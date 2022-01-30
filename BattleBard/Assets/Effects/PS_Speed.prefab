@@ -3869,7 +3869,7 @@ ParticleSystem:
       emitProbability: 1
   LightsModule:
     enabled: 1
-    ratio: 1
+    ratio: 0.5
     light: {fileID: 8899545774428915685, guid: 59a792f56b3194e46b8423da8fc4a831, type: 3}
     randomDistribution: 1
     color: 1
@@ -4043,7 +4043,7 @@ ParticleSystem:
     textureMode: 0
     ribbonCount: 25
     shadowBias: 0.5
-    worldSpace: 0
+    worldSpace: 1
     dieWithParticles: 1
     sizeAffectsWidth: 1
     sizeAffectsLifetime: 0
