@@ -32,7 +32,7 @@ public static class EventManager
 	public static event EffectApplied OnEffectApplied;
 	public static void RaiseEffectAppliedEvent(Effect eff, Minion target)
 	{
-		OnEffectApplied?.Invoke(eff, target);
+		OnEffectApplied?.Invoke(Object.Instantiate(eff), target);
 	}
 
 	public delegate void EffectExpired(Effect eff);
@@ -42,6 +42,21 @@ public static class EventManager
 		OnEffectExpired?.Invoke(eff);
 	}
 
+	// A minion has left a persistent zone effect
+	public delegate void ZoneEffectExpired(Effect eff, Minion m);
+	public static event ZoneEffectExpired OnZoneEffectExpired;
+	public static void RaiseZoneEffectExpired(Effect eff, Minion m)
+	{
+		OnZoneEffectExpired?.Invoke(eff, m);
+	}
+
+	// A combo has just been hit and the current lane is now being effected
+	public delegate void LaneComboComplete(Effect eff, Lane lane, bool affectsAllies, bool affectsEnemies);
+	public static event LaneComboComplete OnLaneComboComplete;
+	public static void RaiseLaneComboComplete(Effect eff, Lane lane, bool affectsAllies, bool affectsEnemies)
+    {
+		OnLaneComboComplete?.Invoke(eff, lane, affectsAllies, affectsEnemies);
+    }
 	#endregion
 
 	#region Minions
@@ -57,5 +72,31 @@ public static class EventManager
 	public static void RaiseMinionDeathEvent(Minion m) {
 		OnMinionDeath?.Invoke(m);
 	}
+	#endregion
+
+	#region Lane Spawning
+	public delegate void LaneSpawnEvent(int waveCount);
+	public static event LaneSpawnEvent OnLaneSpawnEvent;
+	public static void RaiseLaneSpawnEvent(int waveCount)
+	{
+		OnLaneSpawnEvent?.Invoke(waveCount);
+	}
+	#endregion
+
+	#region Camera
+	// Forces the camera to move to a lane. When the camera moves, fires CameraMovedEvent
+	public delegate void ForceCameraMoveEvent(int lane);
+	public static event ForceCameraMoveEvent OnForceCameraMovement;
+	public static void RaiseForceCameraMovement(int lane) {
+		OnForceCameraMovement?.Invoke(lane);
+	}
+
+	// After the camera has begun moving to a lane
+	public delegate void CameraMovedEvent(int lane);
+	public static event CameraMovedEvent OnCameraMove;
+	public static void RaiseCameraMovedEvent(int lane)
+    {
+		OnCameraMove?.Invoke(lane);
+    }
 	#endregion
 }

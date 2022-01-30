@@ -35,18 +35,9 @@ public class Minion : MonoBehaviour
         #region Events
         EventManager.OnEffectApplied += OnEffectApplied;
         EventManager.OnEffectExpired += OnEffectExpired;
-		#endregion
-
-		if (minion_stats.allied)
-        {
-            transform.position = cur_lane.nav_points[0];
-            pointIndex = 1;
-        }
-        else
-        {
-            transform.position = cur_lane.nav_points[cur_lane.nav_points.Count-1];
-            pointIndex = cur_lane.nav_points.Count - 2;
-        }
+        EventManager.OnAreaEffectApplied += OnAreaEffectApplied;
+        EventManager.OnZoneEffectExpired += OnZoneEffectExpired;
+        #endregion
 
         // Keep a copy around
         _default_stats = minion_stats;
@@ -62,7 +53,7 @@ public class Minion : MonoBehaviour
         bool valid = true;
 
         Minion m = FindTargetInRange();
-        if (m && valid)
+        if (m != null && valid)
 		{
             Attack(m);
             valid = false;
@@ -90,14 +81,13 @@ public class Minion : MonoBehaviour
         foreach (Effect e in current_effects)
             minion_stats = e.Apply(minion_stats);
 
-        print(minion_stats.movement_speed);
 	}
 	private void Move()
 	{
-        transform.position += (cur_lane.nav_points[pointIndex] - transform.position).normalized * minion_stats.movement_speed * Time.deltaTime;
+        transform.position += (cur_lane.GetLaneCheckpoint(pointIndex) - transform.position).normalized * minion_stats.movement_speed * Time.deltaTime;
 
         // If the minion is close enough, start moving towards the next point.
-        if ((transform.position - cur_lane.nav_points[pointIndex]).magnitude < movement_precision)
+        if ((transform.position - cur_lane.GetLaneCheckpoint(pointIndex)).magnitude < movement_precision)
         {
             if (minion_stats.allied)
             {
@@ -118,8 +108,8 @@ public class Minion : MonoBehaviour
         {
             Minion other = go.GetComponent<Minion>();
 
-            // Ignore self
-            if (other == this)
+            // Ignore if on same team
+            if (other.minion_stats.allied == minion_stats.allied)
                 continue;
 
             // Ignore already dead Minions
@@ -136,12 +126,19 @@ public class Minion : MonoBehaviour
     private void Attack(Minion other)
 	{
         if (_attack_cooldown <= 0f)
-		{
+        {
             EventManager.RaiseAttackAnimEvent(this);
-            EventManager.RaiseMinionAttackEvent(this, other);
 
             if (minion_stats.applied_effect)
-                EventManager.RaiseEffectAppliedEvent(minion_stats.applied_effect, other);
+			{
+                if (minion_stats.AOE)
+                    EventManager.RaiseAreaEffectAppliedEvent(minion_stats.applied_effect, other.transform.position, minion_stats.AOE_range);
+                else
+                    EventManager.RaiseEffectAppliedEvent(minion_stats.applied_effect, other);
+            }
+
+            EventManager.RaiseMinionAttackEvent(this, other);
+
 
             other.minion_stats.health -= minion_stats.damage;
             _attack_cooldown += BASE_ATTACK_SPEED / minion_stats.attack_speed;
@@ -151,21 +148,81 @@ public class Minion : MonoBehaviour
     #region Events
     private void OnEffectApplied(Effect eff, Minion target)
     {
-        if (target == this)
+        bool hasEffect = false;
+        foreach (Effect e in current_effects)
+            if (e.GetID() == eff.GetID())
+            {
+                hasEffect = true;
+                break;
+            }
+
+        if (target == this && !hasEffect)
             current_effects.Add(eff);
     }
 
     private void OnEffectExpired(Effect eff)
     {
         if (current_effects.Contains(eff))
+        {
             current_effects.Remove(eff);
+
+            // Persistent effects don't expire on their own, so if this triggers, they need to be cleaned up since they're instantiated on a minion-by-minion basis)
+            if (eff.persistent)
+                Destroy(eff.gameObject);
+        }
     }
 
-    #endregion
+    private void OnAreaEffectApplied(Effect eff, Vector3 center, float radius)
+	{
+        if ((transform.position - center).magnitude < radius)
+            EventManager.RaiseEffectAppliedEvent(eff, this);
+	}
+
+    private void OnZoneEffectExpired(Effect eff, Minion m)
+	{
+        if (m != this)
+            return;
+
+        Effect foundEffect = null;
+
+        foreach (Effect effect in current_effects)
+		{
+            if (eff.GetID() == effect.GetID())
+			{
+                foundEffect = effect;
+                break;
+			}
+		}
+
+        // Remove and cleanup the zone effect instance
+        if (foundEffect != null)
+        {
+            current_effects.Remove(foundEffect);
+            Destroy(foundEffect.gameObject);
+        }
+
+	}
+
+	private void OnDestroy()
+	{
+        EventManager.OnEffectApplied -= OnEffectApplied;
+        EventManager.OnEffectExpired -= OnEffectExpired;
+        EventManager.OnAreaEffectApplied -= OnAreaEffectApplied;
+        EventManager.OnZoneEffectExpired -= OnZoneEffectExpired;
+
+        foreach (Effect effect in current_effects)
+		{
+            // If the effect hasn't cleaned itself yet, destroy it
+            if (effect != null)
+                Destroy(effect.gameObject);
+		}
+    }
+
+	#endregion
 
 
-    #region Gizmos
-    private void OnDrawGizmosSelected()
+	#region Gizmos
+	private void OnDrawGizmosSelected()
 	{
         if (debug)
             Gizmos.DrawWireSphere(transform.position, movement_precision);

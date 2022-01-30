@@ -4,11 +4,23 @@ using UnityEngine;
 
 public abstract class Effect : MonoBehaviour
 {
-
 	public bool persistent;
 	public float duration;
 
+	public static int ID { get; private set; }
+
 	protected float _cur_duration;
+	protected static int last_id = 0;
+
+	private static void Start()
+	{
+		ID = last_id++;
+	}
+
+	public int GetID()
+	{
+		return ID;
+	}
 
 	private void Update()
 	{
