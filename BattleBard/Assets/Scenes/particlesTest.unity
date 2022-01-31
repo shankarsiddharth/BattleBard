@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1481.7754, g: 1835.8867, b: 2430.4492, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -995,7 +995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8325765078648700576, guid: 9e479a91b3026f84fa70c7972b48f79c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.8
+      value: -10.11
       objectReference: {fileID: 0}
     - target: {fileID: 8325765078648700576, guid: 9e479a91b3026f84fa70c7972b48f79c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1040,6 +1040,14 @@ PrefabInstance:
     - target: {fileID: 8325765078648700577, guid: 9e479a91b3026f84fa70c7972b48f79c, type: 3}
       propertyPath: LightsModule.maxLights
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325765078648700577, guid: 9e479a91b3026f84fa70c7972b48f79c, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325765078648700577, guid: 9e479a91b3026f84fa70c7972b48f79c, type: 3}
+      propertyPath: TrailModule.lifetime.scalar
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 8325765078648700577, guid: 9e479a91b3026f84fa70c7972b48f79c, type: 3}
       propertyPath: InheritVelocityModule.m_Mode

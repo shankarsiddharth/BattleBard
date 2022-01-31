@@ -661,7 +661,7 @@ ParticleSystem:
     enabled: 1
     type: 8
     angle: 0
-    length: 5
+    length: 2.5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 0.32
     donutRadius: 0.2
@@ -983,20 +983,29 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 3.9606874
-          outSlope: 3.9606874
+          inSlope: 6.4083343
+          outSlope: 6.4083343
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
-          outWeight: 0.05459057
+          outWeight: 0.042134743
+        - serializedVersion: 3
+          time: 0.4629398
+          value: 0.968709
+          inSlope: 0.010775328
+          outSlope: 0.010775328
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
           value: 0
-          inSlope: -2.970515
-          outSlope: -2.970515
+          inSlope: -0.5130681
+          outSlope: -0.5130681
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.109181166
+          inWeight: 0.15738557
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -2839,16 +2848,16 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 1
+    frequency: 0.5
     damping: 1
-    octaves: 1
-    octaveMultiplier: 0.5
+    octaves: 2
+    octaveMultiplier: 1
     octaveScale: 2
     quality: 1
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.125
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
