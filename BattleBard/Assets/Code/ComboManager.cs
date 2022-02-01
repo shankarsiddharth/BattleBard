@@ -17,7 +17,7 @@ public class ComboManager : MonoBehaviour
         EventManager.OnCameraMove += OnCameraMove;
     }
 
-    void CheckCombo()
+	void CheckCombo()
     {
         foreach (Combo validCombo in valid_combos)
         {

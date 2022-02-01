@@ -125,6 +125,9 @@ MonoBehaviour:
     movement_speed: 1.5
   cur_lane: {fileID: 0}
   pointIndex: 0
+  barks:
+  - {fileID: 8300000, guid: efbc27afda1a8c941a52c73ba525f956, type: 3}
+  - {fileID: 8300000, guid: eb1f80b091206324e862c24d2296ccd2, type: 3}
   movement_precision: 0.1
   debug: 1
   current_effects: []
