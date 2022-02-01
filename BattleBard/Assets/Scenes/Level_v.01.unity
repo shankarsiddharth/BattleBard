@@ -566,13 +566,15 @@ MonoBehaviour:
   - {fileID: 269325209}
   waves:
   - EnemyMinions:
-    - {fileID: 1133461591712987327, guid: 8966bb559fbe9b340ae08c71a1692ea7, type: 3}
-    - {fileID: 1133461591712987327, guid: 8966bb559fbe9b340ae08c71a1692ea7, type: 3}
-    - {fileID: 1133461591712987327, guid: 8966bb559fbe9b340ae08c71a1692ea7, type: 3}
+    - minion: {fileID: 1133461591712987327, guid: 8966bb559fbe9b340ae08c71a1692ea7, type: 3}
+      count: 1
+    - minion: {fileID: 1133461591712987327, guid: 26aeb64368224274db87c522e26c0092, type: 3}
+      count: 1
     AlliedMinions:
-    - {fileID: 6006351915996750556, guid: 5a307ab2f28cb5349bb46ce5bc4670c4, type: 3}
-    - {fileID: 6006351915996750556, guid: 5a307ab2f28cb5349bb46ce5bc4670c4, type: 3}
-    - {fileID: 6006351915996750556, guid: 5a307ab2f28cb5349bb46ce5bc4670c4, type: 3}
+    - minion: {fileID: 6006351915996750556, guid: 5a307ab2f28cb5349bb46ce5bc4670c4, type: 3}
+      count: 1
+    - minion: {fileID: 6006351915996750556, guid: f4d813ebaf2f60549a60bbc1c41ec8f5, type: 3}
+      count: 1
   wave_interval: 5
 --- !u!4 &182601185
 Transform:
