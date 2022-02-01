@@ -28,10 +28,13 @@ using System.Threading;
 public class InputManager : MonoBehaviour
 {
 
+    public List<AudioClip> audioClips;
+
     private static List<bool[]> _buttons;
     private static SerialPort _serialPort;
     private static Thread _readThread;
     private static bool _continue;
+
 
     // Start is called before the first frame update
     void Start()
@@ -70,7 +73,14 @@ public class InputManager : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             if (buttonCalls[i])
-                print(i + " pressed.");
+            {
+                if (i == 5)
+                    continue;
+
+                AudioSource sound = gameObject.AddComponent<AudioSource>();
+                sound.clip = audioClips[i];
+                sound.Play();
+            }
         }
     }
 
@@ -83,7 +93,7 @@ public class InputManager : MonoBehaviour
                 string[] vals = _serialPort.ReadLine().Split(',');
 
                 // sometimes we get garbage, throw it away
-                if (vals.Length < 6)
+                if (vals.Length != 6)
                     continue;
 
                 bool[] buttonVals = new bool[6];

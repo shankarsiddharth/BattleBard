@@ -567,14 +567,14 @@ MonoBehaviour:
   waves:
   - EnemyMinions:
     - minion: {fileID: 1133461591712987327, guid: 8966bb559fbe9b340ae08c71a1692ea7, type: 3}
-      count: 1
+      count: 3
     - minion: {fileID: 1133461591712987327, guid: 26aeb64368224274db87c522e26c0092, type: 3}
-      count: 1
+      count: 0
     AlliedMinions:
     - minion: {fileID: 6006351915996750556, guid: 5a307ab2f28cb5349bb46ce5bc4670c4, type: 3}
-      count: 1
+      count: 3
     - minion: {fileID: 6006351915996750556, guid: f4d813ebaf2f60549a60bbc1c41ec8f5, type: 3}
-      count: 1
+      count: 0
   wave_interval: 5
 --- !u!4 &182601185
 Transform:
@@ -2904,6 +2904,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf25c11674d88854aaaa26b3191968b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 2bdd9565f676126458ecfd88e0bccd7a, type: 3}
+  - {fileID: 8300000, guid: 5601a6099d50e8042aec36d4cb383693, type: 3}
+  - {fileID: 8300000, guid: b690e11bbba2bdf4cb0ec9bd9202937e, type: 3}
+  - {fileID: 8300000, guid: f39ef50d90839ec4aad2ade8e27c1c9d, type: 3}
+  - {fileID: 8300000, guid: d7c55e11e7d985d47bc857b5e88de02a, type: 3}
 --- !u!1 &950589209
 GameObject:
   m_ObjectHideFlags: 0
