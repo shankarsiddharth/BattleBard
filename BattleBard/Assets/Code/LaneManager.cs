@@ -4,10 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
+struct WaveMinion
+{
+    public Minion minion;
+    public int count;
+}
+
+[Serializable]
 struct Wave
 {
-    public List<Minion> EnemyMinions;
-    public List<Minion> AlliedMinions;
+    public List<WaveMinion> EnemyMinions;
+    public List<WaveMinion> AlliedMinions;
 }
 
 public class LaneManager : MonoBehaviour
@@ -41,21 +48,27 @@ public class LaneManager : MonoBehaviour
             // Get the current wave, wrapping if needed
             Wave current_wave = waves[_cur_wave % waves.Count];
 
-            foreach (Minion m in current_wave.EnemyMinions) {
-                Minion min = Instantiate(m);
-                min.transform.position = lane.GetLaneCheckpoint(lane.GetLaneCheckpointCount() - 1);
-                min.cur_lane = lane;
-                min.pointIndex = lane.GetLaneCheckpointCount() - 2;
-                lane.enemy_minions.Add(min);
+            foreach (WaveMinion wm in current_wave.EnemyMinions) {
+                for (int i = 0; i < wm.count; i++)
+                {
+                    Minion min = Instantiate(wm.minion);
+                    min.transform.position = lane.GetLaneCheckpoint(lane.GetLaneCheckpointCount() - 1);
+                    min.cur_lane = lane;
+                    min.pointIndex = lane.GetLaneCheckpointCount() - 2;
+                    lane.enemy_minions.Add(min);
+                }
             }
 
-            foreach (Minion m in current_wave.AlliedMinions)
-			{
-                Minion min = Instantiate(m);
-                min.transform.position = lane.GetLaneCheckpoint(0);
-                min.cur_lane = lane;
-                min.pointIndex = 1;
-                lane.allied_minions.Add(min);
+            foreach (WaveMinion wm in current_wave.AlliedMinions)
+            {
+                for (int i = 0; i < wm.count; i++)
+                {
+                    Minion min = Instantiate(wm.minion);
+                    min.transform.position = lane.GetLaneCheckpoint(0);
+                    min.cur_lane = lane;
+                    min.pointIndex = 1;
+                    lane.allied_minions.Add(min);
+                }
             }
 
             EventManager.RaiseLaneSpawnEvent(_cur_wave);
