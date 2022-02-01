@@ -8,29 +8,40 @@ public class Minion : MonoBehaviour
 {
     public static readonly float BASE_ATTACK_SPEED = 5f;
 
-    public Stats minion_stats;
+	#region Public Members
+
+	public Stats minion_stats;
     [Header("Movement")]
     [Tooltip("Should be assigned to this Minion's current lane. Will eventually be set by Lane Manager (or equivilent)")]
     public Lane cur_lane;
     [HideInInspector]
     public int pointIndex;
 
+    [Header("Barks")]
+    public List<AudioClip> barks;
+
     [Header("Config")]
     [Tooltip("How precise minions need to be to the nav_point before they're considered to be moving to the next.")]
     public float movement_precision;
 
-    #if UNITY_EDITOR
-    public bool debug;
-    #endif
-
     [Header("Effects")]
     public List<Effect> current_effects;
 
-    private float _attack_cooldown;
-    private Stats _default_stats;
+    [HideInInspector]
+    public AudioSource audioSource;
 
-    // Start is called before the first frame update
-    void Start()
+#if UNITY_EDITOR
+    public bool debug;
+#endif
+	#endregion
+
+	#region Private Members
+	private float _attack_cooldown;
+    private Stats _default_stats;
+	#endregion
+
+	// Start is called before the first frame update
+	void Start()
     {
         #region Events
         EventManager.OnEffectApplied += OnEffectApplied;
@@ -41,6 +52,10 @@ public class Minion : MonoBehaviour
 
         // Keep a copy around
         _default_stats = minion_stats;
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.maxDistance = 4f;
+        audioSource.spatialBlend = 1.0f;
     }
 
 	private void Update()
@@ -219,7 +234,6 @@ public class Minion : MonoBehaviour
     }
 
 	#endregion
-
 
 	#region Gizmos
 	private void OnDrawGizmosSelected()

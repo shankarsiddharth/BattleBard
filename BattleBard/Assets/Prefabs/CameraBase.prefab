@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02f16710bf79b34faf8b15badc02d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lanes:
-  - {fileID: 0}
+  lane_manager: {fileID: 0}
   cur_lane: {fileID: 0}
   switch_duration: 0.75
+  max_bark_cooldown: 10
 --- !u!1 &1356065754649234483
 GameObject:
   m_ObjectHideFlags: 0
