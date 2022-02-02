@@ -108,7 +108,8 @@ public static class EventManager
 		RightShoulder,
 		Stomach,
 		LeftThigh,
-		RightThigh
+		RightThigh,
+		Pedal
 	}
 	public delegate void DrumPlayed(Drum drum);
 	public static event DrumPlayed OnDrumPlayed;

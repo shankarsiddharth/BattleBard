@@ -27,6 +27,7 @@ public class CameraController : MonoBehaviour
     {
         EventManager.OnMinionDeath += OnMinionDeath;
         EventManager.OnForceCameraMovement += OnForceCameraMove;
+        EventManager.OnDrumPlayed += OnDrumPlayed;
 
         Camera.main.TryGetComponent(out AudioListener _audioListener);
         if (_audioListener == null)
@@ -42,7 +43,7 @@ public class CameraController : MonoBehaviour
         AudioUpdate();
     }
 
-    // Probably should be moved outside of Camera someday...
+    // Probably should be moved outside of Camera someday... Probably into a coroutine
     void AudioUpdate()
 	{
         _audio_delay -= Time.deltaTime;
@@ -107,4 +108,11 @@ public class CameraController : MonoBehaviour
         _following = null;
         EventManager.RaiseCameraMovedEvent(lane);
     }
+    void OnDrumPlayed(EventManager.Drum drum)
+	{
+        if (drum == EventManager.Drum.Pedal)
+		{
+            EventManager.RaiseForceCameraMovement(lane_manager.lanes.IndexOf(cur_lane)+1);
+		}
+	}
 }
