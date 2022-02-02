@@ -93,7 +93,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6006351915996750557}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -127,7 +127,7 @@ MonoBehaviour:
   pointIndex: 0
   barks:
   - {fileID: 8300000, guid: a764c2bd3e4562244bdfaea32a6e5e6c, type: 3}
-  movement_precision: 0.1
+  movement_precision: 0.35
   current_effects: []
   audioSource: {fileID: 0}
   debug: 1

@@ -93,7 +93,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6006351915996750557}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -128,7 +128,7 @@ MonoBehaviour:
   barks:
   - {fileID: 8300000, guid: 8393838568084044591e9d1a04f14d0e, type: 3}
   - {fileID: 8300000, guid: f5af0529596075f4c94ca038a3794383, type: 3}
-  movement_precision: 0.1
+  movement_precision: 0.35
   current_effects: []
   audioSource: {fileID: 0}
   debug: 1
@@ -202,10 +202,6 @@ PrefabInstance:
     - target: {fileID: 2284910293916156258, guid: dd6d44e76e9bfb24fa3e3cd46d16fa0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4659621847711284606, guid: dd6d44e76e9bfb24fa3e3cd46d16fa0b, type: 3}
-      propertyPath: m_Constraints
-      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd6d44e76e9bfb24fa3e3cd46d16fa0b, type: 3}

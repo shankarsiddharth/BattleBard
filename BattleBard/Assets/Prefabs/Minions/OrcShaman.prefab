@@ -223,7 +223,7 @@ MonoBehaviour:
   barks:
   - {fileID: 8300000, guid: d46db8082ff97ee40981af051f6c2f93, type: 3}
   - {fileID: 8300000, guid: b3a1186aafb51314dba1e731541b90be, type: 3}
-  movement_precision: 0.1
+  movement_precision: 0.35
   current_effects: []
   audioSource: {fileID: 0}
   debug: 0

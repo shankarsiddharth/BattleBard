@@ -378,7 +378,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 80d3dbc4d3e13734ca494104af88809b, type: 3}
   - {fileID: 8300000, guid: b3a4b38fd6a3a3a49bd8420b87d2c6f0, type: 3}
   - {fileID: 8300000, guid: 50dbb25207228e34fa21bfd6cd75cd23, type: 3}
-  movement_precision: 0.1
+  movement_precision: 0.35
   current_effects: []
   audioSource: {fileID: 0}
   debug: 0

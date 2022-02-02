@@ -29,6 +29,9 @@ public class LaneManager : MonoBehaviour
     [Tooltip("The time between wave spawns.")]
     public float wave_interval = 30f;
 
+    [Tooltip("The maximum random offset Minions have when spawning.")]
+    public float max_offset = 2.0f;
+
     private float _time_since_wave = 0;
     private int _cur_wave = 0;
 
@@ -67,8 +70,8 @@ public class LaneManager : MonoBehaviour
                     Minion min = Instantiate(wm.minion);
 
                     // Generate a random starting position for them
-                    float xoffset = Random.Range(0, 2f);
-                    float zoffset = Random.Range(0, 2f);
+                    float xoffset = Random.Range(-max_offset/2, max_offset/2);
+                    float zoffset = Random.Range(-max_offset/2, max_offset/2);
 
                     min.transform.position = lane.GetLaneCheckpoint(0) + new Vector3(xoffset, 0, zoffset);
                     min.cur_lane = lane;

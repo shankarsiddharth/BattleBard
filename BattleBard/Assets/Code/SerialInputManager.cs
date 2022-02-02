@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.IO.Ports;
 using System.Threading;
+using System.IO;
 
 
 
@@ -16,7 +17,7 @@ using System.Threading;
     Button 3 | Left thigh       | [Pin 6]
     Button 4 | Right thigh      | [Pin 5]
     Button 5 | Pedal            | [Pin 4]
- */                               
+ */
 
 
 public class SerialInputManager : MonoBehaviour
@@ -40,17 +41,26 @@ public class SerialInputManager : MonoBehaviour
         
         _buttons = new List<bool[]>();
 
-        // Set up our Serial port to the arduino
-        _serialPort = new SerialPort();
-        _serialPort.PortName = "COM3";
-        _serialPort.BaudRate = 9600;
-        _serialPort.Open();
-
         // Print available ports (in case it didn't work the first time...
         foreach (string s in SerialPort.GetPortNames())
         {
             print("\t" + s);
         }
+
+        // Set up our Serial port to the arduino
+        _serialPort = new SerialPort();
+        _serialPort.PortName = "COM3";
+        _serialPort.BaudRate = 9600;
+        try
+        {
+            _serialPort.Open();
+        }
+        catch (IOException)
+		{
+            Debug.LogWarning("No " + _serialPort.PortName + " port available.");
+            return;
+		}
+        
 
         _continue = true;
 
@@ -139,7 +149,9 @@ public class SerialInputManager : MonoBehaviour
     void OnDestroy()
     {
         _continue = false;
-        _readThread.Join();
-        _serialPort.Close();
+        _readThread?.Join();
+
+        if (_serialPort.IsOpen)
+            _serialPort.Close();
     }
 }
