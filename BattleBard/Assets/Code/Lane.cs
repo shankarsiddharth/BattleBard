@@ -65,13 +65,15 @@ public class Lane : MonoBehaviour
         if (lane != this)
             return;
 
+        print(eff);
+
         if (affectsAllies)
             foreach (Minion m in allied_minions)
-                EventManager.RaiseEffectAppliedEvent(eff, m);
+                EventManager.RaiseEffectAppliedEvent(Instantiate(eff), m);
 
         if (affectsEnemies)
             foreach (Minion m in enemy_minions)
-                EventManager.RaiseEffectAppliedEvent(eff, m);
+                EventManager.RaiseEffectAppliedEvent(Instantiate(eff), m);
 
     }
 

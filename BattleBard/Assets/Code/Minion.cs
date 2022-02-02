@@ -163,6 +163,11 @@ public class Minion : MonoBehaviour
     #region Events
     private void OnEffectApplied(Effect eff, Minion target)
     {
+        if (this != target)
+            return;
+
+        print("Applied!");
+
         bool hasEffect = false;
         foreach (Effect e in current_effects)
             if (e.GetID() == eff.GetID())
