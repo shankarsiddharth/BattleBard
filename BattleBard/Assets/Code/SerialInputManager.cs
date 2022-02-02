@@ -25,7 +25,7 @@ using System.Threading;
 
 
 
-public class InputManager : MonoBehaviour
+public class SerialInputManager : MonoBehaviour
 {
 
     public List<AudioClip> audioClips;
