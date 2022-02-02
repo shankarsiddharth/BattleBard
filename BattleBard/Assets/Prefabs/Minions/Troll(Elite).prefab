@@ -219,7 +219,7 @@ MonoBehaviour:
   pointIndex: 0
   barks:
   - {fileID: 8300000, guid: 4884ca79f56e210468c06388d016dbc6, type: 3}
-  movement_precision: 0.1
+  movement_precision: 0.35
   current_effects: []
   audioSource: {fileID: 0}
   debug: 0
@@ -237,7 +237,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &1257611834435897432
 GameObject:

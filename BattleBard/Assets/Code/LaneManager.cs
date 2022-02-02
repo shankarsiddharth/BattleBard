@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [Serializable]
 struct WaveMinion
@@ -27,6 +28,9 @@ public class LaneManager : MonoBehaviour
 
     [Tooltip("The time between wave spawns.")]
     public float wave_interval = 30f;
+
+    [Tooltip("The maximum random offset Minions have when spawning.")]
+    public float max_offset = 2.0f;
 
     private float _time_since_wave = 0;
     private int _cur_wave = 0;
@@ -64,7 +68,12 @@ public class LaneManager : MonoBehaviour
                 for (int i = 0; i < wm.count; i++)
                 {
                     Minion min = Instantiate(wm.minion);
-                    min.transform.position = lane.GetLaneCheckpoint(0);
+
+                    // Generate a random starting position for them
+                    float xoffset = Random.Range(-max_offset/2, max_offset/2);
+                    float zoffset = Random.Range(-max_offset/2, max_offset/2);
+
+                    min.transform.position = lane.GetLaneCheckpoint(0) + new Vector3(xoffset, 0, zoffset);
                     min.cur_lane = lane;
                     min.pointIndex = 1;
                     lane.allied_minions.Add(min);

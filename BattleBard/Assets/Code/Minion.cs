@@ -98,7 +98,9 @@ public class Minion : MonoBehaviour
 
 	}
 	private void Move()
-	{
+    {
+        // TODO: Only update their goal when they've arrived at their current goal
+        transform.LookAt(cur_lane.GetLaneCheckpoint(pointIndex));
         transform.position += (cur_lane.GetLaneCheckpoint(pointIndex) - transform.position).normalized * minion_stats.movement_speed * Time.deltaTime;
 
         // If the minion is close enough, start moving towards the next point.
@@ -165,8 +167,6 @@ public class Minion : MonoBehaviour
     {
         if (this != target)
             return;
-
-        print("Applied!");
 
         bool hasEffect = false;
         foreach (Effect e in current_effects)
