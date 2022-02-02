@@ -7,6 +7,9 @@ public abstract class Effect : MonoBehaviour
 	public bool persistent;
 	public float duration;
 
+	[Tooltip("The prefab of the visual effect.")]
+	public GameObject VFX;
+
 	public static int ID { get; private set; }
 
 	protected float _cur_duration;

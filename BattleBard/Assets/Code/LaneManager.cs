@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [Serializable]
 struct WaveMinion
@@ -64,7 +65,12 @@ public class LaneManager : MonoBehaviour
                 for (int i = 0; i < wm.count; i++)
                 {
                     Minion min = Instantiate(wm.minion);
-                    min.transform.position = lane.GetLaneCheckpoint(0);
+
+                    // Generate a random starting position for them
+                    float xoffset = Random.Range(0, 2f);
+                    float zoffset = Random.Range(0, 2f);
+
+                    min.transform.position = lane.GetLaneCheckpoint(0) + new Vector3(xoffset, 0, zoffset);
                     min.cur_lane = lane;
                     min.pointIndex = 1;
                     lane.allied_minions.Add(min);

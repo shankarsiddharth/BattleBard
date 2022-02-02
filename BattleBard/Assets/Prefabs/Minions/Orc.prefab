@@ -193,8 +193,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b3a4b38fd6a3a3a49bd8420b87d2c6f0, type: 3}
   - {fileID: 8300000, guid: 50dbb25207228e34fa21bfd6cd75cd23, type: 3}
   movement_precision: 0.1
-  debug: 0
   current_effects: []
+  audioSource: {fileID: 0}
+  debug: 0
 --- !u!54 &6757174873723843821
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -209,7 +210,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &1762271220593872471
 GameObject:
@@ -624,7 +625,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4247021584524541949}
-  m_LocalRotation: {x: 0, y: 0.92387956, z: 0, w: 0.38268343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children:
@@ -632,7 +633,7 @@ Transform:
   - {fileID: 4629761207766733846}
   m_Father: {fileID: 1133461591712987323}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 135, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4120627246676314089
 Animator:
   serializedVersion: 3

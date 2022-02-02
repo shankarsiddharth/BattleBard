@@ -98,7 +98,8 @@ public class Minion : MonoBehaviour
 
 	}
 	private void Move()
-	{
+    {
+        transform.LookAt(cur_lane.GetLaneCheckpoint(pointIndex));
         transform.position += (cur_lane.GetLaneCheckpoint(pointIndex) - transform.position).normalized * minion_stats.movement_speed * Time.deltaTime;
 
         // If the minion is close enough, start moving towards the next point.
