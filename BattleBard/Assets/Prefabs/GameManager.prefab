@@ -1,0 +1,311 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3534176208046708031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3534176208046708000}
+  m_Layer: 0
+  m_Name: DrumSoundSlave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3534176208046708000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534176208046708031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3534176208870869677}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3534176208870869673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3534176208870869677}
+  - component: {fileID: 3534176208870869676}
+  - component: {fileID: 3534176208870869675}
+  - component: {fileID: 3534176208870869674}
+  - component: {fileID: 3534176208870869678}
+  - component: {fileID: 3534176208870869679}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3534176208870869677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534176208870869673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3534176208046708000}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3534176208870869676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534176208870869673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d94190b6c03064cbd2c6e08b69615d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3534176208870869675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534176208870869673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a195d28f9cfa7cd41b5cfa857073ca81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lane_manager: {fileID: 0}
+  valid_combos:
+  - {fileID: 11400000, guid: 7555fe840d2a9c84d9d941905e975dae, type: 2}
+  - {fileID: 11400000, guid: 383ee4aca6b34a542a1c54265433352d, type: 2}
+  - {fileID: 11400000, guid: 288b1ab32559cf44fb04955b148044b0, type: 2}
+  - {fileID: 11400000, guid: fe40131c049763e488372db703388ac5, type: 2}
+  - {fileID: 11400000, guid: 626ca7fe05b453641b27282ccd295616, type: 2}
+  - {fileID: 11400000, guid: 9cc2ea58b8a720f4cb4f6d2772efac47, type: 2}
+  drumsHit: 
+--- !u!114 &3534176208870869674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534176208870869673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 184709abb969391408b52b74484818a1, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3534176208870869675}
+        m_TargetAssemblyTypeName: ComboManager, Assembly-CSharp
+        m_MethodName: LeftThigh
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0abeef33-0f28-4e0e-bbb7-b92bff1fb6d8
+    m_ActionName: Player/LeftThigh[/Keyboard/numpad1]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3534176208870869675}
+        m_TargetAssemblyTypeName: ComboManager, Assembly-CSharp
+        m_MethodName: RightThigh
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8f77aea7-51d6-4c69-bea8-d2b2bd50be41
+    m_ActionName: Player/RightThigh[/Keyboard/numpad3]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3534176208870869675}
+        m_TargetAssemblyTypeName: ComboManager, Assembly-CSharp
+        m_MethodName: Stomach
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 21f4bffb-a0a8-4177-832d-90e15bf68bc2
+    m_ActionName: Player/Stomach[/Keyboard/numpad5]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3534176208870869675}
+        m_TargetAssemblyTypeName: ComboManager, Assembly-CSharp
+        m_MethodName: RightShoulder
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a70956c8-9af7-417b-a38f-f22ed1262a71
+    m_ActionName: Player/RightShoulder[/Keyboard/numpad9]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3534176208870869675}
+        m_TargetAssemblyTypeName: ComboManager, Assembly-CSharp
+        m_MethodName: LeftShoulder
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4cb1f906-ee7c-41c6-ab02-abfb71908b3b
+    m_ActionName: Player/LeftShoulder[/Keyboard/numpad7]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3534176208870869675}
+        m_TargetAssemblyTypeName: ComboManager, Assembly-CSharp
+        m_MethodName: Pedal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c1d6df3d-d4e6-4ed5-9908-24528c23a21b
+    m_ActionName: Player/Pedal[/Keyboard/numpad0]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bc9fbafd-8ba3-4860-84b7-07dd9a611a90
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a53fa1f7-7b36-42f9-83b4-92757afe59ac
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2fa8237c-1c7e-44ac-9a38-0c217725b134
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e3ab5fd6-7a66-4448-b419-1706df69de29
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3830d26a-a23c-40ed-8044-f5aba3f83ffe
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9903e8ba-1866-4965-9dc6-0669f1107b40
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 42dd6589-baeb-4a9c-b82a-1f7f15bea1bd
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c0248f4d-149d-42ee-91cf-3225a45f6566
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1a53b2da-b2e3-4255-b6cf-94c7438951da
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fdb7827c-7f9e-4f8b-abcc-4b287b49aebe
+    m_ActionName: UI/TrackedDeviceOrientation
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &3534176208870869678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534176208870869673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf25c11674d88854aaaa26b3191968b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 2bdd9565f676126458ecfd88e0bccd7a, type: 3}
+  - {fileID: 8300000, guid: 5601a6099d50e8042aec36d4cb383693, type: 3}
+  - {fileID: 8300000, guid: b690e11bbba2bdf4cb0ec9bd9202937e, type: 3}
+  - {fileID: 8300000, guid: f39ef50d90839ec4aad2ade8e27c1c9d, type: 3}
+  - {fileID: 8300000, guid: d7c55e11e7d985d47bc857b5e88de02a, type: 3}
+--- !u!114 &3534176208870869679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534176208870869673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d65f8c8b1c7fd4c902545f47c7db8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drumSoundSlave: {fileID: 3534176208046708031}
+  bgSound: {fileID: 8300000, guid: 7b31e001e5416314d94d96d3fd9ba12d, type: 3}
+  bgSoundVolume: 0.15
+  drumsSFX:
+  - drum: 0
+    audio: {fileID: 8300000, guid: 2bdd9565f676126458ecfd88e0bccd7a, type: 3}
+  - drum: 1
+    audio: {fileID: 8300000, guid: 5601a6099d50e8042aec36d4cb383693, type: 3}
+  - drum: 2
+    audio: {fileID: 8300000, guid: b690e11bbba2bdf4cb0ec9bd9202937e, type: 3}
+  - drum: 3
+    audio: {fileID: 8300000, guid: f39ef50d90839ec4aad2ade8e27c1c9d, type: 3}
+  - drum: 4
+    audio: {fileID: 8300000, guid: d7c55e11e7d985d47bc857b5e88de02a, type: 3}

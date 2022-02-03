@@ -10,11 +10,8 @@ public class ComboManager : MonoBehaviour
     public List<Combo> valid_combos;
     public List<char> drumsHit;
 
-    private int _cam_lane = 0;
-
     private void Start()
     {
-        EventManager.OnCameraMove += OnCameraMove;
         EventManager.OnDrumPlayed += OnDrumPlayed;
     }
 
@@ -50,6 +47,7 @@ public class ComboManager : MonoBehaviour
 				Lane curLane = Camera.main.GetComponentInParent<CameraController>().cur_lane;
                 EventManager.RaiseLaneComboComplete(validCombo.effect, curLane, validCombo.affectsAllies, validCombo.affectsEnemies);
 
+                // Carry over the last drum played
                 char lastDrum = drumsHit[0];
                 drumsHit.Clear();
                 drumsHit.Add(lastDrum);
@@ -97,11 +95,6 @@ public class ComboManager : MonoBehaviour
     #endregion
 
     #region Events
-    private void OnCameraMove(int lane)
-    {
-        _cam_lane = lane;
-    }
-
     private void OnDrumPlayed(EventManager.Drum drum)
 	{
 		switch (drum)
