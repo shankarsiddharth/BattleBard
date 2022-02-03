@@ -2734,6 +2734,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd94808e40d45e448338a4a7663556a, type: 3}
+--- !u!1 &159071503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159071504}
+  m_Layer: 0
+  m_Name: DrumSoundSlave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &159071504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159071503}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945513117}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &161076019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15454,6 +15484,7 @@ GameObject:
   - component: {fileID: 945513115}
   - component: {fileID: 945513114}
   - component: {fileID: 945513118}
+  - component: {fileID: 945513119}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -15670,7 +15701,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 159071504}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15692,6 +15724,32 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b690e11bbba2bdf4cb0ec9bd9202937e, type: 3}
   - {fileID: 8300000, guid: f39ef50d90839ec4aad2ade8e27c1c9d, type: 3}
   - {fileID: 8300000, guid: d7c55e11e7d985d47bc857b5e88de02a, type: 3}
+--- !u!114 &945513119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945513113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d65f8c8b1c7fd4c902545f47c7db8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drumSoundSlave: {fileID: 159071503}
+  bgSound: {fileID: 8300000, guid: 7b31e001e5416314d94d96d3fd9ba12d, type: 3}
+  bgSoundVolume: 0.15
+  drumsSFX:
+  - drum: 0
+    audio: {fileID: 8300000, guid: 2bdd9565f676126458ecfd88e0bccd7a, type: 3}
+  - drum: 1
+    audio: {fileID: 8300000, guid: 5601a6099d50e8042aec36d4cb383693, type: 3}
+  - drum: 2
+    audio: {fileID: 8300000, guid: b690e11bbba2bdf4cb0ec9bd9202937e, type: 3}
+  - drum: 3
+    audio: {fileID: 8300000, guid: f39ef50d90839ec4aad2ade8e27c1c9d, type: 3}
+  - drum: 4
+    audio: {fileID: 8300000, guid: d7c55e11e7d985d47bc857b5e88de02a, type: 3}
 --- !u!1001 &946770718
 PrefabInstance:
   m_ObjectHideFlags: 0
