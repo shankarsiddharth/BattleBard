@@ -238,13 +238,15 @@ public class Minion : MonoBehaviour
 		}
     }
 
-	#endregion
+    #endregion
 
-	#region Gizmos
-	private void OnDrawGizmosSelected()
-	{
+    #region Gizmos
+#if UNITY_EDITOR
+    private void OnDrawGizmosSelected()
+    {
         if (debug)
             Gizmos.DrawWireSphere(transform.position, movement_precision);
-	}
+    }
+#endif
     #endregion
 }
