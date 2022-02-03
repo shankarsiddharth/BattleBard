@@ -9,6 +9,8 @@ public abstract class Effect : MonoBehaviour
 
 	[Tooltip("The prefab of the visual effect.")]
 	public GameObject VFX;
+	[HideInInspector]
+	public GameObject effectInstance;
 
 	public static int ID { get; private set; }
 
@@ -39,4 +41,10 @@ public abstract class Effect : MonoBehaviour
 	}
 
 	abstract public Stats Apply(Stats minion_stats);
+
+	private void OnDestroy()
+	{
+		if (VFX != null)
+			Destroy(effectInstance);
+	}
 }

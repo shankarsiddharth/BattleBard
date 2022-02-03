@@ -56,7 +56,12 @@ public class LaneManager : MonoBehaviour
                 for (int i = 0; i < wm.count; i++)
                 {
                     Minion min = Instantiate(wm.minion);
-                    min.transform.position = lane.GetLaneCheckpoint(lane.GetLaneCheckpointCount() - 1);
+
+                    // Generate a random starting position for them
+                    float xoffset = Random.Range(-max_offset / 2, max_offset / 2);
+                    float zoffset = Random.Range(-max_offset / 2, max_offset / 2);
+
+                    min.transform.position = lane.GetLaneCheckpoint(lane.GetLaneCheckpointCount() - 1) + new Vector3(xoffset, 0, zoffset);
                     min.cur_lane = lane;
                     min.pointIndex = lane.GetLaneCheckpointCount() - 2;
                     lane.enemy_minions.Add(min);
@@ -70,8 +75,8 @@ public class LaneManager : MonoBehaviour
                     Minion min = Instantiate(wm.minion);
 
                     // Generate a random starting position for them
-                    float xoffset = Random.Range(-max_offset/2, max_offset/2);
-                    float zoffset = Random.Range(-max_offset/2, max_offset/2);
+                    float xoffset = Random.Range(-max_offset / 2, max_offset / 2);
+                    float zoffset = Random.Range(-max_offset / 2, max_offset / 2);
 
                     min.transform.position = lane.GetLaneCheckpoint(0) + new Vector3(xoffset, 0, zoffset);
                     min.cur_lane = lane;

@@ -20,7 +20,8 @@ public class VFXManager : MonoBehaviour
 
 	private void OnEffectApplied(Effect eff, Minion target)
 	{
-		// ...
+		if (eff.VFX != null)
+			eff.effectInstance = Instantiate(eff.VFX, target.transform.GetChild(0), false);
 	}
 
 	private void OnMinionAttack(Minion m)

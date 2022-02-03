@@ -224,7 +224,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d46db8082ff97ee40981af051f6c2f93, type: 3}
   - {fileID: 8300000, guid: b3a1186aafb51314dba1e731541b90be, type: 3}
   movement_precision: 0.35
-  current_effects: []
+  current_effects:
+  - {fileID: 5242635361360242716, guid: 80f4fc1e5f932354db23449d5be339e4, type: 3}
   audioSource: {fileID: 0}
   debug: 0
 --- !u!54 &6757174873723843821
@@ -561,6 +562,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3877115118806701005}
   - component: {fileID: 2541086733436466327}
+  - component: {fileID: 8919417220092553418}
+  - component: {fileID: 3818754913596483504}
+  - component: {fileID: 711562338300545310}
   m_Layer: 0
   m_Name: T_Pose_Orc
   m_TagString: Untagged
@@ -603,6 +607,48 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &8919417220092553418
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006161284052529613}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.0052224
+  m_Height: 0.03640556
+  m_Direction: 1
+  m_Center: {x: -0.00039053784, y: 0.016408531, z: 0.0005404234}
+--- !u!54 &3818754913596483504
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006161284052529613}
+  serializedVersion: 2
+  m_Mass: 8
+  m_Drag: 0
+  m_AngularDrag: 50
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &711562338300545310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006161284052529613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38bfe5d0b6faddd4f9c95adc777bc3f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6156073008579713960
 GameObject:
   m_ObjectHideFlags: 0

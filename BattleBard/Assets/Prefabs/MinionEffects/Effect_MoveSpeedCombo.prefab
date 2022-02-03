@@ -45,5 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   persistent: 0
   duration: 30
+  VFX: {fileID: 8325765078648700583, guid: 9e479a91b3026f84fa70c7972b48f79c, type: 3}
+  effectInstance: {fileID: 0}
   rawChange: 0
-  scalarChange: 1.5
+  scalarChange: 3
