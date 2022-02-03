@@ -97,6 +97,7 @@ public class ComboManager : MonoBehaviour
     #region Events
     private void OnDrumPlayed(EventManager.Drum drum)
 	{
+        print(drum);
 		switch (drum)
 		{
 			case EventManager.Drum.LeftShoulder:

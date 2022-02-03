@@ -26,6 +26,7 @@ public class SerialInputManager : MonoBehaviour
     public List<AudioClip> audioClips;
 
     private static List<bool[]> _buttons;
+    private static bool[] buttonStatus;
     private static SerialPort _serialPort;
     private static Thread _readThread;
     private static bool _continue;
@@ -36,9 +37,12 @@ public class SerialInputManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //buttonMutex = new Mutex();
+
         // Initialize with all false
         _lastButtonState = new bool[6];
-        
+        buttonStatus = new bool[6];
+
         _buttons = new List<bool[]>();
 
         // Print available ports (in case it didn't work the first time...
@@ -71,28 +75,18 @@ public class SerialInputManager : MonoBehaviour
 
     private void Update()
     {
-        bool[] buttonCalls = new bool[6];
-
-        foreach (bool[] b in _buttons)
-        {
-            for (int i = 0; i < 6; i++)
-            {
-                buttonCalls[i] = buttonCalls[i] || b[i];
-            }
-        }
-        _buttons.Clear();
-
 
         for (int i = 0; i < 6; i++)
         {
             // If the button is held
-            if (buttonCalls[i])
+            if (buttonStatus[i])
             {
                 // And it wasn't activated last frame
-                if (buttonCalls[i] != _lastButtonState[i])
+                if (buttonStatus[i] != _lastButtonState[i])
                 {
                     // Raise the event
                     EventManager.RaiseDrumPlayed((EventManager.Drum) i);
+                    _lastButtonState[i] = true;
 
                     /* Do we want to be explicit? If so, replace the above with this.
                     switch (i)
@@ -119,6 +113,10 @@ public class SerialInputManager : MonoBehaviour
                     */
                 }
             }
+            else
+            {
+                _lastButtonState[i] = false;
+            }
         }
     }
 
@@ -140,7 +138,7 @@ public class SerialInputManager : MonoBehaviour
                 {
                     buttonVals[i] = vals[i] == "0";
                 }
-                _buttons.Add(buttonVals);
+                buttonStatus = buttonVals;
             }
             catch (TimeoutException) { }
         }
