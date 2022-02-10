@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   persistent: 0
-  duration: 0.1
-  percentageHealed: 0.3
+  duration: 1.5
+  VFX: {fileID: 8164456911610438848, guid: b7e9f7694af7835429040c399b4d5726, type: 3}
+  effectInstance: {fileID: 0}
+  percentageHealed: 3

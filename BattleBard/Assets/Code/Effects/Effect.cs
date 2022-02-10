@@ -7,6 +7,11 @@ public abstract class Effect : MonoBehaviour
 	public bool persistent;
 	public float duration;
 
+	[Tooltip("The prefab of the visual effect.")]
+	public GameObject VFX;
+	[HideInInspector]
+	public GameObject effectInstance;
+
 	public static int ID { get; private set; }
 
 	protected float _cur_duration;
@@ -36,4 +41,10 @@ public abstract class Effect : MonoBehaviour
 	}
 
 	abstract public Stats Apply(Stats minion_stats);
+
+	private void OnDestroy()
+	{
+		if (VFX != null)
+			Destroy(effectInstance);
+	}
 }

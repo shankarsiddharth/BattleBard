@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3edf3dc80d621041b5e1a90c4c058b5, type: 3}
   m_Name: HealCombo
   m_EditorClassIdentifier: 
-  comboOrder: 3500320031003400
+  comboOrder: 3500310032003400
   effect: {fileID: 8208559073674416824, guid: c2b288ded4d38be4cac3a4854fdd04c4, type: 3}
+  affectsAllies: 1
+  affectsEnemies: 0

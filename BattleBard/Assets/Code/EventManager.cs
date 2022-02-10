@@ -54,9 +54,9 @@ public static class EventManager
 	public delegate void LaneComboComplete(Effect eff, Lane lane, bool affectsAllies, bool affectsEnemies);
 	public static event LaneComboComplete OnLaneComboComplete;
 	public static void RaiseLaneComboComplete(Effect eff, Lane lane, bool affectsAllies, bool affectsEnemies)
-    {
+	{
 		OnLaneComboComplete?.Invoke(eff, lane, affectsAllies, affectsEnemies);
-    }
+	}
 	#endregion
 
 	#region Minions
@@ -95,8 +95,29 @@ public static class EventManager
 	public delegate void CameraMovedEvent(int lane);
 	public static event CameraMovedEvent OnCameraMove;
 	public static void RaiseCameraMovedEvent(int lane)
-    {
+	{
 		OnCameraMove?.Invoke(lane);
-    }
+	}
+	#endregion
+
+	#region Drums
+
+	public enum Drum
+	{
+		LeftShoulder,
+		RightShoulder,
+		Stomach,
+		LeftThigh,
+		RightThigh,
+		Pedal
+	}
+	public delegate void DrumPlayed(Drum drum);
+	public static event DrumPlayed OnDrumPlayed;
+
+	public static void RaiseDrumPlayed(Drum drum)
+	{
+		OnDrumPlayed?.Invoke(drum);
+	}
+
 	#endregion
 }

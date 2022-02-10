@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboOrder: 310032003100320031003200310035003400
   effect: {fileID: 3569657119470314065, guid: acafa5ab16368eb43b80152955500bf7, type: 3}
+  affectsAllies: 1
+  affectsEnemies: 0

@@ -64,7 +64,7 @@
                 {
                     "name": "",
                     "id": "2796c0aa-c613-426d-8db8-e398da91a3ea",
-                    "path": "<Keyboard>/numpad1",
+                    "path": "<Keyboard>/numpad5",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -75,7 +75,7 @@
                 {
                     "name": "",
                     "id": "3ca3f22d-0900-4e4e-ba34-6122eb617c57",
-                    "path": "<Keyboard>/numpad3",
+                    "path": "<Keyboard>/numpad4",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -86,7 +86,7 @@
                 {
                     "name": "",
                     "id": "ad7b48ce-6192-4faf-b1a7-4082d738958f",
-                    "path": "<Keyboard>/numpad5",
+                    "path": "<Keyboard>/numpad3",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -97,7 +97,7 @@
                 {
                     "name": "",
                     "id": "e90b823b-b9d0-41df-80aa-c0b6030c3e00",
-                    "path": "<Keyboard>/numpad9",
+                    "path": "<Keyboard>/numpad2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -108,7 +108,7 @@
                 {
                     "name": "",
                     "id": "f3530d00-50ae-46b7-afa5-63b0684ca7f8",
-                    "path": "<Keyboard>/numpad7",
+                    "path": "<Keyboard>/numpad1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -119,6 +119,17 @@
                 {
                     "name": "",
                     "id": "fbc3c7ca-7833-41b4-b6b8-7795802a400e",
+                    "path": "<Keyboard>/numpad6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pedal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b94d7b61-22fa-443f-9dba-535d0b33e917",
                     "path": "<Keyboard>/numpad0",
                     "interactions": "",
                     "processors": "",
