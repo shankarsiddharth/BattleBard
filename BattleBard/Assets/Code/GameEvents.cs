@@ -84,4 +84,14 @@ public class GameEvents : MonoBehaviour
         onUnitSpawnedInLane(waveCount);
     }
     #endregion
+
+    #region Path Events
+    //Change action parameter to Path object after implementation
+    public event Action<int> onPathCompleted;
+
+    public void OnPathCompleted(int pathId)
+    {
+        onPathCompleted(pathId);
+    }
+    #endregion
 }
