@@ -1,4 +1,4 @@
-const int NUM_BUTTONS = 5;
+const int NUM_BUTTONS = 6;
 const int BUTTON_PIN_START = 4;
 
 int button_pins[NUM_BUTTONS];
@@ -25,6 +25,7 @@ void setup() {
   Serial.setTimeout(75);
 }
 
+// This code helps unity ensure it connects to the correct device
 void Handshake() {
   if(Serial.available() > 0) {
     String readData = Serial.readStringUntil("\n");
@@ -50,8 +51,9 @@ void PollInputs() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // Check for Unity Handshake
   Handshake();
+  // Check for button inputs
   PollInputs();
   delay(8);
 }
