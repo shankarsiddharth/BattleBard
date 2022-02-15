@@ -88,10 +88,16 @@ public class GameEvents : MonoBehaviour
     #region Path Events
     //Change action parameter to Path object after implementation
     public event Action<int> onPathCompleted;
+    public event Action<int> onPathStart;
 
     public void OnPathCompleted(int pathId)
     {
         onPathCompleted(pathId);
+    }
+
+    public void OnPathStart(int pathId)
+    {
+        onPathStart(pathId);
     }
     #endregion
 }
