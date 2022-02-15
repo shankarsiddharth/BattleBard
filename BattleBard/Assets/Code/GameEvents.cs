@@ -24,12 +24,12 @@ public class GameEvents : MonoBehaviour
     public event Action<int, int> onMinionAttackStarted;
     public event Action<int> onMinionDeath;
 
-    public void MinionAttackStarted(int attackerId, int otherId)
+    public void OnMinionAttackStarted(int attackerId, int otherId)
     {
         onMinionAttackStarted(attackerId, otherId);
     }
 
-    public void MinionDeath(int minionId)
+    public void OnMinionDeath(int minionId)
     {
         onMinionDeath(minionId);
     }
@@ -42,17 +42,17 @@ public class GameEvents : MonoBehaviour
     public event Action onEffectApplied;
     public event Action onEffectExpired;
 
-    public void AreaEffectApplied()
+    public void OnAreaEffectApplied()
     {
         onAreaEffectApplied();
     }
 
-    public void EffectApplied()
+    public void OnEffectApplied()
     {
         onEffectApplied();
     }
 
-    public void EffectExpired()
+    public void OnEffectExpired()
     {
         onEffectExpired();
     }
@@ -65,12 +65,12 @@ public class GameEvents : MonoBehaviour
     //Add parameters after implementations of effects and stuff
     public event Action onDrumComboCompleted;
 
-    public void DrumPlayed(int drumId)
+    public void OnDrumPlayed(int drumId)
     {
         onDrumPlayed(drumId);
     }
     
-    public void DrumComboCompleted()
+    public void OnDrumComboCompleted()
     {
         onDrumComboCompleted();
     }
@@ -82,6 +82,22 @@ public class GameEvents : MonoBehaviour
     public void UnitSpawnedInLane(int waveCount)
     {
         onUnitSpawnedInLane(waveCount);
+    }
+    #endregion
+
+    #region Path Events
+    //Change action parameter to Path object after implementation
+    public event Action<int> onPathCompleted;
+    public event Action<int> onPathStart;
+
+    public void OnPathCompleted(int pathId)
+    {
+        onPathCompleted(pathId);
+    }
+
+    public void OnPathStart(int pathId)
+    {
+        onPathStart(pathId);
     }
     #endregion
 }
