@@ -1,9 +1,9 @@
-const int NUM_BUTTONS = 5;
+const int NUM_BUTTONS = 6;
 const int BUTTON_PIN_START = 4;
 
 int button_pins[NUM_BUTTONS];
 boolean button_state[NUM_BUTTONS];
-boolean previous_button_state[NUM_BUTTONS];
+boolean prev_button_state[NUM_BUTTONS];
 
 void setup() {
   // put your setup code here, to run once:
@@ -13,7 +13,7 @@ void setup() {
     ; // wait for serial port to connect. Needed for native USB
   }
 
-  for(int index = 0; index < NUM_BUTTONS; i++){
+  for(int index = 0; index < NUM_BUTTONS; index++){
     button_pins[index] = index + BUTTON_PIN_START;
     pinMode(button_pins[index], INPUT_PULLUP);
     button_state[index] = 0;
@@ -25,10 +25,11 @@ void setup() {
   Serial.setTimeout(75);
 }
 
+// This code helps unity ensure it connects to the correct device
 void Handshake() {
   if(Serial.available() > 0) {
     String readData = Serial.readStringUntil("\n");
-    if(readData.length() > 0 && !ReadData.equalsIgnoreCase("\n")){
+    if(readData.length() > 0 && !readData.equalsIgnoreCase("\n")){
       if(readData.startsWith("UNITY_HANDSHAKE")){
         Serial.println("ARDUINO_HANDSHAKE");
       }
@@ -36,9 +37,10 @@ void Handshake() {
   }
 }
 
+
 void PollInputs() {
   for (int index = 0; index < NUM_BUTTONS; index++){
-    button_state[index] = digitalRead(button_pints[index]);
+    button_state[index] = digitalRead(button_pins[index]);
     if (button_state[index] != prev_button_state[index]){
       prev_button_state[index] = button_state[index];
       if(button_state[index] == LOW){
@@ -49,8 +51,9 @@ void PollInputs() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // Check for Unity Handshake
   Handshake();
+  // Check for button inputs
   PollInputs();
   delay(8);
 }
