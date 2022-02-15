@@ -60,12 +60,12 @@ public class GameEvents : MonoBehaviour
 
     #region Drum Events
     //Maybe change drum id to enum again after drum class implementation?
-    public event Action<int> onDrumPlayed;
+    public event Action<Drums> onDrumPlayed;
 
     //Add parameters after implementations of effects and stuff
     public event Action onDrumComboCompleted;
 
-    public void OnDrumPlayed(int drumId)
+    public void OnDrumPlayed(Drums drumId)
     {
         onDrumPlayed(drumId);
     }

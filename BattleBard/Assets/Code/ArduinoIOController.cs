@@ -59,6 +59,7 @@ public class ArduinoIOController : MonoBehaviour
                 }
 
                 Debug.Log("Recieved the following message from controller: " + readData);
+                GameEvents.Instance.OnDrumPlayed((Drums) int.Parse(readData));
                 int buttonPressed;
                 if(!int.TryParse(readData, out buttonPressed))
                 {
