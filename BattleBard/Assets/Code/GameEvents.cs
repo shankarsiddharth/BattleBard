@@ -100,4 +100,20 @@ public class GameEvents : MonoBehaviour
         onPathStart(pathId);
     }
     #endregion
+
+    #region Narrative Pieces
+    public event Action onNarrativePieceStart;
+    public event Action onNarrativePieceCompleted;
+    
+    public void OnNarrativePieceStart()
+    {
+        onNarrativePieceStart();
+    }
+    
+    public void OnNarrativePieceCompleted()
+    {
+        onNarrativePieceCompleted();
+    }
+
+    #endregion
 }
