@@ -6,7 +6,7 @@ using UnityEngine;
 public class Combo : ScriptableObject
 {
     public List<char> comboOrder;
-    public ComboEffect effect;
+    //public ComboEffect effect;
     public bool affectsAllies;
     public bool affectsEnemies;
 }

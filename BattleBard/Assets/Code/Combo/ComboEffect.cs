@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 public class ComboEffect : MonoBehaviour
 {
     [Tooltip("If this combo has a custom effect tick this.")]
@@ -56,3 +57,4 @@ public class ComboEffect : MonoBehaviour
     }
 
 }
+*/

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/*
 public class ComboManager : MonoBehaviour
 {
     public List<Combo> valid_combos;
@@ -119,3 +120,4 @@ public class ComboManager : MonoBehaviour
 	}
 	#endregion
 }
+*/ 
