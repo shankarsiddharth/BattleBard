@@ -5,20 +5,23 @@ using System;
 
 public class Metronome : MonoBehaviour
 {
+    private float noteAccuracy;
     public int BPM;
     private AudioSource metroSource;
     private float metroPosition;
     private float metroPositionInBeats;
-    private float dspMetroTime;
     private float secPerBeat;
 
     // Start is called before the first frame update
     void Start()
     {
         metroSource = GetComponent<AudioSource>();
-        dspMetroTime = (float)AudioSettings.dspTime;
         secPerBeat = 60f / BPM;
         metroSource.Play();
+        if (noteAccuracy == 0)
+        {
+            noteAccuracy = .5f;
+        }
     }
 
     // Update is called once per frame
@@ -47,17 +50,10 @@ public class Metronome : MonoBehaviour
     public double GetBeatOffset()
     {
         double dec = metroPositionInBeats - Math.Floor(metroPositionInBeats);
-        if(dec < .5f)
+        while(dec >= noteAccuracy)
         {
-            return dec;
+            dec -= noteAccuracy;
         }
-        else if(dec < 1f)
-        {
-            return 1 - dec;
-        }
-        else
-        {
-            return -1;
-        }
+        return dec;
     }
 }

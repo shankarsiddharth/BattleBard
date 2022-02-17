@@ -2,21 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class NoteEvaluator : MonoBehaviour
 {
+    static private Metronome metronome;
+    static public Text buttonDisplay;
+    static public Text gradeDisplay;
+    static public Text offsetDisplay;
+    [SerializeField]
+    static private float PerfectThreshold;
+    [SerializeField]
+    static private float GreatThreshold;
+    [SerializeField]
+    static private float GoodThreshold;
 
-    private Metronome metronome;
-    public Text buttonDisplay;
-    public Text gradeDisplay;
-    public Text offsetDisplay;
     // Start is called before the first frame update
     void Start()
     {
-        GameEvents.Instance.onDrumPlayed += EvaluateNote;
-        //buttonDisplay = GameObject.Find("Button Display").GetComponent<Text>();
-        //gradeDisplay = GameObject.Find("Grade Display").GetComponent<Text>();
-        //GameEvents.Instance.onDrumPlayed.AddListener(DrumPlayed);
+        //GameEvents.Instance.onDrumPlayed.AddListener(EvaluateNote);
         metronome = GetComponent<Metronome>();
     }
 
@@ -26,30 +30,60 @@ public class NoteEvaluator : MonoBehaviour
         
     }
 
-    void EvaluateNote(Drums drum)
-    {
-        buttonDisplay.text = drum.ToString();
+    static void EvaluateNote(Drums drum)
+    {        
         double beatOffset = metronome.GetBeatOffset();
-        offsetDisplay.text = beatOffset.ToString();
-        if(beatOffset < .05)
+        double absOffset = Math.Abs(beatOffset);
+
+        if(absOffset < PerfectThreshold)
         {
-            gradeDisplay.text = "PERFECT!";
-            gradeDisplay.color = new Color(0f, 1f, 0f);
+            ShowGrade(Grade.Perfect);
         }
-        else if(beatOffset < .075)
+        else if(absOffset < GreatThreshold)
         {
-            gradeDisplay.text = "GREAT!";
-            gradeDisplay.color = new Color(0f, 0f, 1f);
+            ShowGrade(Grade.Great);
         }
-        else if(beatOffset < .1)
+        else if(absOffset < GoodThreshold)
         {
-            gradeDisplay.text = "GOOD";
-            gradeDisplay.color = new Color(1f, 1f, 0f);
+            ShowGrade(Grade.Good);
         }
         else
         {
-            gradeDisplay.text = "Bad...";
-            gradeDisplay.color = new Color(1f, 0f, 0f);
+            ShowGrade(Grade.Bad);
+        }
+        ShowButton(drum);
+    }
+    
+    static void ShowButton(Drums drum)
+    {
+        if (buttonDisplay != null)
+        {
+            buttonDisplay.text = drum.ToString();
+        }
+    }
+    static void ShowGrade(Grade grade)
+    {
+        if (gradeDisplay != null)
+        {
+            switch (grade)
+            {
+                case Grade.Perfect:
+                    gradeDisplay.text = "PERFECT!";
+                    gradeDisplay.color = new Color(0f, 1f, 0f);
+                    break;
+                case Grade.Great:
+                    gradeDisplay.text = "GREAT!";
+                    gradeDisplay.color = new Color(0f, 0f, 1f);
+                    break;
+                case Grade.Good:
+                    gradeDisplay.text = "GOOD";
+                    gradeDisplay.color = new Color(1f, 1f, 0f);
+                    break;
+                case Grade.Bad:
+                    gradeDisplay.text = "Bad...";
+                    gradeDisplay.color = new Color(1f, 0f, 0f);
+                    break;
+            }
         }
     }
 }
