@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class GameEvents : MonoBehaviour
 {
@@ -21,98 +21,98 @@ public class GameEvents : MonoBehaviour
 
     #region Minion Events
     //Change types from int to Minion when class is implemented
-    public event Action<int, int> onMinionAttackStarted;
-    public event Action<int> onMinionDeath;
+    public UnityEvent<int, int> onMinionAttackStarted;
+    public UnityEvent<int> onMinionDeath;
 
     public void OnMinionAttackStarted(int attackerId, int otherId)
     {
-        onMinionAttackStarted(attackerId, otherId);
+        onMinionAttackStarted.Invoke(attackerId, otherId);
     }
 
     public void OnMinionDeath(int minionId)
     {
-        onMinionDeath(minionId);
+        onMinionDeath.Invoke(minionId);
     }
     #endregion
 
     #region Effect Events
 
     //Change types after dependant classes are implemented
-    public event Action onAreaEffectApplied;
-    public event Action onEffectApplied;
-    public event Action onEffectExpired;
+    public UnityEvent onAreaEffectApplied;
+    public UnityEvent onEffectApplied;
+    public UnityEvent onEffectExpired;
 
     public void OnAreaEffectApplied()
     {
-        onAreaEffectApplied();
+        onAreaEffectApplied.Invoke();
     }
 
     public void OnEffectApplied()
     {
-        onEffectApplied();
+        onEffectApplied.Invoke();
     }
 
     public void OnEffectExpired()
     {
-        onEffectExpired();
+        onEffectExpired.Invoke();
     }
     #endregion
 
     #region Drum Events
     //Maybe change drum id to enum again after drum class implementation?
-    public event Action<Drums> onDrumPlayed;
+    public UnityEvent<Drums> onDrumPlayed;
 
     //Add parameters after implementations of effects and stuff
-    public event Action onDrumComboCompleted;
+    public UnityEvent onDrumComboCompleted;
 
     public void OnDrumPlayed(Drums drumId)
     {
-        onDrumPlayed(drumId);
+        onDrumPlayed.Invoke(drumId);
     }
     
     public void OnDrumComboCompleted()
     {
-        onDrumComboCompleted();
+        onDrumComboCompleted.Invoke();
     }
     #endregion
 
     #region Lane Events
-    public event Action<int> onUnitSpawnedInLane;
+    public UnityEvent<int> onUnitSpawnedInLane;
 
     public void UnitSpawnedInLane(int waveCount)
     {
-        onUnitSpawnedInLane(waveCount);
+        onUnitSpawnedInLane.Invoke(waveCount);
     }
     #endregion
 
     #region Path Events
-    //Change action parameter to Path object after implementation
-    public event Action<int> onPathCompleted;
-    public event Action<int> onPathStart;
+    //Change Event parameter to Path object after implementation
+    public UnityEvent<int> onPathCompleted;
+    public UnityEvent<int> onPathStart;
 
     public void OnPathCompleted(int pathId)
     {
-        onPathCompleted(pathId);
+        onPathCompleted.Invoke(pathId);
     }
 
     public void OnPathStart(int pathId)
     {
-        onPathStart(pathId);
+        onPathStart.Invoke(pathId);
     }
     #endregion
 
     #region Narrative Pieces
-    public event Action onNarrativePieceStart;
-    public event Action onNarrativePieceCompleted;
+    public UnityEvent onNarrativePieceStart;
+    public UnityEvent onNarrativePieceCompleted;
     
     public void OnNarrativePieceStart()
     {
-        onNarrativePieceStart();
+        onNarrativePieceStart.Invoke();
     }
     
     public void OnNarrativePieceCompleted()
     {
-        onNarrativePieceCompleted();
+        onNarrativePieceCompleted.Invoke();
     }
 
     #endregion
