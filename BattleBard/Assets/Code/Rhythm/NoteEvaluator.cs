@@ -30,7 +30,7 @@ public class NoteEvaluator : MonoBehaviour
         
     }
 
-    static void EvaluateNote(Drums drum)
+    static void EvaluateNote(Note note)
     {        
         double beatOffset = metronome.GetBeatOffset();
         double absOffset = Math.Abs(beatOffset);
@@ -38,20 +38,24 @@ public class NoteEvaluator : MonoBehaviour
         if(absOffset < PerfectThreshold)
         {
             ShowGrade(Grade.Perfect);
+            note.grade = Grade.Perfect;
         }
         else if(absOffset < GreatThreshold)
         {
             ShowGrade(Grade.Great);
+            note.grade = Grade.Great;
         }
         else if(absOffset < GoodThreshold)
         {
             ShowGrade(Grade.Good);
+            note.grade = Grade.Good;
         }
         else
         {
             ShowGrade(Grade.Bad);
+            note.grade = Grade.Bad;
         }
-        ShowButton(drum);
+        ShowButton(note.notePlayed);
     }
     
     static void ShowButton(Drums drum)

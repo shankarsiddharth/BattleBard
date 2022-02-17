@@ -4,7 +4,7 @@ using UnityEngine;
 
 public struct Note
 {
-    Drums notePlayed;
-    Grade grade;
-    bool isCombo;
+    public Drums notePlayed;
+    public Grade grade;
+    public bool isCombo;
 }
