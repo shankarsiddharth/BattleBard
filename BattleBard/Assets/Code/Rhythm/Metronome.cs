@@ -5,7 +5,7 @@ using System;
 
 public class Metronome : MonoBehaviour
 {
-    public int BPM;
+    public static int BPM;
     private AudioSource metroSource;
     private float metroPosition;
     private float metroPositionInBeats;
