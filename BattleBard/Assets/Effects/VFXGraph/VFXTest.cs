@@ -2,29 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
+public enum VFXType
+{
+    Heal = 0,
+    Speed = 1,
+    Death = 2,
+    DefenceBoost = 3,
+    AttackBoost = 4,
+    TakingDamage = 5,
+}
 
 public class VFXTest : MonoBehaviour
 {
-    public VisualEffect vfxTest;
-    public float lifetime = 1;
+    public VisualEffectAsset[] vfxGraphs;
+    public VFXType vfxType;
+    public bool isOn = false;
 
-    // Start is called before the first frame update
-    void Start()
+    VisualEffect[] vfxObjs;
+    bool setVFX = false;
+    
+    void Awake()
     {
-        vfxTest.Play();
-        StartCoroutine(VFXDisplay());
+        vfxObjs = gameObject.GetComponentsInChildren<VisualEffect>();
+        if (vfxObjs != null) Debug.Log(vfxObjs.Length);
     }
 
-    IEnumerator VFXDisplay()
-    {
-        float time = 0;
-
-        yield return new WaitForSeconds(lifetime);
-        vfxTest.Stop();
-    }
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isOn && !setVFX)
+        {
+            foreach (VisualEffect vfxObj in vfxObjs)
+            {
+                vfxObj.visualEffectAsset = vfxGraphs[(int)vfxType];
+                vfxObj.Play();
+            }
+            setVFX = true;
+        }
+        else if( !isOn && setVFX)
+        {
+            foreach (VisualEffect vfxObj in vfxObjs)
+            {
+                vfxObj.Stop();
+                setVFX = false;
+            }
+        }
     }
 }

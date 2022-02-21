@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Dissolve
+  m_Name: M_Orc_Armor
   m_Shader: {fileID: -6465566751694194690, guid: b3a7a3650eef7cf4583a72be6a3337f0, type: 3}
   m_ShaderKeywords: _ALPHATEST_ON _DISABLE_SSR_TRANSPARENT
   m_LightmapFlags: 4
@@ -52,6 +52,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Dissolve: 0
+    - EdgeIntensity: 1000
+    - EdgeThickness: 0.06
     - Vector1_6d8f1e264d73426685fd11d9f2d71aa0: 0
     - Vector1_bfe34c48399c4e9087b0e30b46eaf878: 80
     - Vector1_d1b7b484b4db4e29bef874f6271bacbc: 0.07
@@ -104,7 +107,10 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
+    - BaseColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 0}
     - Color_16584440da7f460abc2a6f46fbdf3c64: {r: 766.9961, g: 0, b: 0, a: 1}
+    - Color_c73dbda88c674d02b16cadf2d13e86f8: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    - EdgeColor: {r: 4, g: 0, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
