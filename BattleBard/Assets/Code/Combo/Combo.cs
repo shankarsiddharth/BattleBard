@@ -7,7 +7,7 @@ using UnityEngine;
 public struct ComboNote
 {
     public char note;
-    public int beat;
+    public float beat;
 }
 
 [CreateAssetMenu(fileName = "Combo", menuName = "Combo")]

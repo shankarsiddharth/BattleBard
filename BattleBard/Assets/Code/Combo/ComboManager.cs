@@ -6,10 +6,14 @@ using UnityEngine.InputSystem;
 
 public class ComboManager : MonoBehaviour
 {
-    public List<Combo> valid_combos;
-    public List<char> drumsHit;
+    public List<Combo> validCombos;
+    public List<Note> drumsHit;
 
     private Metronome _metronome;
+    private List<Combo> _defaultCombos;
+
+    private bool _playingCombo;
+    private int _startBeat;
 
     private void Start()
     {
@@ -19,20 +23,41 @@ public class ComboManager : MonoBehaviour
             Debug.LogWarning("The primary metronome should be attached to the same game object as the combo manager.");
         }
 
+        _defaultCombos = new List<Combo>(validCombos);
+
     }
 
     private void Update()
     {
-        // Pretend they played a note
-        Drums s = Drums.LeftShoulder;
+        // Check notes in combo against metronome
+        foreach (Combo c in validCombos)
+        {
+            
+        }
 
-        // Set base beat count from metronome beat
-        int curBeat =_metronome.GetLastBeatCount();
+        if (validCombos.Count == 0)
+        {
+            // Combo failed
+            _playingCombo = false;
+            validCombos = new List<Combo>(_defaultCombos);
+        }
+    }
 
+    private void OnDrumPlay(Drums drum)
+    {
+        if (!_playingCombo)
+        {
+            // Set base beat count from metronome beat
+            _startBeat = _metronome.GetLastBeatCount();
+            _playingCombo = true;
+        }
 
+        Note note = new Note { notePlayed = drum };
 
         // Always evaluate notes, even improv notes
-        // NoteEvaluator.EvaluateNote();
+        NoteEvaluator.EvaluateNote(note);
+
+        drumsHit.Add(note);
     }
 
     /*
