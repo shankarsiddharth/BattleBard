@@ -3,17 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/*
+
 public class ComboManager : MonoBehaviour
 {
     public List<Combo> valid_combos;
     public List<char> drumsHit;
 
+    private Metronome _metronome;
+
     private void Start()
     {
-        EventManager.OnDrumPlayed += OnDrumPlayed;
+        //EventManager.OnDrumPlayed += OnDrumPlayed;
+        if (gameObject.TryGetComponent(out _metronome))
+        {
+            Debug.LogWarning("The primary metronome should be attached to the same game object as the combo manager.");
+        }
+
     }
 
+    private void Update()
+    {
+        // Pretend they played a note
+        Drums s = Drums.LeftShoulder;
+
+        // Set base beat count from metronome beat
+        int curBeat =_metronome.GetLastBeatCount();
+
+
+
+        // Always evaluate notes, even improv notes
+        // NoteEvaluator.EvaluateNote();
+    }
+
+    /*
 	void CheckCombo()
     {
         foreach (Combo validCombo in valid_combos)
@@ -43,7 +65,7 @@ public class ComboManager : MonoBehaviour
             if (equals)
             {
 				// Ugly, but get main camera's position
-                EventManager.RaiseComboComplete(validCombo.effect, Camera.main.transform.position, validCombo.affectsAllies, validCombo.affectsEnemies);
+                //EventManager.RaiseComboComplete(validCombo.effect, Camera.main.transform.position, validCombo.affectsAllies, validCombo.affectsEnemies);
 
                 // Carry over the last drum played
                 char lastDrum = drumsHit[0];
@@ -52,7 +74,10 @@ public class ComboManager : MonoBehaviour
             }
         }
     }
+    */
 
+
+    /*
     #region Keyboard Events
     public void LeftThigh(InputAction.CallbackContext context)
     {
@@ -118,6 +143,5 @@ public class ComboManager : MonoBehaviour
 		}
         CheckCombo();
 	}
-	#endregion
+	#endregion*/
 }
-*/ 

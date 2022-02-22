@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
+
 public class ComboEffect : MonoBehaviour
 {
     [Tooltip("If this combo has a custom effect tick this.")]
@@ -22,7 +22,7 @@ public class ComboEffect : MonoBehaviour
 		if (!_staticInitialized)
 		{
             _staticInitialized = true;
-            EventManager.OnComboComplete += ListenForCombos;
+            //EventManager.OnComboComplete += ListenForCombos;
             Destroy(gameObject);
         }
 	}
@@ -35,6 +35,7 @@ public class ComboEffect : MonoBehaviour
             Instantiate(effect, pos, Quaternion.Euler(Vector3.zero));
 		}
 
+        /*
         if (effect.effectApplied != null) {
             if (effect.appliesToAllies) {
                 // Get all allies and apply effect
@@ -52,9 +53,9 @@ public class ComboEffect : MonoBehaviour
                 }
             }
         }
+        */
 
         print("Combo complete: " + effect.ToString());
     }
 
 }
-*/
