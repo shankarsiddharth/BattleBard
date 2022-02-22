@@ -56,4 +56,9 @@ public class Metronome : MonoBehaviour
         }
         return dec;
     }
+
+    public int GetLastBeatCount()
+    {
+        return (int) Math.Floor(metroPositionInBeats);
+    }
 }

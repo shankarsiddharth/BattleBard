@@ -7,4 +7,5 @@ public struct Note
     public Drums notePlayed;
     public Grade grade;
     public bool isCombo;
+    public float timestamp;
 }
