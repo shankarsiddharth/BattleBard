@@ -30,7 +30,7 @@ public class NoteEvaluator : MonoBehaviour
         
     }
 
-    static void EvaluateNote(Note note)
+    static void EvaluateNote(ref Note note)
     {        
         double beatOffset = metronome.GetBeatOffset();
         double absOffset = Math.Abs(beatOffset);
