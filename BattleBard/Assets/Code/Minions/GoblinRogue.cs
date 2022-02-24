@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GoblinRogue : Unit
 {
+    public float poisonDamage;
+
     public override void ApplyStatusEffect()
     {
         throw new System.NotImplementedException();

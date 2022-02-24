@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Grigrog : Unit
 {
+    #region Additional Stats
+    public float attackDiameter;
+    #endregion
+
     public override void ApplyStatusEffect()
     {
         throw new System.NotImplementedException();
@@ -33,6 +37,7 @@ public class Grigrog : Unit
     void Start()
     {
         isAlly = false;
+        attackType = AttackType.AOEConic;
     }
 
     // Update is called once per frame

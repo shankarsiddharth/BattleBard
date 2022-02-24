@@ -5,7 +5,7 @@ using UnityEngine;
 public class FolkHeroMelee : Unit
 {
     #region Additional Stats
-    float attackDiameter;
+    public float attackDiameter;
     #endregion
 
     public override void ApplyStatusEffect()
@@ -36,7 +36,7 @@ public class FolkHeroMelee : Unit
     // Start is called before the first frame update
     void Start()
     {
-        
+        attackType = AttackType.AOEConic;
     }
 
     // Update is called once per frame
