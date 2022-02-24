@@ -860,7 +860,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   validCombos:
+  - {fileID: 11400000, guid: e806a461af0ea83498a8870fae3a1c0b, type: 2}
   - {fileID: 11400000, guid: 8e1a99f45420c3f45b3f5a944c3feeda, type: 2}
+  _comboProgress: 
 --- !u!4 &1985388748
 Transform:
   m_ObjectHideFlags: 0

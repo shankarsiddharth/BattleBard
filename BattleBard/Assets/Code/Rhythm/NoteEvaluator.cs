@@ -21,7 +21,7 @@ public class NoteEvaluator : MonoBehaviour
         metronome = GetComponent<Metronome>();
         PerfectThreshold = .05f;
         GreatThreshold = .075f;
-        GoodThreshold = .1f;
+        GoodThreshold = .4f;
     }
 
     // Update is called once per frame

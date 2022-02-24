@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboOrder:
   - note: 0
-    beat: 0
-  - note: 0
     beat: 1
   - note: 0
     beat: 2
   - note: 0
     beat: 3
+  - note: 0
+    beat: 4
   effect: {fileID: -620298999607620110, guid: 9088543ffda14e848928983ea4efad92, type: 3}
   affectsAllies: 0
   affectsEnemies: 0
