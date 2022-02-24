@@ -32,32 +32,39 @@ public class ComboManager : MonoBehaviour
 
     private void Update()
     {
-        // List of combos to remove because they are no longer valid
-        List<Combo> invalidCombos = new List<Combo>();
-
-        // Get current beat in combo
-        float curBeat = _metronome.GetClosestBeat() - _startBeat;
-
-
-        // Check current note for all valid combos for 'missing' a beat note
-        for (int comboInd=0; comboInd<_comboProgress.Count; comboInd++) {
-            ComboNote curNote = validCombos[comboInd].comboOrder[_comboProgress[comboInd]];
-            
-            // If beat is less than curBeat, they missed it
-            if (curNote.beat < curBeat)
-                invalidCombos.Add(validCombos[comboInd]);
-        }
-
-
-        // Remove invalid combos
-        foreach (Combo combo in invalidCombos)
-            validCombos.Remove(combo);
-
-
-        // All combos failed, reset
-        if (validCombos.Count == 0)
+        if (_playingCombo)
         {
-            ResetCombo();
+            // List of combos to remove because they are no longer valid
+            List<Combo> invalidCombos = new List<Combo>();
+
+            // Get current beat in combo
+            float curBeat = _metronome.GetClosestBeat() - _startBeat;
+
+
+            // Check current note for all valid combos for 'missing' a beat note
+            for (int comboInd = 0; comboInd < _comboProgress.Count; comboInd++)
+            {
+                ComboNote curNote = validCombos[comboInd].comboOrder[_comboProgress[comboInd]];
+
+                // If beat is less than curBeat, they missed it
+                if (curNote.beat < curBeat)
+                    invalidCombos.Add(validCombos[comboInd]);
+            }
+
+
+            // Remove invalid combos
+            foreach (Combo combo in invalidCombos)
+            {
+                _comboProgress.RemoveAt(validCombos.IndexOf(combo));
+                validCombos.Remove(combo);
+            }
+
+
+            // All combos failed, reset
+            if (validCombos.Count == 0)
+            {
+                ResetCombo();
+            }
         }
     }
 
@@ -137,6 +144,12 @@ public class ComboManager : MonoBehaviour
 			{
                 // DO IT
                 print("Played combo " + validCombos[comboInd]);
+
+                // Assign what notes are integral for the combo to execute
+                SetComboNotes(validCombos[comboInd]);
+
+                // Call the event then reset
+                GameEvents.Instance.OnDrumComboCompleted();
                 ResetCombo();
 			}
         }
