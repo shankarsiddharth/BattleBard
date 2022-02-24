@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 public class GameEvents : MonoBehaviour
 {
@@ -65,9 +67,9 @@ public class GameEvents : MonoBehaviour
     //Add parameters after implementations of effects and stuff
     public UnityEvent onDrumComboCompleted;
 
-    public void OnDrumPlayed(Drums drumId)
+    public void OnDrumPlayed(Drums drum)
     {
-        onDrumPlayed.Invoke(drumId);
+        onDrumPlayed.Invoke(drum);
     }
     
     public void OnDrumComboCompleted()
@@ -107,6 +109,38 @@ public class GameEvents : MonoBehaviour
     public void OnNarrativePieceCompleted()
     {
         onNarrativePieceCompleted.Invoke();
+    }
+
+    #endregion
+
+
+    #region Inspector
+    /*  Functions for the inspector (doesn't like enums, etc.)  */
+    
+    public void KeyboardDrum(InputAction.CallbackContext context)
+	{
+
+        if (context.performed)
+        {
+            switch (context.action.name)
+			{
+                case "LeftShoulder":
+                    GameEvents.Instance.OnDrumPlayed(Drums.LeftShoulder);
+                    break;
+                case "RightShoulder":
+                    GameEvents.Instance.OnDrumPlayed(Drums.RightShoulder);
+                    break;
+                case "Stomach":
+                    GameEvents.Instance.OnDrumPlayed(Drums.Stomach);
+                    break;
+                case "LeftThigh":
+                    GameEvents.Instance.OnDrumPlayed(Drums.LeftThigh);
+                    break;
+                case "RightThigh":
+                    GameEvents.Instance.OnDrumPlayed(Drums.RightThigh);
+                    break;
+			}
+        }
     }
 
     #endregion

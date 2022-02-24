@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7cb07a231ff0e04b9f3cecef3d30159, type: 3}
   m_Name: Speed
   m_EditorClassIdentifier: 
-  comboOrder: 31003200
+  comboOrder:
+  - note: 0
+    beat: 0
+  - note: 0
+    beat: 1
+  - note: 0
+    beat: 2
+  - note: 0
+    beat: 3
   effect: {fileID: -620298999607620110, guid: 9088543ffda14e848928983ea4efad92, type: 3}
   affectsAllies: 0
   affectsEnemies: 0

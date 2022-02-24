@@ -6,142 +6,155 @@ using UnityEngine.InputSystem;
 
 public class ComboManager : MonoBehaviour
 {
-    public List<Combo> valid_combos;
-    public List<char> drumsHit;
+    public List<Combo> validCombos;
+    public List<Note> drumsHit;
 
     private Metronome _metronome;
+    private List<Combo> _defaultCombos;
+    // Tracks the progress of current combos so we don't have to check each note very frame
+    private List<int> _comboProgress;
+
+    private bool _playingCombo;
+    private int _startBeat;
 
     private void Start()
     {
-        //EventManager.OnDrumPlayed += OnDrumPlayed;
-        if (gameObject.TryGetComponent(out _metronome))
+        GameEvents.Instance.onDrumPlayed.AddListener(OnDrumPlay);
+        if (!gameObject.TryGetComponent(out _metronome))
         {
             Debug.LogWarning("The primary metronome should be attached to the same game object as the combo manager.");
         }
 
+        _defaultCombos = new List<Combo>(validCombos);
+        _comboProgress = new List<int>(new int[validCombos.Count]);
+        drumsHit = new List<Note>();
     }
 
     private void Update()
     {
-        // Pretend they played a note
-        Drums s = Drums.LeftShoulder;
-
-        // Set base beat count from metronome beat
-        int curBeat =_metronome.GetLastBeatCount();
-
-
-
-        // Always evaluate notes, even improv notes
-        // NoteEvaluator.EvaluateNote();
-    }
-
-    /*
-	void CheckCombo()
-    {
-        foreach (Combo validCombo in valid_combos)
+        if (_playingCombo)
         {
-            List<char> reversedOrder = new List<char>(validCombo.comboOrder);
-            reversedOrder.Reverse();
+            // List of combos to remove because they are no longer valid
+            List<Combo> invalidCombos = new List<Combo>();
 
-            if (reversedOrder.Count > drumsHit.Count)
-                continue;
+            // Get current beat in combo
+            float curBeat = _metronome.GetClosestBeat() - _startBeat;
 
-            List<char> sublist = drumsHit.GetRange(0, reversedOrder.Count);
 
-            // If they aren't equal size, move to the next combo to check
-            if (reversedOrder.Count != sublist.Count)
-                continue;
-
-            bool equals = true;
-            for (int i=0; i<reversedOrder.Count; i++)
+            // Check current note for all valid combos for 'missing' a beat note
+            for (int comboInd = 0; comboInd < _comboProgress.Count; comboInd++)
             {
-                if (reversedOrder[i] != sublist[i])
-                {
-                    equals = false;
-                    break;
-                }
+                ComboNote curNote = validCombos[comboInd].comboOrder[_comboProgress[comboInd]];
+
+                // If beat is less than curBeat, they missed it
+                if (curNote.beat < curBeat)
+                    invalidCombos.Add(validCombos[comboInd]);
             }
 
-            if (equals)
-            {
-				// Ugly, but get main camera's position
-                //EventManager.RaiseComboComplete(validCombo.effect, Camera.main.transform.position, validCombo.affectsAllies, validCombo.affectsEnemies);
 
-                // Carry over the last drum played
-                char lastDrum = drumsHit[0];
-                drumsHit.Clear();
-                drumsHit.Add(lastDrum);
+            // Remove invalid combos
+            foreach (Combo combo in invalidCombos)
+            {
+                _comboProgress.RemoveAt(validCombos.IndexOf(combo));
+                validCombos.Remove(combo);
+            }
+
+
+            // All combos failed, reset
+            if (validCombos.Count == 0)
+            {
+                ResetCombo();
             }
         }
     }
-    */
 
-
-    /*
-    #region Keyboard Events
-    public void LeftThigh(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-            EventManager.RaiseDrumPlayed(EventManager.Drum.LeftThigh);
-    }
-
-    public void RightThigh(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-            EventManager.RaiseDrumPlayed(EventManager.Drum.RightThigh);
-    }
-
-    public void Stomach(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-            EventManager.RaiseDrumPlayed(EventManager.Drum.Stomach);
-    }
-
-    public void LeftShoulder(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-            EventManager.RaiseDrumPlayed(EventManager.Drum.LeftShoulder);
-    }
-
-    public void RightShoulder(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-            EventManager.RaiseDrumPlayed(EventManager.Drum.RightShoulder);
-    }
-
-    // TODO: This input needs to be managed elsewhere...
-    public void Pedal(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-            EventManager.RaiseDrumPlayed(EventManager.Drum.Pedal);
-    }
-    #endregion
-
-    #region Events
-    private void OnDrumPlayed(EventManager.Drum drum)
+    private void ResetCombo()
 	{
-        print(drum);
-		switch (drum)
+        _playingCombo = false;
+        validCombos = new List<Combo>(_defaultCombos);
+        _comboProgress = new List<int>(new int[validCombos.Count]);
+        drumsHit.Clear();
+    }
+
+    // Called when a combo has been played
+    private void SetComboNotes(Combo combo)
+    {
+        int hitNoteInd = 0;
+        foreach (ComboNote cn in combo.comboOrder)
 		{
-			case EventManager.Drum.LeftShoulder:
-                drumsHit.Insert(0, '1');
-                break;
-			case EventManager.Drum.RightShoulder:
-                drumsHit.Insert(0, '2');
-                break;
-			case EventManager.Drum.Stomach:
-                drumsHit.Insert(0, '3');
-                break;
-			case EventManager.Drum.LeftThigh:
-                drumsHit.Insert(0, '5');
-                break;
-			case EventManager.Drum.RightThigh:
-                drumsHit.Insert(0, '4');
-                break;
-			case EventManager.Drum.Pedal:
-				break;
+            for (;  hitNoteInd < drumsHit.Count; hitNoteInd++)
+			{
+                Note n = drumsHit[hitNoteInd];
+                
+                // If the notes aren't the same, skip
+                if (cn.note != n.notePlayed)
+                    continue;
+
+                // If they aren't on the same beat, skip
+                if (cn.beat != n.timestamp)
+                    continue;
+
+                // If its grade is too low, skip (or fail?)
+                if (n.grade == Grade.Bad)
+                    continue;
+
+                // Otherwise, it has to be the combo note
+                drumsHit[hitNoteInd] = new Note { grade = n.grade, isCombo = true, notePlayed = n.notePlayed, timestamp = n.timestamp };
+            }
 		}
-        CheckCombo();
 	}
-	#endregion*/
+
+    private void OnDrumPlay(Drums drum)
+    {
+        if (!_playingCombo)
+        {
+            // Set base beat count from metronome beat
+            _startBeat = _metronome.GetLastBeatCount();
+            _playingCombo = true;
+        }
+
+        Note note = new Note { notePlayed = drum };
+
+        // Always evaluate notes, even improv notes
+        NoteEvaluator.EvaluateNote(ref note);
+
+        // List of combos to remove because they are no longer valid
+        //List<Combo> invalidCombos = new List<Combo>();
+
+        // Check if note was a beat note for each valid combo
+        for (int comboInd = 0; comboInd < _comboProgress.Count; comboInd++)
+        {
+            ComboNote curNote = validCombos[comboInd].comboOrder[_comboProgress[comboInd]];
+
+            // If the notes aren't the same, skip
+            if (curNote.note != note.notePlayed)
+                continue;
+
+            // If they aren't on the same beat, skip
+            if (curNote.beat != note.timestamp)
+                continue;
+
+            // If its grade is too low, skip (or fail?)
+            if (note.grade == Grade.Bad)
+                continue;
+
+            // If it was all good, then advance progress (and 'use' the combo if complete)
+            _comboProgress[comboInd]++;
+            if (_comboProgress[comboInd] == validCombos[comboInd].comboOrder.Count)
+			{
+                // DO IT
+                print("Played combo " + validCombos[comboInd]);
+
+                // Assign what notes are integral for the combo to execute
+                SetComboNotes(validCombos[comboInd]);
+
+                // Call the event then reset
+                GameEvents.Instance.OnDrumComboCompleted();
+                ResetCombo();
+			}
+        }
+
+        drumsHit.Add(note);
+    }
+
 }

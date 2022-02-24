@@ -6,8 +6,8 @@ using UnityEngine;
 [Serializable]
 public struct ComboNote
 {
-    public char note;
-    public int beat;
+    public Drums note;
+    public float beat;
 }
 
 [CreateAssetMenu(fileName = "Combo", menuName = "Combo")]
