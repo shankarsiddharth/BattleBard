@@ -14,6 +14,7 @@ public abstract class Unit : MonoBehaviour
 {
     public AttackType attackType = AttackType.SingleTarget;
     public Stats stats;
+    public float currentHealth;
     public Unit targetUnit;
     public bool isAlly = true;
 
