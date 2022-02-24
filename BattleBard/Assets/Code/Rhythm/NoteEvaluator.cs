@@ -19,6 +19,8 @@ public class NoteEvaluator : MonoBehaviour
     {
         //GameEvents.Instance.onDrumPlayed.AddListener(EvaluateNote);
         metronome = GetComponent<Metronome>();
+        gradeDisplay = (Text)GameObject.Find("Grade Display").GetComponent<Text>();
+        buttonDisplay = GameObject.Find("Button Display").GetComponent<Text>();
         PerfectThreshold = .05f;
         GreatThreshold = .075f;
         GoodThreshold = .4f;

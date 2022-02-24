@@ -11,6 +11,8 @@ public class Metronome : MonoBehaviour
     private float metroPosition;
     private float metroPositionInBeats;
     private float secPerBeat;
+    private float startTime;
+    private float fudgeOffset;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +20,12 @@ public class Metronome : MonoBehaviour
         metroSource = GetComponent<AudioSource>();
         secPerBeat = 60f / BPM;
         metroSource.Play();
+        startTime = (float)AudioSettings.dspTime;
         if (noteAccuracy == 0)
         {
             noteAccuracy = .5f;
         }
+        fudgeOffset = .2f;
     }
 
     // Update is called once per frame
@@ -31,9 +35,9 @@ public class Metronome : MonoBehaviour
         {
             metroSource.Play();
         }
-        metroPosition = metroSource.time;
+        metroPosition = (float)AudioSettings.dspTime;
         //add 1 so the first beat calculates to 1, not 0
-        metroPositionInBeats = metroPosition / secPerBeat + 1f - .2f;
+        metroPositionInBeats = (metroPosition - startTime) / secPerBeat + 1f - fudgeOffset;
     }
 
     public double GetBeatOffset()
