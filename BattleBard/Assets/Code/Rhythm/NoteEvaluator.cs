@@ -21,8 +21,9 @@ public class NoteEvaluator : MonoBehaviour
         metronome = GetComponent<Metronome>();
         gradeDisplay = (Text)GameObject.Find("Grade Display").GetComponent<Text>();
         buttonDisplay = GameObject.Find("Button Display").GetComponent<Text>();
-        PerfectThreshold = .05f;
-        GreatThreshold = .075f;
+        offsetDisplay = GameObject.Find("Offset Display").GetComponent<Text>();
+        PerfectThreshold = .075f;
+        GreatThreshold = .1f;
         GoodThreshold = .4f;
     }
 
@@ -35,8 +36,9 @@ public class NoteEvaluator : MonoBehaviour
     {        
         double beatOffset = metronome.GetBeatOffset();
         double absOffset = Math.Abs(beatOffset);
-
+        
         note.timestamp = metronome.GetClosestBeat();
+        offsetDisplay.text = beatOffset.ToString();
 
         if(absOffset < PerfectThreshold)
         {

@@ -19,35 +19,31 @@ public class Metronome : MonoBehaviour
     {
         metroSource = GetComponent<AudioSource>();
         secPerBeat = 60f / BPM;
-        metroSource.Play();
+        //metroSource.Play();
         startTime = (float)AudioSettings.dspTime;
         if (noteAccuracy == 0)
         {
             noteAccuracy = .5f;
         }
-        fudgeOffset = .2f;
+        fudgeOffset = -.15f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!metroSource.isPlaying)
+        metroPosition = (float)AudioSettings.dspTime;
+        //add 1 so the first beat calculates to 1, not 0
+        metroPositionInBeats = (metroPosition - startTime) / secPerBeat + 1f;
+        if (!metroSource.isPlaying && metroPositionInBeats - (float)Math.Floor(metroPositionInBeats) < .1)
         {
             metroSource.Play();
         }
-        metroPosition = (float)AudioSettings.dspTime;
-        //add 1 so the first beat calculates to 1, not 0
-        metroPositionInBeats = (metroPosition - startTime) / secPerBeat + 1f - fudgeOffset;
     }
 
     public double GetBeatOffset()
     {
-        double dec = metroPositionInBeats - Math.Floor(metroPositionInBeats);
-        while(dec >= noteAccuracy)
-        {
-            dec -= noteAccuracy;
-        }
-        return dec;
+        float closestBeat = GetClosestBeat();
+        return metroPositionInBeats - closestBeat + fudgeOffset;
     }
 
     public int GetLastBeatCount()
