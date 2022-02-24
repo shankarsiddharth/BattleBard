@@ -65,9 +65,9 @@ public class GameEvents : MonoBehaviour
     //Add parameters after implementations of effects and stuff
     public UnityEvent onDrumComboCompleted;
 
-    public void OnDrumPlayed(Drums drumId)
+    public void OnDrumPlayed(Drums drum)
     {
-        onDrumPlayed.Invoke(drumId);
+        onDrumPlayed.Invoke(drum);
     }
     
     public void OnDrumComboCompleted()
@@ -114,6 +114,17 @@ public class GameEvents : MonoBehaviour
     {
         onNarrativePieceCompleted.Invoke();
     }
+
+    #endregion
+
+
+    #region Inspector
+    /*  Functions for the inspector (doesn't like enums, etc.)  */
+    
+    public void KeyboardDrum(int drumID)
+	{
+        OnDrumPlayed((Drums)drumID);
+	}
 
     #endregion
 }

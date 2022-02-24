@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public struct ComboNote
 {
-    public char note;
+    public Drums note;
     public float beat;
 }
 
