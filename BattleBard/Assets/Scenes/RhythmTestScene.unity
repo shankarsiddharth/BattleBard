@@ -1105,7 +1105,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2146952670}
         m_TargetAssemblyTypeName: GameEvents, Assembly-CSharp
         m_MethodName: KeyboardDrum
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1121,11 +1121,11 @@ MonoBehaviour:
       - m_Target: {fileID: 2146952670}
         m_TargetAssemblyTypeName: GameEvents, Assembly-CSharp
         m_MethodName: KeyboardDrum
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1137,11 +1137,11 @@ MonoBehaviour:
       - m_Target: {fileID: 2146952670}
         m_TargetAssemblyTypeName: GameEvents, Assembly-CSharp
         m_MethodName: KeyboardDrum
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1153,11 +1153,11 @@ MonoBehaviour:
       - m_Target: {fileID: 2146952670}
         m_TargetAssemblyTypeName: GameEvents, Assembly-CSharp
         m_MethodName: KeyboardDrum
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1169,11 +1169,11 @@ MonoBehaviour:
       - m_Target: {fileID: 2146952670}
         m_TargetAssemblyTypeName: GameEvents, Assembly-CSharp
         m_MethodName: KeyboardDrum
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1259,4 +1259,14 @@ MonoBehaviour:
   drumSoundSlave: {fileID: 1401369335}
   bgSound: {fileID: 0}
   bgSoundVolume: 0.1
-  drumsSFX: []
+  drumsSFX:
+  - drum: 0
+    audio: {fileID: 8300000, guid: 51b73e1c9d1511b469be5666825e8a25, type: 3}
+  - drum: 1
+    audio: {fileID: 8300000, guid: 6c9c56e6ed93f8d48807f4f12cd457ba, type: 3}
+  - drum: 2
+    audio: {fileID: 8300000, guid: 6c27b7408ac83b249b82ae2cfa3b820b, type: 3}
+  - drum: 3
+    audio: {fileID: 8300000, guid: 8dc2ed7ad0b6db947bed9743d4bb34a2, type: 3}
+  - drum: 4
+    audio: {fileID: 8300000, guid: 09537c125cb29bd41a07884329d4d2aa, type: 3}
