@@ -85,19 +85,13 @@ public class GameEvents : MonoBehaviour
     }
     #endregion
 
-    #region Path Events
-    //Change Event parameter to Path object after implementation
-    public UnityEvent<int> onPathCompleted;
-    public UnityEvent<int> onPathStart;
+    #region Event Triggers
+    //Triggers on event completion
+    public UnityEvent<int> onEventCompleted;
 
-    public void OnPathCompleted(int pathId)
+    public void OnEventCompleted(int eventId)
     {
-        onPathCompleted.Invoke(pathId);
-    }
-
-    public void OnPathStart(int pathId)
-    {
-        onPathStart.Invoke(pathId);
+        onEventCompleted.Invoke(eventId);
     }
     #endregion
 
