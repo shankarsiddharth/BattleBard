@@ -19,7 +19,7 @@ public class ComboManager : MonoBehaviour
 
     private void Start()
     {
-        //GameEvents.Instance.onDrumPlayed += OnDrumPlay;
+        GameEvents.Instance.onDrumPlayed.AddListener(OnDrumPlay);
         if (!gameObject.TryGetComponent(out _metronome))
         {
             Debug.LogWarning("The primary metronome should be attached to the same game object as the combo manager.");

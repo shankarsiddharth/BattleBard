@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 public class GameEvents : MonoBehaviour
 {
@@ -121,10 +123,31 @@ public class GameEvents : MonoBehaviour
     #region Inspector
     /*  Functions for the inspector (doesn't like enums, etc.)  */
     
-    public void KeyboardDrum(int drumID)
+    public void KeyboardDrum(InputAction.CallbackContext context)
 	{
-        OnDrumPlayed((Drums)drumID);
-	}
+
+        if (context.performed)
+        {
+            switch (context.action.name)
+			{
+                case "LeftShoulder":
+                    GameEvents.Instance.OnDrumPlayed(Drums.LeftShoulder);
+                    break;
+                case "RightShoulder":
+                    GameEvents.Instance.OnDrumPlayed(Drums.RightShoulder);
+                    break;
+                case "Stomach":
+                    GameEvents.Instance.OnDrumPlayed(Drums.Stomach);
+                    break;
+                case "LeftThigh":
+                    GameEvents.Instance.OnDrumPlayed(Drums.LeftThigh);
+                    break;
+                case "RightThigh":
+                    GameEvents.Instance.OnDrumPlayed(Drums.RightThigh);
+                    break;
+			}
+        }
+    }
 
     #endregion
 }
