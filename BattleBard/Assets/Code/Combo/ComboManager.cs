@@ -32,10 +32,6 @@ public class ComboManager : MonoBehaviour
 
     private void Update()
     {
-        for (int i=0; i<_comboProgress.Count; i++)
-		{
-            print(validCombos[i].ToString() + " : " + _comboProgress[i]);
-		}
 
         if (_playingCombo)
         {
@@ -120,12 +116,9 @@ public class ComboManager : MonoBehaviour
 
         Note playedNote = new Note { notePlayed = drum };
 
-        print(drum);
-
         // Always evaluate notes, even improv notes
         NoteEvaluator.EvaluateNote(ref playedNote);
 
-        print(playedNote.grade);
 
         // List of combos to remove because they are no longer valid
         //List<Combo> invalidCombos = new List<Combo>();
@@ -140,7 +133,7 @@ public class ComboManager : MonoBehaviour
                 continue;
 
             // If they aren't on the same beat, skip
-            if (properComboNote.beat != playedNote.timestamp)
+            if (properComboNote.beat != playedNote.timestamp - _startBeat)
                 continue;
 
             // If its grade is too low, skip (or fail?)
@@ -158,7 +151,7 @@ public class ComboManager : MonoBehaviour
                 SetComboNotes(validCombos[comboInd]);
 
                 // Call the event then reset
-                GameEvents.Instance.OnDrumComboCompleted();
+                GameEvents.Instance.OnDrumComboCompleted(validCombos[comboInd].effect, Vector3.zero, validCombos[comboInd].affectsAllies, validCombos[comboInd].affectsEnemies);;
                 ResetCombo();
 			}
         }
