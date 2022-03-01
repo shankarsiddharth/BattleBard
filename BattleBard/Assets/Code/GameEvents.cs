@@ -87,19 +87,13 @@ public class GameEvents : MonoBehaviour
     }
     #endregion
 
-    #region Path Events
-    //Change Event parameter to Path object after implementation
-    public UnityEvent<int> onPathCompleted;
-    public UnityEvent<int> onPathStart;
+    #region Event Triggers
+    //Triggers on event completion
+    public UnityEvent<int> onEventCompleted;
 
-    public void OnPathCompleted(int pathId)
+    public void OnEventCompleted(int eventId)
     {
-        onPathCompleted.Invoke(pathId);
-    }
-
-    public void OnPathStart(int pathId)
-    {
-        onPathStart.Invoke(pathId);
+        onEventCompleted.Invoke(eventId);
     }
     #endregion
 
@@ -136,8 +130,8 @@ public class GameEvents : MonoBehaviour
                 case "RightShoulder":
                     GameEvents.Instance.OnDrumPlayed(Drums.RightShoulder);
                     break;
-                case "Stomach":
-                    GameEvents.Instance.OnDrumPlayed(Drums.Stomach);
+                case "RightStomach":
+                    GameEvents.Instance.OnDrumPlayed(Drums.RightStomach);
                     break;
                 case "LeftThigh":
                     GameEvents.Instance.OnDrumPlayed(Drums.LeftThigh);
@@ -145,7 +139,10 @@ public class GameEvents : MonoBehaviour
                 case "RightThigh":
                     GameEvents.Instance.OnDrumPlayed(Drums.RightThigh);
                     break;
-			}
+                case "LeftStomach":
+                    GameEvents.Instance.OnDrumPlayed(Drums.LeftStomach);
+                    break;
+            }
         }
     }
 

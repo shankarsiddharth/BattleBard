@@ -4,7 +4,7 @@ using System;
 public enum Drums
 {
     RightShoulder,
-    Stomach,
+    RightStomach,
     LeftThigh,
     LeftShoulder,
     LeftStomach,

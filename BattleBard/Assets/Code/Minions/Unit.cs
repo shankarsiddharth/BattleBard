@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum AttackType
+{
+    AOECircular,
+    AOEConic,
+    SingleTarget
+}
+
 public abstract class Unit : MonoBehaviour
 {
-
+    public AttackType attackType = AttackType.SingleTarget;
+    public Stats stats;
+    public float currentHealth;
     public Unit targetUnit;
     public bool isAlly = true;
-    #region stats
-    float attackRange;
-    float attackSpeed;
-    float attackDamage;
-    float health;
-    //Armor will be used later maybe
-    float armor;
-    float movementSpeed;
-    #endregion
 
     public abstract void Attack();
 
