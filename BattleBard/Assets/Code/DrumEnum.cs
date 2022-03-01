@@ -3,9 +3,10 @@ using System;
 [Serializable]
 public enum Drums
 {
-    LeftShoulder,
     RightShoulder,
     Stomach,
     LeftThigh,
+    LeftShoulder,
+    LeftStomach,
     RightThigh
 }

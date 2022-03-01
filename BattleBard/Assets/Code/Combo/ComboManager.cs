@@ -20,6 +20,9 @@ public class ComboManager : MonoBehaviour
     private void Start()
     {
         GameEvents.Instance.onDrumPlayed.AddListener(OnDrumPlay);
+        GameEvents.Instance.onDrumComboCompleted.AddListener(ListenForCombos);
+
+
         if (!gameObject.TryGetComponent(out _metronome))
         {
             Debug.LogWarning("The primary metronome should be attached to the same game object as the combo manager.");
@@ -157,6 +160,22 @@ public class ComboManager : MonoBehaviour
         }
 
         drumsHit.Add(playedNote);
+    }
+
+
+    private static void ListenForCombos(ComboEffect effect, Vector3 pos, bool affectsAllies, bool affectsEnemies)
+    {
+        print("Effect!");
+
+        if (effect == null)
+        {
+            Debug.LogWarning("Effect is unassigned!");
+            return;
+        }
+
+        Instantiate(effect, pos, Quaternion.Euler(Vector3.zero));
+
+        print("Combo complete: " + effect.ToString());
     }
 
 }
