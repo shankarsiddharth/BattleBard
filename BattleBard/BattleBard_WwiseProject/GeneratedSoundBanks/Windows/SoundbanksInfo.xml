@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2374325209">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3157003241" Language="SFX" Hash="3807636567">
+			<ObjectPath>\SoundBanks\Default Work Unit\Test</ObjectPath>
+			<ShortName>Test</ShortName>
+			<Path>Test.bnk</Path>
+			<IncludedMemoryFiles>
+				<File Id="69089231" Language="SFX">
+					<ShortName>Exports (120 bpm)\Healing Tier 1.wav</ShortName>
+					<Path>SFX\Exports (120 bpm)\Healing Tier 1_D79FB2B7.wem</Path>
+				</File>
+				<File Id="92752773" Language="SFX">
+					<ShortName>Exports (120 bpm)\Healing Tier 2.wav</ShortName>
+					<Path>SFX\Exports (120 bpm)\Healing Tier 2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="124060520" Language="SFX">
+					<ShortName>Exports (120 bpm)\Attack Tier 2.wav</ShortName>
+					<Path>SFX\Exports (120 bpm)\Attack Tier 2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="166574791" Language="SFX">
+					<ShortName>Exports (120 bpm)\Speed Boost Tier 1.wav</ShortName>
+					<Path>SFX\Exports (120 bpm)\Speed Boost Tier 1_D79FB2B7.wem</Path>
+				</File>
+				<File Id="509647709" Language="SFX">
+					<ShortName>Exports (120 bpm)\Attack Tier 3.wav</ShortName>
+					<Path>SFX\Exports (120 bpm)\Attack Tier 3_D79FB2B7.wem</Path>
+				</File>
+				<File Id="553819016" Language="SFX">
+					<ShortName>Exports (120 bpm)\Speed Boost Tier 3.wav</ShortName>
+					<Path>SFX\Exports (120 bpm)\Speed Boost Tier 3_D79FB2B7.wem</Path>
+				</File>
+				<File Id="672171591" Language="SFX">
+					<ShortName>Exports (120 bpm)\Speed Boost Tier 2.wav</ShortName>
+					<Path>SFX\Exports (120 bpm)\Speed Boost Tier 2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="858013523" Language="SFX">
+					<ShortName>Exports (120 bpm)\Healing Tier 3.wav</ShortName>
+					<Path>SFX\Exports (120 bpm)\Healing Tier 3_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1069394677" Language="SFX">
+					<ShortName>Exports (120 bpm)\Attack Tier 1.wav</ShortName>
+					<Path>SFX\Exports (120 bpm)\Attack Tier 1_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+			<StateGroups>
+				<StateGroup Id="3991942870" Name="Music" ObjectPath="\States\Default Work Unit\Music" GUID="{84541FE8-613C-416E-952F-E4E01266E89A}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music\None" GUID="{97580CCB-D58E-48A8-BF0D-E55DD6FB7402}"/>
+						<State Id="3413347345" Name="Healing" ObjectPath="\States\Default Work Unit\Music\Healing" GUID="{2D227284-6CE6-4F68-A263-689EF495DB23}"/>
+						<State Id="180661997" Name="Attack" ObjectPath="\States\Default Work Unit\Music\Attack" GUID="{A6E2FEB7-6202-409B-91BF-5D9730A6897B}"/>
+						<State Id="640949982" Name="Speed" ObjectPath="\States\Default Work Unit\Music\Speed" GUID="{CE50D1AB-FCBB-4347-BA85-2808692D6D39}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
