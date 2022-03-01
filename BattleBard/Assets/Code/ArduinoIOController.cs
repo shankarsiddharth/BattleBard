@@ -17,11 +17,12 @@ public class ArduinoIOController : MonoBehaviour
         foreach (string portName in SerialPort.GetPortNames())
         {
             Debug.Log("Attempting to connect to: " + portName);
+            ArduinoSerialPort = new SerialPort(portName, BaudRate);
             ArduinoSerialPort.PortName = portName;
             ArduinoSerialPort.ReadTimeout = 8;
-            ArduinoSerialPort.Open();
             try
             {
+                ArduinoSerialPort.Open();
                 ArduinoSerialPort.WriteLine("UNITY_HANDSHAKE");
                 string handShakeRead = ArduinoSerialPort.ReadLine();
                 if (!string.IsNullOrEmpty(handShakeRead) && handShakeRead == "ARDUINO_HANDSHAKE")
@@ -36,7 +37,7 @@ public class ArduinoIOController : MonoBehaviour
                 }
             }
             catch
-            {}
+            { continue; }
         }
         if(!ArduinoSerialPort.IsOpen)
         {

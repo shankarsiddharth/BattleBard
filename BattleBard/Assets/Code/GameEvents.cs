@@ -65,16 +65,16 @@ public class GameEvents : MonoBehaviour
     public UnityEvent<Drums> onDrumPlayed;
 
     //Add parameters after implementations of effects and stuff
-    public UnityEvent onDrumComboCompleted;
+    public UnityEvent<ComboEffect, Vector3, bool, bool> onDrumComboCompleted;
 
     public void OnDrumPlayed(Drums drum)
     {
         onDrumPlayed.Invoke(drum);
     }
     
-    public void OnDrumComboCompleted()
+    public void OnDrumComboCompleted(ComboEffect effect, Vector3 pos, bool affectsAllies, bool affectsEnemies)
     {
-        onDrumComboCompleted.Invoke();
+        onDrumComboCompleted.Invoke(effect, pos, affectsAllies, affectsEnemies);
     }
     #endregion
 
@@ -130,8 +130,8 @@ public class GameEvents : MonoBehaviour
                 case "RightShoulder":
                     GameEvents.Instance.OnDrumPlayed(Drums.RightShoulder);
                     break;
-                case "Stomach":
-                    GameEvents.Instance.OnDrumPlayed(Drums.Stomach);
+                case "RightStomach":
+                    GameEvents.Instance.OnDrumPlayed(Drums.RightStomach);
                     break;
                 case "LeftThigh":
                     GameEvents.Instance.OnDrumPlayed(Drums.LeftThigh);
@@ -139,7 +139,10 @@ public class GameEvents : MonoBehaviour
                 case "RightThigh":
                     GameEvents.Instance.OnDrumPlayed(Drums.RightThigh);
                     break;
-			}
+                case "LeftStomach":
+                    GameEvents.Instance.OnDrumPlayed(Drums.LeftStomach);
+                    break;
+            }
         }
     }
 
