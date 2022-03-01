@@ -130,8 +130,8 @@ public class GameEvents : MonoBehaviour
                 case "RightShoulder":
                     GameEvents.Instance.OnDrumPlayed(Drums.RightShoulder);
                     break;
-                case "Stomach":
-                    GameEvents.Instance.OnDrumPlayed(Drums.Stomach);
+                case "RightStomach":
+                    GameEvents.Instance.OnDrumPlayed(Drums.RightStomach);
                     break;
                 case "LeftThigh":
                     GameEvents.Instance.OnDrumPlayed(Drums.LeftThigh);
@@ -139,7 +139,10 @@ public class GameEvents : MonoBehaviour
                 case "RightThigh":
                     GameEvents.Instance.OnDrumPlayed(Drums.RightThigh);
                     break;
-			}
+                case "LeftStomach":
+                    GameEvents.Instance.OnDrumPlayed(Drums.LeftStomach);
+                    break;
+            }
         }
     }
 
