@@ -22,7 +22,7 @@ public class ComboEffect : MonoBehaviour
 		if (!_staticInitialized)
 		{
             _staticInitialized = true;
-            //EventManager.OnComboComplete += ListenForCombos;
+            GameEvents.Instance.onDrumComboCompleted.AddListener(ListenForCombos);
             Destroy(gameObject);
         }
 	}
@@ -30,6 +30,14 @@ public class ComboEffect : MonoBehaviour
     
     private static void ListenForCombos(ComboEffect effect, Vector3 pos, bool affectsAllies, bool affectsEnemies) 
     {
+        print("Effect!");
+
+        if (effect == null)
+        {
+            Debug.LogWarning("Effect is unassigned!");
+            return;
+        }
+
         if (effect.hasCustomEffect)
 		{
             Instantiate(effect, pos, Quaternion.Euler(Vector3.zero));
