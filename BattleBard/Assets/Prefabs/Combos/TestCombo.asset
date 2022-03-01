@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: TestCombo
   m_EditorClassIdentifier: 
   comboOrder:
-  - note: 0
-    beat: 0
+  - note: 2
+    beat: 1
+  - note: 2
+    beat: 2
   effect: {fileID: 0}
   affectsAllies: 0
   affectsEnemies: 0
