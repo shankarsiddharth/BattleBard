@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7983015578301549802}
   - component: {fileID: 8721444973266882666}
   m_Layer: 0
-  m_Name: OrcResizedFixed
+  m_Name: Orc_Die
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
