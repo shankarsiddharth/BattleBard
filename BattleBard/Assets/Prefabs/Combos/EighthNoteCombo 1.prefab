@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2212661501041718538}
   - component: {fileID: -620298999607620110}
   m_Layer: 0
-  m_Name: EigthNoteCombo 1
+  m_Name: EighthNoteCombo 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
