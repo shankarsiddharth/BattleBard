@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7279344117432691974}
   - component: {fileID: 570228367870793585}
   - component: {fileID: 6709888460737968786}
+  - component: {fileID: 1775653895011239758}
   m_Layer: 0
   m_Name: PlayerAI
   m_TagString: Untagged
@@ -137,6 +138,26 @@ MonoBehaviour:
   AIDistanceTolerence: 1
   isDestinationReached: 0
   agent: {fileID: 0}
+--- !u!114 &1775653895011239758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279344117432691975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecfcdb1cc66b96c43b2e0376a879ec44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats:
+    maxHealth: 0
+    damage: 0
+    movementSpeed: 0
+    attackSpeed: 0
+    range: 0
+    armor: 0
+  PlayerType: 0
 --- !u!1001 &8351695765331329485
 PrefabInstance:
   m_ObjectHideFlags: 0

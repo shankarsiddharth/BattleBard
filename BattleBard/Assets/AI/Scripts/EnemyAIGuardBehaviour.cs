@@ -6,48 +6,53 @@ using UnityEngine;
 public class EnemyAIGuardBehaviour : EnemyBaseAIStateMachine 
 {
 
-    public List<GameObject> GaurdPaths;
+    public List<GameObject> GuardPaths;
     int CurrentGuardPathIndex;
-
-    void Awake()
-    {
-        GaurdPaths = GameObject.FindGameObjectsWithTag("Level1GuardPoint").ToList();
-    }	
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         base.OnStateEnter(animator,stateInfo,layerIndex);
+        EnemyBaseAI enemyBaseAI = EnemyAIGameObject.GetComponent<EnemyBaseAI>();
+        if (enemyBaseAI.GuardPaths.Count <= 0)
+        { 
+            GuardPaths = GameObject.FindGameObjectsWithTag("Level1GuardPoint").ToList();
+        }
+        else
+        {
+            GuardPaths = enemyBaseAI.GuardPaths;
+        }
         CurrentGuardPathIndex = 0;
+        NavMeshAgentObject.speed = 1.5f;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
 
-        if(GaurdPaths.Count == 0) 
+        if(GuardPaths.Count == 0) 
             return;
 
-        Vector3 GaurdPathPosition = GaurdPaths[CurrentGuardPathIndex].transform.position;
+        Vector3 GuardPathPosition = GuardPaths[CurrentGuardPathIndex].transform.position;
         Vector3 EnemyAIGameObjectPosition = EnemyAIGameObject.transform.position;
         Quaternion EnemyAIGameObjectRotation = EnemyAIGameObject.transform.rotation;
         
-        Vector3 GaurdPathPositionInXZPlane = new Vector3(GaurdPathPosition.x, 0, GaurdPathPosition.z);
+        Vector3 GuardPathPositionInXZPlane = new Vector3(GuardPathPosition.x, 0, GuardPathPosition.z);
         Vector3 EnemyAIGameObjectPositionInXZPlane = new Vector3(EnemyAIGameObjectPosition.x, 0, EnemyAIGameObjectPosition.z);
         
-        if(Vector3.Distance(GaurdPathPositionInXZPlane, EnemyAIGameObjectPositionInXZPlane) < AIDistanceTolerence)
+        if(Vector3.Distance(GuardPathPositionInXZPlane, EnemyAIGameObjectPositionInXZPlane) < AIDistanceTolerence)
         {
             CurrentGuardPathIndex++;
-            if(CurrentGuardPathIndex >= GaurdPaths.Count)
+            if(CurrentGuardPathIndex >= GuardPaths.Count)
             {
                 CurrentGuardPathIndex = 0;
             }	
         }
         
         //Update the Position based on the current path index
-        GaurdPathPosition = GaurdPaths[CurrentGuardPathIndex].transform.position;
+        GuardPathPosition = GuardPaths[CurrentGuardPathIndex].transform.position;
 
-        NavMeshAgentObject.SetDestination(GaurdPathPosition);
+        NavMeshAgentObject.SetDestination(GuardPathPosition);
         
         /*//Rotate towards target
         Vector3 direction = GaurdPathPosition - EnemyAIGameObjectPosition;

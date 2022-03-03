@@ -8,11 +8,15 @@ public class EnemyAIChaseBehaviour : EnemyBaseAIStateMachine
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
     {
         base.OnStateEnter(animator,stateInfo,layerIndex);
+        NavMeshAgentObject.speed = 3.0f;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if(TargetAIGameObject == null)
+            return;
+        
         Vector3 targetPosition;
         NavMeshAgentObject.SetDestination(TargetAIGameObject.transform.position);
         //rotate towards target

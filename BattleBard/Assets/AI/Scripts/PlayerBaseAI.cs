@@ -1,13 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public enum TPlayerType
-{
-    kOrcWarrior
-};
 public class PlayerBaseAI : MonoBehaviour
 {
     public Stats stats;
     public TPlayerType PlayerType;
+    public float currentHealth;
 }
