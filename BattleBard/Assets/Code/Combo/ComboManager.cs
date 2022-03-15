@@ -9,6 +9,7 @@ public class ComboManager : MonoBehaviour
     public List<Combo> validCombos;
     public List<Note> drumsHit;
 
+    private CombatManager _combatManager;
     private Metronome _metronome;
     private List<Combo> _defaultCombos;
     // Tracks the progress of current combos so we don't have to check each note very frame
@@ -19,6 +20,8 @@ public class ComboManager : MonoBehaviour
 
     private void Start()
     {
+        _combatManager = GameObject.FindGameObjectWithTag("CombatManager").GetComponent<CombatManager>();
+
         GameEvents.Instance.onDrumPlayed.AddListener(OnDrumPlay);
         GameEvents.Instance.onDrumComboCompleted.AddListener(ListenForCombos);
 
@@ -154,7 +157,7 @@ public class ComboManager : MonoBehaviour
                 SetComboNotes(validCombos[comboInd]);
 
                 // Call the event then reset
-                GameEvents.Instance.OnDrumComboCompleted(validCombos[comboInd].effect, Vector3.zero, validCombos[comboInd].affectsAllies, validCombos[comboInd].affectsEnemies);;
+                GameEvents.Instance.OnDrumComboCompleted(validCombos[comboInd].effect, 0, Vector3.zero);
                 ResetCombo();
 			}
         }
@@ -163,17 +166,16 @@ public class ComboManager : MonoBehaviour
     }
 
 
-    private static void ListenForCombos(ComboEffect effect, Vector3 pos, bool affectsAllies, bool affectsEnemies)
+    private static void ListenForCombos(ComboBase effect, int level, Vector3 pos)
     {
-        print("Effect!");
-
         if (effect == null)
         {
             Debug.LogWarning("Effect is unassigned!");
             return;
         }
 
-        Instantiate(effect, pos, Quaternion.Euler(Vector3.zero));
+        ComboBase b = Instantiate(effect, pos, Quaternion.Euler(Vector3.zero));
+        b.ComboPlayed(effect, level, pos);
 
         print("Combo complete: " + effect.ToString());
     }

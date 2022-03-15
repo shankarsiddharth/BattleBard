@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fcbd3c60f3bbb4468c9a452bbca9d75, type: 3}
   m_Name: MovementSpeed
   m_EditorClassIdentifier: 
-  tierDuration: []
+  tierDuration:
+  - 3
   multiplicitiveChanges:
   - maxHealth: 1
     damage: 1
@@ -20,3 +21,4 @@ MonoBehaviour:
     attackSpeed: 1.5
     range: 1
     armor: 1
+    currentEffects: []

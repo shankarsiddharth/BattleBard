@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class SpeedCombo : ComboEffect
+public class SpeedCombo : ComboApplyStatus
 {
-    private void Start()
+    new void Start()
     {
+        //base.Start();
         print("ZOOM!!");
     }
 }
