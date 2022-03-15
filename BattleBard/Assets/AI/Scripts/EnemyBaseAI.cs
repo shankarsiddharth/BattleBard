@@ -15,7 +15,15 @@ public class EnemyBaseAI : MonoBehaviour
     
     public float AttackStartTime = 0.25f;
     public float AttackRate = 1.0f;
-    
+
+
+    private GameObject EnemyRootGameObject;
+
+    public GameObject GetRootGameObject()
+    {
+        return EnemyRootGameObject;
+    }
+
     public GameObject GetPlayerAIGameObject()
     {
         return PlayerAIGameObject;

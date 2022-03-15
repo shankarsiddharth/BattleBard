@@ -8,5 +8,12 @@ public class PlayerBaseAI : MonoBehaviour
 {
     public Stats stats;
     public TPlayerType PlayerType;
-    public float currentHealth;
+    public float currentHealth; 
+
+    private GameObject playerRootGameObject;
+
+    public GameObject GetRootGameObject()
+    {
+        return playerRootGameObject;
+    }
 }
