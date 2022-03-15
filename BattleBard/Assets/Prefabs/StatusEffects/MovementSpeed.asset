@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: MovementSpeed
   m_EditorClassIdentifier: 
   tierDuration:
-  - 3
+  - 10
   multiplicitiveChanges:
   - maxHealth: 1
     damage: 1
-    movementSpeed: 1
-    attackSpeed: 1.5
+    movementSpeed: 1.5
+    attackSpeed: 1
     range: 1
     armor: 1
     currentEffects: []
