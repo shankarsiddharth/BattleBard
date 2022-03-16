@@ -15,6 +15,4 @@ public class Combo : ScriptableObject
 {
     public List<ComboNote> comboOrder;
     public ComboBase effect;
-    public bool affectsAllies;
-    public bool affectsEnemies;
 }

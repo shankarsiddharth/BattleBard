@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8be7541f126076438e7a0eee6c3b01e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasCustomEffect: 1
-  effectApplied: {fileID: 11400000, guid: f69db8f6de68bc1438cfa35b7120b563, type: 2}
-  appliesToEnemies: 0
-  appliesToAllies: 0
+  affectsAllies: 0
+  affectsEnemies: 0
+  _combatManager: {fileID: 0}
+  statusEffect: {fileID: 0}

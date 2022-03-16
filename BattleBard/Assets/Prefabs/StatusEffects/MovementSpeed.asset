@@ -18,7 +18,9 @@ MonoBehaviour:
   - maxHealth: 1
     damage: 1
     movementSpeed: 1.5
-    attackSpeed: 1
+    attackSpeed: 1.5
     range: 1
     armor: 1
     currentEffects: []
+  effectVFX:
+  - {fileID: 6661253060276135625, guid: d62d37a46d3f05e43bad9fb29f7cf244, type: 3}

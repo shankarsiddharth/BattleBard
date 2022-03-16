@@ -8,7 +8,8 @@ public abstract class ComboBase : MonoBehaviour
 	public bool affectsAllies;
 	public bool affectsEnemies;
 
-	public CombatManager _combatManager;
+	protected CombatManager _combatManager;
+
 	protected void Awake()
 	{
 		_combatManager = GameObject.FindGameObjectWithTag("CombatManager").GetComponent<CombatManager>();

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SpeedCombo : ComboApplyStatus
 {
-    new void Start()
+    void Start()
     {
         //base.Start();
         print("ZOOM!!");

@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 
-[CreateAssetMenu(fileName = "NewStatusEffect", menuName = "Status Effect")]
 public class StatusEffect : ScriptableObject
 {
 	[Tooltip("The duration of the tier.")]
