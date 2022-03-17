@@ -29,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7279344117432691975}
-  m_LocalRotation: {x: 0, y: 0.74467856, z: 0, w: -0.66742337}
+  m_LocalRotation: {x: 0, y: -0.7446785, z: 0, w: 0.6674234}
   m_LocalPosition: {x: 140.34, y: -0.79999924, z: 122.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4633469591719250781}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -96.263, z: 0}
 --- !u!33 &7279344117432691992
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -153,9 +153,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6bcf6c16ee1af4cbdcc6650d5d5e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAIGameObject: {fileID: 0}
+  stats:
+    maxHealth: 5
+    damage: 1
+    movementSpeed: 3
+    attackSpeed: 1
+    range: 1
+    armor: 0
+    currentEffects: []
+  currentHealth: 5
   AttackStartTime: 0.25
-  AttackRate: 0.25
+  target: {fileID: 0}
+  EnemyType: 0
+  GuardPaths:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &5172346196382805174
 PrefabInstance:
   m_ObjectHideFlags: 0

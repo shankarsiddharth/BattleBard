@@ -82,25 +82,15 @@ public class CombatManager : MonoBehaviour
         foreach (Transform childTransform in PlayerUnits.transform)
         {
             GameObject playerGameObject = childTransform.gameObject;
-            PlayerBaseAI playerBaseAI = playerGameObject.GetComponent<PlayerBaseAI>();
-            Stats stats = playerBaseAI.stats;
-            stats.maxHealth = Random.Range(1, 5);
-            stats.armor = Random.Range(1, 5);
-            stats.damage = Random.Range(1, 5);
-            playerBaseAI.stats = stats;
-            playerBaseAI.currentHealth = stats.maxHealth;
+            BaseAI playerBaseAI = playerGameObject.GetComponent<BaseAI>();
+            playerBaseAI.currentHealth = playerBaseAI.stats.maxHealth;
         }
         
         foreach (Transform childTransform in EnemyUnits.transform)
         {
             GameObject enemyGameObject = childTransform.gameObject;
-            EnemyBaseAI enemyBaseAI = enemyGameObject.GetComponent<EnemyBaseAI>();
-            Stats stats = enemyBaseAI.stats;
-            stats.maxHealth = Random.Range(1, 5);
-            stats.armor = Random.Range(1, 5);
-            stats.damage = Random.Range(1, 5);
-            enemyBaseAI.stats = stats;
-            enemyBaseAI.currentHealth = stats.maxHealth;
+            BaseAI enemyBaseAI = enemyGameObject.GetComponent<BaseAI>();
+            enemyBaseAI.currentHealth = enemyBaseAI.stats.maxHealth;
         }
     }
 }

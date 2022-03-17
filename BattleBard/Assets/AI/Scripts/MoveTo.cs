@@ -58,11 +58,6 @@ namespace BB
                     }*/
                     //gameObject.transform.LookAt(TargetGameObject.transform.forward);
                 }
-
-                if (PlayerBaseAI.currentHealth <= 0)
-                {
-                    Destroy(gameObject);
-                }
             }
         }
     }
