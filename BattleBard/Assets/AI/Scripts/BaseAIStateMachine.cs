@@ -7,6 +7,7 @@ public class BaseAIStateMachine : StateMachineBehaviour
 {
     public NavMeshAgent NavMeshAgentObject;
     public GameObject AIGameOBject;
+    public Animator animationAnimator;
     public GameObject TargetAIGameObject;
     public float AISpeed = 1.0f;
     public float AIRotationSpeed = 1.0f;
@@ -19,5 +20,6 @@ public class BaseAIStateMachine : StateMachineBehaviour
         
         //TODO: Find A Target Player Character to Attack/Focus
         TargetAIGameObject = AIGameOBject.GetComponent<BaseAI>().GetTarget();
+        animationAnimator = AIGameOBject.transform.GetChild(0).GetComponent<Animator>();
     }
 }

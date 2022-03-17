@@ -160,6 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NavMeshAgentObject: {fileID: 0}
   AIGameOBject: {fileID: 0}
+  animationAnimator: {fileID: 0}
   TargetAIGameObject: {fileID: 0}
   AISpeed: 1
   AIRotationSpeed: 1
@@ -203,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NavMeshAgentObject: {fileID: 0}
   AIGameOBject: {fileID: 0}
+  animationAnimator: {fileID: 0}
   TargetAIGameObject: {fileID: 0}
   AISpeed: 1
   AIRotationSpeed: 1
@@ -258,6 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NavMeshAgentObject: {fileID: 0}
   AIGameOBject: {fileID: 0}
+  animationAnimator: {fileID: 0}
   TargetAIGameObject: {fileID: 0}
   AISpeed: 1
   AIRotationSpeed: 1

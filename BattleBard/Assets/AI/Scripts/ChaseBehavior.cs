@@ -9,6 +9,7 @@ public class ChaseBehavior : BaseAIStateMachine
     {
         base.OnStateEnter(animator,stateInfo,layerIndex);
         NavMeshAgentObject.speed = animator.GetComponent<BaseAI>().stats.movementSpeed;
+        animationAnimator.Play("Chase");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

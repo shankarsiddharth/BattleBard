@@ -10,6 +10,7 @@ public class AttackBehavior : BaseAIStateMachine
     {
         base.OnStateEnter(animator,stateInfo,layerIndex);
         NavMeshAgentObject.speed = 0.0f;
+        animationAnimator.Play("Attack");
         AIGameOBject.GetComponent<BaseAI>().StartAttack();
     }
 

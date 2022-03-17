@@ -33,7 +33,7 @@ public class GuardBehavior : BaseAIStateMachine
             CurrentGuardPathIndex = 0;
             firstRun = false;
         }
-        
+        animationAnimator.Play("Guard");
         NavMeshAgentObject.speed = baseAI.stats.movementSpeed/2;
     }
 
