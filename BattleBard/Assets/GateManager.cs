@@ -7,6 +7,7 @@ using UnityEngine;
 public class GateManager : MonoBehaviour
 {
     private List<GameObject> _gateList;
+    private bool _isPlayerNearAGate = false;
     
     void Awake()
     {
@@ -33,5 +34,15 @@ public class GateManager : MonoBehaviour
     public void RemoveGate(GameObject gateGameObject)
     {
         _gateList.Remove(gateGameObject);
+    }
+
+    public void SetIsPlayerNearGate(bool isPlayerNearGate)
+    {
+        _isPlayerNearAGate = isPlayerNearGate;
+    }
+
+    public bool GetIsPlayerNearGate()
+    {
+        return _isPlayerNearAGate;
     }
 }

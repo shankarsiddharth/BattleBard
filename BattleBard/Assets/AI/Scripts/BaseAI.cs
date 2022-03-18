@@ -30,7 +30,6 @@ public abstract class BaseAI : MonoBehaviour
 
     void Attack()
     {
-        //TODO: Implement Attack Code
         if (target == null)
             return;
 

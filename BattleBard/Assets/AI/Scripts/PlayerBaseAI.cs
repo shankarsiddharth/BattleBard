@@ -13,15 +13,15 @@ public class PlayerBaseAI : BaseAI
 
     private GateManager _gateManager;
 
-    void Awake()
+    new void Awake()
     {
         base.Awake();
         _gateManager = GameObject.FindGameObjectWithTag("GateManager").GetComponent<GateManager>();
         if (_gateManager == null)
             throw new NullReferenceException("GateManager is null in PlayerBaseAI");
     }
-    
-    void Update()
+
+    new void Update()
     {
         base.Update();
         List<GameObject> gateGameObjects = _gateManager.GetGateList();
@@ -36,6 +36,7 @@ public class PlayerBaseAI : BaseAI
             if(Vector3.Distance(wallPositionInXZPlane, playerPositionInXZPlane) <= wallDistanceThreshold)
             {
                 nearestGate = gate;
+                _gateManager.SetIsPlayerNearGate(true);
                 StopNavigation();
             }
         }

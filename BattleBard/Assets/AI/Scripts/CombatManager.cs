@@ -95,23 +95,26 @@ public class CombatManager : MonoBehaviour
 
     private void ComboListener(ComboBase combo, int level, Vector3 position)
     {
+        if(!_gateManager.GetIsPlayerNearGate())
+            return;
+        
         _damageCounter++;
         if (_damageCounter >= damageToBreakWall)
         {
             List<PlayerBaseAI> playerBaseAis = GetPlayerBaseAIList();
-            //TODO: Get the Closest wall object and destroy
             foreach (PlayerBaseAI playerBaseAi in playerBaseAis)
             {
                 if (playerBaseAi.nearestGate != null)
                 {
-                    //Destroy the wall & break
+                    //Destroy the gate & break
                     _damageCounter = 0;
                     _gateManager.RemoveGate(playerBaseAi.nearestGate);
                     Destroy(playerBaseAi.nearestGate);
+                    _gateManager.SetIsPlayerNearGate(false);
                     break;
                 }
             }
-            //Reset the Current Wall
+            //Reset the Current Gate
             foreach (PlayerBaseAI playerBaseAi in playerBaseAis)
             {
                 playerBaseAi.nearestGate = null;
