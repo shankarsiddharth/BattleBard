@@ -10,7 +10,7 @@ public class ComboApplyStatus : ComboBase
 	{
         if (effect.affectsAllies)
 		{
-			foreach (Transform childTransform in _combatManager.PlayerUnits.transform)
+			foreach (Transform childTransform in _combatManager.playerUnits.transform)
 			{
 				childTransform.gameObject.TryGetComponent(out BaseAI ai);
 				StartCoroutine(statusEffect.StartTimer(level, ai));

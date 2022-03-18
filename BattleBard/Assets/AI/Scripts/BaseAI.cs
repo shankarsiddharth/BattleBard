@@ -53,7 +53,7 @@ public abstract class BaseAI : MonoBehaviour
         InvokeRepeating(nameof(Attack), AttackStartTime, 1 / stats.attackSpeed);
     }
 
-    void Update()
+    protected void Update()
     {
         if (currentHealth <= 0)
         {
@@ -76,5 +76,15 @@ public abstract class BaseAI : MonoBehaviour
     public GameObject GetTarget()
     {
         return target;
+    }
+    
+    public void StopNavigation()
+    {
+        agent.isStopped = true;
+    }
+
+    public void StartNavigation()
+    {
+        agent.isStopped = false;
     }
 }

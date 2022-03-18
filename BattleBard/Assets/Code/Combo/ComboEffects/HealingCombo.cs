@@ -15,7 +15,7 @@ public class HealingCombo : ComboBase
 	{
 		if (effect.affectsAllies)
 		{
-			foreach (Transform childTransform in _combatManager.PlayerUnits.transform)
+			foreach (Transform childTransform in _combatManager.playerUnits.transform)
 			{
 				childTransform.gameObject.TryGetComponent(out BaseAI ai);
 				StartCoroutine(StartTimer(level, ai));
@@ -23,7 +23,7 @@ public class HealingCombo : ComboBase
 		}
 		if (effect.affectsEnemies)
 		{
-			foreach (Transform childTransform in _combatManager.EnemyUnits.transform)
+			foreach (Transform childTransform in _combatManager.enemyUnits.transform)
 			{
 				childTransform.gameObject.TryGetComponent(out BaseAI ai);
 				StartCoroutine(StartTimer(level, ai));

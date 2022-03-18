@@ -7,90 +7,166 @@ using Random = UnityEngine.Random;
 
 public class CombatManager : MonoBehaviour
 {
+    [Header("Values & References")] 
+    public string PlayerUnitTagString = "PlayerUnits";
+    public string EnemyUnitTagString = "EnemyUnits";
+    public int damageToBreakWall = 3;
+
+    [Header("Autofill Values & References")]
+    public GameObject playerUnits;
+    public GameObject enemyUnits;
+
+    private List<GameObject> _playerGameObjectList = new List<GameObject>();
+    private List<GameObject> _enemyGameObjectList = new List<GameObject>();
+
+    private List<PlayerBaseAI> _playerAIList = new List<PlayerBaseAI>();
+    private List<EnemyBaseAI> _enemyAIList = new List<EnemyBaseAI>();
+
+    private GateManager _gateManager; 
+    private int _damageCounter;
+    
     public List<GameObject> GetPlayerGameObjectList()
     {
-        List<GameObject> playerList = new List<GameObject>();
-        GameObject newplayer = new GameObject();
-        playerList.Add(newplayer);
-        playerList.Add(newplayer);
-        return playerList;
+        InitializePlayerUnits();
+        return _playerGameObjectList;
     }
 
     public List<GameObject> GetEnemyGameObjectList()
     {
-        List<GameObject> enemyList = new List<GameObject>();
-        GameObject newEnemy = new GameObject();
-        enemyList.Add(newEnemy);
-        enemyList.Add(newEnemy);
-        return enemyList;
+        InitializeEnemyUnits();
+        return _enemyGameObjectList;
     }
 
     public List<PlayerBaseAI> GetPlayerBaseAIList()
     {
-        List<PlayerBaseAI> playerList = new List<PlayerBaseAI>();
-        PlayerBaseAI newplayer = new PlayerBaseAI();
-        playerList.Add(newplayer);
-        playerList.Add(newplayer);
-        return playerList;
+        InitializePlayerUnits();
+        return _playerAIList;
     }
 
     public List<EnemyBaseAI> GetEnemyBaseAIList()
     {
-        List<EnemyBaseAI> enemyList = new List<EnemyBaseAI>();
-        EnemyBaseAI newEnemy = new EnemyBaseAI();
-        enemyList.Add(newEnemy);
-        enemyList.Add(newEnemy);
-        return enemyList;
+        InitializeEnemyUnits();
+        return _enemyAIList;
     }
-
-    private SortedDictionary<int, PlayerBaseAI> GetPlayer()
-    {
-        SortedDictionary<int, PlayerBaseAI> dict = new SortedDictionary<int, PlayerBaseAI>();
-        PlayerBaseAI newplayer = new PlayerBaseAI();
-        dict.Add(1, newplayer);
-        dict.Add(2, newplayer);
-        return dict;
-    }
-    
-    private SortedDictionary<int, EnemyBaseAI> GetEnemies()
-    {
-        SortedDictionary<int, EnemyBaseAI> dict = new SortedDictionary<int, EnemyBaseAI>();
-        EnemyBaseAI newEnemy = new EnemyBaseAI();
-        dict.Add(1, newEnemy);
-        dict.Add(2, newEnemy);
-        return dict;
-    }
-
-    [Header("Values & References")]
-    public string PlayerUnitTagString = "PlayerUnits";
-    public string EnemyUnitTagString = "EnemyUnits";
-    
-    [Header("Autofill Values & References")]
-    public GameObject PlayerUnits;
-    public GameObject EnemyUnits;
 
     private void Awake()
     {
-        PlayerUnits = GameObject.FindGameObjectWithTag(PlayerUnitTagString);
-        EnemyUnits = GameObject.FindGameObjectWithTag(EnemyUnitTagString);
+        playerUnits = GameObject.FindGameObjectWithTag(PlayerUnitTagString);
+        enemyUnits = GameObject.FindGameObjectWithTag(EnemyUnitTagString);
 
-        if (PlayerUnits == null || EnemyUnits == null)
+        if (playerUnits == null || enemyUnits == null)
         {
             throw new NullReferenceException("Reference missing for PlayerUnits or EnemyUnits in CombatManager");
         }
 
-        foreach (Transform childTransform in PlayerUnits.transform)
+        _gateManager = GameObject.FindGameObjectWithTag("GateManager").GetComponent<GateManager>();
+        if (_gateManager == null)
+        {
+            throw new NullReferenceException("GateManger is null in CombatManager");
+        }
+
+        foreach (Transform childTransform in playerUnits.transform)
         {
             GameObject playerGameObject = childTransform.gameObject;
-            BaseAI playerBaseAI = playerGameObject.GetComponent<BaseAI>();
+            PlayerBaseAI playerBaseAI = playerGameObject.GetComponent<PlayerBaseAI>();
+            /*Stats stats = playerBaseAI.stats;
+            stats.maxHealth = Random.Range(11, 15);
+            stats.armor = Random.Range(1, 5);
+            stats.damage = Random.Range(5, 6);
+            playerBaseAI.stats = stats;*/
             playerBaseAI.currentHealth = playerBaseAI.stats.maxHealth;
         }
-        
-        foreach (Transform childTransform in EnemyUnits.transform)
+
+        foreach (Transform childTransform in enemyUnits.transform)
         {
             GameObject enemyGameObject = childTransform.gameObject;
-            BaseAI enemyBaseAI = enemyGameObject.GetComponent<BaseAI>();
+            EnemyBaseAI enemyBaseAI = enemyGameObject.GetComponent<EnemyBaseAI>();
+            /*Stats stats = enemyBaseAI.stats;
+            stats.maxHealth = Random.Range(1, 5);
+            stats.armor = Random.Range(1, 5);
+            stats.damage = Random.Range(1, 5);
+            enemyBaseAI.stats = stats;*/
             enemyBaseAI.currentHealth = enemyBaseAI.stats.maxHealth;
         }
+        
+        //Listen to Combos
+        GameEvents.Instance.onDrumComboCompleted.AddListener(ComboListener);
     }
+
+    private void ComboListener(ComboBase combo, int level, Vector3 position)
+    {
+        _damageCounter++;
+        if (_damageCounter >= damageToBreakWall)
+        {
+            List<PlayerBaseAI> playerBaseAis = GetPlayerBaseAIList();
+            //TODO: Get the Closest wall object and destroy
+            foreach (PlayerBaseAI playerBaseAi in playerBaseAis)
+            {
+                if (playerBaseAi.nearestGate != null)
+                {
+                    //Destroy the wall & break
+                    _damageCounter = 0;
+                    _gateManager.RemoveGate(playerBaseAi.nearestGate);
+                    Destroy(playerBaseAi.nearestGate);
+                    break;
+                }
+            }
+            //Reset the Current Wall
+            foreach (PlayerBaseAI playerBaseAi in playerBaseAis)
+            {
+                playerBaseAi.nearestGate = null;
+                playerBaseAi.StartNavigation();
+            }
+        }
+    }
+
+    void InitializePlayerUnits()
+    {
+        _playerGameObjectList.Clear();
+        _playerAIList.Clear();
+        foreach (Transform childTransform in playerUnits.transform)
+        {
+            GameObject playerGameObject = childTransform.gameObject;
+            PlayerBaseAI playerBaseAI = playerGameObject.GetComponent<PlayerBaseAI>();
+            _playerGameObjectList.Add(playerGameObject);
+            _playerAIList.Add(playerBaseAI);
+        }
+    }
+
+    void InitializeEnemyUnits()
+    {
+        _enemyGameObjectList.Clear();
+        _enemyAIList.Clear();
+        foreach (Transform childTransform in enemyUnits.transform)
+        {
+            GameObject enemyGameObject = childTransform.gameObject;
+            EnemyBaseAI enemyBaseAI = enemyGameObject.GetComponent<EnemyBaseAI>();
+            _enemyGameObjectList.Add(enemyGameObject);
+            _enemyAIList.Add(enemyBaseAI);
+        }
+    }
+    
+    public Vector3 GetMidPoint()
+    {
+        if(playerUnits.transform.childCount == 0)
+            return Vector3.zero;
+            
+        float totalX = 0f;
+        float totalY = 0f;
+        float totalZ = 0f;
+        int count = 0;
+        foreach(Transform childTransform in playerUnits.transform)
+        {
+            totalX += childTransform.position.x;
+            totalY += childTransform.position.y;
+            totalZ += childTransform.position.z;
+            count++;
+        }
+        float centerX = totalX / (float)count;
+        float centerY = totalY / (float)count;
+        float centerZ = totalZ / (float) count;
+        Vector3 midPoint = new Vector3(centerX, centerY, centerZ);
+        return midPoint;
+    }
+
 }
