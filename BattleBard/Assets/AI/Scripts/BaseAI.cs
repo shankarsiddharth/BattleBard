@@ -52,10 +52,30 @@ public abstract class BaseAI : MonoBehaviour
         InvokeRepeating(nameof(Attack), AttackStartTime, 1 / stats.attackSpeed);
     }
 
+    public GameObject SearchTarget(List<GameObject> targetOptions)
+    {
+        float closestDistance = float.MaxValue;
+        GameObject closestBaseAI = null;
+  
+        foreach(GameObject option in targetOptions)
+        {
+            Vector3 distanceVector = this.transform.position - option.transform.position;
+            float distance = distanceVector.magnitude;
+
+            if(distance < closestDistance)
+            {
+                closestBaseAI = option;
+                closestDistance = distance;
+            }
+        }
+        return closestBaseAI;
+    }
+
     protected void Update()
     {
         if (currentHealth <= 0)
         {
+            CombatManager.Instance.RemoveGameObjectFromBattleground(this);
             Destroy(gameObject);
         }
 
@@ -65,6 +85,10 @@ public abstract class BaseAI : MonoBehaviour
             animator.SetBool("enemyInRange", false);
             animator.SetFloat("distance", 1000.0f);
             return;
+        }
+        else
+        {
+            animator.SetBool("hasNoTarget", false);
         }
 
         float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);

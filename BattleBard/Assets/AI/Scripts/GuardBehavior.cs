@@ -45,14 +45,19 @@ public class GuardBehavior : BaseAIStateMachine
         if (GuardPaths.Count == 0) 
             return;
 
-        Vector3 GuardPathPosition = GuardPaths[CurrentGuardPathIndex].transform.position;
         Vector3 EnemyAIGameObjectPosition = AIGameOBject.transform.position;
-        Quaternion EnemyAIGameObjectRotation = AIGameOBject.transform.rotation;
         
-        Vector3 GuardPathPositionInXZPlane = new Vector3(GuardPathPosition.x, 0, GuardPathPosition.z);
         Vector3 EnemyAIGameObjectPositionInXZPlane = new Vector3(EnemyAIGameObjectPosition.x, 0, EnemyAIGameObjectPosition.z);
+
+        BoxCollider GuardPathCollider;
+
+        GuardPaths[CurrentGuardPathIndex].TryGetComponent(out GuardPathCollider);
         
-        if(Vector3.Distance(GuardPathPositionInXZPlane, EnemyAIGameObjectPositionInXZPlane) < AIDistanceTolerence)
+         Vector3 GuardPathPosition = 
+            GuardPathCollider?.ClosestPoint(EnemyAIGameObjectPositionInXZPlane) 
+            ?? GuardPaths[CurrentGuardPathIndex].transform.position;
+
+        if (Vector3.Distance(GuardPathPosition, EnemyAIGameObjectPositionInXZPlane) < AIDistanceTolerence)
         {
             CurrentGuardPathIndex++;
             if(CurrentGuardPathIndex >= GuardPaths.Count)

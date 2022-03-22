@@ -40,5 +40,10 @@ public class PlayerBaseAI : BaseAI
                 StopNavigation();
             }
         }
+
+        if(this.target == null && CombatManager.Instance._enemyGameObjectList.Count != 0)
+        {
+            this.target = SearchTarget(CombatManager.Instance._enemyGameObjectList);
+        }
     }
 }

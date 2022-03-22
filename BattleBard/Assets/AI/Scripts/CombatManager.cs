@@ -7,7 +7,10 @@ using Random = UnityEngine.Random;
 
 public class CombatManager : MonoBehaviour
 {
-    [Header("Values & References")] 
+
+    public static CombatManager Instance;
+
+    [Header("Values & References")]
     public string PlayerUnitTagString = "PlayerUnits";
     public string EnemyUnitTagString = "EnemyUnits";
     public int damageToBreakWall = 3;
@@ -16,15 +19,15 @@ public class CombatManager : MonoBehaviour
     public GameObject playerUnits;
     public GameObject enemyUnits;
 
-    private List<GameObject> _playerGameObjectList = new List<GameObject>();
-    private List<GameObject> _enemyGameObjectList = new List<GameObject>();
+    public List<GameObject> _playerGameObjectList = new List<GameObject>();
+    public List<GameObject> _enemyGameObjectList = new List<GameObject>();
 
     private List<PlayerBaseAI> _playerAIList = new List<PlayerBaseAI>();
     private List<EnemyBaseAI> _enemyAIList = new List<EnemyBaseAI>();
 
-    private GateManager _gateManager; 
+    private GateManager _gateManager;
     private int _damageCounter;
-    
+
     public List<GameObject> GetPlayerGameObjectList()
     {
         InitializePlayerUnits();
@@ -51,6 +54,15 @@ public class CombatManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(Instance.gameObject);
+        }
+
         playerUnits = GameObject.FindGameObjectWithTag(PlayerUnitTagString);
         enemyUnits = GameObject.FindGameObjectWithTag(EnemyUnitTagString);
 
@@ -88,16 +100,18 @@ public class CombatManager : MonoBehaviour
             enemyBaseAI.stats = stats;*/
             enemyBaseAI.currentHealth = enemyBaseAI.stats.maxHealth;
         }
-        
+        InitializeEnemyUnits();
+        InitializePlayerUnits();
+
         //Listen to Combos
         GameEvents.Instance.onDrumComboCompleted.AddListener(ComboListener);
     }
 
     private void ComboListener(ComboBase combo, int level, Vector3 position)
     {
-        if(!_gateManager.GetIsPlayerNearGate())
+        if (!_gateManager.GetIsPlayerNearGate())
             return;
-        
+
         _damageCounter++;
         if (_damageCounter >= damageToBreakWall)
         {
@@ -148,17 +162,34 @@ public class CombatManager : MonoBehaviour
             _enemyAIList.Add(enemyBaseAI);
         }
     }
-    
+
+    public void RemoveGameObjectFromBattleground(BaseAI aiObject)
+    {
+        EnemyBaseAI enemyAI = aiObject.GetComponent<EnemyBaseAI>();
+        PlayerBaseAI playerAI = aiObject.GetComponent<PlayerBaseAI>();
+
+        if (enemyAI)
+        {
+            _enemyAIList.Remove(enemyAI);
+            _enemyGameObjectList.Remove(enemyAI.gameObject);
+        }
+        else
+        {
+            _playerAIList.Remove(playerAI);
+            _playerGameObjectList.Remove(playerAI.gameObject);
+        }
+    }
+
     public Vector3 GetMidPoint()
     {
-        if(playerUnits.transform.childCount == 0)
+        if (playerUnits.transform.childCount == 0)
             return Vector3.zero;
-            
+
         float totalX = 0f;
         float totalY = 0f;
         float totalZ = 0f;
         int count = 0;
-        foreach(Transform childTransform in playerUnits.transform)
+        foreach (Transform childTransform in playerUnits.transform)
         {
             totalX += childTransform.position.x;
             totalY += childTransform.position.y;
@@ -167,7 +198,7 @@ public class CombatManager : MonoBehaviour
         }
         float centerX = totalX / (float)count;
         float centerY = totalY / (float)count;
-        float centerZ = totalZ / (float) count;
+        float centerZ = totalZ / (float)count;
         Vector3 midPoint = new Vector3(centerX, centerY, centerZ);
         return midPoint;
     }

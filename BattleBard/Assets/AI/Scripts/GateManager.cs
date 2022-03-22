@@ -17,7 +17,7 @@ public class GateManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        RemoveGate(_gateList[0]);
     }
 
     // Update is called once per frame
