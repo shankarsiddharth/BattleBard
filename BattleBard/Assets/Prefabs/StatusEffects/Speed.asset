@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fcbd3c60f3bbb4468c9a452bbca9d75, type: 3}
+  m_Name: Speed
+  m_EditorClassIdentifier: 
+  tierDuration:
+  - 10
+  multiplicitiveChanges:
+  - maxHealth: 1
+    damage: 1
+    movementSpeed: 1.5
+    attackSpeed: 1.5
+    range: 1
+    armor: 1
+    currentEffects: []
+  effectVFX:
+  - {fileID: 6661253060276135625, guid: d62d37a46d3f05e43bad9fb29f7cf244, type: 3}

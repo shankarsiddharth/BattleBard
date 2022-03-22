@@ -65,16 +65,16 @@ public class GameEvents : MonoBehaviour
     public UnityEvent<Drums> onDrumPlayed;
 
     //Add parameters after implementations of effects and stuff
-    public UnityEvent<ComboEffect, Vector3, bool, bool> onDrumComboCompleted;
+    public UnityEvent<ComboBase, int, Vector3> onDrumComboCompleted;
 
     public void OnDrumPlayed(Drums drum)
     {
         onDrumPlayed.Invoke(drum);
     }
     
-    public void OnDrumComboCompleted(ComboEffect effect, Vector3 pos, bool affectsAllies, bool affectsEnemies)
+    public void OnDrumComboCompleted(ComboBase effect, int level, Vector3 pos)
     {
-        onDrumComboCompleted.Invoke(effect, pos, affectsAllies, affectsEnemies);
+        onDrumComboCompleted.Invoke(effect, level, pos);
     }
     #endregion
 

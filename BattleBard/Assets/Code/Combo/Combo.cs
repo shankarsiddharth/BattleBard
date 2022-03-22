@@ -14,7 +14,5 @@ public struct ComboNote
 public class Combo : ScriptableObject
 {
     public List<ComboNote> comboOrder;
-    public ComboEffect effect;
-    public bool affectsAllies;
-    public bool affectsEnemies;
+    public ComboBase effect;
 }
