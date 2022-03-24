@@ -14,6 +14,12 @@ public class Arrow : MonoBehaviour
 
     public void Initialize(Actor owner, Actor target)
     {
+        if (!target)
+        {
+            DestroySelf();
+            return;
+        }
+
         rb = GetComponent<Rigidbody>();
 
         this.owner = owner;
