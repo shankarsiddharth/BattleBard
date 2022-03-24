@@ -31,7 +31,7 @@ public class SFXManager : MonoBehaviour
     {
         _drumSources = new Dictionary<Drums, List<AudioSource>>();
 
-		//GameEvents.Instance.onDrumPlayed.AddListener(OnDrumPlayed);
+		GameEvents.Instance.onDrumPlayed.AddListener(OnDrumPlayed);
 
         foreach (DrumSound ds in drumsSFX)
 		{
