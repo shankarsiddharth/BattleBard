@@ -21,6 +21,8 @@ public class AttackingState : State
             return;
         }
 
+        actor.navMeshAgent.SetDestination(actor.target.transform.position);
+
         if (!actor.navMeshAgent.pathPending && actor.navMeshAgent.remainingDistance > actor.stats.range)
         {
             stateMachine.ChangeState(actor.chasingState);
