@@ -9,7 +9,6 @@ public class ComboManager : MonoBehaviour
     public List<Combo> validCombos;
     public List<Note> drumsHit;
 
-    private CombatManager _combatManager;
     private Metronome _metronome;
     private List<Combo> _defaultCombos;
     // Tracks the progress of current combos so we don't have to check each note very frame
@@ -20,8 +19,6 @@ public class ComboManager : MonoBehaviour
 
     private void Start()
     {
-        _combatManager = GameObject.FindGameObjectWithTag("CombatManager").GetComponent<CombatManager>();
-
         GameEvents.Instance.onDrumPlayed.AddListener(OnDrumPlay);
         GameEvents.Instance.onDrumComboCompleted.AddListener(ListenForCombos);
 

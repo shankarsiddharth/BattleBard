@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class HealingCombo : ComboBase
 {
 	public List<float> tierDuration;
@@ -15,23 +14,23 @@ public class HealingCombo : ComboBase
 	{
 		if (effect.affectsAllies)
 		{
-			foreach (Transform childTransform in _combatManager.playerUnits.transform)
+			foreach (Dwarf dwarf in _combatManager.playerUnits)
 			{
-				childTransform.gameObject.TryGetComponent(out BaseAI ai);
+                dwarf.TryGetComponent(out Actor ai);
 				StartCoroutine(StartTimer(level, ai));
 			}
 		}
 		if (effect.affectsEnemies)
 		{
-			foreach (Transform childTransform in _combatManager.enemyUnits.transform)
+			foreach (Orc orc in _combatManager.enemyUnits)
 			{
-				childTransform.gameObject.TryGetComponent(out BaseAI ai);
+				orc.TryGetComponent(out Actor ai);
 				StartCoroutine(StartTimer(level, ai));
 			}
 		}
 	}
 
-	IEnumerator StartTimer(int level, BaseAI minion)
+	IEnumerator StartTimer(int level, Actor minion)
 	{
 		GameObject vfx = Instantiate(tierVFXPrefab[level], minion.transform);
 		float timeSpent = 0f;

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 public abstract class ComboBase : MonoBehaviour 
 {
@@ -12,8 +9,7 @@ public abstract class ComboBase : MonoBehaviour
 
 	protected void Awake()
 	{
-		_combatManager = GameObject.FindGameObjectWithTag("CombatManager").GetComponent<CombatManager>();
-		print(_combatManager);
+		_combatManager = FindObjectOfType<CombatManager>();
 	}
 
 	public abstract void ComboPlayed(ComboBase effect, int level, Vector3 pos);

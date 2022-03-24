@@ -13,23 +13,23 @@ public class StatusEffect : ScriptableObject
 	public GameObject[] effectVFX;
 
 	// Potentially takes GameObject instead of BaseAI and finds the PlayerBaseAI or EnemyBaseAI components
-	public IEnumerator StartTimer(int tier, BaseAI ai)
+	public IEnumerator StartTimer(int tier, Actor actor)
 	{
 		Debug.Log("Started");
 
-		if (!ai.stats.currentEffects.Contains(this))
+		if (!actor.stats.currentEffects.Contains(this))
 		{
 			// Add VFX
-			GameObject vfx = Instantiate(effectVFX[tier], ai.transform);
-			ai.stats.currentEffects.Add(this);
-			ai.stats *= multiplicitiveChanges[tier];
+			GameObject vfx = Instantiate(effectVFX[tier], actor.transform);
+			actor.stats.currentEffects.Add(this);
+			actor.stats *= multiplicitiveChanges[tier];
 
 			yield return new WaitForSeconds(tierDuration[tier]);
 
-			if (ai != null)
+			if (actor != null)
 			{
-				ai.stats.currentEffects.Remove(this);
-				ai.stats /= multiplicitiveChanges[tier];
+				actor.stats.currentEffects.Remove(this);
+				actor.stats /= multiplicitiveChanges[tier];
 				Destroy(vfx);
 			}
 

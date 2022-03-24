@@ -10,6 +10,9 @@ TagManager:
   - CombatManager
   - Gate
   - GateManager
+  - Dwarf
+  - Orc
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

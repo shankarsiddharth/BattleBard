@@ -11,11 +11,7 @@ GameObject:
   - component: {fileID: 2212661501041718538}
   - component: {fileID: 3526569306241443677}
   m_Layer: 0
-<<<<<<< HEAD:BattleBard/Assets/Prefabs/Combos/EighthNoteCombo 1.prefab
-  m_Name: EighthNoteCombo 1
-=======
   m_Name: Healing
->>>>>>> Kayle-Playtest:BattleBard/Assets/Prefabs/Combos/Healing.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
