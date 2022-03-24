@@ -6,9 +6,14 @@ public class ChasingState : State
     {
         base.Enter();
 
-        // TODO Create animator parameters and set them here.
-        actor.animator.Play("Chase");
+        if (!actor.target)
+        {
+            actor.stateMachine.ChangeState(actor.DefaultState);
+            return;
+        }
 
+        // TODO Create animator parameters and set them here.
+        actor.animator.SetTrigger("chase");
         actor.navMeshAgent.SetDestination(actor.target.transform.position);
         actor.navMeshAgent.isStopped = false;
     }
@@ -20,11 +25,17 @@ public class ChasingState : State
         if (actor.navMeshAgent.destination != actor.target.transform.position)
             actor.navMeshAgent.SetDestination(actor.target.transform.position);
 
-        if (actor.navMeshAgent.remainingDistance <= actor.stats.range)
+        if (!actor.navMeshAgent.pathPending && actor.navMeshAgent.remainingDistance <= actor.stats.range)
+        {
             stateMachine.ChangeState(actor.attackingState);
+            return;
+        }
 
-        if (actor.navMeshAgent.remainingDistance > actor.detectionRange)
+        if (!actor.navMeshAgent.pathPending && actor.navMeshAgent.remainingDistance > actor.detectionRange)
+        {
             stateMachine.ChangeState(actor.DefaultState);
+            return;
+        }
     }
 
     public override void Exit()

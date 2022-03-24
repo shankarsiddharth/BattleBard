@@ -21,13 +21,13 @@ public class AttackingState : State
             return;
         }
 
-        if (actor.navMeshAgent.remainingDistance > actor.stats.range)
+        if (!actor.navMeshAgent.pathPending && actor.navMeshAgent.remainingDistance > actor.stats.range)
         {
             stateMachine.ChangeState(actor.chasingState);
             return;
         }
 
-        if (actor.navMeshAgent.remainingDistance > actor.detectionRange)
+        if (!actor.navMeshAgent.pathPending && actor.navMeshAgent.remainingDistance > actor.detectionRange)
         {
             stateMachine.ChangeState(actor.DefaultState);
             return;
@@ -42,6 +42,7 @@ public class AttackingState : State
     {
         base.Exit();
 
+        actor.target = null;
         actor.CancelInvoke();
     }
 }

@@ -15,13 +15,39 @@ public abstract class Dwarf : Actor
     public override void Init()
     {
         FindCheckpoints();
-
         movingState = new MovingState(this, stateMachine);
     }
 
     private void FindCheckpoints()
     {
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint").Select((go) => go.transform).ToList();
+        FindNextCheckpoint();
+    }
+
+    private void FindNextCheckpoint()
+    {
+        if (checkpoints.Count != 0)
+        {
+            float closestDist = float.MaxValue;
+            Transform closestCheckpoint = null;
+
+            foreach (Transform checkpoint in checkpoints)
+            {
+                float distance = Vector3.Distance(checkpoint.position, transform.position);
+                if (distance < closestDist)
+                {
+                    closestDist = distance;
+                    closestCheckpoint = checkpoint;
+                }
+            }
+
+            if (closestCheckpoint)
+                moveTarget = closestCheckpoint.position;
+        }
+        else
+        {
+            stateMachine.ChangeState(idleState);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,28 +56,7 @@ public abstract class Dwarf : Actor
         {
             checkpoints.Remove(other.transform);
 
-            if (checkpoints.Count != 0)
-            {
-                float closestDist = float.MaxValue;
-                Transform closestCheckpoint = null;
-
-                foreach (Transform checkpoint in checkpoints)
-                {
-                    float distance = Vector3.Distance(closestCheckpoint.position, transform.position);
-                    if (distance < closestDist)
-                    {
-                        closestDist = distance;
-                        closestCheckpoint = checkpoint;
-                    }
-                }
-
-                if (closestCheckpoint)
-                    moveTarget = closestCheckpoint.position;
-            }
-            else
-            {
-                stateMachine.ChangeState(idleState);
-            }
+            FindNextCheckpoint();
         }
     }
 }

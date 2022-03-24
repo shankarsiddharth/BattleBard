@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class IdleState : State
 {
     public IdleState(Actor actor, StateMachine stateMachine) : base(actor, stateMachine) { }
@@ -10,7 +6,9 @@ public class IdleState : State
     {
         base.Enter();
 
-        // TODO Activate idle animation
+        actor.target = null;
+        actor.navMeshAgent.isStopped = true;
+        actor.animator.SetTrigger("idle");
     }
 
     public override void Update()

@@ -90,10 +90,16 @@ public class GameEvents : MonoBehaviour
     #region Event Triggers
     //Triggers on event completion
     public UnityEvent<int> onEventCompleted;
+    public UnityEvent<Gate> onGateDestroyed;
 
     public void OnEventCompleted(int eventId)
     {
         onEventCompleted.Invoke(eventId);
+    } 
+    
+    public void OnGateDestroyed(Gate gate)
+    {
+        onGateDestroyed.Invoke(gate);
     }
     #endregion
 

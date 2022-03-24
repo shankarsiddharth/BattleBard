@@ -9,7 +9,7 @@ public class MovingState : State
         base.Enter();
 
         // TODO Create animator parameters and set them here.
-        actor.animator.Play("Guard");
+        actor.animator.SetTrigger("guard");
 
         actor.navMeshAgent.SetDestination(actor.moveTarget);
         actor.navMeshAgent.isStopped = false;

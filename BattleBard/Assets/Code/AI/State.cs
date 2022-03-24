@@ -9,7 +9,9 @@ public abstract class State
         this.stateMachine = stateMachine;
     }
 
-    public virtual void Enter() {}
+    public virtual void Enter() {
+        //Debug.Log($"{actor} is in {GetType().ToString()}");
+    }
 
     public virtual void Update() {}
 

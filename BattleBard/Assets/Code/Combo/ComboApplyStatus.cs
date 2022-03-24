@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ComboApplyStatus : ComboBase
@@ -10,9 +8,9 @@ public class ComboApplyStatus : ComboBase
 	{
         if (effect.affectsAllies)
 		{
-			foreach (Transform childTransform in _combatManager.playerUnits.transform)
+			foreach (Dwarf dwarf in _combatManager.playerUnits)
 			{
-				childTransform.gameObject.TryGetComponent(out BaseAI ai);
+                dwarf.TryGetComponent(out Actor ai);
 				StartCoroutine(statusEffect.StartTimer(level, ai));
 			}
 		}
