@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 7b1630afa535e714ea57c9c2e8bb0074, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
@@ -239,4 +240,22 @@ MonoBehaviour:
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 1
+=======
+  m_Script: {fileID: 11500000, guid: 746acce18aa01b94b9b73f4eef332cc4, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu: []
+  AuxBusWwu: []
+  BankWwu: []
+  EventWwu: []
+  RtpcWwu: []
+  StateWwu: []
+  SwitchWwu: []
+  TriggerWwu: []
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 
+  AutoSyncSelection: 0
+  autoPopulateEnabled: 1
+  currentDataSource: 0
+>>>>>>> main
   CurrentPluginConfig: 

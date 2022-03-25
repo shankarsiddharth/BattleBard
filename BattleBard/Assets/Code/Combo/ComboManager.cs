@@ -12,7 +12,7 @@ public class ComboManager : MonoBehaviour
     private Metronome _metronome;
     private List<Combo> _defaultCombos;
     // Tracks the progress of current combos so we don't have to check each note very frame
-    private List<int> _comboProgress;
+    [SerializeField] private List<int> _comboProgress;
 
     private bool _playingCombo;
     private int _startBeat;
@@ -20,6 +20,9 @@ public class ComboManager : MonoBehaviour
     private void Start()
     {
         GameEvents.Instance.onDrumPlayed.AddListener(OnDrumPlay);
+        GameEvents.Instance.onDrumComboCompleted.AddListener(ListenForCombos);
+
+
         if (!gameObject.TryGetComponent(out _metronome))
         {
             Debug.LogWarning("The primary metronome should be attached to the same game object as the combo manager.");
@@ -32,6 +35,7 @@ public class ComboManager : MonoBehaviour
 
     private void Update()
     {
+
         if (_playingCombo)
         {
             // List of combos to remove because they are no longer valid
@@ -44,10 +48,10 @@ public class ComboManager : MonoBehaviour
             // Check current note for all valid combos for 'missing' a beat note
             for (int comboInd = 0; comboInd < _comboProgress.Count; comboInd++)
             {
-                ComboNote curNote = validCombos[comboInd].comboOrder[_comboProgress[comboInd]];
+                ComboNote properComboNote = validCombos[comboInd].comboOrder[_comboProgress[comboInd]];
 
                 // If beat is less than curBeat, they missed it
-                if (curNote.beat < curBeat)
+                if (properComboNote.beat < curBeat)
                     invalidCombos.Add(validCombos[comboInd]);
             }
 
@@ -113,10 +117,11 @@ public class ComboManager : MonoBehaviour
             _playingCombo = true;
         }
 
-        Note note = new Note { notePlayed = drum };
+        Note playedNote = new Note { notePlayed = drum };
 
         // Always evaluate notes, even improv notes
-        NoteEvaluator.EvaluateNote(ref note);
+        NoteEvaluator.EvaluateNote(ref playedNote);
+
 
         // List of combos to remove because they are no longer valid
         //List<Combo> invalidCombos = new List<Combo>();
@@ -124,18 +129,18 @@ public class ComboManager : MonoBehaviour
         // Check if note was a beat note for each valid combo
         for (int comboInd = 0; comboInd < _comboProgress.Count; comboInd++)
         {
-            ComboNote curNote = validCombos[comboInd].comboOrder[_comboProgress[comboInd]];
+            ComboNote properComboNote = validCombos[comboInd].comboOrder[_comboProgress[comboInd]];
 
             // If the notes aren't the same, skip
-            if (curNote.note != note.notePlayed)
+            if (properComboNote.note != playedNote.notePlayed)
                 continue;
 
             // If they aren't on the same beat, skip
-            if (curNote.beat != note.timestamp)
+            if (properComboNote.beat != playedNote.timestamp - _startBeat)
                 continue;
 
             // If its grade is too low, skip (or fail?)
-            if (note.grade == Grade.Bad)
+            if (playedNote.grade == Grade.Bad)
                 continue;
 
             // If it was all good, then advance progress (and 'use' the combo if complete)
@@ -149,12 +154,27 @@ public class ComboManager : MonoBehaviour
                 SetComboNotes(validCombos[comboInd]);
 
                 // Call the event then reset
-                GameEvents.Instance.OnDrumComboCompleted();
+                GameEvents.Instance.OnDrumComboCompleted(validCombos[comboInd].effect, 0, Vector3.zero);
                 ResetCombo();
 			}
         }
 
-        drumsHit.Add(note);
+        drumsHit.Add(playedNote);
+    }
+
+
+    private static void ListenForCombos(ComboBase effect, int level, Vector3 pos)
+    {
+        if (effect == null)
+        {
+            Debug.LogWarning("Effect is unassigned!");
+            return;
+        }
+
+        ComboBase b = Instantiate(effect, pos, Quaternion.Euler(Vector3.zero));
+        b.ComboPlayed(effect, level, pos);
+
+        print("Combo complete: " + effect.ToString());
     }
 
 }

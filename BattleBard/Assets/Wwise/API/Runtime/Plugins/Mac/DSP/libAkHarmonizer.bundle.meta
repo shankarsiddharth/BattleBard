@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: cbb2529a838e9bb4f89e6bba68b38191
+=======
+guid: 4abd5db21e4f8b145ab0ebce15e93a89
+>>>>>>> main
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2

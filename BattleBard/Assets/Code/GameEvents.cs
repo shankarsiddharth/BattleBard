@@ -65,16 +65,16 @@ public class GameEvents : MonoBehaviour
     public UnityEvent<Drums> onDrumPlayed;
 
     //Add parameters after implementations of effects and stuff
-    public UnityEvent onDrumComboCompleted;
+    public UnityEvent<ComboBase, int, Vector3> onDrumComboCompleted;
 
     public void OnDrumPlayed(Drums drum)
     {
         onDrumPlayed.Invoke(drum);
     }
     
-    public void OnDrumComboCompleted()
+    public void OnDrumComboCompleted(ComboBase effect, int level, Vector3 pos)
     {
-        onDrumComboCompleted.Invoke();
+        onDrumComboCompleted.Invoke(effect, level, pos);
     }
     #endregion
 
@@ -90,10 +90,16 @@ public class GameEvents : MonoBehaviour
     #region Event Triggers
     //Triggers on event completion
     public UnityEvent<int> onEventCompleted;
+    public UnityEvent<Gate> onGateDestroyed;
 
     public void OnEventCompleted(int eventId)
     {
         onEventCompleted.Invoke(eventId);
+    } 
+    
+    public void OnGateDestroyed(Gate gate)
+    {
+        onGateDestroyed.Invoke(gate);
     }
     #endregion
 
@@ -130,8 +136,8 @@ public class GameEvents : MonoBehaviour
                 case "RightShoulder":
                     GameEvents.Instance.OnDrumPlayed(Drums.RightShoulder);
                     break;
-                case "Stomach":
-                    GameEvents.Instance.OnDrumPlayed(Drums.Stomach);
+                case "RightStomach":
+                    GameEvents.Instance.OnDrumPlayed(Drums.RightStomach);
                     break;
                 case "LeftThigh":
                     GameEvents.Instance.OnDrumPlayed(Drums.LeftThigh);
@@ -139,7 +145,10 @@ public class GameEvents : MonoBehaviour
                 case "RightThigh":
                     GameEvents.Instance.OnDrumPlayed(Drums.RightThigh);
                     break;
-			}
+                case "LeftStomach":
+                    GameEvents.Instance.OnDrumPlayed(Drums.LeftStomach);
+                    break;
+            }
         }
     }
 

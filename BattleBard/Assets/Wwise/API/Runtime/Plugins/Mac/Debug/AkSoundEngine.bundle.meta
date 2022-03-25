@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 0d412468a8af7b849b18c379f2043e3e
+=======
+guid: e87d66ecff31f7b40ae192ade9b0dc7c
+>>>>>>> main
 folderAsset: yes
 PluginImporter:
   externalObjects: {}
