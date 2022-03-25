@@ -1,3 +1,4 @@
+using UnityEngine;
 public abstract class State
 {
     protected Actor actor;
@@ -10,7 +11,7 @@ public abstract class State
     }
 
     public virtual void Enter() {
-        //Debug.Log($"{actor} is in {GetType().ToString()}");
+        Debug.Log($"{actor} is in {GetType().ToString()}");
     }
 
     public virtual void Update() {}

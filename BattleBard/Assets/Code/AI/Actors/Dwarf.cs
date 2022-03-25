@@ -54,6 +54,7 @@ public abstract class Dwarf : Actor
     {
         if (other.tag == "Checkpoint")
         {
+            print("Checkpoint Entered");
             checkpoints.Remove(other.transform);
 
             FindNextCheckpoint();
