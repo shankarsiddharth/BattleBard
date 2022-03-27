@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 public class GameEvents : MonoBehaviour
 {
@@ -63,16 +65,16 @@ public class GameEvents : MonoBehaviour
     public UnityEvent<Drums> onDrumPlayed;
 
     //Add parameters after implementations of effects and stuff
-    public UnityEvent onDrumComboCompleted;
+    public UnityEvent<ComboBase, int, Vector3> onDrumComboCompleted;
 
-    public void OnDrumPlayed(Drums drumId)
+    public void OnDrumPlayed(Drums drum)
     {
-        onDrumPlayed.Invoke(drumId);
+        onDrumPlayed.Invoke(drum);
     }
     
-    public void OnDrumComboCompleted()
+    public void OnDrumComboCompleted(ComboBase effect, int level, Vector3 pos)
     {
-        onDrumComboCompleted.Invoke();
+        onDrumComboCompleted.Invoke(effect, level, pos);
     }
     #endregion
 
@@ -85,19 +87,19 @@ public class GameEvents : MonoBehaviour
     }
     #endregion
 
-    #region Path Events
-    //Change Event parameter to Path object after implementation
-    public UnityEvent<int> onPathCompleted;
-    public UnityEvent<int> onPathStart;
+    #region Event Triggers
+    //Triggers on event completion
+    public UnityEvent<int> onEventCompleted;
+    public UnityEvent<Gate> onGateDestroyed;
 
-    public void OnPathCompleted(int pathId)
+    public void OnEventCompleted(int eventId)
     {
-        onPathCompleted.Invoke(pathId);
-    }
-
-    public void OnPathStart(int pathId)
+        onEventCompleted.Invoke(eventId);
+    } 
+    
+    public void OnGateDestroyed(Gate gate)
     {
-        onPathStart.Invoke(pathId);
+        onGateDestroyed.Invoke(gate);
     }
     #endregion
 
@@ -113,6 +115,41 @@ public class GameEvents : MonoBehaviour
     public void OnNarrativePieceCompleted()
     {
         onNarrativePieceCompleted.Invoke();
+    }
+
+    #endregion
+
+
+    #region Inspector
+    /*  Functions for the inspector (doesn't like enums, etc.)  */
+    
+    public void KeyboardDrum(InputAction.CallbackContext context)
+	{
+
+        if (context.performed)
+        {
+            switch (context.action.name)
+			{
+                case "LeftShoulder":
+                    GameEvents.Instance.OnDrumPlayed(Drums.LeftShoulder);
+                    break;
+                case "RightShoulder":
+                    GameEvents.Instance.OnDrumPlayed(Drums.RightShoulder);
+                    break;
+                case "RightStomach":
+                    GameEvents.Instance.OnDrumPlayed(Drums.RightStomach);
+                    break;
+                case "LeftThigh":
+                    GameEvents.Instance.OnDrumPlayed(Drums.LeftThigh);
+                    break;
+                case "RightThigh":
+                    GameEvents.Instance.OnDrumPlayed(Drums.RightThigh);
+                    break;
+                case "LeftStomach":
+                    GameEvents.Instance.OnDrumPlayed(Drums.LeftStomach);
+                    break;
+            }
+        }
     }
 
     #endregion

@@ -10,18 +10,21 @@ public class NoteEvaluator : MonoBehaviour
     static public Text buttonDisplay;
     static public Text gradeDisplay;
     static public Text offsetDisplay;
-    [SerializeField]
-    static private float PerfectThreshold;
-    [SerializeField]
-    static private float GreatThreshold;
-    [SerializeField]
-    static private float GoodThreshold;
+    static public float PerfectThreshold;
+    static public float GreatThreshold;
+    static public float GoodThreshold;
 
     // Start is called before the first frame update
     void Start()
     {
         //GameEvents.Instance.onDrumPlayed.AddListener(EvaluateNote);
         metronome = GetComponent<Metronome>();
+        gradeDisplay = (Text)GameObject.Find("Grade Display").GetComponent<Text>();
+        buttonDisplay = GameObject.Find("Button Display").GetComponent<Text>();
+        offsetDisplay = GameObject.Find("Offset Display").GetComponent<Text>();
+        PerfectThreshold = .075f;
+        GreatThreshold = .1f;
+        GoodThreshold = .4f;
     }
 
     // Update is called once per frame
@@ -29,11 +32,13 @@ public class NoteEvaluator : MonoBehaviour
     {
         
     }
-
-    static void EvaluateNote(Note note)
+    public static void EvaluateNote(ref Note note)
     {        
         double beatOffset = metronome.GetBeatOffset();
         double absOffset = Math.Abs(beatOffset);
+        
+        note.timestamp = metronome.GetClosestBeat();
+        offsetDisplay.text = beatOffset.ToString();
 
         if(absOffset < PerfectThreshold)
         {
