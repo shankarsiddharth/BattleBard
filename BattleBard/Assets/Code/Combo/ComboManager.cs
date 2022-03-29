@@ -154,7 +154,7 @@ public class ComboManager : MonoBehaviour
                 SetComboNotes(validCombos[comboInd]);
 
                 // Call the event then reset
-                GameEvents.Instance.OnDrumComboCompleted(validCombos[comboInd].effect, Vector3.zero, validCombos[comboInd].affectsAllies, validCombos[comboInd].affectsEnemies);;
+                GameEvents.Instance.OnDrumComboCompleted(validCombos[comboInd].effect, 0, Vector3.zero);
                 ResetCombo();
 			}
         }
@@ -163,17 +163,16 @@ public class ComboManager : MonoBehaviour
     }
 
 
-    private static void ListenForCombos(ComboEffect effect, Vector3 pos, bool affectsAllies, bool affectsEnemies)
+    private static void ListenForCombos(ComboBase effect, int level, Vector3 pos)
     {
-        print("Effect!");
-
         if (effect == null)
         {
             Debug.LogWarning("Effect is unassigned!");
             return;
         }
 
-        Instantiate(effect, pos, Quaternion.Euler(Vector3.zero));
+        ComboBase b = Instantiate(effect, pos, Quaternion.Euler(Vector3.zero));
+        b.ComboPlayed(effect, level, pos);
 
         print("Combo complete: " + effect.ToString());
     }

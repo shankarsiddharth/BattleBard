@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Level1GuardPoint
+  - PlayerUnits
+  - EnemyUnits
+  - CombatManager
+  - Gate
+  - GateManager
+  - Dwarf
+  - Orc
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
@@ -12,7 +20,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Outline
   - 
   - 
   - 

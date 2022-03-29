@@ -17,7 +17,7 @@ public class ComboTextScript : MonoBehaviour
         
     }
 
-    void Test(ComboEffect eff, Vector3 vec, bool affectsA, bool affectsE)
+    void Test(ComboBase eff, int level, Vector3 vec)
     {
         if (eff != null)
         {
