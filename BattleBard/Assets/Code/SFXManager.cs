@@ -36,12 +36,13 @@ public class SFXManager : MonoBehaviour
 
     private Dictionary<Drums, List<AudioSource>> _drumSources;
 
-    //private Dictionary<Drums, List<AK.Wwise.Event>> _akDrumSources;
+    private Dictionary<Drums, AK.Wwise.Event> _akDrumSources;
 
     // Start is called before the first frame update
     void Start()
     {
         _drumSources = new Dictionary<Drums, List<AudioSource>>();
+        _akDrumSources = new Dictionary<Drums, AK.Wwise.Event>();
 
         //_akDrumSources = new Dictionary<Drums, List<AK.Wwise.Event>>();
 
@@ -56,14 +57,10 @@ public class SFXManager : MonoBehaviour
             _drumSources.Add(ds.drum, srcs);
 		}
 
-        /*foreach (AkDrumSound ds in akDrumsSFX)
+        foreach (AkDrumSound ds in akDrumsSFX)
         {
-            List<AK.Wwise.Event> srcs = new List<AK.Wwise.Event>();
-            AK.Wwise.Event drumSource = new AK.Wwise.Event();
-            srcs.Add(drumSource);
-            drumSource = ds.drumClip;
-            _akDrumSources.Add(ds.drum, srcs);
-        }*/
+            _akDrumSources.Add(ds.drum, ds.drumClip);
+        }
 
         if (bgSound != null)
         {
@@ -79,18 +76,19 @@ public class SFXManager : MonoBehaviour
     void OnDrumPlayed(Drums drum)
 	{
 
-        foreach(AkDrumSound aks in akDrumsSFX)
+        /*foreach(AkDrumSound aks in akDrumsSFX)
         {
             if(aks.drum == drum)
             {
                 aks.drumClip.Post(gameObject, (uint)AkCallbackType.AK_EndOfEvent, AKCallbackFunction);
             }
-        }
+        }*/
+        _akDrumSources[drum].Post(gameObject, (uint)AkCallbackType.AK_EndOfEvent, AKCallbackFunction);
 
-        bool played = false;
+        //bool played = false;
 
         // Find a source that is not playing currently
-        foreach (AudioSource audioSource in _drumSources[drum])
+        /*foreach (AudioSource audioSource in _drumSources[drum])
 		{
             if (audioSource.isPlaying)
                 continue;
@@ -98,9 +96,9 @@ public class SFXManager : MonoBehaviour
             audioSource.Play();
             played = true;
             break;
-		}
+		}*/
 
-        if (!played)
+        /*if (!played)
         {
             // If there are none, add a new source and play it
             AudioSource AS = drumSoundSlave.AddComponent<AudioSource>();
@@ -113,7 +111,7 @@ public class SFXManager : MonoBehaviour
                 }
 
             _drumSources[drum].Add(AS);
-        }
+        }*/
 	}
 
     private void AKCallbackFunction(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)

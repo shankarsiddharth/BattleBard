@@ -1,57 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles/>
+	<StreamedFiles>
+		<File Id="64306367" Language="SFX">
+			<ShortName>Mid_Drum_2.wav</ShortName>
+			<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
+		</File>
+		<File Id="98316643" Language="SFX">
+			<ShortName>Bottom_Drum_2.wav</ShortName>
+			<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
+		</File>
+		<File Id="301822309" Language="SFX">
+			<ShortName>Top_Drum_1.wav</ShortName>
+			<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
+		</File>
+		<File Id="388139632" Language="SFX">
+			<ShortName>Cowbell.wav</ShortName>
+			<Path>SFX\Cowbell_04403F93.wem</Path>
+		</File>
+		<File Id="591945233" Language="SFX">
+			<ShortName>Mid_Drum_1.wav</ShortName>
+			<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
+		</File>
+		<File Id="602660900" Language="SFX">
+			<ShortName>Bottom_Drum_1.wav</ShortName>
+			<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
+		</File>
+		<File Id="945996637" Language="SFX">
+			<ShortName>Top_Drum_2.wav</ShortName>
+			<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
+		</File>
+	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1561833023">
+		<SoundBank Id="393239870" Language="SFX" Hash="3131324677">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
 				<Event Id="2180146614" Name="Play_Bottom_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Bottom_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
 				<Event Id="2180146613" Name="Play_Bottom_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Bottom_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
-				<Event Id="1491318392" Name="Play_Cowbell" ObjectPath="\Events\Default Work Unit\Play_Cowbell" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="1491318392" Name="Play_Cowbell" ObjectPath="\Events\Default Work Unit\Play_Cowbell" DurationType="OneShot" DurationMin="0.15" DurationMax="0.15"/>
 				<Event Id="2934670827" Name="Play_Mid_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Mid_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
 				<Event Id="2934670824" Name="Play_Mid_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Mid_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
 				<Event Id="3892736498" Name="Play_Top_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
 				<Event Id="3892736497" Name="Play_Top_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
 			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="64306367"/>
+				<File Id="98316643"/>
+				<File Id="301822309"/>
+				<File Id="388139632"/>
+				<File Id="591945233"/>
+				<File Id="602660900"/>
+				<File Id="945996637"/>
+			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
 				<File Id="64306367" Language="SFX">
 					<ShortName>Mid_Drum_2.wav</ShortName>
 					<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 				<File Id="98316643" Language="SFX">
 					<ShortName>Bottom_Drum_2.wav</ShortName>
 					<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 				<File Id="301822309" Language="SFX">
 					<ShortName>Top_Drum_1.wav</ShortName>
 					<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 				<File Id="388139632" Language="SFX">
 					<ShortName>Cowbell.wav</ShortName>
-					<Path>SFX\Cowbell_10C4C929.wem</Path>
+					<Path>SFX\Cowbell_04403F93.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 				<File Id="591945233" Language="SFX">
 					<ShortName>Mid_Drum_1.wav</ShortName>
 					<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 				<File Id="602660900" Language="SFX">
 					<ShortName>Bottom_Drum_1.wav</ShortName>
 					<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 				<File Id="945996637" Language="SFX">
 					<ShortName>Top_Drum_2.wav</ShortName>
 					<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -60,97 +105,162 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2386706874" Language="SFX" Hash="4016057308">
+		<SoundBank Id="2386706874" Language="SFX" Hash="1629918941">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_120_bpm</ObjectPath>
 			<ShortName>Music_120_bpm</ShortName>
 			<Path>Music_120_bpm.bnk</Path>
 			<IncludedEvents>
 				<Event Id="2180146614" Name="Play_Bottom_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Bottom_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
-					<IncludedMemoryFiles>
+					<ReferencedStreamedFiles>
 						<File Id="602660900" Language="SFX">
 							<ShortName>Bottom_Drum_1.wav</ShortName>
 							<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
 						</File>
+					</ReferencedStreamedFiles>
+					<IncludedMemoryFiles>
+						<File Id="602660900" Language="SFX">
+							<ShortName>Bottom_Drum_1.wav</ShortName>
+							<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
+							<PrefetchSize>17768</PrefetchSize>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2180146613" Name="Play_Bottom_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Bottom_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2.">
-					<IncludedMemoryFiles>
+					<ReferencedStreamedFiles>
 						<File Id="98316643" Language="SFX">
 							<ShortName>Bottom_Drum_2.wav</ShortName>
 							<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
 						</File>
+					</ReferencedStreamedFiles>
+					<IncludedMemoryFiles>
+						<File Id="98316643" Language="SFX">
+							<ShortName>Bottom_Drum_2.wav</ShortName>
+							<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
+							<PrefetchSize>17768</PrefetchSize>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1491318392" Name="Play_Cowbell" ObjectPath="\Events\Default Work Unit\Play_Cowbell" DurationType="OneShot" DurationMin="2." DurationMax="2.">
+				<Event Id="1491318392" Name="Play_Cowbell" ObjectPath="\Events\Default Work Unit\Play_Cowbell" DurationType="OneShot" DurationMin="0.15" DurationMax="0.15">
+					<ReferencedStreamedFiles>
+						<File Id="388139632" Language="SFX">
+							<ShortName>Cowbell.wav</ShortName>
+							<Path>SFX\Cowbell_04403F93.wem</Path>
+						</File>
+					</ReferencedStreamedFiles>
 					<IncludedMemoryFiles>
 						<File Id="388139632" Language="SFX">
 							<ShortName>Cowbell.wav</ShortName>
-							<Path>SFX\Cowbell_10C4C929.wem</Path>
+							<Path>SFX\Cowbell_04403F93.wem</Path>
+							<PrefetchSize>17768</PrefetchSize>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2934670827" Name="Play_Mid_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Mid_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
-					<IncludedMemoryFiles>
+					<ReferencedStreamedFiles>
 						<File Id="591945233" Language="SFX">
 							<ShortName>Mid_Drum_1.wav</ShortName>
 							<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
 						</File>
+					</ReferencedStreamedFiles>
+					<IncludedMemoryFiles>
+						<File Id="591945233" Language="SFX">
+							<ShortName>Mid_Drum_1.wav</ShortName>
+							<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
+							<PrefetchSize>17768</PrefetchSize>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2934670824" Name="Play_Mid_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Mid_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2.">
+					<ReferencedStreamedFiles>
+						<File Id="64306367" Language="SFX">
+							<ShortName>Mid_Drum_2.wav</ShortName>
+							<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
+						</File>
+					</ReferencedStreamedFiles>
 					<IncludedMemoryFiles>
 						<File Id="64306367" Language="SFX">
 							<ShortName>Mid_Drum_2.wav</ShortName>
 							<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
+							<PrefetchSize>17768</PrefetchSize>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="Infinite"/>
 				<Event Id="3892736498" Name="Play_Top_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
-					<IncludedMemoryFiles>
+					<ReferencedStreamedFiles>
 						<File Id="301822309" Language="SFX">
 							<ShortName>Top_Drum_1.wav</ShortName>
 							<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
 						</File>
+					</ReferencedStreamedFiles>
+					<IncludedMemoryFiles>
+						<File Id="301822309" Language="SFX">
+							<ShortName>Top_Drum_1.wav</ShortName>
+							<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
+							<PrefetchSize>17768</PrefetchSize>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3892736497" Name="Play_Top_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2.">
-					<IncludedMemoryFiles>
+					<ReferencedStreamedFiles>
 						<File Id="945996637" Language="SFX">
 							<ShortName>Top_Drum_2.wav</ShortName>
 							<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
 						</File>
+					</ReferencedStreamedFiles>
+					<IncludedMemoryFiles>
+						<File Id="945996637" Language="SFX">
+							<ShortName>Top_Drum_2.wav</ShortName>
+							<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
+							<PrefetchSize>17768</PrefetchSize>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="64306367"/>
+				<File Id="98316643"/>
+				<File Id="301822309"/>
+				<File Id="388139632"/>
+				<File Id="591945233"/>
+				<File Id="602660900"/>
+				<File Id="945996637"/>
+			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
 				<File Id="64306367" Language="SFX">
 					<ShortName>Mid_Drum_2.wav</ShortName>
 					<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 				<File Id="98316643" Language="SFX">
 					<ShortName>Bottom_Drum_2.wav</ShortName>
 					<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 				<File Id="301822309" Language="SFX">
 					<ShortName>Top_Drum_1.wav</ShortName>
 					<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 				<File Id="388139632" Language="SFX">
 					<ShortName>Cowbell.wav</ShortName>
-					<Path>SFX\Cowbell_10C4C929.wem</Path>
+					<Path>SFX\Cowbell_04403F93.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 				<File Id="591945233" Language="SFX">
 					<ShortName>Mid_Drum_1.wav</ShortName>
 					<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 				<File Id="602660900" Language="SFX">
 					<ShortName>Bottom_Drum_1.wav</ShortName>
 					<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 				<File Id="945996637" Language="SFX">
 					<ShortName>Top_Drum_2.wav</ShortName>
 					<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

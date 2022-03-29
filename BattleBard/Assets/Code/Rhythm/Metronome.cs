@@ -30,18 +30,19 @@ public class Metronome : MonoBehaviour
         {
             noteAccuracy = .5f;
         }
-        fudgeOffset = -.15f;
+        fudgeOffset = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        metroPosition = (float)AudioSettings.dspTime;
+        //metroPosition = (float)AudioSettings.dspTime;
+        metroPosition = (float)Time.time;
         //add 1 so the first beat calculates to 1, not 0
         metroPositionInBeats = (metroPosition - startTime) / secPerBeat + 1f;
         if (!metroSource.isPlaying && metroPositionInBeats - (float)Math.Floor(metroPositionInBeats) < .1)
         {
-            metroSource.Play();            
+            //metroSource.Play();            
         }
 
         if(!isPlaying && metroPositionInBeats - (float)Math.Floor(metroPositionInBeats) < .1)

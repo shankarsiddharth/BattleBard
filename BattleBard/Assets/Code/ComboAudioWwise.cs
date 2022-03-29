@@ -24,6 +24,7 @@ public class ComboAudioWwise : MonoBehaviour
     void Start()
     {
         comboAudioEvent.Post(gameObject);
+        //AkSoundEngine.SetState("Tier1", "Attacking");
     }
 
     // Update is called once per frame
