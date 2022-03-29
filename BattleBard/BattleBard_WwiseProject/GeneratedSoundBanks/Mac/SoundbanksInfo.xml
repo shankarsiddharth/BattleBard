@@ -105,7 +105,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2386706874" Language="SFX" Hash="1629918941">
+		<SoundBank Id="2386706874" Language="SFX" Hash="862249794">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_120_bpm</ObjectPath>
 			<ShortName>Music_120_bpm</ShortName>
 			<Path>Music_120_bpm.bnk</Path>
@@ -185,7 +185,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="Infinite"/>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="OneShot" DurationMin="16." DurationMax="16.">
+					<IncludedMemoryFiles>
+						<File Id="1049687214" Language="SFX">
+							<ShortName>568774__josefpres__bass-loops-004-short-loop-120-bpm.wav</ShortName>
+							<Path>SFX\568774__josefpres__bass-loops-004-short-loop-120-bpm_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3892736498" Name="Play_Top_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
 					<ReferencedStreamedFiles>
 						<File Id="301822309" Language="SFX">
@@ -261,6 +268,10 @@
 					<ShortName>Top_Drum_2.wav</ShortName>
 					<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
 					<PrefetchSize>17768</PrefetchSize>
+				</File>
+				<File Id="1049687214" Language="SFX">
+					<ShortName>568774__josefpres__bass-loops-004-short-loop-120-bpm.wav</ShortName>
+					<Path>SFX\568774__josefpres__bass-loops-004-short-loop-120-bpm_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

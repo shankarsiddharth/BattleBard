@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 0cbf0d5597b5db4cb817e6bac57f4603
     GuidInternal: 
-    m_lastTime: -8585530394588601682
+    m_lastTime: -8585530278785340192
     List:
     - name: Play_Bottom_Drum_1
       guid: bd167af13181e249a7b24eee561309fa
@@ -210,8 +210,8 @@ MonoBehaviour:
         guid: 91795785c97b27479c85f78d004ae588
       Path: Events\Default Work Unit\Play_Music
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 16
+      minDuration: 16
     - name: Play_Top_Drum_1
       guid: f71c6c05902a04468610897dd87f9920
       id: 3892736498

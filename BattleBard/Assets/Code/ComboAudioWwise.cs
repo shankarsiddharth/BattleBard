@@ -6,6 +6,7 @@ using UnityEngine;
 public class ComboAudioWwise : MonoBehaviour
 {
     public AK.Wwise.Event comboAudioEvent;
+    public AK.Wwise.State akState;
 
     void Awake()
     {
@@ -16,7 +17,8 @@ public class ComboAudioWwise : MonoBehaviour
     {
         if(effect is SpeedCombo)
         {
-            AkSoundEngine.SetState("Tier1", "Attacking");
+            //AkSoundEngine.SetState("Tier1", "Attacking");
+            akState.SetValue();
         }
     }
 
