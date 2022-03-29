@@ -1,10 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public abstract class Actor : MonoBehaviour
 {
-    public Stats stats;
+    public Stats stats = new Stats();
     public float currentHealth;
     public float attackDelay;
 
@@ -27,6 +28,9 @@ public abstract class Actor : MonoBehaviour
 
     [HideInInspector]
     public Vector3 moveTarget;
+
+    [HideInInspector]
+    public List<StatusEffect> currentEffects = new List<StatusEffect>();
 
     public float detectionRange;
 
