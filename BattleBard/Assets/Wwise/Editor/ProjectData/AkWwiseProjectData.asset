@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 7b1630afa535e714ea57c9c2e8bb0074, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
@@ -21,11 +20,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 69595afdee665944a471a18578e2f574
+      guid: 103b195139c83342aaf143e0c84bbeaf
     ParentPath: Virtual Acoustics\Default Work Unit
-    guid: 69595afdee665944a471a18578e2f574
+    guid: 103b195139c83342aaf143e0c84bbeaf
     GuidInternal: 
-    m_lastTime: -8585554494663514691
+    m_lastTime: -8585533632579312156
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -35,11 +34,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 541c3e26e93d3a49aa99dcceade774ae
+      guid: a735057714281744bb15255cb2b29be1
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
-    guid: 541c3e26e93d3a49aa99dcceade774ae
+    guid: a735057714281744bb15255cb2b29be1
     GuidInternal: 
-    m_lastTime: -8585554494663564566
+    m_lastTime: -8585533632579865485
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -50,7 +49,7 @@ MonoBehaviour:
         guid: 00000000000000000000000000000000
       - ElementName: Default Work Unit
         ObjectType: 12
-        guid: 541c3e26e93d3a49aa99dcceade774ae
+        guid: a735057714281744bb15255cb2b29be1
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -63,26 +62,40 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 87b567104ef88a459dee77b30f8bdd7b
+      guid: 4ec8190ab5f715418031cc8a37e4001b
     ParentPath: SoundBanks\Default Work Unit
-    guid: 87b567104ef88a459dee77b30f8bdd7b
+    guid: 4ec8190ab5f715418031cc8a37e4001b
     GuidInternal: 
-    m_lastTime: -8585554431130151562
+    m_lastTime: -8585530797990544363
     List:
-    - name: Test
-      guid: 7b14e4263383fc4ba356a47f19c27d51
-      id: 3157003241
+    - name: Music_120_bpm
+      guid: bcf3936b91197648beb868006e76cd29
+      id: 2386706874
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Default Work Unit
         ObjectType: 12
-        guid: 87b567104ef88a459dee77b30f8bdd7b
-      - ElementName: Test
+        guid: 4ec8190ab5f715418031cc8a37e4001b
+      - ElementName: Music_120_bpm
         ObjectType: 7
-        guid: 7b14e4263383fc4ba356a47f19c27d51
-      Path: SoundBanks\Default Work Unit\Test
+        guid: bcf3936b91197648beb868006e76cd29
+      Path: SoundBanks\Default Work Unit\Music_120_bpm
+    - name: SFX
+      guid: b2cb4c93008cfc4e8bf3896fb1ee5830
+      id: 393239870
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4ec8190ab5f715418031cc8a37e4001b
+      - ElementName: SFX
+        ObjectType: 7
+        guid: b2cb4c93008cfc4e8bf3896fb1ee5830
+      Path: SoundBanks\Default Work Unit\SFX
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -91,12 +104,148 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: d5b10199da553c468f91ef76ba7a6ce7
+      guid: 0cbf0d5597b5db4cb817e6bac57f4603
     ParentPath: Events\Default Work Unit
-    guid: d5b10199da553c468f91ef76ba7a6ce7
+    guid: 0cbf0d5597b5db4cb817e6bac57f4603
     GuidInternal: 
-    m_lastTime: -8585554494663717651
-    List: []
+    m_lastTime: -8585530742153548272
+    List:
+    - name: Play_Bottom_Drum_1
+      guid: bd167af13181e249a7b24eee561309fa
+      id: 2180146614
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0cbf0d5597b5db4cb817e6bac57f4603
+      - ElementName: Play_Bottom_Drum_1
+        ObjectType: 3
+        guid: bd167af13181e249a7b24eee561309fa
+      Path: Events\Default Work Unit\Play_Bottom_Drum_1
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+    - name: Play_Bottom_Drum_2
+      guid: c9bbf2ee6f9a8745b8a4a05d6d113b63
+      id: 2180146613
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0cbf0d5597b5db4cb817e6bac57f4603
+      - ElementName: Play_Bottom_Drum_2
+        ObjectType: 3
+        guid: c9bbf2ee6f9a8745b8a4a05d6d113b63
+      Path: Events\Default Work Unit\Play_Bottom_Drum_2
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+    - name: Play_Cowbell
+      guid: 0dcac046d05d0940a6295164968d7b27
+      id: 1491318392
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0cbf0d5597b5db4cb817e6bac57f4603
+      - ElementName: Play_Cowbell
+        ObjectType: 3
+        guid: 0dcac046d05d0940a6295164968d7b27
+      Path: Events\Default Work Unit\Play_Cowbell
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+    - name: Play_Mid_Drum_1
+      guid: 9b8836dabf42924987fd919c994b6085
+      id: 2934670827
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0cbf0d5597b5db4cb817e6bac57f4603
+      - ElementName: Play_Mid_Drum_1
+        ObjectType: 3
+        guid: 9b8836dabf42924987fd919c994b6085
+      Path: Events\Default Work Unit\Play_Mid_Drum_1
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+    - name: Play_Mid_Drum_2
+      guid: 1160cc28efdb954e92e09990e546013a
+      id: 2934670824
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0cbf0d5597b5db4cb817e6bac57f4603
+      - ElementName: Play_Mid_Drum_2
+        ObjectType: 3
+        guid: 1160cc28efdb954e92e09990e546013a
+      Path: Events\Default Work Unit\Play_Mid_Drum_2
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+    - name: Play_Music
+      guid: 91795785c97b27479c85f78d004ae588
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0cbf0d5597b5db4cb817e6bac57f4603
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: 91795785c97b27479c85f78d004ae588
+      Path: Events\Default Work Unit\Play_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Top_Drum_1
+      guid: f71c6c05902a04468610897dd87f9920
+      id: 3892736498
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0cbf0d5597b5db4cb817e6bac57f4603
+      - ElementName: Play_Top_Drum_1
+        ObjectType: 3
+        guid: f71c6c05902a04468610897dd87f9920
+      Path: Events\Default Work Unit\Play_Top_Drum_1
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
+    - name: Play_Top_Drum_2
+      guid: 112a2915985ce04786e38be5674972dc
+      id: 3892736497
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0cbf0d5597b5db4cb817e6bac57f4603
+      - ElementName: Play_Top_Drum_2
+        ObjectType: 3
+        guid: 112a2915985ce04786e38be5674972dc
+      Path: Events\Default Work Unit\Play_Top_Drum_2
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 2
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -105,11 +254,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 53d3c2afca8e30459a749468de58f289
+      guid: 23e650c4dc64c4468986379332302c5e
     ParentPath: Game Parameters\Default Work Unit
-    guid: 53d3c2afca8e30459a749468de58f289
+    guid: 23e650c4dc64c4468986379332302c5e
     GuidInternal: 
-    m_lastTime: -8585554494663614450
+    m_lastTime: -8585533632579501651
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -119,45 +268,69 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 5397e755da45ec45bf06ca0f48f601d0
+      guid: f55b86c4180ede49acb008ba255b10a3
     ParentPath: States\Default Work Unit
-    guid: 5397e755da45ec45bf06ca0f48f601d0
+    guid: f55b86c4180ede49acb008ba255b10a3
     GuidInternal: 
-    m_lastTime: -8585554456880571692
+    m_lastTime: -8585530831371401905
     List:
-    - name: Music
-      guid: e81f54843c616e41952fe4e01266e89a
-      id: 3991942870
+    - name: Music_120_bpm
+      guid: f698ee380f721e43a441c29211388087
+      id: 2386706874
       PathAndIcons:
       - ElementName: States
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Default Work Unit
         ObjectType: 12
-        guid: 5397e755da45ec45bf06ca0f48f601d0
-      - ElementName: Music
+        guid: f55b86c4180ede49acb008ba255b10a3
+      - ElementName: Music_120_bpm
+        ObjectType: 4
+        guid: f698ee380f721e43a441c29211388087
+      Path: States\Default Work Unit\Music_120_bpm
+      values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Tier1
+      guid: 86c49d81fb8ba34b8222cd554f50b480
+      id: 3434871822
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f55b86c4180ede49acb008ba255b10a3
+      - ElementName: Music_120_bpm
+        ObjectType: 4
+        guid: f698ee380f721e43a441c29211388087
+      - ElementName: Tier1
         ObjectType: 9
-        guid: e81f54843c616e41952fe4e01266e89a
-      Path: States\Default Work Unit\Music
+        guid: 86c49d81fb8ba34b8222cd554f50b480
+      Path: States\Default Work Unit\Music_120_bpm\Tier1
       values:
-      - name: Attack
-        guid: b7fee2a602629b4091bf5d9730a6897b
-        id: 180661997
+      - name: Attacking
+        guid: 9634f8afbd2f1a41a23de2e01f0dd12e
+        id: 1641806523
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
         - ElementName: Default Work Unit
           ObjectType: 12
-          guid: 5397e755da45ec45bf06ca0f48f601d0
-        - ElementName: Music
+          guid: f55b86c4180ede49acb008ba255b10a3
+        - ElementName: Music_120_bpm
+          ObjectType: 4
+          guid: f698ee380f721e43a441c29211388087
+        - ElementName: Tier1
           ObjectType: 9
-          guid: e81f54843c616e41952fe4e01266e89a
-        - ElementName: Attack
+          guid: 86c49d81fb8ba34b8222cd554f50b480
+        - ElementName: Attacking
           ObjectType: 8
-          guid: b7fee2a602629b4091bf5d9730a6897b
+          guid: 9634f8afbd2f1a41a23de2e01f0dd12e
       - name: Healing
-        guid: 8472222de66c684fa263689ef495db23
+        guid: 32d71d6ae6fee1419f9646202ff71607
         id: 3413347345
         PathAndIcons:
         - ElementName: States
@@ -165,15 +338,18 @@ MonoBehaviour:
           guid: 00000000000000000000000000000000
         - ElementName: Default Work Unit
           ObjectType: 12
-          guid: 5397e755da45ec45bf06ca0f48f601d0
-        - ElementName: Music
+          guid: f55b86c4180ede49acb008ba255b10a3
+        - ElementName: Music_120_bpm
+          ObjectType: 4
+          guid: f698ee380f721e43a441c29211388087
+        - ElementName: Tier1
           ObjectType: 9
-          guid: e81f54843c616e41952fe4e01266e89a
+          guid: 86c49d81fb8ba34b8222cd554f50b480
         - ElementName: Healing
           ObjectType: 8
-          guid: 8472222de66c684fa263689ef495db23
+          guid: 32d71d6ae6fee1419f9646202ff71607
       - name: None
-        guid: cb0c58978ed5a848bf0de55dd6fb7402
+        guid: 9ed53e9e30c0ec479a3c201449b97f30
         id: 748895195
         PathAndIcons:
         - ElementName: States
@@ -181,15 +357,18 @@ MonoBehaviour:
           guid: 00000000000000000000000000000000
         - ElementName: Default Work Unit
           ObjectType: 12
-          guid: 5397e755da45ec45bf06ca0f48f601d0
-        - ElementName: Music
+          guid: f55b86c4180ede49acb008ba255b10a3
+        - ElementName: Music_120_bpm
+          ObjectType: 4
+          guid: f698ee380f721e43a441c29211388087
+        - ElementName: Tier1
           ObjectType: 9
-          guid: e81f54843c616e41952fe4e01266e89a
+          guid: 86c49d81fb8ba34b8222cd554f50b480
         - ElementName: None
           ObjectType: 8
-          guid: cb0c58978ed5a848bf0de55dd6fb7402
+          guid: 9ed53e9e30c0ec479a3c201449b97f30
       - name: Speed
-        guid: abd150cebbfc4743ba852808692d6d39
+        guid: 507f6a5c73be434e9ffa4071396dd7b1
         id: 640949982
         PathAndIcons:
         - ElementName: States
@@ -197,13 +376,210 @@ MonoBehaviour:
           guid: 00000000000000000000000000000000
         - ElementName: Default Work Unit
           ObjectType: 12
-          guid: 5397e755da45ec45bf06ca0f48f601d0
-        - ElementName: Music
+          guid: f55b86c4180ede49acb008ba255b10a3
+        - ElementName: Music_120_bpm
+          ObjectType: 4
+          guid: f698ee380f721e43a441c29211388087
+        - ElementName: Tier1
           ObjectType: 9
-          guid: e81f54843c616e41952fe4e01266e89a
+          guid: 86c49d81fb8ba34b8222cd554f50b480
         - ElementName: Speed
           ObjectType: 8
-          guid: abd150cebbfc4743ba852808692d6d39
+          guid: 507f6a5c73be434e9ffa4071396dd7b1
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Tier2
+      guid: fd4f2163000b7b4798436b328a18806f
+      id: 3434871821
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f55b86c4180ede49acb008ba255b10a3
+      - ElementName: Music_120_bpm
+        ObjectType: 4
+        guid: f698ee380f721e43a441c29211388087
+      - ElementName: Tier2
+        ObjectType: 9
+        guid: fd4f2163000b7b4798436b328a18806f
+      Path: States\Default Work Unit\Music_120_bpm\Tier2
+      values:
+      - name: Attacking
+        guid: 0108557d59d31745b02e6b0c3f5ef399
+        id: 1641806523
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f55b86c4180ede49acb008ba255b10a3
+        - ElementName: Music_120_bpm
+          ObjectType: 4
+          guid: f698ee380f721e43a441c29211388087
+        - ElementName: Tier2
+          ObjectType: 9
+          guid: fd4f2163000b7b4798436b328a18806f
+        - ElementName: Attacking
+          ObjectType: 8
+          guid: 0108557d59d31745b02e6b0c3f5ef399
+      - name: Healing
+        guid: bd6d627b514ff24abe58a1399d366685
+        id: 3413347345
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f55b86c4180ede49acb008ba255b10a3
+        - ElementName: Music_120_bpm
+          ObjectType: 4
+          guid: f698ee380f721e43a441c29211388087
+        - ElementName: Tier2
+          ObjectType: 9
+          guid: fd4f2163000b7b4798436b328a18806f
+        - ElementName: Healing
+          ObjectType: 8
+          guid: bd6d627b514ff24abe58a1399d366685
+      - name: None
+        guid: 9f639280d55fae4c886522a2037f65f2
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f55b86c4180ede49acb008ba255b10a3
+        - ElementName: Music_120_bpm
+          ObjectType: 4
+          guid: f698ee380f721e43a441c29211388087
+        - ElementName: Tier2
+          ObjectType: 9
+          guid: fd4f2163000b7b4798436b328a18806f
+        - ElementName: None
+          ObjectType: 8
+          guid: 9f639280d55fae4c886522a2037f65f2
+      - name: Speed
+        guid: 9c6f87c596e59d4d83a090b002279b0e
+        id: 640949982
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f55b86c4180ede49acb008ba255b10a3
+        - ElementName: Music_120_bpm
+          ObjectType: 4
+          guid: f698ee380f721e43a441c29211388087
+        - ElementName: Tier2
+          ObjectType: 9
+          guid: fd4f2163000b7b4798436b328a18806f
+        - ElementName: Speed
+          ObjectType: 8
+          guid: 9c6f87c596e59d4d83a090b002279b0e
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Tier3
+      guid: 36d9fe8bd6b3374cb194f0ff9294effa
+      id: 3434871820
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f55b86c4180ede49acb008ba255b10a3
+      - ElementName: Music_120_bpm
+        ObjectType: 4
+        guid: f698ee380f721e43a441c29211388087
+      - ElementName: Tier3
+        ObjectType: 9
+        guid: 36d9fe8bd6b3374cb194f0ff9294effa
+      Path: States\Default Work Unit\Music_120_bpm\Tier3
+      values:
+      - name: Attacking
+        guid: 247d27a461492145a128e4fadfdf936e
+        id: 1641806523
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f55b86c4180ede49acb008ba255b10a3
+        - ElementName: Music_120_bpm
+          ObjectType: 4
+          guid: f698ee380f721e43a441c29211388087
+        - ElementName: Tier3
+          ObjectType: 9
+          guid: 36d9fe8bd6b3374cb194f0ff9294effa
+        - ElementName: Attacking
+          ObjectType: 8
+          guid: 247d27a461492145a128e4fadfdf936e
+      - name: Healing
+        guid: df68de8df59d8f4290176a0a3486540c
+        id: 3413347345
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f55b86c4180ede49acb008ba255b10a3
+        - ElementName: Music_120_bpm
+          ObjectType: 4
+          guid: f698ee380f721e43a441c29211388087
+        - ElementName: Tier3
+          ObjectType: 9
+          guid: 36d9fe8bd6b3374cb194f0ff9294effa
+        - ElementName: Healing
+          ObjectType: 8
+          guid: df68de8df59d8f4290176a0a3486540c
+      - name: None
+        guid: 29436549d01a304bab78035acea5b716
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f55b86c4180ede49acb008ba255b10a3
+        - ElementName: Music_120_bpm
+          ObjectType: 4
+          guid: f698ee380f721e43a441c29211388087
+        - ElementName: Tier3
+          ObjectType: 9
+          guid: 36d9fe8bd6b3374cb194f0ff9294effa
+        - ElementName: None
+          ObjectType: 8
+          guid: 29436549d01a304bab78035acea5b716
+      - name: Speed
+        guid: 6970a49d9b1c864696d4e1b2e1f41398
+        id: 640949982
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f55b86c4180ede49acb008ba255b10a3
+        - ElementName: Music_120_bpm
+          ObjectType: 4
+          guid: f698ee380f721e43a441c29211388087
+        - ElementName: Tier3
+          ObjectType: 9
+          guid: 36d9fe8bd6b3374cb194f0ff9294effa
+        - ElementName: Speed
+          ObjectType: 8
+          guid: 6970a49d9b1c864696d4e1b2e1f41398
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -215,11 +591,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 8c636cf91ad463489272601afc6e28db
+      guid: 4d86b4652f357842ae470e1701647dfb
     ParentPath: Switches\Default Work Unit
-    guid: 8c636cf91ad463489272601afc6e28db
+    guid: 4d86b4652f357842ae470e1701647dfb
     GuidInternal: 
-    m_lastTime: -8585554494663677746
+    m_lastTime: -8585533632579441805
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -229,33 +605,15 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 690c50bcb4309d48902465f6454bdf5a
+      guid: 79f410fe08d9d448bc16a627b3cb2e81
     ParentPath: Triggers\Default Work Unit
-    guid: 690c50bcb4309d48902465f6454bdf5a
+    guid: 79f410fe08d9d448bc16a627b3cb2e81
     GuidInternal: 
-    m_lastTime: -8585554494663923050
+    m_lastTime: -8585533632580115066
     List: []
-  ExpandedFileSystemItemIds: 02000000060000000700000008000000
-  ExpandedWaapiItemIds: 02000000060000000700000008000000
-  AutoSyncSelection: 0
-  autoPopulateEnabled: 1
-  currentDataSource: 1
-=======
-  m_Script: {fileID: 11500000, guid: 746acce18aa01b94b9b73f4eef332cc4, type: 3}
-  m_Name: AkWwiseProjectData
-  m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
-  ExpandedFileSystemItemIds: 
+  ExpandedFileSystemItemIds: 01000000020000000300000004000000050000000600000007000000080000000b0000000d0000000e0000000f00000018000000190000001b0000001c0000001d0000001e0000001f000000200000002300000024000000
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
->>>>>>> main
+  currentDataSource: 1
   CurrentPluginConfig: 

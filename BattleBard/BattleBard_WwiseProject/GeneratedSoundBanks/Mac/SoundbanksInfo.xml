@@ -1,88 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-<<<<<<< HEAD
-		<ProjectRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
-=======
-		<ProjectRoot>C:\Users\timta\Documents\School\Projects1\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\timta\Documents\School\Projects1\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\timta\Documents\School\Projects1\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
-		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\timta\Documents\School\Projects1\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
->>>>>>> main
+		<ExternalSourcesOutputRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-<<<<<<< HEAD
-		<SoundBank Id="1355168291" Language="SFX" Hash="3017090543">
-=======
-		<SoundBank Id="1355168291" Language="SFX" Hash="2754342975">
->>>>>>> main
+		<SoundBank Id="393239870" Language="SFX" Hash="1561833023">
+			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
+			<ShortName>SFX</ShortName>
+			<Path>SFX.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2180146614" Name="Play_Bottom_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Bottom_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="2180146613" Name="Play_Bottom_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Bottom_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="1491318392" Name="Play_Cowbell" ObjectPath="\Events\Default Work Unit\Play_Cowbell" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="2934670827" Name="Play_Mid_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Mid_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="2934670824" Name="Play_Mid_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Mid_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="3892736498" Name="Play_Top_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="3892736497" Name="Play_Top_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="64306367" Language="SFX">
+					<ShortName>Mid_Drum_2.wav</ShortName>
+					<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
+				</File>
+				<File Id="98316643" Language="SFX">
+					<ShortName>Bottom_Drum_2.wav</ShortName>
+					<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
+				</File>
+				<File Id="301822309" Language="SFX">
+					<ShortName>Top_Drum_1.wav</ShortName>
+					<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
+				</File>
+				<File Id="388139632" Language="SFX">
+					<ShortName>Cowbell.wav</ShortName>
+					<Path>SFX\Cowbell_10C4C929.wem</Path>
+				</File>
+				<File Id="591945233" Language="SFX">
+					<ShortName>Mid_Drum_1.wav</ShortName>
+					<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
+				</File>
+				<File Id="602660900" Language="SFX">
+					<ShortName>Bottom_Drum_1.wav</ShortName>
+					<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
+				</File>
+				<File Id="945996637" Language="SFX">
+					<ShortName>Top_Drum_2.wav</ShortName>
+					<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="4222187791">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-<<<<<<< HEAD
-		<SoundBank Id="3157003241" Language="SFX" Hash="3807636567">
-			<ObjectPath>\SoundBanks\Default Work Unit\Test</ObjectPath>
-			<ShortName>Test</ShortName>
-			<Path>Test.bnk</Path>
+		<SoundBank Id="2386706874" Language="SFX" Hash="4016057308">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music_120_bpm</ObjectPath>
+			<ShortName>Music_120_bpm</ShortName>
+			<Path>Music_120_bpm.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2180146614" Name="Play_Bottom_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Bottom_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
+					<IncludedMemoryFiles>
+						<File Id="602660900" Language="SFX">
+							<ShortName>Bottom_Drum_1.wav</ShortName>
+							<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2180146613" Name="Play_Bottom_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Bottom_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2.">
+					<IncludedMemoryFiles>
+						<File Id="98316643" Language="SFX">
+							<ShortName>Bottom_Drum_2.wav</ShortName>
+							<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1491318392" Name="Play_Cowbell" ObjectPath="\Events\Default Work Unit\Play_Cowbell" DurationType="OneShot" DurationMin="2." DurationMax="2.">
+					<IncludedMemoryFiles>
+						<File Id="388139632" Language="SFX">
+							<ShortName>Cowbell.wav</ShortName>
+							<Path>SFX\Cowbell_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2934670827" Name="Play_Mid_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Mid_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
+					<IncludedMemoryFiles>
+						<File Id="591945233" Language="SFX">
+							<ShortName>Mid_Drum_1.wav</ShortName>
+							<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2934670824" Name="Play_Mid_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Mid_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2.">
+					<IncludedMemoryFiles>
+						<File Id="64306367" Language="SFX">
+							<ShortName>Mid_Drum_2.wav</ShortName>
+							<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="Infinite"/>
+				<Event Id="3892736498" Name="Play_Top_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
+					<IncludedMemoryFiles>
+						<File Id="301822309" Language="SFX">
+							<ShortName>Top_Drum_1.wav</ShortName>
+							<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3892736497" Name="Play_Top_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2.">
+					<IncludedMemoryFiles>
+						<File Id="945996637" Language="SFX">
+							<ShortName>Top_Drum_2.wav</ShortName>
+							<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="69089231" Language="SFX">
-					<ShortName>Exports (120 bpm)\Healing Tier 1.wav</ShortName>
-					<Path>SFX\Exports (120 bpm)\Healing Tier 1_D79FB2B7.wem</Path>
+				<File Id="64306367" Language="SFX">
+					<ShortName>Mid_Drum_2.wav</ShortName>
+					<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
 				</File>
-				<File Id="92752773" Language="SFX">
-					<ShortName>Exports (120 bpm)\Healing Tier 2.wav</ShortName>
-					<Path>SFX\Exports (120 bpm)\Healing Tier 2_D79FB2B7.wem</Path>
+				<File Id="98316643" Language="SFX">
+					<ShortName>Bottom_Drum_2.wav</ShortName>
+					<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
 				</File>
-				<File Id="124060520" Language="SFX">
-					<ShortName>Exports (120 bpm)\Attack Tier 2.wav</ShortName>
-					<Path>SFX\Exports (120 bpm)\Attack Tier 2_D79FB2B7.wem</Path>
+				<File Id="301822309" Language="SFX">
+					<ShortName>Top_Drum_1.wav</ShortName>
+					<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
 				</File>
-				<File Id="166574791" Language="SFX">
-					<ShortName>Exports (120 bpm)\Speed Boost Tier 1.wav</ShortName>
-					<Path>SFX\Exports (120 bpm)\Speed Boost Tier 1_D79FB2B7.wem</Path>
+				<File Id="388139632" Language="SFX">
+					<ShortName>Cowbell.wav</ShortName>
+					<Path>SFX\Cowbell_10C4C929.wem</Path>
 				</File>
-				<File Id="509647709" Language="SFX">
-					<ShortName>Exports (120 bpm)\Attack Tier 3.wav</ShortName>
-					<Path>SFX\Exports (120 bpm)\Attack Tier 3_D79FB2B7.wem</Path>
+				<File Id="591945233" Language="SFX">
+					<ShortName>Mid_Drum_1.wav</ShortName>
+					<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
 				</File>
-				<File Id="553819016" Language="SFX">
-					<ShortName>Exports (120 bpm)\Speed Boost Tier 3.wav</ShortName>
-					<Path>SFX\Exports (120 bpm)\Speed Boost Tier 3_D79FB2B7.wem</Path>
+				<File Id="602660900" Language="SFX">
+					<ShortName>Bottom_Drum_1.wav</ShortName>
+					<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
 				</File>
-				<File Id="672171591" Language="SFX">
-					<ShortName>Exports (120 bpm)\Speed Boost Tier 2.wav</ShortName>
-					<Path>SFX\Exports (120 bpm)\Speed Boost Tier 2_D79FB2B7.wem</Path>
-				</File>
-				<File Id="858013523" Language="SFX">
-					<ShortName>Exports (120 bpm)\Healing Tier 3.wav</ShortName>
-					<Path>SFX\Exports (120 bpm)\Healing Tier 3_D79FB2B7.wem</Path>
-				</File>
-				<File Id="1069394677" Language="SFX">
-					<ShortName>Exports (120 bpm)\Attack Tier 1.wav</ShortName>
-					<Path>SFX\Exports (120 bpm)\Attack Tier 1_D79FB2B7.wem</Path>
+				<File Id="945996637" Language="SFX">
+					<ShortName>Top_Drum_2.wav</ShortName>
+					<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
-			<StateGroups>
-				<StateGroup Id="3991942870" Name="Music" ObjectPath="\States\Default Work Unit\Music" GUID="{84541FE8-613C-416E-952F-E4E01266E89A}">
-					<States>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music\None" GUID="{97580CCB-D58E-48A8-BF0D-E55DD6FB7402}"/>
-						<State Id="3413347345" Name="Healing" ObjectPath="\States\Default Work Unit\Music\Healing" GUID="{2D227284-6CE6-4F68-A263-689EF495DB23}"/>
-						<State Id="180661997" Name="Attack" ObjectPath="\States\Default Work Unit\Music\Attack" GUID="{A6E2FEB7-6202-409B-91BF-5D9730A6897B}"/>
-						<State Id="640949982" Name="Speed" ObjectPath="\States\Default Work Unit\Music\Speed" GUID="{CE50D1AB-FCBB-4347-BA85-2808692D6D39}"/>
-					</States>
-				</StateGroup>
-			</StateGroups>
 		</SoundBank>
-=======
->>>>>>> main
 	</SoundBanks>
 </SoundBanksInfo>

@@ -10,6 +10,13 @@ public struct DrumSound
     public AudioClip audio;
 }
 
+[Serializable]
+public struct AkDrumSound
+{
+    public Drums drum;
+    public AK.Wwise.Event drumClip;
+}
+
 public class SFXManager : MonoBehaviour
 {
     [Tooltip("The gameobject that will house all of the AudioSource components for the SFX Manager")]
@@ -24,12 +31,19 @@ public class SFXManager : MonoBehaviour
     [Tooltip("List of drums and their AudioClips")]
     public List<DrumSound> drumsSFX;
 
+    [Tooltip("List of drums and their AudioClips")]
+    public List<AkDrumSound> akDrumsSFX;
+
     private Dictionary<Drums, List<AudioSource>> _drumSources;
+
+    //private Dictionary<Drums, List<AK.Wwise.Event>> _akDrumSources;
 
     // Start is called before the first frame update
     void Start()
     {
         _drumSources = new Dictionary<Drums, List<AudioSource>>();
+
+        //_akDrumSources = new Dictionary<Drums, List<AK.Wwise.Event>>();
 
 		GameEvents.Instance.onDrumPlayed.AddListener(OnDrumPlayed);
 
@@ -41,6 +55,15 @@ public class SFXManager : MonoBehaviour
             drumSource.clip = ds.audio;
             _drumSources.Add(ds.drum, srcs);
 		}
+
+        /*foreach (AkDrumSound ds in akDrumsSFX)
+        {
+            List<AK.Wwise.Event> srcs = new List<AK.Wwise.Event>();
+            AK.Wwise.Event drumSource = new AK.Wwise.Event();
+            srcs.Add(drumSource);
+            drumSource = ds.drumClip;
+            _akDrumSources.Add(ds.drum, srcs);
+        }*/
 
         if (bgSound != null)
         {
@@ -55,6 +78,15 @@ public class SFXManager : MonoBehaviour
 
     void OnDrumPlayed(Drums drum)
 	{
+
+        foreach(AkDrumSound aks in akDrumsSFX)
+        {
+            if(aks.drum == drum)
+            {
+                aks.drumClip.Post(gameObject, (uint)AkCallbackType.AK_EndOfEvent, AKCallbackFunction);
+            }
+        }
+
         bool played = false;
 
         // Find a source that is not playing currently
@@ -83,4 +115,9 @@ public class SFXManager : MonoBehaviour
             _drumSources[drum].Add(AS);
         }
 	}
+
+    private void AKCallbackFunction(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
+    {
+        //throw new NotImplementedException();
+    }
 }
