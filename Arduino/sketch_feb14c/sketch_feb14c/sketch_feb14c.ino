@@ -1,5 +1,6 @@
 const int NUM_BUTTONS = 6;
-const int BUTTON_PIN_START = 4;
+const int BUTTON_PIN_START = 22;
+const int BUTTON_PIN_INCREMENT = 2;
 
 int button_pins[NUM_BUTTONS];
 boolean button_state[NUM_BUTTONS];
@@ -14,7 +15,8 @@ void setup() {
   }
 
   for(int index = 0; index < NUM_BUTTONS; index++){
-    button_pins[index] = index + BUTTON_PIN_START;
+    button_pins[index] = BUTTON_PIN_START + (index * BUTTON_PIN_INCREMENT);
+    Serial.println(button_pins[index]);
     pinMode(button_pins[index], INPUT_PULLUP);
     button_state[index] = 0;
     prev_button_state[index] = 0;
