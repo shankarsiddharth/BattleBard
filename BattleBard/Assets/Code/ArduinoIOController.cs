@@ -10,6 +10,10 @@ public class ArduinoIOController : MonoBehaviour
 
     public static SerialPort ArduinoSerialPort = new SerialPort(CommunicationPort, BaudRate);
 
+    private void OnDestroy()
+    {
+        ArduinoSerialPort.Close();
+    }
 
     // Start is called before the first frame update
     void Start()
