@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\u1377417\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\u1377417\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\u1377417\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\u1165870\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\u1377417\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -40,7 +40,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="3131324677">
+		<SoundBank Id="393239870" Language="SFX" Hash="3413278594">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -105,7 +105,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2386706874" Language="SFX" Hash="862249794">
+		<SoundBank Id="2386706874" Language="SFX" Hash="2380751748">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_120_bpm</ObjectPath>
 			<ShortName>Music_120_bpm</ShortName>
 			<Path>Music_120_bpm.bnk</Path>
@@ -193,6 +193,44 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2408909650" Name="Play_Tier_1" ObjectPath="\Events\Default Work Unit\Play_Tier_1" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="464545941" Language="SFX">
+							<ShortName>Speed_Boost_Tier_1.wav</ShortName>
+							<Path>SFX\Speed_Boost_Tier_1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="910168158" Language="SFX">
+							<ShortName>Healing_Tier_1.wav</ShortName>
+							<Path>SFX\Healing_Tier_1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1058716056" Language="SFX">
+							<ShortName>Attack_Tier_1.wav</ShortName>
+							<Path>SFX\Attack_Tier_1_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{819DC486-8BFB-4BA3-8222-CD554F50B480}">
+							<Media>
+								<File Id="464545941"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{AFF83496-2FBD-411A-A23D-E2E01F0DD12E}">
+							<Media>
+								<File Id="1058716056"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{6A1DD732-FEE6-41E1-9F96-46202FF71607}">
+							<Media>
+								<File Id="910168158"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{5C6A7F50-BE73-4E43-9FFA-4071396DD7B1}">
+							<Media>
+								<File Id="464545941"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="3892736498" Name="Play_Top_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
 					<ReferencedStreamedFiles>
 						<File Id="301822309" Language="SFX">
@@ -274,6 +312,16 @@
 					<Path>SFX\568774__josefpres__bass-loops-004-short-loop-120-bpm_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+			<StateGroups>
+				<StateGroup Id="3434871822" Name="Tier1" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier1" GUID="{819DC486-8BFB-4BA3-8222-CD554F50B480}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier1\None" GUID="{9E3ED59E-C030-47EC-9A3C-201449B97F30}"/>
+						<State Id="1641806523" Name="Attacking" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier1\Attacking" GUID="{AFF83496-2FBD-411A-A23D-E2E01F0DD12E}"/>
+						<State Id="3413347345" Name="Healing" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier1\Healing" GUID="{6A1DD732-FEE6-41E1-9F96-46202FF71607}"/>
+						<State Id="640949982" Name="Speed" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier1\Speed" GUID="{5C6A7F50-BE73-4E43-9FFA-4071396DD7B1}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
