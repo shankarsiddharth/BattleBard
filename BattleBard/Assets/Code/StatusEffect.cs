@@ -17,18 +17,18 @@ public class StatusEffect : ScriptableObject
 	{
 		Debug.Log("Started");
 
-		if (!actor.stats.currentEffects.Contains(this))
+		if (!actor.currentEffects.Contains(this))
 		{
 			// Add VFX
 			GameObject vfx = Instantiate(effectVFX[tier], actor.transform);
-			actor.stats.currentEffects.Add(this);
+			actor.currentEffects.Add(this);
 			actor.stats *= multiplicitiveChanges[tier];
 
 			yield return new WaitForSeconds(tierDuration[tier]);
 
 			if (actor != null)
 			{
-				actor.stats.currentEffects.Remove(this);
+				actor.currentEffects.Remove(this);
 				actor.stats /= multiplicitiveChanges[tier];
 				Destroy(vfx);
 			}
