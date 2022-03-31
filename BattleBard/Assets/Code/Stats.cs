@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 [Serializable]
 public class Stats
@@ -10,9 +11,6 @@ public class Stats
 	public float attackSpeed;
 	public float range;
 	public float armor;
-
-	[UnityEngine.HideInInspector]
-	public List<StatusEffect> currentEffects = new List<StatusEffect>();
 
 	public static Stats operator *(Stats lhs, Stats rhs)
 	{
