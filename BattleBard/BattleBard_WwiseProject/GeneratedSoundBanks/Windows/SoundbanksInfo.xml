@@ -105,7 +105,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2386706874" Language="SFX" Hash="2380751748">
+		<SoundBank Id="2386706874" Language="SFX" Hash="1214751127">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_120_bpm</ObjectPath>
 			<ShortName>Music_120_bpm</ShortName>
 			<Path>Music_120_bpm.bnk</Path>
@@ -231,6 +231,82 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2408909649" Name="Play_Tier_2" ObjectPath="\Events\Default Work Unit\Play_Tier_2" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="111141900" Language="SFX">
+							<ShortName>Speed_Boost_Tier_2.wav</ShortName>
+							<Path>SFX\Speed_Boost_Tier_2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="182826032" Language="SFX">
+							<ShortName>Attack_Tier_2.wav</ShortName>
+							<Path>SFX\Attack_Tier_2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="731254210" Language="SFX">
+							<ShortName>Healing_Tier_2.wav</ShortName>
+							<Path>SFX\Healing_Tier_2_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{63214FFD-0B00-477B-9843-6B328A18806F}">
+							<Media>
+								<File Id="111141900"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{7D550801-D359-4517-B02E-6B0C3F5EF399}">
+							<Media>
+								<File Id="182826032"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{7B626DBD-4F51-4AF2-BE58-A1399D366685}">
+							<Media>
+								<File Id="731254210"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{C5876F9C-E596-4D9D-83A0-90B002279B0E}">
+							<Media>
+								<File Id="111141900"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2408909648" Name="Play_Tier_3" ObjectPath="\Events\Default Work Unit\Play_Tier_3" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="355994873" Language="SFX">
+							<ShortName>Healing_Tier_3.wav</ShortName>
+							<Path>SFX\Healing_Tier_3_D79FB2B7.wem</Path>
+						</File>
+						<File Id="910025595" Language="SFX">
+							<ShortName>Attack_Tier_3.wav</ShortName>
+							<Path>SFX\Attack_Tier_3_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1024646306" Language="SFX">
+							<ShortName>Speed_Boost_Tier_3.wav</ShortName>
+							<Path>SFX\Speed_Boost_Tier_3_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{8BFED936-B3D6-4C37-B194-F0FF9294EFFA}">
+							<Media>
+								<File Id="355994873"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{A4277D24-4961-4521-A128-E4FADFDF936E}">
+							<Media>
+								<File Id="910025595"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{8DDE68DF-9DF5-428F-9017-6A0A3486540C}">
+							<Media>
+								<File Id="355994873"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{9DA47069-1C9B-4686-96D4-E1B2E1F41398}">
+							<Media>
+								<File Id="1024646306"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="3892736498" Name="Play_Top_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
 					<ReferencedStreamedFiles>
 						<File Id="301822309" Language="SFX">
@@ -313,6 +389,22 @@
 				</File>
 			</IncludedMemoryFiles>
 			<StateGroups>
+				<StateGroup Id="3434871820" Name="Tier3" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier3" GUID="{8BFED936-B3D6-4C37-B194-F0FF9294EFFA}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier3\None" GUID="{49654329-1AD0-4B30-AB78-035ACEA5B716}"/>
+						<State Id="1641806523" Name="Attacking" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier3\Attacking" GUID="{A4277D24-4961-4521-A128-E4FADFDF936E}"/>
+						<State Id="3413347345" Name="Healing" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier3\Healing" GUID="{8DDE68DF-9DF5-428F-9017-6A0A3486540C}"/>
+						<State Id="640949982" Name="Speed" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier3\Speed" GUID="{9DA47069-1C9B-4686-96D4-E1B2E1F41398}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3434871821" Name="Tier2" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier2" GUID="{63214FFD-0B00-477B-9843-6B328A18806F}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier2\None" GUID="{8092639F-5FD5-4CAE-8865-22A2037F65F2}"/>
+						<State Id="1641806523" Name="Attacking" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier2\Attacking" GUID="{7D550801-D359-4517-B02E-6B0C3F5EF399}"/>
+						<State Id="3413347345" Name="Healing" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier2\Healing" GUID="{7B626DBD-4F51-4AF2-BE58-A1399D366685}"/>
+						<State Id="640949982" Name="Speed" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier2\Speed" GUID="{C5876F9C-E596-4D9D-83A0-90B002279B0E}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3434871822" Name="Tier1" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier1" GUID="{819DC486-8BFB-4BA3-8222-CD554F50B480}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier1\None" GUID="{9E3ED59E-C030-47EC-9A3C-201449B97F30}"/>
