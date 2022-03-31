@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 7523.2344, g: 3736.3704, b: 1424.0457, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 46045de377cd4c4449a90ae11c5de33b, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 91323a4f710e99a41ad89d2c110a80d3, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -133,6 +133,10 @@ PrefabInstance:
     - target: {fileID: 3659321964709206647, guid: 136585a53cf5f7349bec842d64bd432e, type: 3}
       propertyPath: m_Name
       value: BearTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659321964709206647, guid: 136585a53cf5f7349bec842d64bd432e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4144249939963576525, guid: 136585a53cf5f7349bec842d64bd432e, type: 3}
       propertyPath: m_RootOrder
@@ -235,6 +239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arrow001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3003524793157372629, guid: f0239717386fc5249a602bfc5026c71a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0239717386fc5249a602bfc5026c71a, type: 3}
 --- !u!1001 &332989482
@@ -292,8 +300,57 @@ PrefabInstance:
       propertyPath: m_Name
       value: Log Resized
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 99e5a3482719e9d43a0b7237d1cfb315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99e5a3482719e9d43a0b7237d1cfb315, type: 3}
+--- !u!1 &373887604
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373887606}
+  - component: {fileID: 373887605}
+  m_Layer: 0
+  m_Name: StaticLightingSky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &373887605
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373887604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441482e8936e35048a1dffac814e3ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Profile: {fileID: 11400000, guid: 8a2967cbfbd14e24d8b804c6b4dca48f, type: 2}
+  m_StaticLightingSkyUniqueID: 4
+--- !u!4 &373887606
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373887604}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &384791794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -348,6 +405,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0a5657f6254898546a395ab74ab93487, type: 3}
       propertyPath: m_Name
       value: OrcBanner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a5657f6254898546a395ab74ab93487, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a5657f6254898546a395ab74ab93487, type: 3}
@@ -406,6 +467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DwarfBanner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2163510903689283133, guid: c989628bc1d3b3b4899d1d956f393f99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c989628bc1d3b3b4899d1d956f393f99, type: 3}
 --- !u!1001 &672821609
@@ -417,11 +482,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c00dc75ea6bf06e49a856ee0bbaec6bf, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c00dc75ea6bf06e49a856ee0bbaec6bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.82622313
+      value: -6.61
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c00dc75ea6bf06e49a856ee0bbaec6bf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -462,6 +527,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c00dc75ea6bf06e49a856ee0bbaec6bf, type: 3}
       propertyPath: m_Name
       value: GateFBX
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c00dc75ea6bf06e49a856ee0bbaec6bf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c00dc75ea6bf06e49a856ee0bbaec6bf, type: 3}
@@ -616,6 +685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrapFBX
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa682bf3c5439564fae1de89087d30e2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa682bf3c5439564fae1de89087d30e2, type: 3}
 --- !u!1001 &1059434222
@@ -673,6 +746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate
       objectReference: {fileID: 0}
+    - target: {fileID: 4273627918911132742, guid: bddc3ee03739f6a47a90d24d1cf536e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bddc3ee03739f6a47a90d24d1cf536e5, type: 3}
 --- !u!1001 &1067312779
@@ -685,6 +762,10 @@ PrefabInstance:
     - target: {fileID: 6079444296693100430, guid: 0880408834975b540b1798ff3f049535, type: 3}
       propertyPath: m_Name
       value: Bridge
+      objectReference: {fileID: 0}
+    - target: {fileID: 6079444296693100430, guid: 0880408834975b540b1798ff3f049535, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6851477843136410932, guid: 0880408834975b540b1798ff3f049535, type: 3}
       propertyPath: m_RootOrder
@@ -742,6 +823,10 @@ PrefabInstance:
     - target: {fileID: 8467469357596682298, guid: 9ca0c493353ccad4aa185fa3f85e628c, type: 3}
       propertyPath: m_Name
       value: OrcBanner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467469357596682298, guid: 9ca0c493353ccad4aa185fa3f85e628c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9136024806938800768, guid: 9ca0c493353ccad4aa185fa3f85e628c, type: 3}
       propertyPath: m_RootOrder
@@ -844,6 +929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpikeBarricadeFBX
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9295f6a24fe93ae4c8106992fa969123, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9295f6a24fe93ae4c8106992fa969123, type: 3}
 --- !u!1001 &1336220140
@@ -856,6 +945,10 @@ PrefabInstance:
     - target: {fileID: 6292046551847358543, guid: 84babdff40fe53644bc9a60fce2e019e, type: 3}
       propertyPath: m_Name
       value: Barrel_Deliver (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292046551847358543, guid: 84babdff40fe53644bc9a60fce2e019e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6636625436394982133, guid: 84babdff40fe53644bc9a60fce2e019e, type: 3}
       propertyPath: m_RootOrder
@@ -913,6 +1006,10 @@ PrefabInstance:
     - target: {fileID: 3878040262426207087, guid: 3ab0b727cda78c14ba68a545bce1ad94, type: 3}
       propertyPath: m_Name
       value: OrcSpear (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878040262426207087, guid: 3ab0b727cda78c14ba68a545bce1ad94, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4510990265093454293, guid: 3ab0b727cda78c14ba68a545bce1ad94, type: 3}
       propertyPath: m_RootOrder
@@ -1015,6 +1112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate_deliver
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a10b570acceba14b8cfa58cdb2aac34, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a10b570acceba14b8cfa58cdb2aac34, type: 3}
 --- !u!1001 &1409457229
@@ -1072,6 +1173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tavern_Mesh
       objectReference: {fileID: 0}
+    - target: {fileID: 6682224555822899139, guid: 7e1753407d1c7da45b9b460c9dfeb780, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e1753407d1c7da45b9b460c9dfeb780, type: 3}
 --- !u!1001 &1521551897
@@ -1128,6 +1233,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b4e14e14ec5b642468619f221aadc855, type: 3}
       propertyPath: m_Name
       value: BridgeFBX_scaled
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b4e14e14ec5b642468619f221aadc855, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4e14e14ec5b642468619f221aadc855, type: 3}
@@ -1402,6 +1511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cage2FBX
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eecd78642d4987149b917f8e588f9584, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eecd78642d4987149b917f8e588f9584, type: 3}
 --- !u!1001 &1625581148
@@ -1458,6 +1571,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2fe2ab8897707f5449a4c5eb6de6da16, type: 3}
       propertyPath: m_Name
       value: OrcSpear
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2fe2ab8897707f5449a4c5eb6de6da16, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fe2ab8897707f5449a4c5eb6de6da16, type: 3}
@@ -1516,6 +1633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Log Resized (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2142099587832761349, guid: 744d053bbb2a1ae46ba2e116b9d080d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 744d053bbb2a1ae46ba2e116b9d080d1, type: 3}
 --- !u!1001 &1675036809
@@ -1573,6 +1694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcResizedFixed
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2c7115e241e33442821e68177836590, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2c7115e241e33442821e68177836590, type: 3}
 --- !u!1001 &1786688405
@@ -1585,6 +1710,10 @@ PrefabInstance:
     - target: {fileID: 6125824299764663240, guid: 7d63e2503d7678e4ab656e699df3b60b, type: 3}
       propertyPath: m_Name
       value: SpikeBarricadeFBX (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125824299764663240, guid: 7d63e2503d7678e4ab656e699df3b60b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6793851639101757810, guid: 7d63e2503d7678e4ab656e699df3b60b, type: 3}
       propertyPath: m_RootOrder
@@ -1755,6 +1884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate_deliver (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8322729277315883819, guid: 3f28bfb494a9d3f409f0ee42094de244, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8704216189957077393, guid: 3f28bfb494a9d3f409f0ee42094de244, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1856,6 +1989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arrow001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 417561eebd103eb429ce2f8665c7eb97, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 417561eebd103eb429ce2f8665c7eb97, type: 3}
 --- !u!1001 &2027863415
@@ -1865,9 +2002,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6563485410000124291, guid: c2dc60b65fa1253418fd98a505178d98, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7000287028855571163, guid: c2dc60b65fa1253418fd98a505178d98, type: 3}
       propertyPath: m_Name
       value: ArrowAsset
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000287028855571163, guid: c2dc60b65fa1253418fd98a505178d98, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7669018124687399009, guid: c2dc60b65fa1253418fd98a505178d98, type: 3}
       propertyPath: m_RootOrder
@@ -1969,6 +2114,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7073cfe81db5c034b8370324973ba60d, type: 3}
       propertyPath: m_Name
       value: DwarfBanner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7073cfe81db5c034b8370324973ba60d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7073cfe81db5c034b8370324973ba60d, type: 3}
@@ -2083,6 +2232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_Deliver
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e13a3f17907eeba4c9c56fecd31a22f0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e13a3f17907eeba4c9c56fecd31a22f0, type: 3}
 --- !u!1001 &2082319144
@@ -2095,6 +2248,10 @@ PrefabInstance:
     - target: {fileID: 551503948852277662, guid: d95155d7f1e76344d93ce0839b620ed7, type: 3}
       propertyPath: m_Name
       value: OrcCampMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 551503948852277662, guid: d95155d7f1e76344d93ce0839b620ed7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 931265767127706404, guid: d95155d7f1e76344d93ce0839b620ed7, type: 3}
       propertyPath: m_RootOrder
@@ -2196,6 +2353,10 @@ PrefabInstance:
     - target: {fileID: 3164794481402232204, guid: 292c152182a4076479374dcb436c730f, type: 3}
       propertyPath: m_Name
       value: Cage2FBX (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3164794481402232204, guid: 292c152182a4076479374dcb436c730f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 292c152182a4076479374dcb436c730f, type: 3}
