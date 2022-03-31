@@ -25,7 +25,8 @@ public class Metronome : MonoBehaviour
         metroSource = GetComponent<AudioSource>();
         secPerBeat = 60f / BPM;
         //metroSource.Play();
-        startTime = (float)AudioSettings.dspTime;
+        //startTime = (float)AudioSettings.dspTime;
+        startTime = Time.time;
         if (noteAccuracy == 0)
         {
             noteAccuracy = .5f;
