@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Stomach",
+                    "name": "RightStomach",
                     "type": "Button",
                     "id": "3497aba3-e543-4859-bd44-cfe24d2b8b9b",
                     "expectedControlType": "Button",
@@ -51,9 +51,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pedal",
+                    "name": "LeftStomach",
                     "type": "Button",
-                    "id": "da149516-39d2-43d0-8a47-ebaefc15a7b9",
+                    "id": "f59bff7c-977c-401c-bc26-7d0ec1ba8ec4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -64,7 +64,7 @@
                 {
                     "name": "",
                     "id": "ae9f1154-9b54-41aa-990e-91e0e1fae1eb",
-                    "path": "<Keyboard>/numpad5",
+                    "path": "<Keyboard>/numpad1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -75,7 +75,7 @@
                 {
                     "name": "",
                     "id": "8a8976be-9d8d-4301-8732-278d21c6b95b",
-                    "path": "<Keyboard>/numpad4",
+                    "path": "<Keyboard>/numpad2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -86,18 +86,18 @@
                 {
                     "name": "",
                     "id": "e10f415f-0722-4938-a947-6b31e547ed71",
-                    "path": "<Keyboard>/numpad3",
+                    "path": "<Keyboard>/numpad5",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Stomach",
+                    "action": "RightStomach",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "daeb837b-513f-4fdb-a324-540c46ce19b8",
-                    "path": "<Keyboard>/numpad1",
+                    "path": "<Keyboard>/numpad7",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -108,7 +108,7 @@
                 {
                     "name": "",
                     "id": "b62a26b5-9973-4f7b-9bbf-f3c3f662cda3",
-                    "path": "<Keyboard>/numpad2",
+                    "path": "<Keyboard>/numpad8",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -118,12 +118,12 @@
                 },
                 {
                     "name": "",
-                    "id": "06e015f5-8dfc-429a-b128-a8f7a732a336",
-                    "path": "<Keyboard>/numpad0",
+                    "id": "88ad493f-f2c2-465f-b2df-b3e6f231d891",
+                    "path": "<Keyboard>/numpad4",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Pedal",
+                    "action": "LeftStomach",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
