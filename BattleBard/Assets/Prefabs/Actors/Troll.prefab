@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6681529506964411450}
   m_Layer: 0
   m_Name: Troll
-  m_TagString: Dwarf
+  m_TagString: Orc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6148313552655655719, guid: ed49889958bcd25409602bd6bb03d8e0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 962b89587b583b44fbd7a6a790e94a98, type: 2}
     - target: {fileID: 919132149155446097, guid: ed49889958bcd25409602bd6bb03d8e0, type: 3}
       propertyPath: m_Name
       value: Troll_Tpose
