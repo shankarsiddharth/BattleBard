@@ -4,10 +4,14 @@ public class AttackingState : State
 {
     public AttackingState(Actor actor, StateMachine stateMachine) : base(actor, stateMachine) { }
 
+    private float actorAttackSpeed;
+    
     public override void Enter()
     {
         base.Enter();
 
+        actorAttackSpeed = actor.stats.attackSpeed;
+      
         actor.InvokeRepeating(nameof(actor.Attack), actor.attackDelay, 1 / actor.stats.attackSpeed);
 
         actor.navMeshAgent.isStopped = true;
@@ -36,6 +40,13 @@ public class AttackingState : State
         }
 
         base.Update();
+
+        if(actorAttackSpeed != actor.stats.attackSpeed)
+        {
+            actor.CancelInvoke();
+            actorAttackSpeed = actor.stats.attackSpeed;
+            actor.InvokeRepeating(nameof(actor.Attack), actor.attackDelay, 1 / actor.stats.attackSpeed);
+        }
 
         actor.transform.LookAt(actor.target.transform);
     }
