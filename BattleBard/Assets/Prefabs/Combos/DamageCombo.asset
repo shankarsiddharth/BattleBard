@@ -19,4 +19,10 @@ MonoBehaviour:
     beat: 2
   - note: 2
     beat: 3
-  effect: {fileID: -620298999607620110, guid: 02ca5a4c530fe364eaad158a7655f1d6, type: 3}
+  - note: 2
+    beat: 4
+  - note: 2
+    beat: 5
+  - note: 2
+    beat: 6
+  effect: {fileID: 7799187262755110395, guid: 02ca5a4c530fe364eaad158a7655f1d6, type: 3}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2212661501041718538}
-  - component: {fileID: -620298999607620110}
+  - component: {fileID: 7799187262755110395}
   m_Layer: 0
   m_Name: Damage
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-620298999607620110
+--- !u!114 &7799187262755110395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4561255006919345032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8be7541f126076438e7a0eee6c3b01e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b3306f1558c43e42a1f6be719e1620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   affectsAllies: 1
