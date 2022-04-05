@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    maxHealth: 7
+    maxHealth: 9
     damage: 1
     movementSpeed: 3
     attackSpeed: 1

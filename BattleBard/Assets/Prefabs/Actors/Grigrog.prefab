@@ -139,11 +139,11 @@ MonoBehaviour:
     maxHealth: 30
     damage: 3
     movementSpeed: 1
-    attackSpeed: 0.8
-    range: 1
+    attackSpeed: 1
+    range: 2
     armor: 0
   currentHealth: 0
-  attackDelay: 0.4
+  attackDelay: 0.25
   target: {fileID: 0}
   animator: {fileID: 0}
   navMeshAgent: {fileID: 0}

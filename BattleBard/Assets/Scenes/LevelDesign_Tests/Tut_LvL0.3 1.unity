@@ -77960,7 +77960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2042423085
 Transform:
   m_ObjectHideFlags: 0
@@ -82007,7 +82007,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311538378}
   m_LocalRotation: {x: -0, y: -0.52019376, z: -0, w: -0.8540483}
-  m_LocalPosition: {x: -11.62, y: -3.1142857, z: 31.7}
+  m_LocalPosition: {x: -268.2, y: -3.1142857, z: 67.4}
   m_LocalScale: {x: 1.4285713, y: 1.4285713, z: 1.4285713}
   m_Children:
   - {fileID: 1827334275}
@@ -86109,6 +86109,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 866167745}
     m_Modifications:
+    - target: {fileID: 7092974174322544078, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
+      propertyPath: drumsSFX.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092974174322544078, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
+      propertyPath: drumsSFX.Array.data[3].drum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092974174322544078, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
+      propertyPath: drumsSFX.Array.data[5].drum
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7092974174322544078, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
+      propertyPath: drumsSFX.Array.data[3].audio
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c27b7408ac83b249b82ae2cfa3b820b, type: 3}
+    - target: {fileID: 7092974174322544078, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
+      propertyPath: drumsSFX.Array.data[5].audio
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c27b7408ac83b249b82ae2cfa3b820b, type: 3}
     - target: {fileID: 7092974174322544079, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
       propertyPath: m_RootOrder
       value: 2
