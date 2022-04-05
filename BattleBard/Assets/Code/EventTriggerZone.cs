@@ -8,9 +8,9 @@ public class EventTriggerZone : MonoBehaviour
     public bool hasNarratedEnding;
     private void OnTriggerEnter(Collider other)
     {
-        Unit unit = other.GetComponent<Unit>();
+        Dwarf dwarf = other.GetComponent<Dwarf>();
 
-        if (unit != null && unit.isAlly) {
+        if (dwarf != null) {
             GameEvents.Instance.OnEventCompleted(eventId);
 
             if (hasNarratedEnding)

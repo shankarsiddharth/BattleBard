@@ -21,6 +21,8 @@ public class ChasingState : State
     public override void Update()
     {
         base.Update();
+        if (actor.target == null)
+            stateMachine.ChangeState(actor.DefaultState);
 
         if (actor.navMeshAgent.destination != actor.target.transform.position)
             actor.navMeshAgent.SetDestination(actor.target.transform.position);

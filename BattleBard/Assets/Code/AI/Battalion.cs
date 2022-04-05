@@ -48,7 +48,7 @@ public class Battalion : MonoBehaviour
                 {
                     nearDwarfCount++;
 
-                    if (nearDwarfCount >= Mathf.Ceil((float)dwarves.Count / 2))
+                    if (nearDwarfCount >= 1)
                     {
                         nearestGate = gate;
                     }

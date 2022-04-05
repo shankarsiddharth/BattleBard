@@ -142,13 +142,13 @@ MonoBehaviour:
     attackSpeed: 0.3
     range: 10
     armor: 0
-    currentEffects: []
   currentHealth: 0
   attackDelay: 1
   target: {fileID: 0}
   animator: {fileID: 0}
   navMeshAgent: {fileID: 0}
   moveTarget: {x: 0, y: 0, z: 0}
+  currentEffects: []
   detectionRange: 20
   checkpoints: []
   arrowPrefab: {fileID: 7898420103362052601, guid: 720b93a7f5be1c1429dea8b156bc6f90, type: 3}
@@ -219,6 +219,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8470421742361104569, guid: c4184eba95bfb64479a6632c69bbdc88, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 261353e38e8b6a14f995716e4e532fe9, type: 2}
     - target: {fileID: -8021001004253913084, guid: c4184eba95bfb64479a6632c69bbdc88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 6.8857727
