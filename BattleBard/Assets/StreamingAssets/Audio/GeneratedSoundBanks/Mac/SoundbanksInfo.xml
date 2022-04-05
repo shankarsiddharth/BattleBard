@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\u1377417\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\u1377417\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\u1377417\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\u1377417\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -40,7 +40,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1413459195">
+		<SoundBank Id="393239870" Language="SFX" Hash="2845093703">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -105,7 +105,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2386706874" Language="SFX" Hash="4202193721">
+		<SoundBank Id="2386706874" Language="SFX" Hash="3316738251">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_120_bpm</ObjectPath>
 			<ShortName>Music_120_bpm</ShortName>
 			<Path>Music_120_bpm.bnk</Path>
