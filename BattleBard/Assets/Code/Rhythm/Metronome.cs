@@ -5,7 +5,7 @@ using System;
 
 public class Metronome : MonoBehaviour
 {
-    private float noteAccuracy;
+    public float noteAccuracy;
     public int BPM;
     private AudioSource metroSource;
     private float metroPosition;

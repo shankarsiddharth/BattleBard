@@ -9,7 +9,7 @@ boolean prev_button_state[NUM_BUTTONS];
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-
+  delay(20)
   while(!Serial){
     ; // wait for serial port to connect. Needed for native USB
   }
