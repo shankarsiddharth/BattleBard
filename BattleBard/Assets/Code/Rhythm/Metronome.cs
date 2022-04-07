@@ -9,7 +9,7 @@ public class Metronome : MonoBehaviour
     private uint playID = 0;
     bool isPlaying = false;
 
-    private float noteAccuracy;
+    public float noteAccuracy;
     public int BPM;
     private AudioSource metroSource;
     private float metroPosition;
