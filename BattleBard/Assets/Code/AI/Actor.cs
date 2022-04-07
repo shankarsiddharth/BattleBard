@@ -16,7 +16,7 @@ public abstract class Actor : MonoBehaviour
     public ChasingState chasingState;
     public DeathState deathState;
 
-    public State DefaultState;
+    public abstract State DefaultState { get; }
 
     [HideInInspector]
     public Actor target;
