@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec10f3b826d457b49b3618b07c44c3ac, type: 3}
+  m_Name: 9DA47069-1C9B-4686-96D4-E1B2E1F41398
+  m_EditorClassIdentifier: 
+  objectName: Speed
+  id: 640949982
+  guid: 9DA47069-1C9B-4686-96D4-E1B2E1F41398
+  WwiseStateGroupReference: {fileID: 11400000, guid: ef4e9d5ad79e48e4f898adbe5a7c3fbe, type: 2}

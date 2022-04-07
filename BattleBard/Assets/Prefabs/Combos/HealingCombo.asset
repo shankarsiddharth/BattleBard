@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: HealingCombo
   m_EditorClassIdentifier: 
   comboOrder:
-  - note: 1
+  - note: 2
     beat: 1
-  - note: 4
+  - note: 5
     beat: 1.5
-  - note: 1
+  - note: 2
     beat: 2
-  - note: 4
+  - note: 5
     beat: 2.5
-  - note: 1
+  - note: 2
     beat: 3
-  - note: 4
+  - note: 5
     beat: 3.5
   effect: {fileID: 3526569306241443677, guid: 4a7ff9e417a8384408dcfa728da9aebb, type: 3}

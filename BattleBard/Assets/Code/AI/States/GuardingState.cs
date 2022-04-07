@@ -19,7 +19,7 @@ public class GuardingState : State
     {
         base.Update();
 
-        if (!actor.target) SearchForTarget();
+        if (!actor.target || actor.target.IsDead) SearchForTarget();
 
         if (!actor.navMeshAgent.pathPending && actor.navMeshAgent.remainingDistance < 0.2f)
             GotoNextPoint();

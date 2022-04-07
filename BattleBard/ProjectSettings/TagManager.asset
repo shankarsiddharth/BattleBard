@@ -13,6 +13,9 @@ TagManager:
   - Dwarf
   - Orc
   - Checkpoint
+  - RhythmManager
+  - DeadActor
+  - PrisonerDwarf
   layers:
   - Default
   - TransparentFX
