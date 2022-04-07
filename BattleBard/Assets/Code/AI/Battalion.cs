@@ -66,6 +66,17 @@ public class Battalion : MonoBehaviour
         }
     }
 
+    private void RemoveDwarfOnDeath()
+    {
+        foreach(Dwarf dwarf in dwarves)
+        {
+            if(dwarf.tag == "DeadActor")
+            {
+                dwarves.Remove(dwarf);
+            }
+        }
+    }
+
     public Vector3 GetMidPoint()
     {
         if (dwarves.Count == 0)
@@ -95,6 +106,7 @@ public class Battalion : MonoBehaviour
 
     void Update()
     {
+        RemoveDwarfOnDeath();
         SearchNearestGate();
     }
 }
