@@ -24,6 +24,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "RightStomach",
+                    "type": "Button",
+                    "id": "3497aba3-e543-4859-bd44-cfe24d2b8b9b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "LeftShoulder",
                     "type": "Button",
                     "id": "111265f5-01a5-4939-9dee-e680e643164d",
@@ -44,25 +53,7 @@
                 {
                     "name": "LeftStomach",
                     "type": "Button",
-                    "id": "331bdb42-124b-4a7f-8669-da05f498ec46",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "RightStomach",
-                    "type": "Button",
-                    "id": "9da8218a-b940-4ffc-a1fa-92b5b66475e3",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Combo",
-                    "type": "Button",
-                    "id": "5c6e86b4-7ecc-4f98-87b0-33677385ff1a",
+                    "id": "f59bff7c-977c-401c-bc26-7d0ec1ba8ec4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -73,7 +64,7 @@
                 {
                     "name": "",
                     "id": "ae9f1154-9b54-41aa-990e-91e0e1fae1eb",
-                    "path": "<Keyboard>/numpad5",
+                    "path": "<Keyboard>/numpad1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -84,7 +75,7 @@
                 {
                     "name": "",
                     "id": "8a8976be-9d8d-4301-8732-278d21c6b95b",
-                    "path": "<Keyboard>/numpad4",
+                    "path": "<Keyboard>/numpad2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -94,8 +85,19 @@
                 },
                 {
                     "name": "",
+                    "id": "e10f415f-0722-4938-a947-6b31e547ed71",
+                    "path": "<Keyboard>/numpad5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightStomach",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "daeb837b-513f-4fdb-a324-540c46ce19b8",
-                    "path": "<Keyboard>/numpad1",
+                    "path": "<Keyboard>/numpad7",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -106,7 +108,7 @@
                 {
                     "name": "",
                     "id": "b62a26b5-9973-4f7b-9bbf-f3c3f662cda3",
-                    "path": "<Keyboard>/numpad2",
+                    "path": "<Keyboard>/numpad8",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -116,34 +118,12 @@
                 },
                 {
                     "name": "",
-                    "id": "4ceea186-a031-4953-b495-141350f74423",
-                    "path": "<Keyboard>/numpad3",
+                    "id": "88ad493f-f2c2-465f-b2df-b3e6f231d891",
+                    "path": "<Keyboard>/numpad4",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "LeftStomach",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "322f11c7-d6de-47c1-a021-125392945554",
-                    "path": "<Keyboard>/numpad6",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RightStomach",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "754b9d81-079a-4e63-877a-ca57a5c4b6b6",
-                    "path": "<Keyboard>/numpad9",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Combo",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: DamageCombo
   m_EditorClassIdentifier: 
   comboOrder:
-  - note: 2
+  - note: 5
     beat: 1
-  - note: 2
+  - note: 4
     beat: 2
-  - note: 2
+  - note: 5
     beat: 3
-  - note: 2
+  - note: 4
     beat: 4
-  effect: {fileID: 7799187262755110395, guid: 02ca5a4c530fe364eaad158a7655f1d6, type: 3}
+  effect: {fileID: -620298999607620110, guid: 02ca5a4c530fe364eaad158a7655f1d6, type: 3}

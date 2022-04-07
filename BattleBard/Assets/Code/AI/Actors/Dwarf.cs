@@ -42,7 +42,10 @@ public abstract class Dwarf : Actor
             }
 
             if (closestCheckpoint)
-                moveTarget = closestCheckpoint.position;
+            {
+                Vector3 movePosition = new Vector3(closestCheckpoint.position.x, 0, closestCheckpoint.position.z);
+                moveTarget = movePosition;
+            }
         }
         else
         {

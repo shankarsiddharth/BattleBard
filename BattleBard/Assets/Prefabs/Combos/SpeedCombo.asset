@@ -22,5 +22,3 @@ MonoBehaviour:
   - note: 0
     beat: 4
   effect: {fileID: -620298999607620110, guid: 9088543ffda14e848928983ea4efad92, type: 3}
-  affectsAllies: 0
-  affectsEnemies: 0

@@ -9,7 +9,8 @@ public class MovingState : State
         base.Enter();
 
         // TODO Create animator parameters and set them here.
-        actor.animator.SetTrigger("guard");
+        float animStartRandomizer = Random.Range(0, (float)1);
+        actor.animator.Play("Guard", 0, animStartRandomizer);
 
         actor.navMeshAgent.SetDestination(actor.moveTarget);
         actor.navMeshAgent.isStopped = false;
@@ -19,7 +20,7 @@ public class MovingState : State
     {
         base.Update();
 
-        if (!actor.target) SearchForTarget();
+        if (!actor.target || actor.target.IsDead) SearchForTarget();
 
         if (actor.navMeshAgent.destination != actor.moveTarget)
             actor.navMeshAgent.SetDestination(actor.moveTarget);

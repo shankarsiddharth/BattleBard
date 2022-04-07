@@ -14,6 +14,7 @@ public abstract class Actor : MonoBehaviour
     public IdleState idleState;
     public AttackingState attackingState;
     public ChasingState chasingState;
+    public DeathState deathState;
 
     public abstract State DefaultState { get; }
 
@@ -50,6 +51,7 @@ public abstract class Actor : MonoBehaviour
         idleState = new IdleState(this, stateMachine);
         attackingState = new AttackingState(this, stateMachine);
         chasingState = new ChasingState(this, stateMachine);
+        deathState = new DeathState(this, stateMachine);
 
         Init();
 
@@ -67,10 +69,10 @@ public abstract class Actor : MonoBehaviour
     {
         currentHealth -= damage;
 
-        if (currentHealth <= 0)
+        if (IsDead)
         {
-            currentHealth = 0;
-            Destroy(gameObject);
+            stateMachine.ChangeState(deathState);
+            tag = "DeadActor";
         }
     }
 
