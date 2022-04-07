@@ -70,7 +70,7 @@ public class Battalion : MonoBehaviour
     {
         foreach(Dwarf dwarf in dwarves)
         {
-            if(dwarf.tag == "DeadActor")
+            if(dwarf.CompareTag("DeadActor"))
             {
                 dwarves.Remove(dwarf);
             }
