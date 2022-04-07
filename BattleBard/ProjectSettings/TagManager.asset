@@ -14,6 +14,7 @@ TagManager:
   - Orc
   - Checkpoint
   - RhythmManager
+  - DeadActor
   layers:
   - Default
   - TransparentFX
