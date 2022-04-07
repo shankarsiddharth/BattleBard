@@ -1,0 +1,11 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.202510665)
+
+newmtl bark
+kd 0.2071 0.1216 0.0324
+illum 1
+
+newmtl leaves
+kd 0.33102 0.551 0.169708
+illum 1
+
