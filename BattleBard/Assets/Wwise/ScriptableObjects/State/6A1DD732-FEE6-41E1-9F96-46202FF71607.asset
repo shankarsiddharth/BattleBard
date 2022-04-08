@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec10f3b826d457b49b3618b07c44c3ac, type: 3}
+  m_Name: 6A1DD732-FEE6-41E1-9F96-46202FF71607
+  m_EditorClassIdentifier: 
+  objectName: Healing
+  id: 3413347345
+  guid: 6A1DD732-FEE6-41E1-9F96-46202FF71607
+  WwiseStateGroupReference: {fileID: 11400000, guid: 1782ba251aece124fb5bc6f9b101f40c, type: 2}

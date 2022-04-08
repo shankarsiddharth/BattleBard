@@ -135,22 +135,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 3497aba3-e543-4859-bd44-cfe24d2b8b9b
-    m_ActionName: Player/Stomach[/Keyboard/numpad3]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7092974174322544113}
-        m_TargetAssemblyTypeName: GameEvents, Assembly-CSharp
-        m_MethodName: KeyboardDrum
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: 111265f5-01a5-4939-9dee-e680e643164d
     m_ActionName: Player/LeftShoulder[/Keyboard/numpad1]
   - m_PersistentCalls:
@@ -169,10 +153,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c7b8acbc-f87b-42c0-8bd9-eb039172754e
     m_ActionName: Player/RightShoulder[/Keyboard/numpad2]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: da149516-39d2-43d0-8a47-ebaefc15a7b9
-    m_ActionName: Player/Pedal[/Keyboard/numpad0]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: c08a9cd9-6116-4ad0-939c-152c35466e7e
@@ -213,6 +193,38 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 21191e7e-a3aa-4023-bbdc-d9188b791d74
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7092974174322544113}
+        m_TargetAssemblyTypeName: GameEvents, Assembly-CSharp
+        m_MethodName: KeyboardDrum
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 331bdb42-124b-4a7f-8669-da05f498ec46
+    m_ActionName: Player/LeftStomach[/Keyboard/numpad3]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7092974174322544113}
+        m_TargetAssemblyTypeName: GameEvents, Assembly-CSharp
+        m_MethodName: KeyboardDrum
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9da8218a-b940-4ffc-a1fa-92b5b66475e3
+    m_ActionName: Player/RightStomach[/Keyboard/numpad6]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -257,6 +269,9 @@ MonoBehaviour:
   onEventCompleted:
     m_PersistentCalls:
       m_Calls: []
+  onGateDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
   onNarrativePieceStart:
     m_PersistentCalls:
       m_Calls: []
@@ -285,7 +300,40 @@ MonoBehaviour:
     audio: {fileID: 8300000, guid: 51b73e1c9d1511b469be5666825e8a25, type: 3}
   - drum: 2
     audio: {fileID: 8300000, guid: 8dc2ed7ad0b6db947bed9743d4bb34a2, type: 3}
-  - drum: 3
-    audio: {fileID: 8300000, guid: 8dc2ed7ad0b6db947bed9743d4bb34a2, type: 3}
   - drum: 5
     audio: {fileID: 8300000, guid: 09537c125cb29bd41a07884329d4d2aa, type: 3}
+  - drum: 1
+    audio: {fileID: 8300000, guid: 6c27b7408ac83b249b82ae2cfa3b820b, type: 3}
+  - drum: 4
+    audio: {fileID: 8300000, guid: 6c27b7408ac83b249b82ae2cfa3b820b, type: 3}
+  akDrumsSFX:
+  - drum: 0
+    drumClip:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 105d33a0762d4e6468bc1ad0e2f54ef6, type: 2}
+  - drum: 3
+    drumClip:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: d9af89b37da15a14f9641a689d390962, type: 2}
+  - drum: 2
+    drumClip:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: c83965beea5e73446a2abf14ee465df8, type: 2}
+  - drum: 5
+    drumClip:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 0adb22205f78e994a82683425494eada, type: 2}
+  - drum: 1
+    drumClip:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 286c0467476e32047b7f1a6507f999c8, type: 2}
+  - drum: 4
+    drumClip:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 7e794253e402b6842b0fd51e859dd1fd, type: 2}

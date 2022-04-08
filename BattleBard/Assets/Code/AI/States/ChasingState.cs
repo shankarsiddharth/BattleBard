@@ -6,7 +6,7 @@ public class ChasingState : State
     {
         base.Enter();
 
-        if (!actor.target)
+        if (!actor.target || actor.target.IsDead)
         {
             actor.stateMachine.ChangeState(actor.DefaultState);
             return;
@@ -21,7 +21,7 @@ public class ChasingState : State
     public override void Update()
     {
         base.Update();
-        if (actor.target == null)
+        if (actor.target == null || actor.target.IsDead)
             stateMachine.ChangeState(actor.DefaultState);
 
         if (actor.navMeshAgent.destination != actor.target.transform.position)

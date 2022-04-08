@@ -110,6 +110,7 @@ public class ComboManager : MonoBehaviour
 
     private void OnDrumPlay(Drums drum)
     {
+        Debug.Log(drum);
         if (!_playingCombo)
         {
             // Set base beat count from metronome beat

@@ -154,11 +154,11 @@ MonoBehaviour:
     maxHealth: 10
     damage: 2
     movementSpeed: 1
-    attackSpeed: 0.3
-    range: 1
+    attackSpeed: 1
+    range: 2
     armor: 0
   currentHealth: 10
-  attackDelay: 1
+  attackDelay: 0.25
   target: {fileID: 0}
   animator: {fileID: 0}
   navMeshAgent: {fileID: 0}
