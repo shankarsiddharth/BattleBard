@@ -135,20 +135,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    maxHealth: 5
+    maxHealth: 9
     damage: 1
     movementSpeed: 3
     attackSpeed: 1
-    range: 1
+    range: 2
     armor: 0
-    currentEffects: []
   currentHealth: 0
   attackDelay: 0.25
   target: {fileID: 0}
   animator: {fileID: 0}
   navMeshAgent: {fileID: 0}
   moveTarget: {x: 0, y: 0, z: 0}
-  detectionRange: 20
+  currentEffects: []
+  detectionRange: 15
   guardPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -170,7 +170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6110551d91703cc4ca809a3199ad97dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.21
+      value: -0.881
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6110551d91703cc4ca809a3199ad97dc, type: 3}
       propertyPath: m_LocalPosition.z

@@ -48,7 +48,7 @@ public class Battalion : MonoBehaviour
                 {
                     nearDwarfCount++;
 
-                    if (nearDwarfCount >= Mathf.Ceil((float)dwarves.Count / 2))
+                    if (nearDwarfCount >= 1)
                     {
                         nearestGate = gate;
                     }
@@ -62,6 +62,17 @@ public class Battalion : MonoBehaviour
             foreach(Dwarf dwarf in dwarves)
             {
                 dwarf.stateMachine.ChangeState(dwarf.idleState);
+            }
+        }
+    }
+
+    private void RemoveDwarfOnDeath()
+    {
+        foreach(Dwarf dwarf in dwarves)
+        {
+            if(dwarf.CompareTag("DeadActor"))
+            {
+                dwarves.Remove(dwarf);
             }
         }
     }
@@ -95,6 +106,7 @@ public class Battalion : MonoBehaviour
 
     void Update()
     {
+        RemoveDwarfOnDeath();
         SearchNearestGate();
     }
 }

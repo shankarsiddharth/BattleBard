@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Dwarf : Actor
 {
     public MovingState movingState;
-    public override State DefaultState => movingState;
+    public PrisonerState prisonerState;
 
     [HideInInspector]
     public List<Transform> checkpoints;
@@ -15,7 +15,17 @@ public abstract class Dwarf : Actor
     public override void Init()
     {
         FindCheckpoints();
+        prisonerState = new PrisonerState(this, stateMachine);
         movingState = new MovingState(this, stateMachine);
+
+        if (CompareTag("PrisonerDwarf"))
+        {
+            DefaultState = prisonerState;
+        }
+        else
+        {
+            DefaultState = movingState;
+        }
     }
 
     private void FindCheckpoints()
@@ -42,7 +52,10 @@ public abstract class Dwarf : Actor
             }
 
             if (closestCheckpoint)
-                moveTarget = closestCheckpoint.position;
+            {
+                Vector3 movePosition = new Vector3(closestCheckpoint.position.x, 0, closestCheckpoint.position.z);
+                moveTarget = movePosition;
+            }
         }
         else
         {

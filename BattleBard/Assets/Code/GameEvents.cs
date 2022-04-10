@@ -125,7 +125,6 @@ public class GameEvents : MonoBehaviour
     
     public void KeyboardDrum(InputAction.CallbackContext context)
 	{
-
         if (context.performed)
         {
             switch (context.action.name)
@@ -148,6 +147,10 @@ public class GameEvents : MonoBehaviour
                 case "LeftStomach":
                     GameEvents.Instance.OnDrumPlayed(Drums.LeftStomach);
                     break;
+                /*case "Combo":
+                    AkSoundEngine.SetState("Tier1", "Attacking");
+                    Debug.Log("Combo");
+                    break;*/
             }
         }
     }

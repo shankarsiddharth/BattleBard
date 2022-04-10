@@ -137,19 +137,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats:
     maxHealth: 15
-    damage: 1
+    damage: 0.5
     movementSpeed: 5
-    attackSpeed: 1
+    attackSpeed: 0.8
     range: 2
     armor: 0
-    currentEffects: []
   currentHealth: 0
   attackDelay: 0.25
   target: {fileID: 0}
   animator: {fileID: 0}
   navMeshAgent: {fileID: 0}
   moveTarget: {x: 0, y: 0, z: 0}
-  detectionRange: 30
+  currentEffects: []
+  detectionRange: 15
   checkpoints: []
 --- !u!54 &6338803549954027002
 Rigidbody:
@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8470421742361104569, guid: c4184eba95bfb64479a6632c69bbdc88, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 261353e38e8b6a14f995716e4e532fe9, type: 2}
     - target: {fileID: 919132149155446097, guid: c4184eba95bfb64479a6632c69bbdc88, type: 3}
       propertyPath: m_Name
       value: Dwarf_TPose

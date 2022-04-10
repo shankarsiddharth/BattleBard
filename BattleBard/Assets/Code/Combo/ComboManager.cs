@@ -50,8 +50,8 @@ public class ComboManager : MonoBehaviour
             {
                 ComboNote properComboNote = validCombos[comboInd].comboOrder[_comboProgress[comboInd]];
 
-                // If beat is less than curBeat, they missed it
-                if (properComboNote.beat < curBeat)
+                // Check if we are past the window to play the necessary combo note
+                if (properComboNote.beat + _metronome.noteAccuracy < curBeat)
                     invalidCombos.Add(validCombos[comboInd]);
             }
 
@@ -110,6 +110,7 @@ public class ComboManager : MonoBehaviour
 
     private void OnDrumPlay(Drums drum)
     {
+        Debug.Log(drum);
         if (!_playingCombo)
         {
             // Set base beat count from metronome beat
