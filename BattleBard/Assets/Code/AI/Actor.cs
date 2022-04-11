@@ -39,6 +39,8 @@ public abstract class Actor : MonoBehaviour
 
     public bool IsDead => currentHealth <= 0;
 
+    private HealthBar healthBar;
+
     public void Start()
     {
         currentHealth = stats.maxHealth;
@@ -52,6 +54,9 @@ public abstract class Actor : MonoBehaviour
         attackingState = new AttackingState(this, stateMachine);
         chasingState = new ChasingState(this, stateMachine);
         deathState = new DeathState(this, stateMachine);
+
+        healthBar = GetComponentInChildren<HealthBar>();
+        healthBar.SetMaxHealth(stats.maxHealth);
 
         Init();
 
@@ -68,11 +73,14 @@ public abstract class Actor : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
 
         if (IsDead)
         {
+            healthBar.gameObject.SetActive(false);
             stateMachine.ChangeState(deathState);
             tag = "DeadActor";
+
             Dwarf dwarf = GetComponent<Dwarf>();
             if (dwarf)
             {
