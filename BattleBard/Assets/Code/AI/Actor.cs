@@ -73,6 +73,11 @@ public abstract class Actor : MonoBehaviour
         {
             stateMachine.ChangeState(deathState);
             tag = "DeadActor";
+            Dwarf dwarf = GetComponent<Dwarf>();
+            if (dwarf)
+            {
+                GameEvents.Instance.OnDwarfDeath(dwarf);
+            }
         }
     }
 

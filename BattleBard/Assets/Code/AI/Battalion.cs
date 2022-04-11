@@ -19,6 +19,7 @@ public class Battalion : MonoBehaviour
         _gateManager = FindObjectOfType<GateManager>();
         dwarves = GetComponentsInChildren<Dwarf>().ToList();
         GameEvents.Instance.onGateDestroyed.AddListener(OnGateDestroyed);
+        GameEvents.Instance.onDwarfDeath.AddListener(OnDwarfDeath);
     }
 
     private void OnGateDestroyed(Gate gate)
@@ -66,15 +67,9 @@ public class Battalion : MonoBehaviour
         }
     }
 
-    private void RemoveDwarfOnDeath()
+    private void OnDwarfDeath(Dwarf dwarf)
     {
-        foreach(Dwarf dwarf in dwarves)
-        {
-            if(dwarf.CompareTag("DeadActor"))
-            {
-                dwarves.Remove(dwarf);
-            }
-        }
+        dwarves.Remove(dwarf);
     }
 
     public Vector3 GetMidPoint()
@@ -106,7 +101,6 @@ public class Battalion : MonoBehaviour
 
     void Update()
     {
-        RemoveDwarfOnDeath();
         SearchNearestGate();
     }
 }
