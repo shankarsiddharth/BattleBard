@@ -39,7 +39,7 @@ public abstract class Actor : MonoBehaviour
 
     public bool IsDead => currentHealth <= 0;
 
-    private HealthBar healthBar;
+    public HealthBar healthBar;
 
     public void Start()
     {

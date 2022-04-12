@@ -11,25 +11,7 @@ public class PrisonerState : State
     public override void Enter()
     {
         base.Enter();
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(actor.EnemyTag);
-
-        float closestDist = float.MaxValue;
-        GameObject closestEnemy = null;
-
-        foreach (GameObject enemy in enemies)
-        {
-            float distance = Vector3.Distance(enemy.transform.position, actor.transform.position);
-            if (distance < closestDist)
-            {
-                closestDist = distance;
-                closestEnemy = enemy;
-            }
-        }
-
-        if (!closestEnemy) return;
-
-        actor.SetTarget(closestEnemy.GetComponent<Actor>());
-        
+        actor.transform.Find("HP Canvas").gameObject.SetActive(false);
     }
 
     public override void Exit()
@@ -40,38 +22,62 @@ public class PrisonerState : State
     public override void Update()
     {
         base.Update();
-        SearchForBattalion();
+        if (IsAreaClear())
+        {
+            JoinBattalion();
+        }
     }
 
-    private void SearchForBattalion()
+    private bool IsAreaClear()
     {
-        if (!actor.target.IsDead) return;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(actor.EnemyTag);
+        int numEnemiesInArea = 0;
 
-        Battalion dwarfBattalion = GameObject.FindObjectOfType<Battalion>();
-        GameObject[] dwarves = GameObject.FindGameObjectsWithTag("Dwarf");
-
-        float closestDist = float.MaxValue;
-        GameObject closestDwarf = null;
-
-        foreach (GameObject dwarf in dwarves)
+        foreach (GameObject enemy in enemies)
         {
-            float distance = Vector3.Distance(dwarf.transform.position, actor.transform.position);
-            if (distance < closestDist)
+            float distance = Vector3.Distance(enemy.transform.position, actor.transform.position);
+
+            if (distance <= actor.detectionRange)
             {
-                closestDist = distance;
-                closestDwarf = dwarf;
+                numEnemiesInArea++;
             }
         }
 
-        if (!closestDwarf) return;
+        if (numEnemiesInArea == 0)
+            return true;
+        else
+            return false;
+    }
 
-        if (Vector3.Distance(closestDwarf.transform.position, actor.transform.position) <= actor.detectionRange)
+    private void JoinBattalion()
+    {
+        Battalion dwarfBattalion = GameObject.FindObjectOfType<Battalion>();
+        GameObject[] dwarves = GameObject.FindGameObjectsWithTag("Dwarf");
+
+        float leastCheckpoints = float.MaxValue;
+        GameObject furthestDwarf = null;
+
+        foreach (GameObject go in dwarves)
+        {
+            Dwarf dwarf = go.GetComponent<Dwarf>();
+
+            if (dwarf.checkpoints.Count <= leastCheckpoints)
+            {
+                leastCheckpoints = dwarf.checkpoints.Count;
+                furthestDwarf = go;
+            }
+        }
+
+        if (!furthestDwarf) return;
+
+        if (Vector3.Distance(furthestDwarf.transform.position, actor.transform.position) <= actor.detectionRange)
         {
             Dwarf dwarfComponent = actor.GetComponent<Dwarf>();
             actor.DefaultState = dwarfComponent.movingState;
             actor.tag = "Dwarf";
             actor.transform.SetParent(dwarfBattalion.transform);
-            dwarfComponent.checkpoints = closestDwarf.GetComponent<Dwarf>().checkpoints;
+            dwarfComponent.checkpoints = furthestDwarf.GetComponent<Dwarf>().checkpoints;
+            actor.transform.Find("HP Canvas").gameObject.SetActive(true);
             stateMachine.ChangeState(actor.DefaultState);
         }
     }
