@@ -25,6 +25,7 @@ public class GameEvents : MonoBehaviour
     //Change types from int to Minion when class is implemented
     public UnityEvent<int, int> onMinionAttackStarted;
     public UnityEvent<int> onMinionDeath;
+    public UnityEvent<Dwarf> onDwarfDeath;
 
     public void OnMinionAttackStarted(int attackerId, int otherId)
     {
@@ -34,6 +35,11 @@ public class GameEvents : MonoBehaviour
     public void OnMinionDeath(int minionId)
     {
         onMinionDeath.Invoke(minionId);
+    }
+
+    public void OnDwarfDeath(Dwarf dwarf)
+    {
+        onDwarfDeath.Invoke(dwarf);
     }
     #endregion
 

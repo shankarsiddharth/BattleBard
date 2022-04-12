@@ -14,7 +14,11 @@ public abstract class Dwarf : Actor
 
     public override void Init()
     {
-        FindCheckpoints();
+        if (!CompareTag("PrisonerDwarf"))
+        {
+            FindCheckpoints();
+        }
+
         prisonerState = new PrisonerState(this, stateMachine);
         movingState = new MovingState(this, stateMachine);
 
@@ -65,7 +69,7 @@ public abstract class Dwarf : Actor
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Checkpoint")
+        if (other.CompareTag("Checkpoint"))
         {
             print("Checkpoint Entered");
             checkpoints.Remove(other.transform);

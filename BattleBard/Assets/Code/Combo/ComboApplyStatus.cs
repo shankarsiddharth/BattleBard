@@ -11,7 +11,7 @@ public class ComboApplyStatus : ComboBase
             foreach (Dwarf dwarf in _combatManager.playerUnits)
             {
                 dwarf.TryGetComponent(out Actor ai);
-                if (!dwarf.CompareTag("DwarfPrisoner"))
+                if (!dwarf.CompareTag("PrisonerDwarf") && !dwarf.CompareTag("DeadActor"))
                     StartCoroutine(statusEffect.StartTimer(level, ai));
             }
         }
