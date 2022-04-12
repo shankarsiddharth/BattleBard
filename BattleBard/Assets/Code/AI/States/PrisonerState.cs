@@ -12,6 +12,7 @@ public class PrisonerState : State
     {
         base.Enter();
         actor.transform.Find("HP Canvas").gameObject.SetActive(false);
+        actor.GetComponent<Dwarf>().checkpoints.Clear();
     }
 
     public override void Exit()
@@ -22,6 +23,7 @@ public class PrisonerState : State
     public override void Update()
     {
         base.Update();
+
         if (IsAreaClear())
         {
             JoinBattalion();
@@ -37,7 +39,7 @@ public class PrisonerState : State
         {
             float distance = Vector3.Distance(enemy.transform.position, actor.transform.position);
 
-            if (distance <= actor.detectionRange)
+            if (distance <= actor.detectionRange && !enemy.CompareTag("DeadActor"))
             {
                 numEnemiesInArea++;
             }
@@ -68,17 +70,32 @@ public class PrisonerState : State
             }
         }
 
-        if (!furthestDwarf) return;
+        Dwarf dwarfComponent = actor.GetComponent<Dwarf>();
+        actor.DefaultState = dwarfComponent.movingState;
+        actor.tag = "Dwarf";
+        actor.transform.SetParent(dwarfBattalion.transform);
+        dwarfComponent.checkpoints = furthestDwarf.GetComponent<Dwarf>().checkpoints;
+        actor.transform.Find("HP Canvas").gameObject.SetActive(true);
+        float closestDist = float.MaxValue;
+        Transform closestCheckpoint = null;
 
-        if (Vector3.Distance(furthestDwarf.transform.position, actor.transform.position) <= actor.detectionRange)
+        foreach (Transform checkpoint in dwarfComponent.checkpoints)
         {
-            Dwarf dwarfComponent = actor.GetComponent<Dwarf>();
-            actor.DefaultState = dwarfComponent.movingState;
-            actor.tag = "Dwarf";
-            actor.transform.SetParent(dwarfBattalion.transform);
-            dwarfComponent.checkpoints = furthestDwarf.GetComponent<Dwarf>().checkpoints;
-            actor.transform.Find("HP Canvas").gameObject.SetActive(true);
-            stateMachine.ChangeState(actor.DefaultState);
+            float distance = Vector3.Distance(checkpoint.position, actor.transform.position);
+            if (distance < closestDist)
+            {
+                closestDist = distance;
+                closestCheckpoint = checkpoint;
+            }
         }
+
+        if (closestCheckpoint)
+        {
+            Vector3 movePosition = new Vector3(closestCheckpoint.position.x, 0, closestCheckpoint.position.z);
+            actor.moveTarget = movePosition;
+        }
+
+        stateMachine.ChangeState(actor.DefaultState);
+
     }
 }

@@ -10,7 +10,6 @@ public class DeathState : State
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("Entered death state");
         actor.target = null;
         actor.navMeshAgent.enabled = false;
         actor.animator.SetTrigger("death");

@@ -17,7 +17,7 @@ public class HealingCombo : ComboBase
             foreach (Dwarf dwarf in _combatManager.playerUnits)
             {
                 dwarf.TryGetComponent(out Actor ai);
-                if (!dwarf.CompareTag("PrisonerDwarf"))
+                if (!dwarf.CompareTag("PrisonerDwarf") && !dwarf.CompareTag("DeadActor"))
                     StartCoroutine(StartTimer(level, ai));
             }
         }
