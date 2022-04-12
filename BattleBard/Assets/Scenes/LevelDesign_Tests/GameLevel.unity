@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 2961.6099, g: 1303.1716, b: 423.2854, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5701,17 +5701,6 @@ Transform:
   m_Father: {fileID: 2055976526}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &291025609 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7092974174322544113, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-  m_PrefabInstance: {fileID: 7092974172794791983}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3a37fe29ed8e19478506854a75563c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &296671639 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2163588131153934942, guid: 2b403aa2db012934aad59525154ef792, type: 3}
@@ -68209,26 +68198,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 866167745}
     m_Modifications:
-    - target: {fileID: 7092974174322544078, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: drumsSFX.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544078, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: drumsSFX.Array.data[3].drum
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544078, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: drumsSFX.Array.data[5].drum
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544078, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: drumsSFX.Array.data[3].audio
-      value: 
-      objectReference: {fileID: 8300000, guid: 6c27b7408ac83b249b82ae2cfa3b820b, type: 3}
-    - target: {fileID: 7092974174322544078, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: drumsSFX.Array.data[5].audio
-      value: 
-      objectReference: {fileID: 8300000, guid: 6c27b7408ac83b249b82ae2cfa3b820b, type: 3}
     - target: {fileID: 7092974174322544079, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -68272,74 +68241,6 @@ PrefabInstance:
     - target: {fileID: 7092974174322544079, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_ActionId
-      value: 3497aba3-e543-4859-bd44-cfe24d2b8b9b
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_ActionId
-      value: f59bff7c-977c-401c-bc26-7d0ec1ba8ec4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_ActionName
-      value: Player/RightStomach[/Keyboard/numpad5]
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_ActionName
-      value: Player/LeftStomach[/Keyboard/numpad4]
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 291025609}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 291025609}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: KeyboardDrum
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: KeyboardDrum
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameEvents, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameEvents, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092974174322544112, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7092974174322544114, guid: bbf480f20efc0cd43b36d8aa3292210d, type: 3}
       propertyPath: m_Name
