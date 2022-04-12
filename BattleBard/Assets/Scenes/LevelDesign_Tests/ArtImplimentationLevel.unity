@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 3053.0515, g: 1383.3794, b: 490.47485, a: 1}
+  m_IndirectSpecularColor: {r: 2953.8586, g: 1298.7126, b: 420.9383, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1253,6 +1253,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 45870240}
     m_Modifications:
+    - target: {fileID: 61904393022738652, guid: 17d7b840888971b4a8a698b8fd094aee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61904393022738652, guid: 17d7b840888971b4a8a698b8fd094aee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6681529506964411450, guid: 17d7b840888971b4a8a698b8fd094aee, type: 3}
       propertyPath: guardPoints.Array.size
       value: 2
@@ -1426,6 +1434,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orc_Warrior (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
 --- !u!4 &65228273 stripped
@@ -1517,7 +1533,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25148
+  m_Name: pb_Mesh33714
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3006,6 +3022,14 @@ PrefabInstance:
     - target: {fileID: 692436562864411262, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
       propertyPath: m_Name
       value: Orc_Warrior (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
@@ -4717,7 +4741,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25664
+  m_Name: pb_Mesh34230
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4969,7 +4993,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25950
+  m_Name: pb_Mesh34516
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6980,7 +7004,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26784
+  m_Name: pb_Mesh35350
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10036,6 +10060,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orc_Warrior
       objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
 --- !u!4 &513665146 stripped
@@ -10292,7 +10324,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26840
+  m_Name: pb_Mesh35406
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12015,6 +12047,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orc_Warrior (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
 --- !u!4 &587907852 stripped
@@ -12507,6 +12547,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 068d39ad2a610284589321a74477fca7, type: 2}
     - target: {fileID: -531339508311027714, guid: 38a04d4ce58caed4dbaf9d49793ebc76, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -531339508311027714, guid: 38a04d4ce58caed4dbaf9d49793ebc76, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -12687,6 +12731,10 @@ PrefabInstance:
       value: -71.275
       objectReference: {fileID: 0}
     - target: {fileID: 8134837689134937748, guid: 38a04d4ce58caed4dbaf9d49793ebc76, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134837689134937748, guid: 38a04d4ce58caed4dbaf9d49793ebc76, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -12792,7 +12840,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25246
+  m_Name: pb_Mesh33812
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13409,6 +13457,14 @@ PrefabInstance:
     - target: {fileID: 692436562864411262, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
       propertyPath: m_Name
       value: Orc_Warrior (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
@@ -28627,6 +28683,35 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -531339508311027714, guid: 38a04d4ce58caed4dbaf9d49793ebc76, type: 3}
   m_PrefabInstance: {fileID: 605732534}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &852890790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852890788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: 105ea610afdc46b42a4039c670b48ce4, type: 2}
 --- !u!64 &852890792
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29801,6 +29886,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 45870240}
     m_Modifications:
+    - target: {fileID: 61904393022738652, guid: 17d7b840888971b4a8a698b8fd094aee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61904393022738652, guid: 17d7b840888971b4a8a698b8fd094aee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6681529506964411450, guid: 17d7b840888971b4a8a698b8fd094aee, type: 3}
       propertyPath: guardPoints.Array.size
       value: 2
@@ -30283,6 +30376,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2073562524}
     m_Modifications:
+    - target: {fileID: 1215575803953465546, guid: 1a8a9ceac8f852c4a8ea715251ae751c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215575803953465546, guid: 1a8a9ceac8f852c4a8ea715251ae751c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3518111855335026627, guid: 1a8a9ceac8f852c4a8ea715251ae751c, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -39226,6 +39327,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orc_Warrior (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
 --- !u!4 &1127701762 stripped
@@ -39248,6 +39357,14 @@ PrefabInstance:
     - target: {fileID: 2082156677860369951, guid: 8606511c82493e143abac743af1dac9a, type: 3}
       propertyPath: m_AutoTraverseOffMeshLink
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607594515306088969, guid: 8606511c82493e143abac743af1dac9a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607594515306088969, guid: 8606511c82493e143abac743af1dac9a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9082064119535672425, guid: 8606511c82493e143abac743af1dac9a, type: 3}
       propertyPath: m_Name
@@ -39871,6 +39988,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2073562524}
     m_Modifications:
+    - target: {fileID: 1215575803953465546, guid: 1a8a9ceac8f852c4a8ea715251ae751c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215575803953465546, guid: 1a8a9ceac8f852c4a8ea715251ae751c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3518111855335026627, guid: 1a8a9ceac8f852c4a8ea715251ae751c, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -40544,6 +40669,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2073562524}
     m_Modifications:
+    - target: {fileID: 1215575803953465546, guid: 1a8a9ceac8f852c4a8ea715251ae751c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215575803953465546, guid: 1a8a9ceac8f852c4a8ea715251ae751c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3518111855335026627, guid: 1a8a9ceac8f852c4a8ea715251ae751c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -41170,6 +41303,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orc_Warrior (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
 --- !u!4 &1246794038 stripped
@@ -41313,6 +41454,14 @@ PrefabInstance:
     - target: {fileID: 692436562864411262, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
       propertyPath: m_Name
       value: Orc_Warrior (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
@@ -42985,6 +43134,14 @@ PrefabInstance:
     - target: {fileID: 692436562864411262, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
       propertyPath: m_Name
       value: Orc_Warrior (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
@@ -47135,6 +47292,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orc_Warrior (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
 --- !u!4 &1396744983 stripped
@@ -47501,7 +47666,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-9256
+  m_Name: pb_Mesh-28180
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49150,7 +49315,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6716
+  m_Name: pb_Mesh-25640
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49448,6 +49613,14 @@ PrefabInstance:
     - target: {fileID: 692436562864411262, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
       propertyPath: m_Name
       value: Orc_Warrior (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
@@ -50441,6 +50614,14 @@ PrefabInstance:
     - target: {fileID: 692436562864411262, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
       propertyPath: m_Name
       value: Orc_Warrior (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
@@ -52586,7 +52767,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25306
+  m_Name: pb_Mesh33872
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -52996,7 +53177,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25566
+  m_Name: pb_Mesh34132
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -53304,6 +53485,14 @@ PrefabInstance:
     - target: {fileID: 692436562864411262, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
       propertyPath: m_Name
       value: Orc_Warrior
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
@@ -54776,7 +54965,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-10004
+  m_Name: pb_Mesh-28928
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -55150,6 +55339,14 @@ PrefabInstance:
     - target: {fileID: 692436562864411262, guid: 00af874a82dacb648ad8071504f1660d, type: 3}
       propertyPath: m_Name
       value: Grigrog
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269236595161531483, guid: 00af874a82dacb648ad8071504f1660d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269236595161531483, guid: 00af874a82dacb648ad8071504f1660d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8690314906635491050, guid: 00af874a82dacb648ad8071504f1660d, type: 3}
       propertyPath: guardPoints.Array.size
@@ -55685,6 +55882,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orc_Warrior
       objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
 --- !u!4 &1821149508 stripped
@@ -56135,6 +56340,14 @@ PrefabInstance:
     - target: {fileID: 692436562864411262, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
       propertyPath: m_Name
       value: Orc_Warrior (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
@@ -56816,6 +57029,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Orc
       objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550600450947207901, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d467916d12fb264b8318d35d5d42af5, type: 3}
 --- !u!4 &1860400211 stripped
@@ -57150,6 +57371,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2082156677860369951, guid: 8606511c82493e143abac743af1dac9a, type: 3}
       propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607594515306088969, guid: 8606511c82493e143abac743af1dac9a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607594515306088969, guid: 8606511c82493e143abac743af1dac9a, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9082064119535672425, guid: 8606511c82493e143abac743af1dac9a, type: 3}
@@ -58446,6 +58675,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2073562524}
     m_Modifications:
+    - target: {fileID: 1215575803953465546, guid: 1a8a9ceac8f852c4a8ea715251ae751c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215575803953465546, guid: 1a8a9ceac8f852c4a8ea715251ae751c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3518111855335026627, guid: 1a8a9ceac8f852c4a8ea715251ae751c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -68179,6 +68416,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 45870240}
     m_Modifications:
+    - target: {fileID: 61904393022738652, guid: 17d7b840888971b4a8a698b8fd094aee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61904393022738652, guid: 17d7b840888971b4a8a698b8fd094aee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6681529506964411450, guid: 17d7b840888971b4a8a698b8fd094aee, type: 3}
       propertyPath: guardPoints.Array.size
       value: 2
@@ -69161,6 +69406,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2082156677860369951, guid: 8606511c82493e143abac743af1dac9a, type: 3}
       propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607594515306088969, guid: 8606511c82493e143abac743af1dac9a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607594515306088969, guid: 8606511c82493e143abac743af1dac9a, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9082064119535672425, guid: 8606511c82493e143abac743af1dac9a, type: 3}
