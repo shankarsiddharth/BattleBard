@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Dwarf
+  m_Name: M_Orc
   m_Shader: {fileID: -6465566751694194690, guid: c356dfa46f27a2c4e89f8feb2bc6c8d1, type: 3}
   m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT
   m_LightmapFlags: 4
@@ -26,15 +26,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_7d77a072112c4f63824defebe481f053:
-        m_Texture: {fileID: 2800000, guid: 688ce3f2c2c8d64419b1b6c40854009d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8e40f10fdd371eb4298ae9e608bbbdb4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_7f8ff1483eab43fcac36f41814efbc52:
-        m_Texture: {fileID: 2800000, guid: 534e4af2e5fc632499d8e3bef3c4324a, type: 3}
+        m_Texture: {fileID: 2800000, guid: b1b50d6489d4fea46966a1f59d917f24, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: eca1cad286b2bc440984d709d9650075, type: 3}
+        m_Texture: {fileID: 2800000, guid: e86704e60ac54ec46a2a1c2ba7954b30, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
