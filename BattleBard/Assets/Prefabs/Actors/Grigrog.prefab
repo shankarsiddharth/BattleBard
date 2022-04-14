@@ -151,6 +151,7 @@ MonoBehaviour:
   moveTarget: {x: 0, y: 0, z: 0}
   currentEffects: []
   detectionRange: 25
+  healthBar: {fileID: 0}
   guardPoints: []
   guardPointIndex: 0
 --- !u!135 &8483036142344196768
@@ -351,6 +352,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 417863550013535065, guid: 6110551d91703cc4ca809a3199ad97dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d9dd5af3f6609474db7df9927a60a425, type: 2}
     - target: {fileID: 919132149155446097, guid: 6110551d91703cc4ca809a3199ad97dc, type: 3}
       propertyPath: m_Name
       value: Orc

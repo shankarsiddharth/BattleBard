@@ -151,6 +151,7 @@ MonoBehaviour:
   moveTarget: {x: 0, y: 0, z: 0}
   currentEffects: []
   detectionRange: 25
+  healthBar: {fileID: 0}
   checkpoints: []
   arrowPrefab: {fileID: 7898420103362052601, guid: 720b93a7f5be1c1429dea8b156bc6f90, type: 3}
 --- !u!54 &7208323011306005244
@@ -345,7 +346,7 @@ PrefabInstance:
     - target: {fileID: -8470421742361104569, guid: c4184eba95bfb64479a6632c69bbdc88, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 261353e38e8b6a14f995716e4e532fe9, type: 2}
+      objectReference: {fileID: 2100000, guid: 5f62786c6cc94d94a8326e0a15a40d64, type: 2}
     - target: {fileID: -8021001004253913084, guid: c4184eba95bfb64479a6632c69bbdc88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 6.8857727
