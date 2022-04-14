@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    public string GameSceneName = "Canvas_Test";
+    public string GameSceneName = "GameLevel";
     public GameObject MainMenuScreen;
     public GameObject OptionsScreen;
     public GameObject CreditsScreen;
