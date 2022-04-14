@@ -74,6 +74,7 @@ public class PrisonerState : State
         actor.DefaultState = dwarfComponent.movingState;
         actor.tag = "Dwarf";
         actor.transform.SetParent(dwarfBattalion.transform);
+        dwarfBattalion.dwarves.Add(dwarfComponent);
         dwarfComponent.checkpoints = furthestDwarf.GetComponent<Dwarf>().checkpoints;
         actor.transform.Find("HP Canvas").gameObject.SetActive(true);
         float closestDist = float.MaxValue;
