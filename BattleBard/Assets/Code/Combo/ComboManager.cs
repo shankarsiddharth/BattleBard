@@ -123,6 +123,7 @@ public class ComboManager : MonoBehaviour
         // Always evaluate notes, even improv notes
         NoteEvaluator.EvaluateNote(ref playedNote);
 
+        GameEvents.Instance.OnNoteEvaluated(playedNote);
 
         // List of combos to remove because they are no longer valid
         //List<Combo> invalidCombos = new List<Combo>();

@@ -73,6 +73,8 @@ public class GameEvents : MonoBehaviour
     //Add parameters after implementations of effects and stuff
     public UnityEvent<ComboBase, int, Vector3> onDrumComboCompleted;
 
+    public UnityEvent<Note> onNoteEvaluated;
+
     public void OnDrumPlayed(Drums drum)
     {
         onDrumPlayed.Invoke(drum);
@@ -81,6 +83,11 @@ public class GameEvents : MonoBehaviour
     public void OnDrumComboCompleted(ComboBase effect, int level, Vector3 pos)
     {
         onDrumComboCompleted.Invoke(effect, level, pos);
+    }
+
+    public void OnNoteEvaluated(Note note)
+    {
+        onNoteEvaluated.Invoke(note);
     }
     #endregion
 
