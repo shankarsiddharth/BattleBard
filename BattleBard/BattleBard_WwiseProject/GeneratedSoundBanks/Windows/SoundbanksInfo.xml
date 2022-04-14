@@ -9,134 +9,121 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
-		<File Id="64306367" Language="SFX">
-			<ShortName>Mid_Drum_2.wav</ShortName>
-			<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
-		</File>
-		<File Id="98316643" Language="SFX">
-			<ShortName>Bottom_Drum_2.wav</ShortName>
-			<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
-		</File>
-		<File Id="301822309" Language="SFX">
-			<ShortName>Top_Drum_1.wav</ShortName>
-			<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
-		</File>
 		<File Id="388139632" Language="SFX">
 			<ShortName>Cowbell.wav</ShortName>
 			<Path>SFX\Cowbell_04403F93.wem</Path>
 		</File>
-		<File Id="591945233" Language="SFX">
-			<ShortName>Mid_Drum_1.wav</ShortName>
-			<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
-		</File>
-		<File Id="602660900" Language="SFX">
-			<ShortName>Bottom_Drum_1.wav</ShortName>
-			<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
-		</File>
-		<File Id="945996637" Language="SFX">
-			<ShortName>Top_Drum_2.wav</ShortName>
-			<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
-		</File>
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2845093703">
+		<SoundBank Id="393239870" Language="SFX" Hash="1065528326">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2180146614" Name="Play_Bottom_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Bottom_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
-				<Event Id="2180146613" Name="Play_Bottom_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Bottom_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="2692890187" Name="Play_A_Troll" ObjectPath="\Events\Default Work Unit\Play_A_Troll" DurationType="OneShot" DurationMin="2.498292" DurationMax="2.498292"/>
 				<Event Id="1491318392" Name="Play_Cowbell" ObjectPath="\Events\Default Work Unit\Play_Cowbell" DurationType="OneShot" DurationMin="0.15" DurationMax="0.15"/>
-				<Event Id="2934670827" Name="Play_Mid_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Mid_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
-				<Event Id="2934670824" Name="Play_Mid_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Mid_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
-				<Event Id="3892736498" Name="Play_Top_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
-				<Event Id="3892736497" Name="Play_Top_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="1318683030" Name="Play_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="1318683029" Name="Play_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="1318683028" Name="Play_Drum_3" ObjectPath="\Events\Default Work Unit\Play_Drum_3" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="1318683027" Name="Play_Drum_4" ObjectPath="\Events\Default Work Unit\Play_Drum_4" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
+				<Event Id="3103472528" Name="Play_Intro" ObjectPath="\Events\Default Work Unit\Play_Intro" DurationType="OneShot" DurationMin="31.086916" DurationMax="31.086916"/>
+				<Event Id="226855043" Name="Play_Reinforced_Gate" ObjectPath="\Events\Default Work Unit\Play_Reinforced_Gate" DurationType="OneShot" DurationMin="5.557167" DurationMax="5.557167"/>
+				<Event Id="1807275314" Name="Play_Take_Back_Our_Home" ObjectPath="\Events\Default Work Unit\Play_Take_Back_Our_Home" DurationType="OneShot" DurationMin="3.017333" DurationMax="3.017333"/>
+				<Event Id="3448951123" Name="Play_That_One_There" ObjectPath="\Events\Default Work Unit\Play_That_One_There" DurationType="OneShot" DurationMin="6.789021" DurationMax="6.789021"/>
+				<Event Id="1170258016" Name="Play_The_Village_is_Ours_Again" ObjectPath="\Events\Default Work Unit\Play_The_Village_is_Ours_Again" DurationType="OneShot" DurationMin="9.197354" DurationMax="9.197354"/>
+				<Event Id="2831686769" Name="Play_Theyre_Retreating" ObjectPath="\Events\Default Work Unit\Play_Theyre_Retreating" DurationType="OneShot" DurationMin="7.162708" DurationMax="7.162708"/>
+				<Event Id="3559424791" Name="Play_Trap" ObjectPath="\Events\Default Work Unit\Play_Trap" DurationType="OneShot" DurationMin="7.55025" DurationMax="7.55025"/>
+				<Event Id="1123782303" Name="Play_We_Need_More_Muscle" ObjectPath="\Events\Default Work Unit\Play_We_Need_More_Muscle" DurationType="OneShot" DurationMin="2.802813" DurationMax="2.802813"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
-				<File Id="64306367"/>
-				<File Id="98316643"/>
-				<File Id="301822309"/>
 				<File Id="388139632"/>
-				<File Id="591945233"/>
-				<File Id="602660900"/>
-				<File Id="945996637"/>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
-				<File Id="64306367" Language="SFX">
-					<ShortName>Mid_Drum_2.wav</ShortName>
-					<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
+				<File Id="67889240" Language="SFX">
+					<ShortName>Theyre_Retreating_3.wav</ShortName>
+					<Path>SFX\Theyre_Retreating_3_10C4C929.wem</Path>
 				</File>
-				<File Id="98316643" Language="SFX">
-					<ShortName>Bottom_Drum_2.wav</ShortName>
-					<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
+				<File Id="190032006" Language="SFX">
+					<ShortName>A_Troll_1.wav</ShortName>
+					<Path>SFX\A_Troll_1_10C4C929.wem</Path>
 				</File>
-				<File Id="301822309" Language="SFX">
-					<ShortName>Top_Drum_1.wav</ShortName>
-					<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
+				<File Id="294660824" Language="SFX">
+					<ShortName>Intro_2.wav</ShortName>
+					<Path>SFX\Intro_2_10C4C929.wem</Path>
+				</File>
+				<File Id="322211726" Language="SFX">
+					<ShortName>Drum 2.wav</ShortName>
+					<Path>SFX\Drum 2_10C4C929.wem</Path>
+				</File>
+				<File Id="351928753" Language="SFX">
+					<ShortName>The_Village_is_Ours_Again_1.wav</ShortName>
+					<Path>SFX\The_Village_is_Ours_Again_1_10C4C929.wem</Path>
 				</File>
 				<File Id="388139632" Language="SFX">
 					<ShortName>Cowbell.wav</ShortName>
 					<Path>SFX\Cowbell_04403F93.wem</Path>
 					<PrefetchSize>17768</PrefetchSize>
 				</File>
-				<File Id="591945233" Language="SFX">
-					<ShortName>Mid_Drum_1.wav</ShortName>
-					<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
+				<File Id="390141292" Language="SFX">
+					<ShortName>Drum 4.wav</ShortName>
+					<Path>SFX\Drum 4_10C4C929.wem</Path>
 				</File>
-				<File Id="602660900" Language="SFX">
-					<ShortName>Bottom_Drum_1.wav</ShortName>
-					<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
+				<File Id="468849986" Language="SFX">
+					<ShortName>That_One_There_2.wav</ShortName>
+					<Path>SFX\That_One_There_2_10C4C929.wem</Path>
 				</File>
-				<File Id="945996637" Language="SFX">
-					<ShortName>Top_Drum_2.wav</ShortName>
-					<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
+				<File Id="556155814" Language="SFX">
+					<ShortName>Take_Back_Our_Home_2.wav</ShortName>
+					<Path>SFX\Take_Back_Our_Home_2_10C4C929.wem</Path>
+				</File>
+				<File Id="608074595" Language="SFX">
+					<ShortName>We_Need_More_Muscle_3.wav</ShortName>
+					<Path>SFX\We_Need_More_Muscle_3_10C4C929.wem</Path>
+				</File>
+				<File Id="758886743" Language="SFX">
+					<ShortName>Drum 1.wav</ShortName>
+					<Path>SFX\Drum 1_10C4C929.wem</Path>
+				</File>
+				<File Id="988406303" Language="SFX">
+					<ShortName>Reinforced_Gate_1.wav</ShortName>
+					<Path>SFX\Reinforced_Gate_1_10C4C929.wem</Path>
+				</File>
+				<File Id="1000564919" Language="SFX">
+					<ShortName>Drum 3.wav</ShortName>
+					<Path>SFX\Drum 3_10C4C929.wem</Path>
+				</File>
+				<File Id="1045215813" Language="SFX">
+					<ShortName>Trap_1.wav</ShortName>
+					<Path>SFX\Trap_1_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
+				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MusicVolume"/>
+				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="358222841">
+		<SoundBank Id="1355168291" Language="SFX" Hash="423708664">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
+				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MusicVolume"/>
+				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2386706874" Language="SFX" Hash="3316738251">
+		<SoundBank Id="2386706874" Language="SFX" Hash="3158437799">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_120_bpm</ObjectPath>
 			<ShortName>Music_120_bpm</ShortName>
 			<Path>Music_120_bpm.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2180146614" Name="Play_Bottom_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Bottom_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
-					<ReferencedStreamedFiles>
-						<File Id="602660900" Language="SFX">
-							<ShortName>Bottom_Drum_1.wav</ShortName>
-							<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
-						</File>
-					</ReferencedStreamedFiles>
+				<Event Id="2692890187" Name="Play_A_Troll" ObjectPath="\Events\Default Work Unit\Play_A_Troll" DurationType="OneShot" DurationMin="2.498292" DurationMax="2.498292">
 					<IncludedMemoryFiles>
-						<File Id="602660900" Language="SFX">
-							<ShortName>Bottom_Drum_1.wav</ShortName>
-							<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
-							<PrefetchSize>17768</PrefetchSize>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="2180146613" Name="Play_Bottom_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Bottom_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2.">
-					<ReferencedStreamedFiles>
-						<File Id="98316643" Language="SFX">
-							<ShortName>Bottom_Drum_2.wav</ShortName>
-							<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
-						</File>
-					</ReferencedStreamedFiles>
-					<IncludedMemoryFiles>
-						<File Id="98316643" Language="SFX">
-							<ShortName>Bottom_Drum_2.wav</ShortName>
-							<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
-							<PrefetchSize>17768</PrefetchSize>
+						<File Id="190032006" Language="SFX">
+							<ShortName>A_Troll_1.wav</ShortName>
+							<Path>SFX\A_Troll_1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -155,33 +142,43 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2934670827" Name="Play_Mid_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Mid_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
-					<ReferencedStreamedFiles>
-						<File Id="591945233" Language="SFX">
-							<ShortName>Mid_Drum_1.wav</ShortName>
-							<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
-						</File>
-					</ReferencedStreamedFiles>
+				<Event Id="1318683030" Name="Play_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
 					<IncludedMemoryFiles>
-						<File Id="591945233" Language="SFX">
-							<ShortName>Mid_Drum_1.wav</ShortName>
-							<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
-							<PrefetchSize>17768</PrefetchSize>
+						<File Id="758886743" Language="SFX">
+							<ShortName>Drum 1.wav</ShortName>
+							<Path>SFX\Drum 1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2934670824" Name="Play_Mid_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Mid_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2.">
-					<ReferencedStreamedFiles>
-						<File Id="64306367" Language="SFX">
-							<ShortName>Mid_Drum_2.wav</ShortName>
-							<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
-						</File>
-					</ReferencedStreamedFiles>
+				<Event Id="1318683029" Name="Play_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2.">
 					<IncludedMemoryFiles>
-						<File Id="64306367" Language="SFX">
-							<ShortName>Mid_Drum_2.wav</ShortName>
-							<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
-							<PrefetchSize>17768</PrefetchSize>
+						<File Id="322211726" Language="SFX">
+							<ShortName>Drum 2.wav</ShortName>
+							<Path>SFX\Drum 2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1318683028" Name="Play_Drum_3" ObjectPath="\Events\Default Work Unit\Play_Drum_3" DurationType="OneShot" DurationMin="2." DurationMax="2.">
+					<IncludedMemoryFiles>
+						<File Id="1000564919" Language="SFX">
+							<ShortName>Drum 3.wav</ShortName>
+							<Path>SFX\Drum 3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1318683027" Name="Play_Drum_4" ObjectPath="\Events\Default Work Unit\Play_Drum_4" DurationType="OneShot" DurationMin="2." DurationMax="2.">
+					<IncludedMemoryFiles>
+						<File Id="390141292" Language="SFX">
+							<ShortName>Drum 4.wav</ShortName>
+							<Path>SFX\Drum 4_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3103472528" Name="Play_Intro" ObjectPath="\Events\Default Work Unit\Play_Intro" DurationType="OneShot" DurationMin="31.086916" DurationMax="31.086916">
+					<IncludedMemoryFiles>
+						<File Id="294660824" Language="SFX">
+							<ShortName>Intro_2.wav</ShortName>
+							<Path>SFX\Intro_2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -193,201 +190,263 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="226855043" Name="Play_Reinforced_Gate" ObjectPath="\Events\Default Work Unit\Play_Reinforced_Gate" DurationType="OneShot" DurationMin="5.557167" DurationMax="5.557167">
+					<IncludedMemoryFiles>
+						<File Id="988406303" Language="SFX">
+							<ShortName>Reinforced_Gate_1.wav</ShortName>
+							<Path>SFX\Reinforced_Gate_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1807275314" Name="Play_Take_Back_Our_Home" ObjectPath="\Events\Default Work Unit\Play_Take_Back_Our_Home" DurationType="OneShot" DurationMin="3.017333" DurationMax="3.017333">
+					<IncludedMemoryFiles>
+						<File Id="556155814" Language="SFX">
+							<ShortName>Take_Back_Our_Home_2.wav</ShortName>
+							<Path>SFX\Take_Back_Our_Home_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3448951123" Name="Play_That_One_There" ObjectPath="\Events\Default Work Unit\Play_That_One_There" DurationType="OneShot" DurationMin="6.789021" DurationMax="6.789021">
+					<IncludedMemoryFiles>
+						<File Id="468849986" Language="SFX">
+							<ShortName>That_One_There_2.wav</ShortName>
+							<Path>SFX\That_One_There_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1170258016" Name="Play_The_Village_is_Ours_Again" ObjectPath="\Events\Default Work Unit\Play_The_Village_is_Ours_Again" DurationType="OneShot" DurationMin="9.197354" DurationMax="9.197354">
+					<IncludedMemoryFiles>
+						<File Id="351928753" Language="SFX">
+							<ShortName>The_Village_is_Ours_Again_1.wav</ShortName>
+							<Path>SFX\The_Village_is_Ours_Again_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2831686769" Name="Play_Theyre_Retreating" ObjectPath="\Events\Default Work Unit\Play_Theyre_Retreating" DurationType="OneShot" DurationMin="7.162708" DurationMax="7.162708">
+					<IncludedMemoryFiles>
+						<File Id="67889240" Language="SFX">
+							<ShortName>Theyre_Retreating_3.wav</ShortName>
+							<Path>SFX\Theyre_Retreating_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2408909650" Name="Play_Tier_1" ObjectPath="\Events\Default Work Unit\Play_Tier_1" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="464545941" Language="SFX">
-							<ShortName>Speed_Boost_Tier_1.wav</ShortName>
-							<Path>SFX\Speed_Boost_Tier_1_D79FB2B7.wem</Path>
+						<File Id="163595620" Language="SFX">
+							<ShortName>Speed_T1_1.wav</ShortName>
+							<Path>SFX\Speed_T1_1_D79FB2B7.wem</Path>
 						</File>
-						<File Id="910168158" Language="SFX">
-							<ShortName>Healing_Tier_1.wav</ShortName>
-							<Path>SFX\Healing_Tier_1_D79FB2B7.wem</Path>
+						<File Id="185803366" Language="SFX">
+							<ShortName>Healing_T1_1.wav</ShortName>
+							<Path>SFX\Healing_T1_1_D79FB2B7.wem</Path>
 						</File>
-						<File Id="1058716056" Language="SFX">
-							<ShortName>Attack_Tier_1.wav</ShortName>
-							<Path>SFX\Attack_Tier_1_D79FB2B7.wem</Path>
+						<File Id="272182380" Language="SFX">
+							<ShortName>Speed_T1_2.wav</ShortName>
+							<Path>SFX\Speed_T1_2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="459815666" Language="SFX">
+							<ShortName>Speed_T1_3.wav</ShortName>
+							<Path>SFX\Speed_T1_3_D79FB2B7.wem</Path>
+						</File>
+						<File Id="587467227" Language="SFX">
+							<ShortName>Attack_T1_1.wav</ShortName>
+							<Path>SFX\Attack_T1_1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="654632406" Language="SFX">
+							<ShortName>Attack_T1_3.wav</ShortName>
+							<Path>SFX\Attack_T1_3_D79FB2B7.wem</Path>
+						</File>
+						<File Id="731989350" Language="SFX">
+							<ShortName>Healing_T1_3.wav</ShortName>
+							<Path>SFX\Healing_T1_3_D79FB2B7.wem</Path>
+						</File>
+						<File Id="931607762" Language="SFX">
+							<ShortName>Attack_T1_2.wav</ShortName>
+							<Path>SFX\Attack_T1_2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1063858419" Language="SFX">
+							<ShortName>Healing_T1_2.wav</ShortName>
+							<Path>SFX\Healing_T1_2_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
-						<SwitchContainer SwitchValue="{819DC486-8BFB-4BA3-8222-CD554F50B480}">
-							<Media>
-								<File Id="464545941"/>
-							</Media>
-						</SwitchContainer>
 						<SwitchContainer SwitchValue="{AFF83496-2FBD-411A-A23D-E2E01F0DD12E}">
 							<Media>
-								<File Id="1058716056"/>
+								<File Id="587467227"/>
+								<File Id="654632406"/>
+								<File Id="931607762"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{6A1DD732-FEE6-41E1-9F96-46202FF71607}">
 							<Media>
-								<File Id="910168158"/>
+								<File Id="185803366"/>
+								<File Id="731989350"/>
+								<File Id="1063858419"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{5C6A7F50-BE73-4E43-9FFA-4071396DD7B1}">
 							<Media>
-								<File Id="464545941"/>
+								<File Id="163595620"/>
+								<File Id="272182380"/>
+								<File Id="459815666"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 				<Event Id="2408909649" Name="Play_Tier_2" ObjectPath="\Events\Default Work Unit\Play_Tier_2" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="111141900" Language="SFX">
-							<ShortName>Speed_Boost_Tier_2.wav</ShortName>
-							<Path>SFX\Speed_Boost_Tier_2_D79FB2B7.wem</Path>
+						<File Id="90544307" Language="SFX">
+							<ShortName>Attack_T2_3.wav</ShortName>
+							<Path>SFX\Attack_T2_3_D79FB2B7.wem</Path>
 						</File>
-						<File Id="182826032" Language="SFX">
-							<ShortName>Attack_Tier_2.wav</ShortName>
-							<Path>SFX\Attack_Tier_2_D79FB2B7.wem</Path>
+						<File Id="106126622" Language="SFX">
+							<ShortName>Healing_T2_1.wav</ShortName>
+							<Path>SFX\Healing_T2_1_D79FB2B7.wem</Path>
 						</File>
-						<File Id="731254210" Language="SFX">
-							<ShortName>Healing_Tier_2.wav</ShortName>
-							<Path>SFX\Healing_Tier_2_D79FB2B7.wem</Path>
+						<File Id="141807743" Language="SFX">
+							<ShortName>Healing_T2_2.wav</ShortName>
+							<Path>SFX\Healing_T2_2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="153062155" Language="SFX">
+							<ShortName>Attack_T2_1.wav</ShortName>
+							<Path>SFX\Attack_T2_1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="216635119" Language="SFX">
+							<ShortName>Attack_T2_2.wav</ShortName>
+							<Path>SFX\Attack_T2_2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="242612734" Language="SFX">
+							<ShortName>Speed_T2_2.wav</ShortName>
+							<Path>SFX\Speed_T2_2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="307168888" Language="SFX">
+							<ShortName>Healing_T2_3.wav</ShortName>
+							<Path>SFX\Healing_T2_3_D79FB2B7.wem</Path>
+						</File>
+						<File Id="620322888" Language="SFX">
+							<ShortName>Speed_T2_3.wav</ShortName>
+							<Path>SFX\Speed_T2_3_D79FB2B7.wem</Path>
+						</File>
+						<File Id="710055089" Language="SFX">
+							<ShortName>Speed_T2_1.wav</ShortName>
+							<Path>SFX\Speed_T2_1_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
-						<SwitchContainer SwitchValue="{63214FFD-0B00-477B-9843-6B328A18806F}">
-							<Media>
-								<File Id="111141900"/>
-							</Media>
-						</SwitchContainer>
 						<SwitchContainer SwitchValue="{7D550801-D359-4517-B02E-6B0C3F5EF399}">
 							<Media>
-								<File Id="182826032"/>
+								<File Id="90544307"/>
+								<File Id="153062155"/>
+								<File Id="216635119"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{7B626DBD-4F51-4AF2-BE58-A1399D366685}">
 							<Media>
-								<File Id="731254210"/>
+								<File Id="106126622"/>
+								<File Id="141807743"/>
+								<File Id="307168888"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{C5876F9C-E596-4D9D-83A0-90B002279B0E}">
 							<Media>
-								<File Id="111141900"/>
+								<File Id="242612734"/>
+								<File Id="620322888"/>
+								<File Id="710055089"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 				<Event Id="2408909648" Name="Play_Tier_3" ObjectPath="\Events\Default Work Unit\Play_Tier_3" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="355994873" Language="SFX">
-							<ShortName>Healing_Tier_3.wav</ShortName>
-							<Path>SFX\Healing_Tier_3_D79FB2B7.wem</Path>
+						<File Id="211984583" Language="SFX">
+							<ShortName>Attack_T3_2.wav</ShortName>
+							<Path>SFX\Attack_T3_2_D79FB2B7.wem</Path>
 						</File>
-						<File Id="910025595" Language="SFX">
-							<ShortName>Attack_Tier_3.wav</ShortName>
-							<Path>SFX\Attack_Tier_3_D79FB2B7.wem</Path>
+						<File Id="336345604" Language="SFX">
+							<ShortName>Healing_T3_3.wav</ShortName>
+							<Path>SFX\Healing_T3_3_D79FB2B7.wem</Path>
 						</File>
-						<File Id="1024646306" Language="SFX">
-							<ShortName>Speed_Boost_Tier_3.wav</ShortName>
-							<Path>SFX\Speed_Boost_Tier_3_D79FB2B7.wem</Path>
+						<File Id="351337165" Language="SFX">
+							<ShortName>Healing_T3_1.wav</ShortName>
+							<Path>SFX\Healing_T3_1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="408029112" Language="SFX">
+							<ShortName>Healing_T3_2.wav</ShortName>
+							<Path>SFX\Healing_T3_2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="475942752" Language="SFX">
+							<ShortName>Speed_T3_1.wav</ShortName>
+							<Path>SFX\Speed_T3_1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="729255060" Language="SFX">
+							<ShortName>Speed_T3_3.wav</ShortName>
+							<Path>SFX\Speed_T3_3_D79FB2B7.wem</Path>
+						</File>
+						<File Id="784377917" Language="SFX">
+							<ShortName>Attack_T3_3.wav</ShortName>
+							<Path>SFX\Attack_T3_3_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1020229655" Language="SFX">
+							<ShortName>Speed_T3_2.wav</ShortName>
+							<Path>SFX\Speed_T3_2_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1028794606" Language="SFX">
+							<ShortName>Attack_T3_1.wav</ShortName>
+							<Path>SFX\Attack_T3_1_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
-						<SwitchContainer SwitchValue="{8BFED936-B3D6-4C37-B194-F0FF9294EFFA}">
-							<Media>
-								<File Id="355994873"/>
-							</Media>
-						</SwitchContainer>
 						<SwitchContainer SwitchValue="{A4277D24-4961-4521-A128-E4FADFDF936E}">
 							<Media>
-								<File Id="910025595"/>
+								<File Id="211984583"/>
+								<File Id="784377917"/>
+								<File Id="1028794606"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{8DDE68DF-9DF5-428F-9017-6A0A3486540C}">
 							<Media>
-								<File Id="355994873"/>
+								<File Id="336345604"/>
+								<File Id="351337165"/>
+								<File Id="408029112"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{9DA47069-1C9B-4686-96D4-E1B2E1F41398}">
 							<Media>
-								<File Id="1024646306"/>
+								<File Id="475942752"/>
+								<File Id="729255060"/>
+								<File Id="1020229655"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3892736498" Name="Play_Top_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2.">
-					<ReferencedStreamedFiles>
-						<File Id="301822309" Language="SFX">
-							<ShortName>Top_Drum_1.wav</ShortName>
-							<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
-						</File>
-					</ReferencedStreamedFiles>
+				<Event Id="3559424791" Name="Play_Trap" ObjectPath="\Events\Default Work Unit\Play_Trap" DurationType="OneShot" DurationMin="7.55025" DurationMax="7.55025">
 					<IncludedMemoryFiles>
-						<File Id="301822309" Language="SFX">
-							<ShortName>Top_Drum_1.wav</ShortName>
-							<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
-							<PrefetchSize>17768</PrefetchSize>
+						<File Id="1045215813" Language="SFX">
+							<ShortName>Trap_1.wav</ShortName>
+							<Path>SFX\Trap_1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3892736497" Name="Play_Top_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Top_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2.">
-					<ReferencedStreamedFiles>
-						<File Id="945996637" Language="SFX">
-							<ShortName>Top_Drum_2.wav</ShortName>
-							<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
-						</File>
-					</ReferencedStreamedFiles>
+				<Event Id="1123782303" Name="Play_We_Need_More_Muscle" ObjectPath="\Events\Default Work Unit\Play_We_Need_More_Muscle" DurationType="OneShot" DurationMin="2.802813" DurationMax="2.802813">
 					<IncludedMemoryFiles>
-						<File Id="945996637" Language="SFX">
-							<ShortName>Top_Drum_2.wav</ShortName>
-							<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
-							<PrefetchSize>17768</PrefetchSize>
+						<File Id="608074595" Language="SFX">
+							<ShortName>We_Need_More_Muscle_3.wav</ShortName>
+							<Path>SFX\We_Need_More_Muscle_3_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
-			<ReferencedStreamedFiles>
-				<File Id="64306367"/>
-				<File Id="98316643"/>
-				<File Id="301822309"/>
-				<File Id="388139632"/>
-				<File Id="591945233"/>
-				<File Id="602660900"/>
-				<File Id="945996637"/>
-			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
-				<File Id="64306367" Language="SFX">
-					<ShortName>Mid_Drum_2.wav</ShortName>
-					<Path>SFX\Mid_Drum_2_10C4C929.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
-				</File>
-				<File Id="98316643" Language="SFX">
-					<ShortName>Bottom_Drum_2.wav</ShortName>
-					<Path>SFX\Bottom_Drum_2_10C4C929.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
-				</File>
-				<File Id="301822309" Language="SFX">
-					<ShortName>Top_Drum_1.wav</ShortName>
-					<Path>SFX\Top_Drum_1_10C4C929.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
-				</File>
-				<File Id="388139632" Language="SFX">
-					<ShortName>Cowbell.wav</ShortName>
-					<Path>SFX\Cowbell_04403F93.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
-				</File>
-				<File Id="591945233" Language="SFX">
-					<ShortName>Mid_Drum_1.wav</ShortName>
-					<Path>SFX\Mid_Drum_1_10C4C929.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
-				</File>
-				<File Id="602660900" Language="SFX">
-					<ShortName>Bottom_Drum_1.wav</ShortName>
-					<Path>SFX\Bottom_Drum_1_10C4C929.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
-				</File>
-				<File Id="945996637" Language="SFX">
-					<ShortName>Top_Drum_2.wav</ShortName>
-					<Path>SFX\Top_Drum_2_10C4C929.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
-				</File>
 				<File Id="1049687214" Language="SFX">
 					<ShortName>568774__josefpres__bass-loops-004-short-loop-120-bpm.wav</ShortName>
 					<Path>SFX\568774__josefpres__bass-loops-004-short-loop-120-bpm_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
+				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MusicVolume"/>
+				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="3434871820" Name="Tier3" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier3" GUID="{8BFED936-B3D6-4C37-B194-F0FF9294EFFA}">
 					<States>
