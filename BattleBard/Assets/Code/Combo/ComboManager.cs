@@ -53,7 +53,6 @@ public class ComboManager : MonoBehaviour
                 if (properComboNote.beat + _metronome.noteAccuracy < curBeat)
                 {
                     invalidCombos.Add(validCombo);
-                    print("Time ran out.");
                 }
             }
 
@@ -152,8 +151,6 @@ public class ComboManager : MonoBehaviour
             // If they aren't on the same beat, skip
             if (properComboNote.beat != playedNote.timestamp - _startBeat)
             {
-                print("Expected: " + properComboNote.beat);
-                print("Got: " + (playedNote.timestamp - _startBeat));
                 invalidCombos.Add(combo);
                 continue;
             }
@@ -161,7 +158,6 @@ public class ComboManager : MonoBehaviour
             // If its grade is too low, skip (or fail?)
             if (playedNote.grade == Grade.Bad)
             {
-                print("Bad note!");
                 invalidCombos.Add(combo);
                 continue;
             }
