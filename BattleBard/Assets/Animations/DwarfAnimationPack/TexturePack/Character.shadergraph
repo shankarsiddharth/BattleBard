@@ -1790,7 +1790,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "db9898f752fe4330a4848a8549775886",
     "m_Id": 0,
-    "m_DisplayName": "Texture2D",
+    "m_DisplayName": "albedo",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
