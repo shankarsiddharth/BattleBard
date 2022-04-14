@@ -23,10 +23,10 @@ public class NoteUI : MonoBehaviour
                 DrumBeatUIList[1].SetDrum(inDrum);
                 break;
             case Drums.LeftStomach:
-                DrumBeatUIList[2].SetDrum(inDrum);
+                //DrumBeatUIList[2].SetDrum(inDrum);
                 break;
             case Drums.RightStomach:
-                DrumBeatUIList[3].SetDrum(inDrum);
+                //DrumBeatUIList[3].SetDrum(inDrum);
                 break;
             case Drums.LeftThigh:
                 DrumBeatUIList[4].SetDrum(inDrum);
@@ -50,10 +50,10 @@ public class NoteUI : MonoBehaviour
                 DrumBeatUIList[1].SetGrade(inGrade);
                 break;
             case Drums.LeftStomach:
-                DrumBeatUIList[2].SetGrade(inGrade);
+                //DrumBeatUIList[2].SetGrade(inGrade);
                 break;
             case Drums.RightStomach:
-                DrumBeatUIList[3].SetGrade(inGrade);
+                //DrumBeatUIList[3].SetGrade(inGrade);
                 break;
             case Drums.LeftThigh:
                 DrumBeatUIList[4].SetGrade(inGrade);
@@ -62,6 +62,12 @@ public class NoteUI : MonoBehaviour
                 DrumBeatUIList[5].SetGrade(inGrade);
                 break;
         }
+    }
+
+    public void HideAll()
+    {
+        HideAllDrum();
+        HideGrade();
     }
 
     public void HideGrade()

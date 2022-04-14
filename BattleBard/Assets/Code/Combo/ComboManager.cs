@@ -14,7 +14,7 @@ public class ComboManager : MonoBehaviour
     // Tracks the progress of current combos so we don't have to check each note very frame
     [SerializeField] private List<int> _comboProgress;
 
-    private bool _playingCombo;
+    public bool playingCombo;
     private int _startBeat;
 
     private void Start()
@@ -36,7 +36,7 @@ public class ComboManager : MonoBehaviour
     private void Update()
     {
 
-        if (_playingCombo)
+        if (playingCombo)
         {
             // List of combos to remove because they are no longer valid
             List<Combo> invalidCombos = new List<Combo>();
@@ -74,7 +74,7 @@ public class ComboManager : MonoBehaviour
 
     private void ResetCombo()
 	{
-        _playingCombo = false;
+        playingCombo = false;
         validCombos = new List<Combo>(_defaultCombos);
         _comboProgress = new List<int>(new int[validCombos.Count]);
         drumsHit.Clear();
@@ -111,11 +111,11 @@ public class ComboManager : MonoBehaviour
     private void OnDrumPlay(Drums drum)
     {
         Debug.Log(drum);
-        if (!_playingCombo)
+        if (!playingCombo)
         {
             // Set base beat count from metronome beat
             _startBeat = _metronome.GetLastBeatCount();
-            _playingCombo = true;
+            playingCombo = true;
         }
 
         Note playedNote = new Note { notePlayed = drum };
@@ -132,17 +132,24 @@ public class ComboManager : MonoBehaviour
         {
             ComboNote properComboNote = validCombos[comboInd].comboOrder[_comboProgress[comboInd]];
 
+            Debug.Log(1);
             // If the notes aren't the same, skip
             if (properComboNote.note != playedNote.notePlayed)
                 continue;
+
+            Debug.Log("expected: " + properComboNote.beat);
+            Debug.Log("got: " + (playedNote.timestamp - _startBeat));
 
             // If they aren't on the same beat, skip
             if (properComboNote.beat != playedNote.timestamp - _startBeat)
                 continue;
 
+            Debug.Log(3);
             // If its grade is too low, skip (or fail?)
             if (playedNote.grade == Grade.Bad)
                 continue;
+
+            Debug.Log(4);
 
             // If it was all good, then advance progress (and 'use' the combo if complete)
             _comboProgress[comboInd]++;
@@ -157,6 +164,7 @@ public class ComboManager : MonoBehaviour
                 // Call the event then reset
                 GameEvents.Instance.OnDrumComboCompleted(validCombos[comboInd].effect, 0, Vector3.zero);
                 ResetCombo();
+                return;
 			}
         }
 

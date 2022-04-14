@@ -28,28 +28,35 @@ public class ComboUIManager : MonoBehaviour
 
         totalNumberOfValidCombos = _comboManager.validCombos.Count;
         _comboUIGameObjects = new List<GameObject>();
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameEvents.Instance.onDrumPlayed.AddListener(UpdateMenu);
+        GameEvents.Instance.onDrumComboCompleted.AddListener(UpdateMenu);
     }
 
-    // Update is called once per frame
-    void Update()
+	private void Update()
+	{
+		if (!_comboManager.playingCombo)
+		{
+            // Reset
+            _comboUIGameObjects.Clear();
+            DestroyAllChildren();
+        }
+	}
+
+	// Alias because we don't care about parameters
+	private void UpdateMenu(ComboBase arg0, int arg1, Vector3 arg2) { UpdateMenu(); }
+    private void UpdateMenu(Drums drum) { UpdateMenu(); }
+
+    // Update each time a drum is hit or a combo is completed
+    void UpdateMenu()
     {
         _comboUIGameObjects.Clear();
         DestroyAllChildren();
-        if (_comboManager.validCombos.Count == totalNumberOfValidCombos)
-        {
-            return;
-        }
-
-        if (_comboManager.validCombos.Count == 0)
-        {
-            return;
-        }
 
         //_comboUIGameObjects = new List<GameObject>();
         Combo validCombo = _comboManager.validCombos[0];

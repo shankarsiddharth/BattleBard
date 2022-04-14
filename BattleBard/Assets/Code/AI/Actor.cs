@@ -65,6 +65,7 @@ public abstract class Actor : MonoBehaviour
 
     public void Update()
     {
+        healthBar.SetHealth(currentHealth);
         stateMachine.CurrentState.Update();
     }
 
@@ -73,7 +74,6 @@ public abstract class Actor : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
 
         if (IsDead)
         {

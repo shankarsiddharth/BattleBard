@@ -207,8 +207,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 331bdb42-124b-4a7f-8669-da05f498ec46
-    m_ActionName: Player/LeftStomach[/Keyboard/numpad3]
+    m_ActionId: 3497aba3-e543-4859-bd44-cfe24d2b8b9b
+    m_ActionName: Player/RightStomach[/Keyboard/numpad5]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7092974174322544113}
@@ -223,8 +223,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 9da8218a-b940-4ffc-a1fa-92b5b66475e3
-    m_ActionName: Player/RightStomach[/Keyboard/numpad6]
+    m_ActionId: f59bff7c-977c-401c-bc26-7d0ec1ba8ec4
+    m_ActionName: Player/LeftStomach[/Keyboard/numpad4]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -246,6 +246,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onMinionDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  onDwarfDeath:
     m_PersistentCalls:
       m_Calls: []
   onAreaEffectApplied:
@@ -301,7 +304,7 @@ MonoBehaviour:
   - drum: 2
     audio: {fileID: 8300000, guid: 8dc2ed7ad0b6db947bed9743d4bb34a2, type: 3}
   - drum: 5
-    audio: {fileID: 8300000, guid: 09537c125cb29bd41a07884329d4d2aa, type: 3}
+    audio: {fileID: 8300000, guid: 6c27b7408ac83b249b82ae2cfa3b820b, type: 3}
   - drum: 1
     audio: {fileID: 8300000, guid: 6c27b7408ac83b249b82ae2cfa3b820b, type: 3}
   - drum: 4
