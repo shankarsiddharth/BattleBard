@@ -9,6 +9,10 @@ public class MovingState : State
         base.Enter();
 
         // TODO Create animator parameters and set them here.
+        actor.target = null;
+        SearchForTarget();
+        if (actor.target) return;
+
         float animStartRandomizer = Random.Range(0, (float).6);
         actor.animator.Play("Guard", 0, animStartRandomizer);
 

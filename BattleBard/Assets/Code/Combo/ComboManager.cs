@@ -11,8 +11,6 @@ public class ComboManager : MonoBehaviour
 
     private Metronome _metronome;
     private List<Combo> _defaultCombos;
-    // Tracks the progress of current combos so we don't have to check each note very frame
-    [SerializeField] private List<int> _comboProgress;
 
     public bool playingCombo;
     private int _startBeat;
@@ -29,7 +27,6 @@ public class ComboManager : MonoBehaviour
         }
 
         _defaultCombos = new List<Combo>(validCombos);
-        _comboProgress = new List<int>(new int[validCombos.Count]);
         drumsHit = new List<Note>();
     }
 
@@ -45,21 +42,23 @@ public class ComboManager : MonoBehaviour
             float curBeat = _metronome.GetClosestBeat() - _startBeat;
 
 
-            // Check current note for all valid combos for 'missing' a beat note
-            for (int comboInd = 0; comboInd < _comboProgress.Count; comboInd++)
+            foreach (Combo validCombo in validCombos)
             {
-                ComboNote properComboNote = validCombos[comboInd].comboOrder[_comboProgress[comboInd]];
+                if (drumsHit.Count == 0)
+                    break;
+
+                ComboNote properComboNote = validCombo.comboOrder[drumsHit.Count];
 
                 // Check if we are past the window to play the necessary combo note
                 if (properComboNote.beat + _metronome.noteAccuracy < curBeat)
-                    invalidCombos.Add(validCombos[comboInd]);
+                {
+                    invalidCombos.Add(validCombo);
+                }
             }
-
 
             // Remove invalid combos
             foreach (Combo combo in invalidCombos)
             {
-                _comboProgress.RemoveAt(validCombos.IndexOf(combo));
                 validCombos.Remove(combo);
             }
 
@@ -76,41 +75,48 @@ public class ComboManager : MonoBehaviour
 	{
         playingCombo = false;
         validCombos = new List<Combo>(_defaultCombos);
-        _comboProgress = new List<int>(new int[validCombos.Count]);
         drumsHit.Clear();
     }
 
-    // Called when a combo has been played
-    private void SetComboNotes(Combo combo)
+    private int GetComboLevel(Combo combo)
     {
-        int hitNoteInd = 0;
-        foreach (ComboNote cn in combo.comboOrder)
-		{
-            for (;  hitNoteInd < drumsHit.Count; hitNoteInd++)
-			{
-                Note n = drumsHit[hitNoteInd];
-                
-                // If the notes aren't the same, skip
-                if (cn.note != n.notePlayed)
-                    continue;
+        // Level values
+        float level2 = 1;
+        float level3 = 2;
 
-                // If they aren't on the same beat, skip
-                if (cn.beat != n.timestamp)
-                    continue;
+        float total = 0;
 
-                // If its grade is too low, skip (or fail?)
-                if (n.grade == Grade.Bad)
-                    continue;
+        foreach (Note drumHit in drumsHit)
+        {
+            total += GetNoteValue(drumHit);
+        }
 
-                // Otherwise, it has to be the combo note
-                drumsHit[hitNoteInd] = new Note { grade = n.grade, isCombo = true, notePlayed = n.notePlayed, timestamp = n.timestamp };
-            }
-		}
-	}
+        if (total / combo.comboOrder.Count > level2)
+            return 1;
+
+        if (total / combo.comboOrder.Count > level3)
+            return 2;
+
+        return 0;
+    }
+
+    private float GetNoteValue(Note n)
+    {
+        float GoodValue = 0;
+        float GreatValue = 1;
+        float PerfectValue = 2;
+
+        return n.grade switch
+        {
+            Grade.Perfect => PerfectValue,
+            Grade.Great => GreatValue,
+            Grade.Good => GoodValue,
+            _ => -1
+        };
+    }
 
     private void OnDrumPlay(Drums drum)
     {
-        Debug.Log(drum);
         if (!playingCombo)
         {
             // Set base beat count from metronome beat
@@ -123,52 +129,61 @@ public class ComboManager : MonoBehaviour
         // Always evaluate notes, even improv notes
         NoteEvaluator.EvaluateNote(ref playedNote);
 
+        GameEvents.Instance.OnNoteEvaluated(playedNote);
 
         // List of combos to remove because they are no longer valid
-        //List<Combo> invalidCombos = new List<Combo>();
+        List<Combo> invalidCombos = new List<Combo>();
 
-        // Check if note was a beat note for each valid combo
-        for (int comboInd = 0; comboInd < _comboProgress.Count; comboInd++)
+        drumsHit.Add(playedNote);
+
+        // Check if note was a note for each valid combo
+        foreach (Combo combo in validCombos)
         {
-            ComboNote properComboNote = validCombos[comboInd].comboOrder[_comboProgress[comboInd]];
+            ComboNote properComboNote = combo.comboOrder[drumsHit.Count - 1];
 
-            Debug.Log(1);
             // If the notes aren't the same, skip
             if (properComboNote.note != playedNote.notePlayed)
+            {
+                invalidCombos.Add(combo);
                 continue;
-
-            Debug.Log("expected: " + properComboNote.beat);
-            Debug.Log("got: " + (playedNote.timestamp - _startBeat));
+            }
 
             // If they aren't on the same beat, skip
             if (properComboNote.beat != playedNote.timestamp - _startBeat)
+            {
+                invalidCombos.Add(combo);
                 continue;
+            }
 
-            Debug.Log(3);
             // If its grade is too low, skip (or fail?)
             if (playedNote.grade == Grade.Bad)
+            {
+                invalidCombos.Add(combo);
                 continue;
-
-            Debug.Log(4);
+            }
 
             // If it was all good, then advance progress (and 'use' the combo if complete)
-            _comboProgress[comboInd]++;
-            if (_comboProgress[comboInd] == validCombos[comboInd].comboOrder.Count)
+            if (drumsHit.Count == combo.comboOrder.Count)
 			{
-                // DO IT
-                print("Played combo " + validCombos[comboInd]);
-
-                // Assign what notes are integral for the combo to execute
-                SetComboNotes(validCombos[comboInd]);
+                // Get the level of the combo
+                int level = GetComboLevel(combo);
 
                 // Call the event then reset
-                GameEvents.Instance.OnDrumComboCompleted(validCombos[comboInd].effect, 0, Vector3.zero);
+                GameEvents.Instance.OnDrumComboCompleted(combo.effect, level, Vector3.zero);
                 ResetCombo();
                 return;
 			}
         }
 
-        drumsHit.Add(playedNote);
+        
+        // Remove invalid combos
+        foreach (Combo combo in invalidCombos)
+        {
+            validCombos.Remove(combo);
+        }
+
+        if (validCombos.Count == 0)
+            ResetCombo();
     }
 
 

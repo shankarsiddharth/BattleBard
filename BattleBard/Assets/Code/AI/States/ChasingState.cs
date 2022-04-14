@@ -12,6 +12,12 @@ public class ChasingState : State
             return;
         }
 
+        if (!actor.navMeshAgent.pathPending && actor.navMeshAgent.remainingDistance <= actor.stats.range)
+        {
+            stateMachine.ChangeState(actor.attackingState);
+            return;
+        }
+
         // TODO Create animator parameters and set them here.
         actor.animator.SetTrigger("chase");
         actor.navMeshAgent.SetDestination(actor.target.transform.position);

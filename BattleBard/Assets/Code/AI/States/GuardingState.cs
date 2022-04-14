@@ -9,8 +9,8 @@ public class GuardingState : State
         base.Enter();
 
         // TODO Create animator parameters and set them here.
+        actor.target = null;
         actor.animator.SetTrigger("guard");
-
         GotoNextPoint();
         actor.navMeshAgent.isStopped = false;
     }

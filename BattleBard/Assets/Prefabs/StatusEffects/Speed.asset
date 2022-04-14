@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tierDuration:
   - 10
+  - 13
+  - 16
   multiplicitiveChanges:
   - maxHealth: 1
     damage: 1
@@ -21,6 +23,19 @@ MonoBehaviour:
     attackSpeed: 1.5
     range: 1
     armor: 1
-    currentEffects: []
+  - maxHealth: 1
+    damage: 1
+    movementSpeed: 1.8
+    attackSpeed: 1.8
+    range: 1
+    armor: 1
+  - maxHealth: 1
+    damage: 1
+    movementSpeed: 2
+    attackSpeed: 2
+    range: 1
+    armor: 1
   effectVFX:
+  - {fileID: 6661253060276135625, guid: d62d37a46d3f05e43bad9fb29f7cf244, type: 3}
+  - {fileID: 6661253060276135625, guid: d62d37a46d3f05e43bad9fb29f7cf244, type: 3}
   - {fileID: 6661253060276135625, guid: d62d37a46d3f05e43bad9fb29f7cf244, type: 3}
