@@ -10,6 +10,9 @@ public class DrumHitUIManager : MonoBehaviour
     public List<NoteUI> _noteUIList;
     public Queue<Drums> drumPlayQueue;
     public Queue<Note> notePlayQueue;
+    public float idleTimeToClearUIInSeconds = 0.5f;
+    private float timeElapsedSinceLastNotePlayedInSeconds = 0;
+
     
     void Awake()
     {
@@ -46,6 +49,7 @@ public class DrumHitUIManager : MonoBehaviour
             notePlayQueue.Enqueue(note);
             DisplayNoteUIOnDrumHit();
         }
+        timeElapsedSinceLastNotePlayedInSeconds = 0;
     }
 
     private void DisplayNoteUIOnDrumHit()
@@ -68,6 +72,11 @@ public class DrumHitUIManager : MonoBehaviour
     private void OnDrumComboCompleted(ComboBase effect, int level, Vector3 pos)
     {
         //throw new NotImplementedException();
+        ClearUI();
+    }
+
+    private void ClearUI()
+    {
         drumPlayQueue.Clear();
         notePlayQueue.Clear();
     }
@@ -120,7 +129,16 @@ public class DrumHitUIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timeElapsedSinceLastNotePlayedInSeconds += Time.deltaTime;
+        if (timeElapsedSinceLastNotePlayedInSeconds >= idleTimeToClearUIInSeconds)
+        {
+            if (notePlayQueue.Count > 0)
+            {
+                notePlayQueue.Dequeue();
+            }
+            DisplayNoteUIOnDrumHit();
+            timeElapsedSinceLastNotePlayedInSeconds = 0;
+        }
     }
     
 }
