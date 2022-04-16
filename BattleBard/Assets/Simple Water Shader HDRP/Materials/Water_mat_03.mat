@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Water_mat_03
   m_Shader: {fileID: -6465566751694194690, guid: f3ff61003df241e4a84f6c4962ed1e66, type: 3}
-  m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
+  m_ShaderKeywords: _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -22,7 +22,6 @@ Material:
   - TransparentDepthPostpass
   - TransparentBackface
   - RayTracingPrepass
-  - TransparentDepthPrepass
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -140,11 +139,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_ebdbf4f311404f5fb2cd2b6927a304c1: 0
-    - Vector1_07c93c7e34df4237b5dd57255d7f857a: 0.1
+    - Vector1_07c93c7e34df4237b5dd57255d7f857a: 0.2
     - Vector1_3849afd7c2eb484893a68ec694cc75b3: 1
     - Vector1_4fa7de5de5304ba799341f5b9bbbf2c0: 0.3
     - Vector1_6f56a0970372485390c6587863c2374e: -2
-    - Vector1_7ab1e13367ff4c17b0a4403edd3d9450: 0.571
+    - Vector1_7ab1e13367ff4c17b0a4403edd3d9450: 0.5
     - Vector1_a3027f23b37c4da89592d406468d7aa8: -0.8
     - Vector1_c0da6a80189144e5a45df6c62b281d57: 1
     - Vector1_d70d07d7ef17405a961168abe8e24a3a: 28
@@ -216,7 +215,7 @@ Material:
     - _PPDPrimitiveWidth: 1
     - _RayTracing: 0
     - _ReceivesSSR: 1
-    - _ReceivesSSRTransparent: 0
+    - _ReceivesSSRTransparent: 1
     - _RefractionModel: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
@@ -228,10 +227,10 @@ Material:
     - _SpecularOcclusionMode: 1
     - _SrcBlend: 1
     - _StencilRef: 0
-    - _StencilRefDepth: 0
+    - _StencilRefDepth: 8
     - _StencilRefDistortionVec: 4
-    - _StencilRefGBuffer: 2
-    - _StencilRefMV: 32
+    - _StencilRefGBuffer: 10
+    - _StencilRefMV: 40
     - _StencilWriteMask: 6
     - _StencilWriteMaskDepth: 8
     - _StencilWriteMaskDistortionVec: 4
@@ -262,7 +261,7 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - Color_6a9a916e2c84442984edc20c082efe79: {r: 0.2352941, g: 0.62424207, b: 0.6901961, a: 0.5764706}
-    - Color_c9a840f2115c4802ba54d713194f761d: {r: 0.094117634, g: 0.51262975, b: 0.81960785, a: 0.9607843}
+    - Color_c9a840f2115c4802ba54d713194f761d: {r: 0.63437647, g: 0.74151033, b: 0.81960785, a: 0.9607843}
     - Vector2_130994fa54a3486dacf33287c0070f7f: {r: 100, g: 100, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
