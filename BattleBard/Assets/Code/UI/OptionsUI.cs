@@ -59,6 +59,7 @@ public class OptionsUI : MonoBehaviour
     public void ApplyChanges()
     {
         Screen.SetResolution(resolutionOptions[_currentResolutionIndex].width, resolutionOptions[_currentResolutionIndex].height, true);
+        SetCurrentVolumeLevel();
     }
 
 
@@ -99,6 +100,11 @@ public class OptionsUI : MonoBehaviour
         volumeText.text = _currentVolume.ToString();
     }
 
+    void Awake()
+    {
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -126,15 +132,21 @@ public class OptionsUI : MonoBehaviour
         }
 
         UpdateResolutionText();
-        
+        GetCurrentVolumeLevel();
         SetCurrentVolumeLevel();
+    }
+
+    private int GetCurrentVolumeLevel()
+    {
+        _currentVolume = ((int)Math.Round(VolumeSlider.value * 100.0f));
+        return _currentVolume;
     }
 
     private void SetCurrentVolumeLevel()
     {
-        _currentVolume = 50;
         UpdateVolumeText();
         //TODO: Add code to get the volume from Wwise
+        WwiseAudioVolumeController.SetWwiseAudioVolume(_currentVolume);
         //throw new NotImplementedException();
     }
 

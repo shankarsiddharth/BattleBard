@@ -680,6 +680,7 @@ MonoBehaviour:
   resolutionText: {fileID: 2066045638}
   volumeText: {fileID: 2019048415}
   VolumeSlider: {fileID: 1753092165}
+  wwiseAudioVolumeController: {fileID: 0}
 --- !u!1 &192628668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2914,7 +2915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2307936a14e57734c94a5a40f064641e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameSceneName: WwiseUI
+  GameSceneName: GameLevel
   MainMenuScreen: {fileID: 2039061810}
   OptionsScreen: {fileID: 174433066}
   CreditsScreen: {fileID: 50608054}
