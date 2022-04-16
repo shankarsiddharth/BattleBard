@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\u1377417\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\u1377417\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\u1377417\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\u1377417\Documents\GitHub\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -16,7 +16,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1065528326">
+		<SoundBank Id="393239870" Language="SFX" Hash="2627067562">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -102,9 +102,10 @@
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MusicVolume"/>
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
+				<GameParameter Id="3325181466" Name="VOVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\VOVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="423708664">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3510586188">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -112,9 +113,10 @@
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MusicVolume"/>
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
+				<GameParameter Id="3325181466" Name="VOVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\VOVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2386706874" Language="SFX" Hash="3158437799">
+		<SoundBank Id="2386706874" Language="SFX" Hash="4059662247">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_120_bpm</ObjectPath>
 			<ShortName>Music_120_bpm</ShortName>
 			<Path>Music_120_bpm.bnk</Path>
@@ -124,6 +126,14 @@
 						<File Id="190032006" Language="SFX">
 							<ShortName>A_Troll_1.wav</ShortName>
 							<Path>SFX\A_Troll_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3113730691" Name="Play_bg_music" ObjectPath="\Events\Default Work Unit\Play_bg_music" DurationType="OneShot" DurationMin="16." DurationMax="16.">
+					<IncludedMemoryFiles>
+						<File Id="1049687214" Language="SFX">
+							<ShortName>568774__josefpres__bass-loops-004-short-loop-120-bpm.wav</ShortName>
+							<Path>SFX\568774__josefpres__bass-loops-004-short-loop-120-bpm_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -436,7 +446,67 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="388139632"/>
+			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
+				<File Id="67889240" Language="SFX">
+					<ShortName>Theyre_Retreating_3.wav</ShortName>
+					<Path>SFX\Theyre_Retreating_3_10C4C929.wem</Path>
+				</File>
+				<File Id="190032006" Language="SFX">
+					<ShortName>A_Troll_1.wav</ShortName>
+					<Path>SFX\A_Troll_1_10C4C929.wem</Path>
+				</File>
+				<File Id="294660824" Language="SFX">
+					<ShortName>Intro_2.wav</ShortName>
+					<Path>SFX\Intro_2_10C4C929.wem</Path>
+				</File>
+				<File Id="322211726" Language="SFX">
+					<ShortName>Drum 2.wav</ShortName>
+					<Path>SFX\Drum 2_10C4C929.wem</Path>
+				</File>
+				<File Id="351928753" Language="SFX">
+					<ShortName>The_Village_is_Ours_Again_1.wav</ShortName>
+					<Path>SFX\The_Village_is_Ours_Again_1_10C4C929.wem</Path>
+				</File>
+				<File Id="388139632" Language="SFX">
+					<ShortName>Cowbell.wav</ShortName>
+					<Path>SFX\Cowbell_04403F93.wem</Path>
+					<PrefetchSize>17768</PrefetchSize>
+				</File>
+				<File Id="390141292" Language="SFX">
+					<ShortName>Drum 4.wav</ShortName>
+					<Path>SFX\Drum 4_10C4C929.wem</Path>
+				</File>
+				<File Id="468849986" Language="SFX">
+					<ShortName>That_One_There_2.wav</ShortName>
+					<Path>SFX\That_One_There_2_10C4C929.wem</Path>
+				</File>
+				<File Id="556155814" Language="SFX">
+					<ShortName>Take_Back_Our_Home_2.wav</ShortName>
+					<Path>SFX\Take_Back_Our_Home_2_10C4C929.wem</Path>
+				</File>
+				<File Id="608074595" Language="SFX">
+					<ShortName>We_Need_More_Muscle_3.wav</ShortName>
+					<Path>SFX\We_Need_More_Muscle_3_10C4C929.wem</Path>
+				</File>
+				<File Id="758886743" Language="SFX">
+					<ShortName>Drum 1.wav</ShortName>
+					<Path>SFX\Drum 1_10C4C929.wem</Path>
+				</File>
+				<File Id="988406303" Language="SFX">
+					<ShortName>Reinforced_Gate_1.wav</ShortName>
+					<Path>SFX\Reinforced_Gate_1_10C4C929.wem</Path>
+				</File>
+				<File Id="1000564919" Language="SFX">
+					<ShortName>Drum 3.wav</ShortName>
+					<Path>SFX\Drum 3_10C4C929.wem</Path>
+				</File>
+				<File Id="1045215813" Language="SFX">
+					<ShortName>Trap_1.wav</ShortName>
+					<Path>SFX\Trap_1_10C4C929.wem</Path>
+				</File>
 				<File Id="1049687214" Language="SFX">
 					<ShortName>568774__josefpres__bass-loops-004-short-loop-120-bpm.wav</ShortName>
 					<Path>SFX\568774__josefpres__bass-loops-004-short-loop-120-bpm_D79FB2B7.wem</Path>
@@ -446,6 +516,7 @@
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MusicVolume"/>
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
+				<GameParameter Id="3325181466" Name="VOVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\VOVolume"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="3434871820" Name="Tier3" ObjectPath="\States\Default Work Unit\Music_120_bpm\Tier3" GUID="{8BFED936-B3D6-4C37-B194-F0FF9294EFFA}">
