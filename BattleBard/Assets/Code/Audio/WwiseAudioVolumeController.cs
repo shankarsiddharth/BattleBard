@@ -12,6 +12,7 @@ public static class WwiseAudioVolumeController
         AkSoundEngine.SetRTPCValue("MasterVolume", CurrentVolume);
         AkSoundEngine.SetRTPCValue("MusicVolume", CurrentVolume);
         AkSoundEngine.SetRTPCValue("SFXVolume", CurrentVolume);
+        AkSoundEngine.SetRTPCValue("VOVolume", CurrentVolume);
     }
 
     public static void SetWwiseAudioVolume()
@@ -19,5 +20,6 @@ public static class WwiseAudioVolumeController
         AkSoundEngine.SetRTPCValue("MasterVolume", CurrentVolume);
         AkSoundEngine.SetRTPCValue("MusicVolume", CurrentVolume);
         AkSoundEngine.SetRTPCValue("SFXVolume", CurrentVolume);
+        AkSoundEngine.SetRTPCValue("VOVolume", CurrentVolume);
     }
 }
