@@ -41,7 +41,7 @@ public class ComboAudioWwise : MonoBehaviour
     void Start()
     {
         comboTierAudioEvent[currentTierLevel].Post(gameObject);
-        akHealState[currentTierLevel].SetValue();
+        akIdleState[currentTierLevel].SetValue();
         //AkSoundEngine.SetState("Tier1", "Attacking");
     }
 
