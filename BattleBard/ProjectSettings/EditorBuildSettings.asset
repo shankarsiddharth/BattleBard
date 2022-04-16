@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelDesign_Tests/Main Scenes/MainMenu.unity
     guid: 37c28fd3e6120c2458c5796e513e217f
   - enabled: 1
-    path: Assets/Scenes/LevelDesign_Tests/Canvas_Test.unity
-    guid: b13df15a2eebb3348bb535b51bfad24b
+    path: Assets/Scenes/LevelDesign_Tests/GameLevel.unity
+    guid: 52214f7d3f175524f834ea0003508c98
   m_configObjects: {}
