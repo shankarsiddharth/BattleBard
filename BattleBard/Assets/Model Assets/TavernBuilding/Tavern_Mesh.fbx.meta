@@ -3,7 +3,42 @@ guid: ca15459940bc3f6429c275420ffcb3e2
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_Base
+    second: {fileID: 2100000, guid: e575b59fe3c13604789c0365bae91a53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_Wall
+    second: {fileID: 2100000, guid: 9a0e54c0650a19d4583975b418b468d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_WoodFrame
+    second: {fileID: 2100000, guid: 1b7b4ea1d778da8448b585ae2e892ac8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof
+    second: {fileID: 2100000, guid: fef89f33b90a54944b1b77c4b07d9bac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window_Frame
+    second: {fileID: 2100000, guid: 147cbc65c88faa54da47346bc001d64e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodPillar
+    second: {fileID: 2100000, guid: 1d1d6193f4fe6064f9e63875f7df4ae5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert7
+    second: {fileID: 2100000, guid: e575b59fe3c13604789c0365bae91a53, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
