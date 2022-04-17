@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: SpeedCombo
   m_EditorClassIdentifier: 
   comboOrder:
-  - note: 3
+  - note: 2
     beat: 1
+  - note: 3
+    beat: 1.5
+  - note: 0
+    beat: 2
+  - note: 5
+    beat: 2.5
+  - note: 2
+    beat: 3
   effect: {fileID: -620298999607620110, guid: 9088543ffda14e848928983ea4efad92, type: 3}
