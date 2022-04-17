@@ -32,7 +32,6 @@ public class Metronome : MonoBehaviour
             noteAccuracy = .5f;
         }
         fudgeOffset = 0f;
-        WwiseAudioVolumeController.SetWwiseAudioVolume();
     }
 
     // Update is called once per frame

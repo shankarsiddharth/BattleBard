@@ -38,6 +38,9 @@ public class VoiceOver : MonoBehaviour
         {
             throw new NullReferenceException("uiGameObject is null in VoiceOver");
         }
+
+        WwiseAudioVolumeController.SetWwiseAudioVolume();
+        WwiseAudioVolumeController.SetWwiseAudioVolumeForAudioBusType(0, TAudioBusType.kSFX);
     }
 
     // Start is called before the first frame update

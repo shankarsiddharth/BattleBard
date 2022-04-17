@@ -13,6 +13,9 @@ public class MainMenuController : MonoBehaviour
     public GameObject OptionsScreen;
     public GameObject CreditsScreen;
 
+    private GameObject wwiseGameObject;
+    private BGAudio bgAudio;
+
     public void OnExitButtonClicked()
     {
 #if UNITY_EDITOR
@@ -41,6 +44,7 @@ public class MainMenuController : MonoBehaviour
 
     public void OnPlayButtonClicked()
     {
+        bgAudio.StopBGAudio();
         SceneManager.LoadSceneAsync(GameSceneName);
     }
 
@@ -53,6 +57,16 @@ public class MainMenuController : MonoBehaviour
 
     void Awake()
     {
+        wwiseGameObject = GameObject.FindGameObjectWithTag("Wwise");
+        if (wwiseGameObject == null)
+        {
+            throw new NullReferenceException("wwiseGameObject is null in MainMenuController");
+        }
+        bgAudio = wwiseGameObject.GetComponentInChildren<BGAudio>();
+        if (bgAudio == null)
+        {
+            throw new NullReferenceException("bgAudio is null in MainMenuController");
+        }
         if (MainMenuScreen == null || OptionsScreen == null
                                    || CreditsScreen == null)
         {
@@ -62,6 +76,9 @@ public class MainMenuController : MonoBehaviour
         MainMenuScreen.SetActive(true);
         OptionsScreen.SetActive(false);
         CreditsScreen.SetActive(false);
+
+        WwiseAudioVolumeController.SetWwiseAudioVolume();
+        WwiseAudioVolumeController.SetWwiseAudioVolumeForAudioBusType(0, TAudioBusType.kSFX);
     }
 
     // Start is called before the first frame update
