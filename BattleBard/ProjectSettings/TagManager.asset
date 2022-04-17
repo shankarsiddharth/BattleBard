@@ -16,6 +16,8 @@ TagManager:
   - RhythmManager
   - DeadActor
   - PrisonerDwarf
+  - Wwise
+  - UI
   layers:
   - Default
   - TransparentFX

@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7cb07a231ff0e04b9f3cecef3d30159, type: 3}
-  m_Name: HealingCombo
+  m_Script: {fileID: 11500000, guid: f9ec4a53faae5254eb112979ac696727, type: 3}
+  m_Name: D9608946-2792-4D23-926C-E6111FDCC7FF
   m_EditorClassIdentifier: 
-  comboOrder:
-  - note: 2
-    beat: 1
-  effect: {fileID: 3526569306241443677, guid: 4a7ff9e417a8384408dcfa728da9aebb, type: 3}
+  objectName: Play_The_Village_is_Ours_Again
+  id: 1170258016
+  guid: D9608946-2792-4D23-926C-E6111FDCC7FF

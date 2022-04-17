@@ -15,10 +15,4 @@ MonoBehaviour:
   comboOrder:
   - note: 1
     beat: 1
-  - note: 4
-    beat: 2
-  - note: 1
-    beat: 3
-  - note: 4
-    beat: 4
   effect: {fileID: 7799187262755110395, guid: 02ca5a4c530fe364eaad158a7655f1d6, type: 3}

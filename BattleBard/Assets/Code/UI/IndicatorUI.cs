@@ -37,6 +37,10 @@ public class IndicatorUI: MonoBehaviour
 
     private void OnDrumComboCompleted(ComboBase effect, int level, Vector3 pos)
     {
+        if (!transform.parent.gameObject.activeSelf)
+        {
+            return;
+        }
         if (effect is DamageCombo)
         {
             AttackIndicatorGameObject.SetActive(true);
@@ -51,7 +55,9 @@ public class IndicatorUI: MonoBehaviour
             HealIndicatorGameObject.SetActive(true);
             _vfxEffectCount[1]++;
             //TODO: Track the time of the effect
-
+            HealingCombo healingCombo = (HealingCombo) effect;
+            float durationInSeconds = healingCombo.tierDuration[level];
+            StartCoroutine(StartVFXTimer(effect, durationInSeconds));
         }
         else if (effect is SpeedCombo)
         {
@@ -62,7 +68,6 @@ public class IndicatorUI: MonoBehaviour
             float durationInSeconds = statusEffect.tierDuration[level];
             StartCoroutine(StartVFXTimer(effect, durationInSeconds));
         }
-        
     }
 
     public IEnumerator StartVFXTimer(ComboBase effect, float durationInSeconds)
