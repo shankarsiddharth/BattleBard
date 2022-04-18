@@ -16,7 +16,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2627067562">
+		<SoundBank Id="393239870" Language="SFX" Hash="3993453326">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -63,7 +63,7 @@
 				<File Id="388139632" Language="SFX">
 					<ShortName>Cowbell.wav</ShortName>
 					<Path>SFX\Cowbell_04403F93.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
+					<PrefetchSize>26588</PrefetchSize>
 				</File>
 				<File Id="390141292" Language="SFX">
 					<ShortName>Drum 4.wav</ShortName>
@@ -116,7 +116,7 @@
 				<GameParameter Id="3325181466" Name="VOVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\VOVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2386706874" Language="SFX" Hash="4059662247">
+		<SoundBank Id="2386706874" Language="SFX" Hash="4108450589">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_120_bpm</ObjectPath>
 			<ShortName>Music_120_bpm</ShortName>
 			<Path>Music_120_bpm.bnk</Path>
@@ -129,11 +129,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3113730691" Name="Play_bg_music" ObjectPath="\Events\Default Work Unit\Play_bg_music" DurationType="OneShot" DurationMin="16." DurationMax="16.">
+				<Event Id="3113730691" Name="Play_bg_music" ObjectPath="\Events\Default Work Unit\Play_bg_music" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="1049687214" Language="SFX">
-							<ShortName>568774__josefpres__bass-loops-004-short-loop-120-bpm.wav</ShortName>
-							<Path>SFX\568774__josefpres__bass-loops-004-short-loop-120-bpm_D79FB2B7.wem</Path>
+						<File Id="904612785" Language="SFX">
+							<ShortName>bg_music.wav</ShortName>
+							<Path>SFX\bg_music_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -148,7 +148,7 @@
 						<File Id="388139632" Language="SFX">
 							<ShortName>Cowbell.wav</ShortName>
 							<Path>SFX\Cowbell_04403F93.wem</Path>
-							<PrefetchSize>17768</PrefetchSize>
+							<PrefetchSize>26588</PrefetchSize>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -192,14 +192,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="OneShot" DurationMin="16." DurationMax="16.">
-					<IncludedMemoryFiles>
-						<File Id="1049687214" Language="SFX">
-							<ShortName>568774__josefpres__bass-loops-004-short-loop-120-bpm.wav</ShortName>
-							<Path>SFX\568774__josefpres__bass-loops-004-short-loop-120-bpm_D79FB2B7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="226855043" Name="Play_Reinforced_Gate" ObjectPath="\Events\Default Work Unit\Play_Reinforced_Gate" DurationType="OneShot" DurationMin="5.557167" DurationMax="5.557167">
 					<IncludedMemoryFiles>
 						<File Id="988406303" Language="SFX">
@@ -473,7 +466,7 @@
 				<File Id="388139632" Language="SFX">
 					<ShortName>Cowbell.wav</ShortName>
 					<Path>SFX\Cowbell_04403F93.wem</Path>
-					<PrefetchSize>17768</PrefetchSize>
+					<PrefetchSize>26588</PrefetchSize>
 				</File>
 				<File Id="390141292" Language="SFX">
 					<ShortName>Drum 4.wav</ShortName>
@@ -495,6 +488,10 @@
 					<ShortName>Drum 1.wav</ShortName>
 					<Path>SFX\Drum 1_10C4C929.wem</Path>
 				</File>
+				<File Id="904612785" Language="SFX">
+					<ShortName>bg_music.wav</ShortName>
+					<Path>SFX\bg_music_D79FB2B7.wem</Path>
+				</File>
 				<File Id="988406303" Language="SFX">
 					<ShortName>Reinforced_Gate_1.wav</ShortName>
 					<Path>SFX\Reinforced_Gate_1_10C4C929.wem</Path>
@@ -506,10 +503,6 @@
 				<File Id="1045215813" Language="SFX">
 					<ShortName>Trap_1.wav</ShortName>
 					<Path>SFX\Trap_1_10C4C929.wem</Path>
-				</File>
-				<File Id="1049687214" Language="SFX">
-					<ShortName>568774__josefpres__bass-loops-004-short-loop-120-bpm.wav</ShortName>
-					<Path>SFX\568774__josefpres__bass-loops-004-short-loop-120-bpm_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 			<GameParameters>
