@@ -18,7 +18,8 @@ public class NoteEvaluator : MonoBehaviour
     void Start()
     {
         //GameEvents.Instance.onDrumPlayed.AddListener(EvaluateNote);
-        metronome = GetComponent<Metronome>();
+        //metronome = GetComponent<Metronome>();
+        metronome = GameObject.FindGameObjectWithTag("AnimMetronome").GetComponent<Metronome>();
         gradeDisplay = (Text)GameObject.Find("Grade Display").GetComponent<Text>();
         buttonDisplay = GameObject.Find("Button Display").GetComponent<Text>();
         offsetDisplay = GameObject.Find("Offset Display").GetComponent<Text>();
@@ -38,6 +39,7 @@ public class NoteEvaluator : MonoBehaviour
         double absOffset = Math.Abs(beatOffset);
         
         note.timestamp = metronome.GetClosestBeat();
+        //note.timestamp = Time.time;
         offsetDisplay.text = beatOffset.ToString();
 
         if(absOffset < PerfectThreshold)

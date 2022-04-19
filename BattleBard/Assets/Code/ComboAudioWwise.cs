@@ -25,14 +25,17 @@ public class ComboAudioWwise : MonoBehaviour
         currentTierLevel = tierLevel;
         if(effect is SpeedCombo)
         {
+            comboTierAudioEvent[currentTierLevel].Post(gameObject);
             akSpeedState[tierLevel].SetValue();
         }
         else if(effect is DamageCombo)
         {
+            comboTierAudioEvent[currentTierLevel].Post(gameObject);
             akAttackState[tierLevel].SetValue();
         }
         else if (effect is HealingCombo)
         {
+            comboTierAudioEvent[currentTierLevel].Post(gameObject);
             akHealState[tierLevel].SetValue();
         }
     }
@@ -40,8 +43,8 @@ public class ComboAudioWwise : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        comboTierAudioEvent[currentTierLevel].Post(gameObject);
-        akIdleState[currentTierLevel].SetValue();
+        //comboTierAudioEvent[currentTierLevel].Post(gameObject);
+        //akIdleState[currentTierLevel].SetValue();
         //AkSoundEngine.SetState("Tier1", "Attacking");
     }
 

@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1893880067">
+		<SoundBank Id="393239870" Language="SFX" Hash="3351517366">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -23,7 +23,7 @@
 				<Event Id="1318683027" Name="Play_Drum_4" ObjectPath="\Events\Default Work Unit\Play_Drum_4" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
 				<Event Id="3103472528" Name="Play_Intro" ObjectPath="\Events\Default Work Unit\Play_Intro" DurationType="OneShot" DurationMin="31.086916" DurationMax="31.086916"/>
 				<Event Id="3670347913" Name="Play_Metronome_ms" ObjectPath="\Events\Default Work Unit\Play_Metronome_ms" DurationType="OneShot" DurationMin="0.050045" DurationMax="0.050045"/>
-				<Event Id="3895177024" Name="Play_Metronome_s" ObjectPath="\Events\Default Work Unit\Play_Metronome_s" DurationType="OneShot" DurationMin="1." DurationMax="1."/>
+				<Event Id="3895177024" Name="Play_Metronome_s" ObjectPath="\Events\Default Work Unit\Play_Metronome_s" DurationType="Infinite"/>
 				<Event Id="226855043" Name="Play_Reinforced_Gate" ObjectPath="\Events\Default Work Unit\Play_Reinforced_Gate" DurationType="OneShot" DurationMin="5.557167" DurationMax="5.557167"/>
 				<Event Id="1807275314" Name="Play_Take_Back_Our_Home" ObjectPath="\Events\Default Work Unit\Play_Take_Back_Our_Home" DurationType="OneShot" DurationMin="3.017333" DurationMax="3.017333"/>
 				<Event Id="3448951123" Name="Play_That_One_There" ObjectPath="\Events\Default Work Unit\Play_That_One_There" DurationType="OneShot" DurationMin="6.789021" DurationMax="6.789021"/>
@@ -75,7 +75,7 @@
 				</File>
 				<File Id="660299775" Language="SFX">
 					<ShortName>Metronome_New.wav</ShortName>
-					<Path>SFX\Metronome_New_10C4C929.wem</Path>
+					<Path>SFX\Metronome_New_D79FB2B7.wem</Path>
 				</File>
 				<File Id="758886743" Language="SFX">
 					<ShortName>Drum 1.wav</ShortName>
@@ -114,7 +114,7 @@
 				<GameParameter Id="3325181466" Name="VOVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\VOVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2386706874" Language="SFX" Hash="1183246806">
+		<SoundBank Id="2386706874" Language="SFX" Hash="2923547257">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_120_bpm</ObjectPath>
 			<ShortName>Music_120_bpm</ShortName>
 			<Path>Music_120_bpm.bnk</Path>
@@ -183,11 +183,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3895177024" Name="Play_Metronome_s" ObjectPath="\Events\Default Work Unit\Play_Metronome_s" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="3895177024" Name="Play_Metronome_s" ObjectPath="\Events\Default Work Unit\Play_Metronome_s" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="660299775" Language="SFX">
 							<ShortName>Metronome_New.wav</ShortName>
-							<Path>SFX\Metronome_New_10C4C929.wem</Path>
+							<Path>SFX\Metronome_New_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -481,7 +481,7 @@
 				</File>
 				<File Id="660299775" Language="SFX">
 					<ShortName>Metronome_New.wav</ShortName>
-					<Path>SFX\Metronome_New_10C4C929.wem</Path>
+					<Path>SFX\Metronome_New_D79FB2B7.wem</Path>
 				</File>
 				<File Id="758886743" Language="SFX">
 					<ShortName>Drum 1.wav</ShortName>

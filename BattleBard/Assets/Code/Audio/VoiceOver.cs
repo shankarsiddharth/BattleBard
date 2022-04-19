@@ -61,11 +61,11 @@ public class VoiceOver : MonoBehaviour
             || voiceOverAudioType == TVoiceOverAudioType.kReinforcedGate
             || voiceOverAudioType == TVoiceOverAudioType.kTheVillageisOursAgain)
         {
-            WwiseAudioVolumeController.SetWwiseAudioVolumeForAudioBusType(0, TAudioBusType.kSFX);
+            /*WwiseAudioVolumeController.SetWwiseAudioVolumeForAudioBusType(0, TAudioBusType.kSFX);
             WwiseAudioVolumeController.SetWwiseAudioVolumeForAudioBusType(0, TAudioBusType.kMetronome);
             uiGameObject.SetActive(false);
-            //WwiseAudioVolumeController.SetWwiseAudioVolumeForAudioBusType(WwiseAudioVolumeController.CurrentVolume, TAudioBusType.kSFX);
-
+            */
+            WwiseAudioVolumeController.SetWwiseAudioVolumeForAudioBusType(WwiseAudioVolumeController.CurrentVolume, TAudioBusType.kSFX);
         }
 
         foreach (VoiceOverData voiceOverData in voiceOverDataList)

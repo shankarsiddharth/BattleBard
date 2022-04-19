@@ -21,10 +21,12 @@ public class ComboManager : MonoBehaviour
         GameEvents.Instance.onDrumComboCompleted.AddListener(ListenForCombos);
 
 
-        if (!gameObject.TryGetComponent(out _metronome))
+        /*if (!gameObject.TryGetComponent(out _metronome))
         {
             Debug.LogWarning("The primary metronome should be attached to the same game object as the combo manager.");
-        }
+        }*/
+
+        _metronome = GameObject.FindGameObjectWithTag("AnimMetronome").GetComponent<Metronome>();
 
         _defaultCombos = new List<Combo>(validCombos);
         drumsHit = new List<Note>();
@@ -81,8 +83,8 @@ public class ComboManager : MonoBehaviour
     private int GetComboLevel(Combo combo)
     {
         // Level values
-        float level2 = 1;
-        float level3 = 2;
+        float level2 = 1.0f;
+        float level3 = 2.0f;
 
         float total = 0;
 
@@ -91,11 +93,11 @@ public class ComboManager : MonoBehaviour
             total += GetNoteValue(drumHit);
         }
 
-        if (total / combo.comboOrder.Count > level2)
-            return 1;
-
-        if (total / combo.comboOrder.Count > level3)
+        if (total / combo.comboOrder.Count >= level3)
             return 2;
+        
+        if (total / combo.comboOrder.Count >= level2)
+            return 1;
 
         return 0;
     }
@@ -104,7 +106,7 @@ public class ComboManager : MonoBehaviour
     {
         float GoodValue = 0;
         float GreatValue = 1;
-        float PerfectValue = 2;
+        float PerfectValue = 2.3f;
 
         return n.grade switch
         {

@@ -3,12 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+public enum TUIEffectType
+{
+    kAttack,
+    kHeal,
+    kSpeed
+}
+
 public class ComboTextScript : MonoBehaviour
 {
+    public TUIEffectType UiEffectType;
+    public Text uiText;
+    private string text = "0";
+
+    void Awake()
+    {
+        GameEvents.Instance.onDrumComboCompleted.AddListener(Test);
+        uiText = GetComponent<Text>();
+        uiText.text = text;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        GameEvents.Instance.onDrumComboCompleted.AddListener(Test);
+        
     }
 
     // Update is called once per frame
@@ -17,12 +36,46 @@ public class ComboTextScript : MonoBehaviour
         
     }
 
-    void Test(ComboBase eff, int level, Vector3 vec)
+    void Test(ComboBase effect, int level, Vector3 vec)
     {
-        if (eff != null)
+        if (level == 0)
         {
-            GetComponent<Text>().text = eff.gameObject.name;
-            GetComponent<Text>().SetAllDirty();
+            text = "I";
         }
+        else if (level == 1)
+        {
+            text = "II";
+        }
+        else if (level == 2)
+        {
+            text = "III";
+        }
+
+        if (effect is SpeedCombo)
+        {
+            if (UiEffectType == TUIEffectType.kSpeed)
+            {
+                uiText.text = text;
+            }
+        }
+        else if (effect is DamageCombo)
+        {
+            if (UiEffectType == TUIEffectType.kAttack)
+            {
+                uiText.text = text;
+            }
+        }
+        else if (effect is HealingCombo)
+        {
+            if (UiEffectType == TUIEffectType.kHeal)
+            {
+                uiText.text = text;
+            }
+        }
+        /*if (eff != null)
+        {
+            //GetComponent<Text>().text = eff.gameObject.name;
+            GetComponent<Text>().SetAllDirty();
+        }*/
     }
 }

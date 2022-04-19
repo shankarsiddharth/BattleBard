@@ -18,6 +18,7 @@ TagManager:
   - PrisonerDwarf
   - Wwise
   - UI
+  - AnimMetronome
   layers:
   - Default
   - TransparentFX
