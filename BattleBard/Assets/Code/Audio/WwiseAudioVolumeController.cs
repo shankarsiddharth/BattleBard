@@ -10,6 +10,7 @@ public enum TAudioBusType
     kMaster,
     kMusic,
     kSFX,
+    kMetronome,
     kVoiceOver
 }
 
@@ -24,6 +25,7 @@ public static class WwiseAudioVolumeController
         AkSoundEngine.SetRTPCValue("MusicVolume", CurrentVolume);
         AkSoundEngine.SetRTPCValue("SFXVolume", CurrentVolume);
         AkSoundEngine.SetRTPCValue("VOVolume", CurrentVolume);
+        AkSoundEngine.SetRTPCValue("MetronomeVolume", CurrentVolume);
     }
 
     public static void SetWwiseAudioVolume()
@@ -32,6 +34,7 @@ public static class WwiseAudioVolumeController
         AkSoundEngine.SetRTPCValue("MusicVolume", CurrentVolume);
         AkSoundEngine.SetRTPCValue("SFXVolume", CurrentVolume);
         AkSoundEngine.SetRTPCValue("VOVolume", CurrentVolume);
+        AkSoundEngine.SetRTPCValue("MetronomeVolume", CurrentVolume);
     }
 
     public static void SetWwiseAudioVolumeForAudioBusType(int volume, TAudioBusType audioBusType = TAudioBusType.kAll)
@@ -58,6 +61,11 @@ public static class WwiseAudioVolumeController
                 AkSoundEngine.SetRTPCValue("VOVolume", volume);
             }
                 break;
+            case TAudioBusType.kMetronome:
+                {
+                    AkSoundEngine.SetRTPCValue("MetronomeVolume", volume);
+                }
+                break;
             default:
             case TAudioBusType.kAll:
             {
@@ -65,6 +73,7 @@ public static class WwiseAudioVolumeController
                 AkSoundEngine.SetRTPCValue("MusicVolume", volume);
                 AkSoundEngine.SetRTPCValue("SFXVolume", volume);
                 AkSoundEngine.SetRTPCValue("VOVolume", volume);
+                AkSoundEngine.SetRTPCValue("MetronomeVolume", volume);
             }
                 break;
         }

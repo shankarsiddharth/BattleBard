@@ -18,7 +18,6 @@ public class Metronome : MonoBehaviour
     private float startTime;
     private float fudgeOffset;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +47,9 @@ public class Metronome : MonoBehaviour
 
         if(!isPlaying && metroPositionInBeats - (float)Math.Floor(metroPositionInBeats) < .1)
         {
+            Debug.Log("START Tick");
             playID = metronomeClip.Post(gameObject, (uint)AkCallbackType.AK_EndOfEvent, AKCallbackFunction);
+            Debug.Log("END Tick");
             isPlaying = true;           
         }
     }

@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 103b195139c83342aaf143e0c84bbeaf
     GuidInternal: 
-    m_lastTime: -8585513713125997007
+    m_lastTime: -8585522423549053055
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: a735057714281744bb15255cb2b29be1
     GuidInternal: 
-    m_lastTime: -8585513713141761063
+    m_lastTime: -8585512796292985113
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Metronome
+      guid: 1fd83019db4a534ead1441538b717bd6
+      id: 3537469747
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a735057714281744bb15255cb2b29be1
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Metronome
+        ObjectType: 2
+        guid: 1fd83019db4a534ead1441538b717bd6
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Metronome
     - name: Music
       guid: e016cadc54d2ee43a572dc6f11cadf4e
       id: 3991942870
@@ -117,7 +134,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 4ec8190ab5f715418031cc8a37e4001b
     GuidInternal: 
-    m_lastTime: -8585513713126016954
+    m_lastTime: -8585514724603590658
     List:
     - name: Music_120_bpm
       guid: bcf3936b91197648beb868006e76cd29
@@ -159,7 +176,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 0cbf0d5597b5db4cb817e6bac57f4603
     GuidInternal: 
-    m_lastTime: -8585513713154146607
+    m_lastTime: -8585512796081142602
     List:
     - name: Play_A_Troll
       guid: 8c536adb752c294b92573b480316997d
@@ -179,7 +196,7 @@ MonoBehaviour:
       maxDuration: 2.498292
       minDuration: 2.498292
     - name: Play_bg_music
-      guid: af307d3e9a7b154cb1d00fcf7eb4e07e
+      guid: c29bd04a56974c4db660728273bcd0dd
       id: 3113730691
       PathAndIcons:
       - ElementName: Events
@@ -190,28 +207,11 @@ MonoBehaviour:
         guid: 0cbf0d5597b5db4cb817e6bac57f4603
       - ElementName: Play_bg_music
         ObjectType: 3
-        guid: af307d3e9a7b154cb1d00fcf7eb4e07e
+        guid: c29bd04a56974c4db660728273bcd0dd
       Path: Events\Default Work Unit\Play_bg_music
       maxAttenuation: 0
-      maxDuration: 16
-      minDuration: 16
-    - name: Play_Cowbell
-      guid: 0dcac046d05d0940a6295164968d7b27
-      id: 1491318392
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 0cbf0d5597b5db4cb817e6bac57f4603
-      - ElementName: Play_Cowbell
-        ObjectType: 3
-        guid: 0dcac046d05d0940a6295164968d7b27
-      Path: Events\Default Work Unit\Play_Cowbell
-      maxAttenuation: 0
-      maxDuration: 0.15
-      minDuration: 0.15
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Drum_1
       guid: 9256c0c1a0d9f047a5d9370c8b863884
       id: 1318683030
@@ -297,6 +297,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 31.086916
       minDuration: 31.086916
+    - name: Play_Metronome_ms
+      guid: 4f431638f93cee47a14a662c8ad9c5f4
+      id: 3670347913
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0cbf0d5597b5db4cb817e6bac57f4603
+      - ElementName: Play_Metronome_ms
+        ObjectType: 3
+        guid: 4f431638f93cee47a14a662c8ad9c5f4
+      Path: Events\Default Work Unit\Play_Metronome_ms
+      maxAttenuation: 0
+      maxDuration: 0.050045
+      minDuration: 0.050045
+    - name: Play_Metronome_s
+      guid: 0dcac046d05d0940a6295164968d7b27
+      id: 3895177024
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0cbf0d5597b5db4cb817e6bac57f4603
+      - ElementName: Play_Metronome_s
+        ObjectType: 3
+        guid: 0dcac046d05d0940a6295164968d7b27
+      Path: Events\Default Work Unit\Play_Metronome_s
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: Play_Music
       guid: 91795785c97b27479c85f78d004ae588
       id: 2932040671
@@ -312,8 +346,8 @@ MonoBehaviour:
         guid: 91795785c97b27479c85f78d004ae588
       Path: Events\Default Work Unit\Play_Music
       maxAttenuation: 0
-      maxDuration: 16
-      minDuration: 16
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Reinforced_Gate
       guid: e13c8a4b0d7ecd4d9a4f4112473949d7
       id: 226855043
@@ -496,7 +530,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 23e650c4dc64c4468986379332302c5e
     GuidInternal: 
-    m_lastTime: -8585513713154146607
+    m_lastTime: -8585512797058746536
     List:
     - name: MasterVolume
       guid: 85a085ebcc8ce447af9a863f78641d24
@@ -515,6 +549,23 @@ MonoBehaviour:
         ObjectType: 13
         guid: 85a085ebcc8ce447af9a863f78641d24
       Path: Game Parameters\Default Work Unit\Volume\MasterVolume
+    - name: MetronomeVolume
+      guid: d083df48f3f4d148b8190a088944a9c1
+      id: 2591469393
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 23e650c4dc64c4468986379332302c5e
+      - ElementName: Volume
+        ObjectType: 4
+        guid: 9a3dd889d2b0c14f8c38616588ef81d9
+      - ElementName: MetronomeVolume
+        ObjectType: 13
+        guid: d083df48f3f4d148b8190a088944a9c1
+      Path: Game Parameters\Default Work Unit\Volume\MetronomeVolume
     - name: MusicVolume
       guid: b080b9b06a92c643be727cf36b11996e
       id: 2346531308
@@ -592,7 +643,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: f55b86c4180ede49acb008ba255b10a3
     GuidInternal: 
-    m_lastTime: -8585513713126006980
+    m_lastTime: -8585522423549073035
     List:
     - name: Music_120_bpm
       guid: f698ee380f721e43a441c29211388087
@@ -915,7 +966,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 4d86b4652f357842ae470e1701647dfb
     GuidInternal: 
-    m_lastTime: -8585513713125997007
+    m_lastTime: -8585522423549063040
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -929,10 +980,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 79f410fe08d9d448bc16a627b3cb2e81
     GuidInternal: 
-    m_lastTime: -8585513713125997007
+    m_lastTime: -8585522423549063040
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

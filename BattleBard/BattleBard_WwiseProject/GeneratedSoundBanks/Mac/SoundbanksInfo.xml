@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\EAE\Unity\BattleBard\BattleBard\BattleBard_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\EAE\Unity\BattleBard\BattleBard\BattleBard_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\EAE\Unity\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Masters Sem 2\EAE 6110 Game Projects\BattleBard\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\EAE\Unity\BattleBard\BattleBard\BattleBard_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles>
-		<File Id="388139632" Language="SFX">
-			<ShortName>Cowbell.wav</ShortName>
-			<Path>SFX\Cowbell_04403F93.wem</Path>
-		</File>
-	</StreamedFiles>
+	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="3993453326">
+		<SoundBank Id="393239870" Language="SFX" Hash="1893880067">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
 				<Event Id="2692890187" Name="Play_A_Troll" ObjectPath="\Events\Default Work Unit\Play_A_Troll" DurationType="OneShot" DurationMin="2.498292" DurationMax="2.498292"/>
-				<Event Id="1491318392" Name="Play_Cowbell" ObjectPath="\Events\Default Work Unit\Play_Cowbell" DurationType="OneShot" DurationMin="0.15" DurationMax="0.15"/>
 				<Event Id="1318683030" Name="Play_Drum_1" ObjectPath="\Events\Default Work Unit\Play_Drum_1" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
 				<Event Id="1318683029" Name="Play_Drum_2" ObjectPath="\Events\Default Work Unit\Play_Drum_2" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
 				<Event Id="1318683028" Name="Play_Drum_3" ObjectPath="\Events\Default Work Unit\Play_Drum_3" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
 				<Event Id="1318683027" Name="Play_Drum_4" ObjectPath="\Events\Default Work Unit\Play_Drum_4" DurationType="OneShot" DurationMin="2." DurationMax="2."/>
 				<Event Id="3103472528" Name="Play_Intro" ObjectPath="\Events\Default Work Unit\Play_Intro" DurationType="OneShot" DurationMin="31.086916" DurationMax="31.086916"/>
+				<Event Id="3670347913" Name="Play_Metronome_ms" ObjectPath="\Events\Default Work Unit\Play_Metronome_ms" DurationType="OneShot" DurationMin="0.050045" DurationMax="0.050045"/>
+				<Event Id="3895177024" Name="Play_Metronome_s" ObjectPath="\Events\Default Work Unit\Play_Metronome_s" DurationType="OneShot" DurationMin="1." DurationMax="1."/>
 				<Event Id="226855043" Name="Play_Reinforced_Gate" ObjectPath="\Events\Default Work Unit\Play_Reinforced_Gate" DurationType="OneShot" DurationMin="5.557167" DurationMax="5.557167"/>
 				<Event Id="1807275314" Name="Play_Take_Back_Our_Home" ObjectPath="\Events\Default Work Unit\Play_Take_Back_Our_Home" DurationType="OneShot" DurationMin="3.017333" DurationMax="3.017333"/>
 				<Event Id="3448951123" Name="Play_That_One_There" ObjectPath="\Events\Default Work Unit\Play_That_One_There" DurationType="OneShot" DurationMin="6.789021" DurationMax="6.789021"/>
@@ -36,9 +32,6 @@
 				<Event Id="3559424791" Name="Play_Trap" ObjectPath="\Events\Default Work Unit\Play_Trap" DurationType="OneShot" DurationMin="7.55025" DurationMax="7.55025"/>
 				<Event Id="1123782303" Name="Play_We_Need_More_Muscle" ObjectPath="\Events\Default Work Unit\Play_We_Need_More_Muscle" DurationType="OneShot" DurationMin="2.802813" DurationMax="2.802813"/>
 			</IncludedEvents>
-			<ReferencedStreamedFiles>
-				<File Id="388139632"/>
-			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
 				<File Id="67889240" Language="SFX">
 					<ShortName>Theyre_Retreating_3.wav</ShortName>
@@ -60,11 +53,6 @@
 					<ShortName>The_Village_is_Ours_Again_1.wav</ShortName>
 					<Path>SFX\The_Village_is_Ours_Again_1_10C4C929.wem</Path>
 				</File>
-				<File Id="388139632" Language="SFX">
-					<ShortName>Cowbell.wav</ShortName>
-					<Path>SFX\Cowbell_04403F93.wem</Path>
-					<PrefetchSize>26588</PrefetchSize>
-				</File>
 				<File Id="390141292" Language="SFX">
 					<ShortName>Drum 4.wav</ShortName>
 					<Path>SFX\Drum 4_10C4C929.wem</Path>
@@ -80,6 +68,14 @@
 				<File Id="608074595" Language="SFX">
 					<ShortName>We_Need_More_Muscle_3.wav</ShortName>
 					<Path>SFX\We_Need_More_Muscle_3_10C4C929.wem</Path>
+				</File>
+				<File Id="631214722" Language="SFX">
+					<ShortName>Metronome.wav</ShortName>
+					<Path>SFX\Metronome_10C4C929.wem</Path>
+				</File>
+				<File Id="660299775" Language="SFX">
+					<ShortName>Metronome_New.wav</ShortName>
+					<Path>SFX\Metronome_New_10C4C929.wem</Path>
 				</File>
 				<File Id="758886743" Language="SFX">
 					<ShortName>Drum 1.wav</ShortName>
@@ -101,22 +97,24 @@
 			<GameParameters>
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MusicVolume"/>
+				<GameParameter Id="2591469393" Name="MetronomeVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MetronomeVolume"/>
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
 				<GameParameter Id="3325181466" Name="VOVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\VOVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3518725678">
+		<SoundBank Id="1355168291" Language="SFX" Hash="746836946">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<GameParameters>
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MusicVolume"/>
+				<GameParameter Id="2591469393" Name="MetronomeVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MetronomeVolume"/>
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
 				<GameParameter Id="3325181466" Name="VOVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\VOVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2386706874" Language="SFX" Hash="4108450589">
+		<SoundBank Id="2386706874" Language="SFX" Hash="1183246806">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_120_bpm</ObjectPath>
 			<ShortName>Music_120_bpm</ShortName>
 			<Path>Music_120_bpm.bnk</Path>
@@ -134,21 +132,6 @@
 						<File Id="904612785" Language="SFX">
 							<ShortName>bg_music.wav</ShortName>
 							<Path>SFX\bg_music_D79FB2B7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="1491318392" Name="Play_Cowbell" ObjectPath="\Events\Default Work Unit\Play_Cowbell" DurationType="OneShot" DurationMin="0.15" DurationMax="0.15">
-					<ReferencedStreamedFiles>
-						<File Id="388139632" Language="SFX">
-							<ShortName>Cowbell.wav</ShortName>
-							<Path>SFX\Cowbell_04403F93.wem</Path>
-						</File>
-					</ReferencedStreamedFiles>
-					<IncludedMemoryFiles>
-						<File Id="388139632" Language="SFX">
-							<ShortName>Cowbell.wav</ShortName>
-							<Path>SFX\Cowbell_04403F93.wem</Path>
-							<PrefetchSize>26588</PrefetchSize>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -189,6 +172,22 @@
 						<File Id="294660824" Language="SFX">
 							<ShortName>Intro_2.wav</ShortName>
 							<Path>SFX\Intro_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3670347913" Name="Play_Metronome_ms" ObjectPath="\Events\Default Work Unit\Play_Metronome_ms" DurationType="OneShot" DurationMin="0.050045" DurationMax="0.050045">
+					<IncludedMemoryFiles>
+						<File Id="631214722" Language="SFX">
+							<ShortName>Metronome.wav</ShortName>
+							<Path>SFX\Metronome_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3895177024" Name="Play_Metronome_s" ObjectPath="\Events\Default Work Unit\Play_Metronome_s" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="660299775" Language="SFX">
+							<ShortName>Metronome_New.wav</ShortName>
+							<Path>SFX\Metronome_New_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -439,9 +438,6 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
-			<ReferencedStreamedFiles>
-				<File Id="388139632"/>
-			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
 				<File Id="67889240" Language="SFX">
 					<ShortName>Theyre_Retreating_3.wav</ShortName>
@@ -463,11 +459,6 @@
 					<ShortName>The_Village_is_Ours_Again_1.wav</ShortName>
 					<Path>SFX\The_Village_is_Ours_Again_1_10C4C929.wem</Path>
 				</File>
-				<File Id="388139632" Language="SFX">
-					<ShortName>Cowbell.wav</ShortName>
-					<Path>SFX\Cowbell_04403F93.wem</Path>
-					<PrefetchSize>26588</PrefetchSize>
-				</File>
 				<File Id="390141292" Language="SFX">
 					<ShortName>Drum 4.wav</ShortName>
 					<Path>SFX\Drum 4_10C4C929.wem</Path>
@@ -483,6 +474,14 @@
 				<File Id="608074595" Language="SFX">
 					<ShortName>We_Need_More_Muscle_3.wav</ShortName>
 					<Path>SFX\We_Need_More_Muscle_3_10C4C929.wem</Path>
+				</File>
+				<File Id="631214722" Language="SFX">
+					<ShortName>Metronome.wav</ShortName>
+					<Path>SFX\Metronome_10C4C929.wem</Path>
+				</File>
+				<File Id="660299775" Language="SFX">
+					<ShortName>Metronome_New.wav</ShortName>
+					<Path>SFX\Metronome_New_10C4C929.wem</Path>
 				</File>
 				<File Id="758886743" Language="SFX">
 					<ShortName>Drum 1.wav</ShortName>
@@ -508,6 +507,7 @@
 			<GameParameters>
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\SFXVolume"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MusicVolume"/>
+				<GameParameter Id="2591469393" Name="MetronomeVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MetronomeVolume"/>
 				<GameParameter Id="2918011349" Name="MasterVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\MasterVolume"/>
 				<GameParameter Id="3325181466" Name="VOVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\VOVolume"/>
 			</GameParameters>
