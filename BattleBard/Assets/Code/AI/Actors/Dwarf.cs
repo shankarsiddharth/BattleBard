@@ -73,7 +73,7 @@ public abstract class Dwarf : Actor
         {
             print("Checkpoint Entered");
             checkpoints.Remove(other.transform);
-
+            GameEvents.Instance.OnCheckpointReached();
             FindNextCheckpoint();
         }
     }

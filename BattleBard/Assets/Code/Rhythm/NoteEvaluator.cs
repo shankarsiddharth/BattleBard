@@ -7,9 +7,9 @@ using System;
 public class NoteEvaluator : MonoBehaviour
 {
     static private Metronome metronome;
-    static public Text buttonDisplay;
-    static public Text gradeDisplay;
-    static public Text offsetDisplay;
+    //static public Text buttonDisplay;
+    //static public Text gradeDisplay;
+    //static public Text offsetDisplay;
     static public float PerfectThreshold;
     static public float GreatThreshold;
     static public float GoodThreshold;
@@ -20,9 +20,9 @@ public class NoteEvaluator : MonoBehaviour
         //GameEvents.Instance.onDrumPlayed.AddListener(EvaluateNote);
         //metronome = GetComponent<Metronome>();
         metronome = GameObject.FindGameObjectWithTag("AnimMetronome").GetComponent<Metronome>();
-        gradeDisplay = (Text)GameObject.Find("Grade Display").GetComponent<Text>();
-        buttonDisplay = GameObject.Find("Button Display").GetComponent<Text>();
-        offsetDisplay = GameObject.Find("Offset Display").GetComponent<Text>();
+        //gradeDisplay = (Text)GameObject.Find("Grade Display").GetComponent<Text>();
+        //buttonDisplay = GameObject.Find("Button Display").GetComponent<Text>();
+        //offsetDisplay = GameObject.Find("Offset Display").GetComponent<Text>();
         PerfectThreshold = .075f;
         GreatThreshold = .1f;
         GoodThreshold = .4f;
@@ -40,7 +40,7 @@ public class NoteEvaluator : MonoBehaviour
         
         note.timestamp = metronome.GetClosestBeat();
         //note.timestamp = Time.time;
-        offsetDisplay.text = beatOffset.ToString();
+        //offsetDisplay.text = beatOffset.ToString();
 
         if(absOffset < PerfectThreshold)
         {
@@ -67,13 +67,14 @@ public class NoteEvaluator : MonoBehaviour
     
     static void ShowButton(Drums drum)
     {
-        if (buttonDisplay != null)
+        /*if (buttonDisplay != null)
         {
             buttonDisplay.text = drum.ToString();
-        }
+        }*/
     }
     static void ShowGrade(Grade grade)
     {
+        /*
         if (gradeDisplay != null)
         {
             switch (grade)
@@ -96,5 +97,6 @@ public class NoteEvaluator : MonoBehaviour
                     break;
             }
         }
+        */
     }
 }

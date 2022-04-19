@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Battalion : MonoBehaviour
 {
-   public List<Dwarf> dwarves = new List<Dwarf>();
+    public List<Dwarf> dwarves = new List<Dwarf>();
 
     public Gate nearestGate;
     public bool isNearGate => nearestGate != null;
@@ -20,6 +20,7 @@ public class Battalion : MonoBehaviour
         dwarves = GetComponentsInChildren<Dwarf>().ToList();
         GameEvents.Instance.onGateDestroyed.AddListener(OnGateDestroyed);
         GameEvents.Instance.onDwarfDeath.AddListener(OnDwarfDeath);
+        GameEvents.Instance.onCheckpointReached.AddListener(DidBattalionReachEnd);
     }
 
     private void OnGateDestroyed(Gate gate)
@@ -60,7 +61,7 @@ public class Battalion : MonoBehaviour
 
         if (nearestGate && _gateManager.gates.Contains(nearestGate))
         {
-            foreach(Dwarf dwarf in dwarves)
+            foreach (Dwarf dwarf in dwarves)
             {
                 dwarf.stateMachine.ChangeState(dwarf.idleState);
             }
@@ -70,6 +71,23 @@ public class Battalion : MonoBehaviour
     private void OnDwarfDeath(Dwarf dwarf)
     {
         dwarves.Remove(dwarf);
+
+        if (dwarves.Count == 0)
+        {
+            GameEvents.Instance.OnBattalionKilled(this);
+        }
+    }
+
+    private void DidBattalionReachEnd()
+    {
+        foreach (Dwarf d in dwarves)
+        {
+            if (d.checkpoints.Count != 0)
+            {
+                return;
+            }
+        }
+        GameEvents.Instance.OnGameWon();
     }
 
     public Vector3 GetMidPoint()

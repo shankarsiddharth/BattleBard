@@ -26,6 +26,10 @@ public class GameEvents : MonoBehaviour
     public UnityEvent<int, int> onMinionAttackStarted;
     public UnityEvent<int> onMinionDeath;
     public UnityEvent<Dwarf> onDwarfDeath;
+    public UnityEvent<Battalion> onBattalionKilled;
+    public UnityEvent onCheckpointReached;
+    public UnityEvent onGameWon;
+
 
     public void OnMinionAttackStarted(int attackerId, int otherId)
     {
@@ -41,6 +45,27 @@ public class GameEvents : MonoBehaviour
     {
         onDwarfDeath.Invoke(dwarf);
     }
+
+    public void OnBattalionKilled(Battalion battalion)
+    {
+        print("Game Over, you suck");
+        onBattalionKilled.Invoke(battalion);
+    }  
+
+    public void OnCheckpointReached()
+    {
+        onCheckpointReached.Invoke();
+    } 
+
+    public void OnGameWon()
+    {
+        print("Game won, you still suck");
+        onGameWon.Invoke();
+    }
+
+
+
+
     #endregion
 
     #region Effect Events
