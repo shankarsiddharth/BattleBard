@@ -41296,6 +41296,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComboAudioWwise
       objectReference: {fileID: 0}
+    - target: {fileID: 7689334484020316257, guid: 113614d2d3d42c044affb498a2fd3e22, type: 3}
+      propertyPath: akIdleState.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b42a9936c41c4ef489556c4edefa729a, type: 2}
+    - target: {fileID: 7689334484020316257, guid: 113614d2d3d42c044affb498a2fd3e22, type: 3}
+      propertyPath: comboTierAudioEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17868d49820be434ea031c5ff8aba115, type: 2}
+    - target: {fileID: 7689334484020316257, guid: 113614d2d3d42c044affb498a2fd3e22, type: 3}
+      propertyPath: akHealState.Array.data[0].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: a2e2cf755f51ad94284dc6d501090cd6, type: 2}
+    - target: {fileID: 7689334484020316257, guid: 113614d2d3d42c044affb498a2fd3e22, type: 3}
+      propertyPath: akHealState.Array.data[1].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b7dfa2087753667478d6f8f74eaf377f, type: 2}
+    - target: {fileID: 7689334484020316257, guid: 113614d2d3d42c044affb498a2fd3e22, type: 3}
+      propertyPath: akHealState.Array.data[2].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f9b69dc17f41a884bb2c5a787674e1dd, type: 2}
+    - target: {fileID: 7689334484020316257, guid: 113614d2d3d42c044affb498a2fd3e22, type: 3}
+      propertyPath: akSpeedState.Array.data[0].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e01abfd0066d5e44bcb4aa2f2192d3e, type: 2}
+    - target: {fileID: 7689334484020316257, guid: 113614d2d3d42c044affb498a2fd3e22, type: 3}
+      propertyPath: akSpeedState.Array.data[1].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ca5c555f2e6ed7409542b755ec911d0, type: 2}
+    - target: {fileID: 7689334484020316257, guid: 113614d2d3d42c044affb498a2fd3e22, type: 3}
+      propertyPath: akSpeedState.Array.data[2].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b3c50301afbbcaf4e9bc4d4c9c645a2a, type: 2}
+    - target: {fileID: 7689334484020316257, guid: 113614d2d3d42c044affb498a2fd3e22, type: 3}
+      propertyPath: akAttackState.Array.data[0].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d9155d803fae331458253201c59d54fe, type: 2}
+    - target: {fileID: 7689334484020316257, guid: 113614d2d3d42c044affb498a2fd3e22, type: 3}
+      propertyPath: akAttackState.Array.data[1].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b808b458ee207594dadb99299b996d1f, type: 2}
+    - target: {fileID: 7689334484020316257, guid: 113614d2d3d42c044affb498a2fd3e22, type: 3}
+      propertyPath: akAttackState.Array.data[2].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 41e4ebb3c09e6214cab9b472ae5e8846, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 113614d2d3d42c044affb498a2fd3e22, type: 3}
 --- !u!4 &1236515001 stripped
