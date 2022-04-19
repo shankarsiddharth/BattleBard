@@ -15,7 +15,7 @@ public class ComboTextScript : MonoBehaviour
 {
     public TUIEffectType UiEffectType;
     public Text uiText;
-    private string text = "0";
+    private string text = "I";
 
     void Awake()
     {
