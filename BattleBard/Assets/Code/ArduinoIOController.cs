@@ -72,7 +72,26 @@ public class ArduinoIOController : MonoBehaviour
                 }
                 else
                 {
-                    GameEvents.Instance.OnDrumPlayed((Drums)buttonPressed);
+                    Drums playedDrum;
+                    switch(buttonPressed)
+                    {
+                        case 0:
+                            playedDrum = Drums.LeftShoulder;
+                            break;
+                        case 1:
+                            playedDrum = Drums.LeftThigh;
+                            break;
+                        case 2:
+                            playedDrum = Drums.RightShoulder;
+                            break;
+                        case 3:
+                            playedDrum = Drums.RightThigh;
+                            break;
+                        default:
+                            throw new System.Exception("depricated button pressed");
+                            break;
+                    }
+                    GameEvents.Instance.OnDrumPlayed(playedDrum);
                 }
             }
             catch (System.Exception exception)

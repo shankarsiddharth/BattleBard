@@ -30,7 +30,7 @@ public class Metronome : MonoBehaviour
         //startTime = Time.time;
         if (noteAccuracy == 0)
         {
-            noteAccuracy = 1.0f;
+            noteAccuracy = .5f;
         }
         fudgeOffset = 0f;
         lastPlayed = 0.0f;
