@@ -5,8 +5,8 @@ public enum Drums
 {
     LeftShoulder,
     LeftStomach,
-    LeftThigh,
     RightShoulder,
     RightStomach,
+    LeftThigh,
     RightThigh
 }
