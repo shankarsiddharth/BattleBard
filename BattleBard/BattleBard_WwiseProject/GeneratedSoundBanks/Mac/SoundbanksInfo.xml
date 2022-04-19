@@ -114,7 +114,7 @@
 				<GameParameter Id="3325181466" Name="VOVolume" ObjectPath="\Game Parameters\Default Work Unit\Volume\VOVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2386706874" Language="SFX" Hash="2213890130">
+		<SoundBank Id="2386706874" Language="SFX" Hash="1641795926">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music_120_bpm</ObjectPath>
 			<ShortName>Music_120_bpm</ShortName>
 			<Path>Music_120_bpm.bnk</Path>
