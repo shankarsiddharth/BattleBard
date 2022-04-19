@@ -65,7 +65,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15
     secondaryUVHardAngle: 180
     secondaryUVMarginMethod: 1
-    secondaryUVMinLightmapResolution: 15
+    secondaryUVMinLightmapResolution: 20
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
