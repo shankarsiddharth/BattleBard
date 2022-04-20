@@ -19,6 +19,7 @@ TagManager:
   - Wwise
   - UI
   - AnimMetronome
+  - GameUI
   layers:
   - Default
   - TransparentFX

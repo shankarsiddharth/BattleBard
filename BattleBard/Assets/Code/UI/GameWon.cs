@@ -9,8 +9,8 @@ public class GameWon : MonoBehaviour
 
     void Awake()
     {
-        gameWonGameObject.SetActive(false);
         GameEvents.Instance.onGameWon.AddListener(OnGameWon);
+        gameWonGameObject.SetActive(false);
     }
 
     private void OnGameWon()

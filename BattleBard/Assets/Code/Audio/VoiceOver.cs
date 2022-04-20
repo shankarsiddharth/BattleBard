@@ -58,7 +58,7 @@ public class VoiceOver : MonoBehaviour
         _currentVoiceOverAudioType = voiceOverAudioType;
 
         if (voiceOverAudioType == TVoiceOverAudioType.kIntro
-            || voiceOverAudioType == TVoiceOverAudioType.kReinforcedGate
+            //|| voiceOverAudioType == TVoiceOverAudioType.kReinforcedGate
             || voiceOverAudioType == TVoiceOverAudioType.kTheVillageisOursAgain)
         {
             WwiseAudioVolumeController.SetWwiseAudioVolumeForAudioBusType(0, TAudioBusType.kSFX);
@@ -93,8 +93,8 @@ public class VoiceOver : MonoBehaviour
 
     private void AKCallbackFunction(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
     {
-        if (!(_currentVoiceOverAudioType == TVoiceOverAudioType.kIntro
-            || _currentVoiceOverAudioType == TVoiceOverAudioType.kTheVillageisOursAgain))
+        if (!(/*_currentVoiceOverAudioType == TVoiceOverAudioType.kIntro
+            ||*/ _currentVoiceOverAudioType == TVoiceOverAudioType.kTheVillageisOursAgain))
         {
             uiGameObject.SetActive(true);
             if (in_type == AkCallbackType.AK_EndOfEvent)

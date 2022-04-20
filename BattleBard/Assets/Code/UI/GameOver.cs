@@ -9,8 +9,8 @@ public class GameOver : MonoBehaviour
 
     void Awake()
     {
-        gameOverGameObject.SetActive(false);
         GameEvents.Instance.onBattalionKilled.AddListener(OnGameOver);
+        gameOverGameObject.SetActive(false);
     }
 
     private void OnGameOver(Battalion arg0)

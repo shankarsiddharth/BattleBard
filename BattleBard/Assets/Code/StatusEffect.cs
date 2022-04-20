@@ -15,7 +15,7 @@ public class StatusEffect : ScriptableObject
 	// Potentially takes GameObject instead of BaseAI and finds the PlayerBaseAI or EnemyBaseAI components
 	public IEnumerator StartTimer(int tier, Actor actor)
 	{
-		Debug.Log("Started");
+		//Debug.Log("Started");
 
 		if (!actor.currentEffects.Contains(this))
 		{
@@ -33,7 +33,7 @@ public class StatusEffect : ScriptableObject
 				Destroy(vfx);
 			}
 
-			Debug.Log("Done.");
+			//Debug.Log("Done.");
 		}
 	}
 }

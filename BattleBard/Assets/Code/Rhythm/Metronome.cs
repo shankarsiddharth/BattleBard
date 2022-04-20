@@ -106,8 +106,8 @@ public class Metronome : MonoBehaviour
         {
             startTime = lastBeatPlayedTime;
         }
-        Debug.Log("START Tick");
+        //Debug.Log("START Tick");
         metronomeClip.Post(gameObject);
-        Debug.Log("START Tick");
+        //Debug.Log("START Tick");
     }
 }

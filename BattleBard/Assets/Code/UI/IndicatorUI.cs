@@ -73,7 +73,7 @@ public class IndicatorUI: MonoBehaviour
     public IEnumerator StartVFXTimer(ComboBase effect, float durationInSeconds)
     {
         
-        Debug.Log("VFX Started");
+        //Debug.Log("VFX Started");
         if (effect is DamageCombo)
         {
             yield return new WaitForSeconds(durationInSeconds);
@@ -103,7 +103,7 @@ public class IndicatorUI: MonoBehaviour
             }
         }
         
-        Debug.Log("VFX Ended");
+        //Debug.Log("VFX Ended");
     }
 
     // Start is called before the first frame update
