@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,7 +42,7 @@ public class ComboManager : MonoBehaviour
             List<Combo> invalidCombos = new List<Combo>();
 
             // Get current beat in combo
-            float curBeat = _metronome.GetClosestBeat() - _startBeat;
+            float curBeat = _metronome.CalculateAndGetClosestBeat() - _startBeat;
 
 
             foreach (Combo validCombo in validCombos)
@@ -52,7 +53,7 @@ public class ComboManager : MonoBehaviour
                 ComboNote properComboNote = validCombo.comboOrder[drumsHit.Count];
 
                 // Check if we are past the window to play the necessary combo note
-                if (properComboNote.beat + _metronome.noteAccuracy < curBeat)
+                if (properComboNote.beat + _metronome.GetNoteAccuracy() < curBeat)
                 {
                     invalidCombos.Add(validCombo);
                 }
@@ -119,19 +120,19 @@ public class ComboManager : MonoBehaviour
 
     private void OnDrumPlay(Drums drum)
     {
-        if (!playingCombo)
-        {
-            // Set base beat count from metronome beat
-            _startBeat = _metronome.GetLastBeatCount();
-            playingCombo = true;
-        }
-
         Note playedNote = new Note { notePlayed = drum };
 
         // Always evaluate notes, even improv notes
         NoteEvaluator.EvaluateNote(ref playedNote);
 
         GameEvents.Instance.OnNoteEvaluated(playedNote);
+
+        if (!playingCombo)
+        {
+            // Set base beat count from metronome beat
+            _startBeat = (int) playedNote.timestamp;
+            playingCombo = true;
+        }
 
         // List of combos to remove because they are no longer valid
         List<Combo> invalidCombos = new List<Combo>();
@@ -151,8 +152,9 @@ public class ComboManager : MonoBehaviour
             }
 
             // If they aren't on the same beat, skip
-            if (properComboNote.beat != playedNote.timestamp - _startBeat)
+            if (Math.Abs(properComboNote.beat - (playedNote.timestamp - _startBeat + 1)) > 0.001f)
             {
+                playedNote.grade = Grade.Bad;
                 invalidCombos.Add(combo);
                 continue;
             }

@@ -60,26 +60,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2741276078268842837}
     m_Modifications:
-    - target: {fileID: 7404714652601279297, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ed28ac0ed6dc09b4fbb7ccbcfe84edd4, type: 3}
-    - target: {fileID: 7404714652601279297, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
-      propertyPath: m_Color.b
-      value: 0.24056602
-      objectReference: {fileID: 0}
-    - target: {fileID: 7404714652601279297, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7404714652601279297, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
-      propertyPath: m_Color.r
-      value: 0.34992436
-      objectReference: {fileID: 0}
-    - target: {fileID: 7404714652735569228, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ed28ac0ed6dc09b4fbb7ccbcfe84edd4, type: 3}
     - target: {fileID: 7404714653098269338, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
       propertyPath: m_Name
       value: GradeUI
@@ -167,26 +147,6 @@ PrefabInstance:
     - target: {fileID: 7404714653098269339, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7404714653484784827, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ed28ac0ed6dc09b4fbb7ccbcfe84edd4, type: 3}
-    - target: {fileID: 7404714654142169895, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ed28ac0ed6dc09b4fbb7ccbcfe84edd4, type: 3}
-    - target: {fileID: 7404714654142169895, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
-      propertyPath: m_Color.b
-      value: 0.754717
-      objectReference: {fileID: 0}
-    - target: {fileID: 7404714654142169895, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
-      propertyPath: m_Color.g
-      value: 0.33107865
-      objectReference: {fileID: 0}
-    - target: {fileID: 7404714654142169895, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
-      propertyPath: m_Color.r
-      value: 0.5968909
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c39bc17d6c54c3249ad7c4db72221632, type: 3}
