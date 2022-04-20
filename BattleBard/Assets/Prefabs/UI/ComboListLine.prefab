@@ -53,11 +53,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiObjectList:
   - {fileID: 3774801293373333098}
-  - {fileID: 1015358065711487875}
   - {fileID: 920088693821485698}
+  - {fileID: 1015358065711487875}
   AttackGameObject: {fileID: 3774801293373333098}
-  HealGameObject: {fileID: 1015358065711487875}
-  SpeedGameObject: {fileID: 920088693821485698}
+  HealGameObject: {fileID: 920088693821485698}
+  SpeedGameObject: {fileID: 1015358065711487875}
 --- !u!1001 &1173927542021369194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67,7 +67,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2057704314443276264, guid: 7cacf020d89ee1e4ebb14133eac5ec2f, type: 3}
       propertyPath: m_Name
-      value: SpeedComboUI
+      value: HealComboUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057704314443276264, guid: 7cacf020d89ee1e4ebb14133eac5ec2f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2057704314443276271, guid: 7cacf020d89ee1e4ebb14133eac5ec2f, type: 3}
       propertyPath: m_Pivot.x
@@ -174,7 +178,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2057704314443276264, guid: 8c1ff981f35b425489a7fdaad48f094f, type: 3}
       propertyPath: m_Name
-      value: HealComboUI
+      value: SpeedComboUI
       objectReference: {fileID: 0}
     - target: {fileID: 2057704314443276271, guid: 8c1ff981f35b425489a7fdaad48f094f, type: 3}
       propertyPath: m_Pivot.x
