@@ -28,7 +28,10 @@ public class ChasingState : State
     {
         base.Update();
         if (actor.target == null || actor.target.IsDead)
+        {
             stateMachine.ChangeState(actor.DefaultState);
+            return;
+        }
 
         if (actor.navMeshAgent.destination != actor.target.transform.position)
             actor.navMeshAgent.SetDestination(actor.target.transform.position);
