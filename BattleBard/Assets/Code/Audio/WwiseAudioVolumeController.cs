@@ -16,7 +16,31 @@ public enum TAudioBusType
 
 public static class WwiseAudioVolumeController
 {
+    public static int DeltaVolume = 5;
+    public static int MinimumVolume = 0;
+    public static int MaximumVolume = 100;
     public static int CurrentVolume = 50;
+
+    public static void IncreaseVolume()
+    {
+        int newVolume = CurrentVolume + DeltaVolume;
+        if (newVolume >= MaximumVolume)
+        {
+            newVolume = MaximumVolume;
+        }
+        SetWwiseAudioVolume(newVolume);
+    }
+
+
+    public static void DecreaseVolume()
+    {
+        int newVolume = CurrentVolume - DeltaVolume;
+        if (newVolume <= MinimumVolume)
+        {
+            newVolume = MinimumVolume;
+        }
+        SetWwiseAudioVolume(newVolume);
+    }
 
     public static void SetWwiseAudioVolume(int volume)
     {

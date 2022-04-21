@@ -7,9 +7,6 @@ using UnityEngine.UI;
 
 public class OptionsUI : MonoBehaviour
 {
-    public int deltaVolume = 5;
-    public int minimumVolume = 0;
-    public int maximumVolume = 100;
     public List<Resolution> resolutionOptions;// = Screen.resolutions.ToList();
     private int _currentResolutionIndex;
     private int _currentVolume;
@@ -65,10 +62,10 @@ public class OptionsUI : MonoBehaviour
 
     public void IncreaseVolume()
     {
-        _currentVolume += deltaVolume;
-        if (_currentVolume >= maximumVolume)
+        _currentVolume += WwiseAudioVolumeController.DeltaVolume;
+        if (_currentVolume >= WwiseAudioVolumeController.MaximumVolume)
         {
-            _currentVolume = maximumVolume;
+            _currentVolume = WwiseAudioVolumeController.MaximumVolume;
         }
 
         VolumeSlider.value = (float) (_currentVolume / 100.0f);
@@ -78,10 +75,10 @@ public class OptionsUI : MonoBehaviour
 
     public void DecreaseVolume()
     {
-        _currentVolume -= deltaVolume;
-        if (_currentVolume < 0)
+        _currentVolume -= WwiseAudioVolumeController.DeltaVolume;
+        if (_currentVolume <= WwiseAudioVolumeController.MinimumVolume)
         {
-            _currentVolume = minimumVolume;
+            _currentVolume = WwiseAudioVolumeController.MinimumVolume;
         }
 
         VolumeSlider.value = (float)(_currentVolume / 100.0f);
