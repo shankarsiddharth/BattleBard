@@ -24,11 +24,13 @@ public class GameOver : MonoBehaviour
 
     public void RestartGame()
     {
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(SceneNames.GameScene, LoadSceneMode.Single);
     }
 
     public void GoToMainMenu()
     {
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(SceneNames.MainMenuScene, LoadSceneMode.Single);
     }
 

@@ -705,9 +705,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b93e84bf357e64aac25b576f3b177b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deltaVolume: 5
-  minimumVolume: 0
-  maximumVolume: 100
   resolutionText: {fileID: 2066045638}
   volumeText: {fileID: 2019048415}
   VolumeSlider: {fileID: 1753092165}
@@ -2584,6 +2581,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818722597}
   m_CullTransparentMesh: 1
+--- !u!1 &827485677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 827485679}
+  - component: {fileID: 827485678}
+  m_Layer: 0
+  m_Name: ApplicationControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &827485678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827485677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8b80ec60b62014d809e9cf9a06b3a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &827485679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827485677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 940.5755, y: 711.2059, z: -21.276234}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &850937227
 GameObject:
   m_ObjectHideFlags: 0
@@ -4819,6 +4859,86 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 21191e7e-a3aa-4023-bbdc-d9188b791d74
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 827485678}
+        m_TargetAssemblyTypeName: ApplicationControl, Assembly-CSharp
+        m_MethodName: IncreaseVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 303fbebb-2fd3-4d72-893d-53c9914d4127
+    m_ActionName: Player/IncreaseVolume[/Keyboard/numpadPlus,/Keyboard/equals]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 827485678}
+        m_TargetAssemblyTypeName: ApplicationControl, Assembly-CSharp
+        m_MethodName: DecreaseVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 84e2166f-d11e-4dad-be94-caea7ce2bacc
+    m_ActionName: Player/DecreaseVolume[/Keyboard/numpadMinus,/Keyboard/minus]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 827485678}
+        m_TargetAssemblyTypeName: ApplicationControl, Assembly-CSharp
+        m_MethodName: OnExitButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5ab3035f-d9e0-42f5-a48c-a55abc26ef35
+    m_ActionName: Player/QuitApplication[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 827485678}
+        m_TargetAssemblyTypeName: ApplicationControl, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c4c9572e-5985-41fe-9848-1f603a2438ae
+    m_ActionName: Player/RestartLevel[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 827485678}
+        m_TargetAssemblyTypeName: ApplicationControl, Assembly-CSharp
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: dd152730-efbf-41bf-bcd7-6084b75fbe49
+    m_ActionName: Player/MainMenu[/Keyboard/m]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

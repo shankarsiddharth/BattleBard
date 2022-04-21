@@ -19,7 +19,7 @@ public class ApplicationControl : MonoBehaviour
     public void RestartLevel()
     {
         AkSoundEngine.StopAll();
-        SceneManager.LoadScene(SceneNames.GameScene, LoadSceneMode.Single);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
     public void GoToMainMenu()
     {

@@ -17,7 +17,13 @@ public class ComboTierAudioWwise : MonoBehaviour
 
     void Awake()
     {
-        GameEvents.Instance.onDrumComboCompleted.AddListener(ListenForCombos);        
+        GameEvents.Instance.onDrumComboCompleted.AddListener(ListenForCombos);
+        GameEvents.Instance.onBattalionKilled.AddListener(OnGameOver);
+    }
+
+    private void OnGameOver(Battalion arg0)
+    {
+        akAttackState[1].SetValue();
     }
 
     public void ListenForCombos(ComboBase effect, int level, Vector3 position)
