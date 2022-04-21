@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameWon : MonoBehaviour
 {
     public GameObject gameWonGameObject;
+    public GameObject MetronomeCanvasGameObject;
 
     void Awake()
     {
@@ -15,6 +16,7 @@ public class GameWon : MonoBehaviour
 
     private void OnGameWon()
     {
+        MetronomeCanvasGameObject.SetActive(false);
         WwiseAudioVolumeController.SetWwiseAudioVolumeForAudioBusType(0, TAudioBusType.kSFX);
         WwiseAudioVolumeController.SetWwiseAudioVolumeForAudioBusType(0, TAudioBusType.kMetronome);
         gameWonGameObject.SetActive(true);

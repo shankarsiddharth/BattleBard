@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject gameOverGameObject;
+    public GameObject MetronomeCanvasGameObject;
 
     void Awake()
     {
@@ -15,6 +16,7 @@ public class GameOver : MonoBehaviour
 
     private void OnGameOver(Battalion arg0)
     {
+        MetronomeCanvasGameObject.SetActive(false);
         WwiseAudioVolumeController.SetWwiseAudioVolumeForAudioBusType(0, TAudioBusType.kSFX);
         WwiseAudioVolumeController.SetWwiseAudioVolumeForAudioBusType(0, TAudioBusType.kMetronome);
         gameOverGameObject.SetActive(true);
