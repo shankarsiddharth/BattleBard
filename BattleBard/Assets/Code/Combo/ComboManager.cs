@@ -16,6 +16,8 @@ public class ComboManager : MonoBehaviour
     public bool playingCombo;
     private int _startBeat;
 
+    private float _lastDrumBeatTime;
+
     private void Start()
     {
         GameEvents.Instance.onDrumPlayed.AddListener(OnDrumPlay);
@@ -52,8 +54,10 @@ public class ComboManager : MonoBehaviour
 
                 ComboNote properComboNote = validCombo.comboOrder[drumsHit.Count];
 
+                if((Math.Abs(_metronome.CalculateAndGetClosestBeat() - _lastDrumBeatTime)) > Math.Abs(_metronome.GetSecPerBeat() + _metronome.GetNoteAccuracy()))
                 // Check if we are past the window to play the necessary combo note
-                if (properComboNote.beat + _metronome.GetNoteAccuracy() < curBeat)
+                /*if (properComboNote.beat + _metronome.GetNoteAccuracy() < curBeat 
+                    || _metronome.GetLastBeatCount())*/
                 {
                     invalidCombos.Add(validCombo);
                 }
@@ -127,6 +131,8 @@ public class ComboManager : MonoBehaviour
 
         GameEvents.Instance.OnNoteEvaluated(playedNote);
 
+        _lastDrumBeatTime = _metronome.GetClosestBeatTime();
+
         if (!playingCombo)
         {
             // Set base beat count from metronome beat
@@ -151,20 +157,20 @@ public class ComboManager : MonoBehaviour
                 continue;
             }
 
-            // If they aren't on the same beat, skip
-            if (Math.Abs(properComboNote.beat - (playedNote.timestamp - _startBeat + 1)) > 0.001f)
-            {
-                playedNote.grade = Grade.Bad;
-                invalidCombos.Add(combo);
-                continue;
-            }
-
             // If its grade is too low, skip (or fail?)
             if (playedNote.grade == Grade.Bad)
             {
                 invalidCombos.Add(combo);
                 continue;
             }
+
+            // If they aren't on the same beat, skip
+            /*if (Math.Abs(properComboNote.beat - (playedNote.timestamp - _startBeat + 1)) > 0.001f)
+            {
+                playedNote.grade = Grade.Bad;
+                invalidCombos.Add(combo);
+                continue;
+            }*/
 
             // If it was all good, then advance progress (and 'use' the combo if complete)
             if (drumsHit.Count == combo.comboOrder.Count)

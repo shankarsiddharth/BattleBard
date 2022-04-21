@@ -74,6 +74,11 @@ public class Metronome : MonoBehaviour
         return _lastBeatCount;
     }
 
+    public float GetLastBeatTime()
+    {
+        return _lastBeatPlayedTime;
+    }
+
     private float CalculateClosestBeatTime()
     {
         float tolerance = 0.00000001f;
@@ -112,6 +117,15 @@ public class Metronome : MonoBehaviour
 
     public int CalculateAndGetClosestBeat()
     {
+        float closestBeatTime = CalculateAndGetClosestBeatTime();
+
+        closestBeatTime -= _startTime;
+        int closestBeat = (int) Math.Floor(closestBeatTime);
+        return closestBeat;
+    }
+
+    public float CalculateAndGetClosestBeatTime()
+    {
         float tolerance = 0.00000001f;
 
         float currentTime = Time.time;
@@ -139,9 +153,8 @@ public class Metronome : MonoBehaviour
             closestBeatTime = nextBeatTime;
         }
 
-        closestBeatTime -= _startTime;
-        int closestBeat = (int) Math.Floor(closestBeatTime);
-        return closestBeat;
+        //closestBeatTime -= _startTime;
+        return closestBeatTime;
     }
 
     private int CalculateClosestBeat()
@@ -170,5 +183,10 @@ public class Metronome : MonoBehaviour
         {
             _startTime = _lastBeatPlayedTime;
         }
+    }
+
+    public float GetSecPerBeat()
+    {
+        return _secPerBeat;
     }
 }
